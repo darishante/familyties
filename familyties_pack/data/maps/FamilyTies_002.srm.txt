@@ -1,0 +1,116 @@
+minX: 1
+minZ: -4
+numX: 5
+numZ: 5
+props {
+  name: "morgue_wall_brickCorner01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "morgue_floor_tile01"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "morgue_floor_tile01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53db714564343176dd31b7ef"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickConnector01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickEnd01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "morgue_floor_tile01"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53db71ad64343176dd31b7f0"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_floor_tile01"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53db71b564343176dd31b7f1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorDoor01Back"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickConnector01"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53db71ef64343176dd31b7f2"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_rustedBedSpring"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}

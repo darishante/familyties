@@ -394,7 +394,7 @@ nodes {
     id: "53da9e6364343190a831b85c"
   }
   index: 4
-  text: "CODE NINER!\n\n{{GM}}A cloud of nerve gas fills the air. You black out. Needless to say, you\'re totally fired.{{/GM}}"
+  text: "CODE NINER!\n\n{{GM}}Augusta pulls out a gun. Needless to say, you\'re totally fired.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53da6bbe643431a4970041c4"

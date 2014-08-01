@@ -423,6 +423,176 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "liftUpFromGarage"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db748d64343176dd31b7f5"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "53db77cf64343176dd31b7ff"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53db765a64343176dd31b7f9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "liftDownToGarage"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db77bc64343176dd31b7fb"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "53db75d464343176dd31b7f8"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dbc32b64343176dd31b801"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "OfficeHallway"
   position {
@@ -468,12 +638,12 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "Camera Region"
+  name: "Basement Camera Region"
   position {
     x: -28
-    y: 36
-    width: 35
-    height: -63
+    y: 13
+    width: 34
+    height: -32
   }
   enabledAtStart: true
   is_camera_region: true
@@ -511,10 +681,156 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "GarageLiftDown"
+  position {
+    x: -8
+    y: -14
+    width: 0
+    height: 0
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53db75d464343176dd31b7f8"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: 0
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "GarageLiftUp"
+  position {
+    x: -41
+    y: -17
+    width: 0
+    height: 0
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53db77cf64343176dd31b7ff"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: 0
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Office Camera Region"
+  position {
+    x: -31
+    y: 9
+    width: -30
+    height: -30
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53dbc2e764343176dd31b800"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: 0.5
+    y: 0.5
+    z: 1.5
+  }
+  directional_light_color {
+    r: 0.86274511
+    g: 0.86274511
+    b: 0.86274511
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.86274511
+    g: 0.86274511
+    b: 0.86274511
+    a: 0.86274511
+  }
+  ambience_template: "office-busy"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 2
+    x: 0
     y: 0
     z: -2
   }
@@ -718,7 +1034,7 @@ worldMapLocation {
 }
 mapName: "FamilyTies_001"
 parentStory: ""
-scene_title: "BACK AT THE OFFICE"
+scene_title: "2055: BACK AT THE OFFICE"
 scene_subtitle: ""
 scene_synopsis: "After steering a particularily vicious project to completion the higher ups at Alcamai Cosmetics gave you an entire week of vacation. It was almost enough to make you relax and forget the pressures of your job.\n\nYour flight back to Omaha was delayed by nearly 12 hours, so instead of a well deserved night\'s sleep in your own bed, you ended up having a horrible red-eye through some nasty weather. From the airport you rushed into a taxi and just barely made it to the basement entrance in time, still in your worn-out holiday duds..."
 scene_image: ""
