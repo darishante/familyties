@@ -1,0 +1,35 @@
+minX: 0
+minZ: -4
+numX: 3
+numZ: 3
+props {
+  name: "sleekOffice_floor_plain01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53daae0a64343125b331b784"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "53daaccf64343190a831b8e2"
+      turnToFace: false
+    }
+  }
+  lod: 0
+}

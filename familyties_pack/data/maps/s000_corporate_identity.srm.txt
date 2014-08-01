@@ -1,0 +1,14 @@
+minX: 0
+minZ: -4
+numX: 3
+numZ: 3
+props {
+  name: "sleekOffice_floor_plain01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}

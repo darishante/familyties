@@ -1,0 +1,52 @@
+FAMILY TIES design doc
+-----------
+Tekijät:
+
+Dare - pseudokoodi, tarina, editointi
+Heikki - kuvitus, tarina
+
+
+1. Konsepti
+
+Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shadowrunner.
+
+
+
+2. Historia
+
+
+2033 - 2047 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
+
+2043 - 2047 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
+o	keskiluokkainen perheenäiti; trolli
+o	taksonomian tutkija; örkki (academic)
+o	tv-juontaja; haltia (socialite)
+o	Knight Errantin turvamies Seattlessa; ihminen (security)
+o	shadowrunner, kääpiö (shadowrun)
+o	korporaatti, pelaajahahmo (corporate / socialite / academic)
+
+Pelaajahahmo työskentelee aluksi Alcamai Cosmetics -firmalla Omahassa. Lentää sieltä ulos ekan tehtävän aikana. Joku on murhannut jonkun sen perheenjäsenen, jostain syystä sitä epäillään - jotain Alcamain firman salaisuuksia löytyy 
+murhatun asunnolta.
+
+Etenee muiden perheenjäsenten kautta, hahmosta tulee shadowrunner ja 
+koettaa selvittää, mitä hämärää orpokodissa on hänelle ja hänen 
+sisaruksilleen oikein tehty.
+
+
+3. Hahmot
+
+3.1 Alcamai Cosmetics
+
+Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko myyjö, tutkija tai nuorempi manageri
+
+Augusta - Turvahenkilö, respatyöntekijä
+
+
+4. Tarina ja lokaatiot
+
+ - Alcamai, josta saadaan potkut
+ - murhatun sisaruksen koti Red Hillissä
+ - Red Hill
+
+
+
