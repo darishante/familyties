@@ -172,7 +172,7 @@ nodes {
     id: "53da914b64343190a831b7b0"
   }
   index: 1
-  text: "Kind of explains you showing up at my door. Go on in. You\'re really going to have to get a change of clothes though. Hope you\'ve got an emergency business suit stashed somewhere. "
+  text: "Got to town late, eh? Kind of explains you showing up at my door instead of going through the front desk. Go on in. You\'re really going to have to get a change of clothes though. Hope you\'ve got an emergency business suit stashed somewhere. "
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53da6bbe643431a4970041c4"
@@ -246,7 +246,7 @@ nodes {
     id: "53da9abb64343190a831b81a"
   }
   index: 2
-  text: "Hope you enjoy returning to work, doctor! Oh, and despite you guys in the research division having a lax dress code, those clothes are not going to cut it. If your manager catches you there\'s going to be hell to pay."
+  text: "Hope you enjoy returning to work, doctor! Oh, and despite you guys in the research division having a lax dress code, those clothes are not going to cut it. If your manager catches you looking like that there\'s going to be hell to pay."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53da6bbe643431a4970041c4"

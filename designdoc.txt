@@ -50,3 +50,13 @@ Augusta - Turvahenkilö, respatyöntekijä
 
 
 
+5. Skenaarioiden rundown
+
+5.1 Alcamai
+
+ - sisään
+ - hanki valepuku
+   * jos ei onnistu, poliisin epäluulo suurempi
+ - optional: löydä ase
+
+

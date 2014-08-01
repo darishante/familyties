@@ -7,7 +7,7 @@ nodes {
     id: "53dabf97643431b5b631b801"
   }
   index: 0
-  text: "Welcome to Alcamai Cosmetics! Please enter your last name, as shown on your SIN:"
+  text: "Welcome to Alcamai Cosmetics! Please enter your last name, as shown on your SIN.\n\nGiving fraudulent information will result in termination and possibly charges of fraud and/or identity theft."
   branches {
     responseText: ""
     nextNodeIndex: 1
@@ -289,6 +289,102 @@ nodes {
         }
         args {
           string_value: "Christine"
+        }
+      }
+    }
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Aidan"
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_firstname"
+            }
+          }
+        }
+        args {
+          string_value: "Aidan"
+        }
+      }
+    }
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Liam"
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_firstname"
+            }
+          }
+        }
+        args {
+          string_value: "Liam"
+        }
+      }
+    }
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sarah"
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_firstname"
+            }
+          }
+        }
+        args {
+          string_value: "Sarah"
+        }
+      }
+    }
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Emma"
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_firstname"
+            }
+          }
+        }
+        args {
+          string_value: "Emma"
         }
       }
     }
