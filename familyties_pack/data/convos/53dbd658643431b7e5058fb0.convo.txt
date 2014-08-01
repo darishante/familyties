@@ -1,0 +1,139 @@
+idRef {
+  id: "53dbd658643431b7e5058fb0"
+}
+ui_name: "s001_security_locker_keypad"
+nodes {
+  idRef {
+    id: "53dbd663643431b7e5058fb6"
+  }
+  index: 0
+  text: "Security Locker - Authorized Use Only"
+  branches {
+    responseText: "0310"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Decking 2{{/CC}} Hack the keypad"
+    conditions {
+      ops {
+        functionName: "Compare Team Skill"
+        args {
+          call_value {
+            functionName: "Team of Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 1
+    inputBypass: true
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_InputNumpad
+  inputMaxLength: 4
+}
+nodes {
+  idRef {
+    id: "53dbd7ae643431b7e5058fba"
+  }
+  index: 1
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53dbd7c1643431b7e5058fbb"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

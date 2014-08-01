@@ -426,17 +426,6 @@ triggers {
 triggers {
   name: "liftUpFromGarage"
   events {
-    ops {
-      functionName: "On Item Interaction"
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "53db748d64343176dd31b7f5"
-          }
-        }
-      }
-    }
   }
   conditions {
   }
@@ -445,13 +434,36 @@ triggers {
       functionName: "Teleport Actor"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "All Actors on Team"
           args {
             call_value {
-              functionName: "Triggering Actor"
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
             }
           }
           args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
           }
         }
       }
@@ -495,7 +507,7 @@ triggers {
       functionName: "Teleport Camera To Actor"
       args {
         call_value {
-          functionName: "Triggering Actor"
+          functionName: "Active Actor"
         }
       }
     }
@@ -588,6 +600,150 @@ triggers {
   isActive: true
   idRef {
     id: "53dbc32b64343176dd31b801"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "gol_GetToMyDesk"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53dbd36e643431b7e5058f8d"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Start The Day At Your Desk"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dbd3cc643431b7e5058f8e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "openSecurityLocker"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Force-Use Interactable Object (Basic)"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db0bb464343133c9a404ef"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dbd7c1643431b7e5058fbb"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "securityLockerKeypad"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db098464343133c9a404ce"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53dbd658643431b7e5058fb0"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dbd8af643431b7e5058fcb"
   }
   elseActions {
   }
@@ -735,8 +891,8 @@ regions {
 regions {
   name: "GarageLiftUp"
   position {
-    x: -41
-    y: -17
+    x: -73
+    y: -20
     width: 0
     height: 0
   }
@@ -786,8 +942,8 @@ regions {
 regions {
   name: "Office Camera Region"
   position {
-    x: -31
-    y: 9
+    x: -54
+    y: 7
     width: -30
     height: -30
   }
@@ -822,6 +978,50 @@ regions {
     a: 0.86274511
   }
   ambience_template: "office-busy"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "MyDesk"
+  position {
+    x: -67
+    y: -4
+    width: 5
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53dbd36e643431b7e5058f8d"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
   combat_music: ""
   default_music: ""
   loop_combat_music: true

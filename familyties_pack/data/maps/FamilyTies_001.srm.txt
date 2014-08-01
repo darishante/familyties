@@ -1,7 +1,7 @@
-minX: -51
-minZ: -19
-numX: 54
-numZ: 28
+minX: -83
+minZ: -22
+numX: 86
+numZ: 31
 props {
   name: "secretLab_wall_windowClosedEnd01"
   gridPoint {
@@ -579,8 +579,14 @@ props {
     z: 0
   }
   orientation: ORIENTATION_E
+  displayName: "Security Locker Pad"
   idRef {
     id: "53db098464343133c9a404ce"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }
@@ -605,7 +611,7 @@ props {
     z: -1
   }
   orientation: ORIENTATION_S
-  displayName: "Basement Storage door"
+  displayName: "Security Locker Door"
   idRef {
     id: "53db0bb464343133c9a404ef"
   }
@@ -614,7 +620,7 @@ props {
     interactionRadius: 1
     doorPoint {
       doorState: false
-      aiOnlyDoor: false
+      aiOnlyDoor: true
       doorSound: "DoorSlide"
       doorSoundBundle: "props"
     }
@@ -1209,11 +1215,24 @@ props {
 props {
   name: "barrens_vehicle_headTurnerMotorcycle01"
   gridPoint {
-    x: -6
+    x: -5
     y: 0
     z: -14
   }
   orientation: ORIENTATION_N
+  idRef {
+    id: "53dbd214643431b7e5058f79"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 5
+      inspectText: "Some hot shots in Sales and Marketing have really cool bikes."
+      disableAfterInteracting: false
+    }
+  }
   lod: 0
 }
 props {
@@ -1709,16 +1728,19 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    interactionIcon: InteractionIcon_Warp
+    conversationPoint {
+      conversationID: "53dbcdcc643431b7e5058f62"
+      turnToFace: true
+    }
   }
   lod: 0
 }
 props {
   name: "sleekOffice_wall_elevatorDoor01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   displayName: "Office Garage Elevator door"
@@ -1735,9 +1757,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1748,9 +1770,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1761,9 +1783,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1774,9 +1796,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1787,9 +1809,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1800,9 +1822,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1813,9 +1835,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1826,9 +1848,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1839,9 +1861,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1852,9 +1874,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1865,9 +1887,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1878,9 +1900,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1891,9 +1913,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1904,9 +1926,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1917,9 +1939,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1930,9 +1952,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1943,9 +1965,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1956,9 +1978,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1969,9 +1991,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1982,9 +2004,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -1995,9 +2017,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2008,9 +2030,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2021,9 +2043,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2034,9 +2056,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2047,9 +2069,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -40
+    x: -72
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2060,9 +2082,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -38
+    x: -70
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2073,9 +2095,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2086,9 +2108,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2099,9 +2121,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2112,9 +2134,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2125,9 +2147,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2138,9 +2160,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2151,9 +2173,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2164,9 +2186,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2177,9 +2199,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2190,9 +2212,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2203,9 +2225,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2216,9 +2238,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2229,9 +2251,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2242,9 +2264,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2255,9 +2277,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2268,9 +2290,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2281,9 +2303,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2294,9 +2316,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -44
+    x: -76
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2307,9 +2329,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2320,9 +2342,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2333,9 +2355,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2346,9 +2368,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2359,9 +2381,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2372,9 +2394,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2385,9 +2407,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2398,9 +2420,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2411,9 +2433,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2424,9 +2446,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2437,9 +2459,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2450,9 +2472,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2463,9 +2485,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2476,9 +2498,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2489,9 +2511,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2502,9 +2524,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2515,9 +2537,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2528,9 +2550,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2541,9 +2563,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2554,9 +2576,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2567,9 +2589,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2580,9 +2602,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -48
+    x: -80
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2593,9 +2615,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2606,9 +2628,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2619,9 +2641,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2632,9 +2654,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2645,9 +2667,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2658,9 +2680,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2671,9 +2693,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2684,9 +2706,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2697,9 +2719,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2710,9 +2732,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2723,9 +2745,9 @@ props {
 props {
   name: "sleekOffice_floor_reflected01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2736,9 +2758,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteEdge05"
   gridPoint {
-    x: -45
+    x: -77
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -2746,9 +2768,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteDoorBack02"
   gridPoint {
-    x: -43
+    x: -75
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -2756,9 +2778,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteDoorFront01"
   gridPoint {
-    x: -41
+    x: -73
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -2766,9 +2788,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteEdge05"
   gridPoint {
-    x: -39
+    x: -71
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2779,9 +2801,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteEdge05"
   gridPoint {
-    x: -47
+    x: -79
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2792,9 +2814,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteEdge05"
   gridPoint {
-    x: -49
+    x: -81
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2805,9 +2827,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -16
+    z: -19
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2815,9 +2837,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindowEnd01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -18
+    z: -21
   }
   orientation: ORIENTATION_N
   lod: 0
@@ -2825,9 +2847,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteConnector01"
   gridPoint {
-    x: -50
+    x: -82
     y: 0
-    z: -19
+    z: -22
   }
   orientation: ORIENTATION_W
   lod: 0
@@ -2835,9 +2857,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -14
+    z: -17
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2848,9 +2870,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -12
+    z: -15
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2861,9 +2883,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindowEnd01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -10
+    z: -13
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2871,9 +2893,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindowEnd01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -6
+    z: -9
   }
   orientation: ORIENTATION_N
   idRef {
@@ -2884,9 +2906,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -4
+    z: -7
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2897,9 +2919,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -2
+    z: -5
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2910,9 +2932,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindow01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: 0
+    z: -3
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2923,9 +2945,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteWindowEnd01"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: 2
+    z: -1
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2936,9 +2958,9 @@ props {
 props {
   name: "sleekOffice_wall_whiteEdge05"
   gridPoint {
-    x: -51
+    x: -83
     y: 0
-    z: -8
+    z: -11
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2949,9 +2971,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk02"
   gridPoint {
-    x: -47
+    x: -79
     y: 0
-    z: -11
+    z: -14
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2959,9 +2981,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk02"
   gridPoint {
-    x: -47
+    x: -79
     y: 0
-    z: 1
+    z: -2
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2972,9 +2994,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk02"
   gridPoint {
-    x: -47
+    x: -79
     y: 0
-    z: -5
+    z: -8
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2985,9 +3007,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -11
+    z: -14
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2995,9 +3017,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk01"
   gridPoint {
-    x: -42
+    x: -74
     y: 0
-    z: -5
+    z: -8
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3008,9 +3030,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk01"
   gridPoint {
-    x: -41
+    x: -73
     y: 0
-    z: 1
+    z: -2
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3021,9 +3043,9 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: -46
+    x: -78
     y: 0
-    z: 5
+    z: 2
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -3035,4 +3057,271 @@ props {
       b: 1
     }
   }
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd304643431b7e5058f7a"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd304643431b7e5058f7b"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd304643431b7e5058f7c"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd304643431b7e5058f7d"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd304643431b7e5058f7e"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd306643431b7e5058f7f"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd306643431b7e5058f80"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd306643431b7e5058f81"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd306643431b7e5058f82"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd306643431b7e5058f83"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd309643431b7e5058f84"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd309643431b7e5058f85"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd309643431b7e5058f86"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd309643431b7e5058f87"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd309643431b7e5058f88"
+  }
+  lod: 0
+}
+props {
+  name: "office_furniture_rectangleDesk01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dbd30f643431b7e5058f89"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -67
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -67
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dbd345643431b7e5058f8a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 3
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 5
+      inspectText: "$(story.pc_salutation) $(story.pc_firstname) $(story.pc_lastname)\nJunior $(story.pc_alcamai)"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -65
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd349643431b7e5058f8b"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -63
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53dbd35a643431b7e5058f8c"
+  }
+  lod: 0
 }
