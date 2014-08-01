@@ -1,0 +1,177 @@
+idRef {
+  id: "53db1e5d64343199d131b7ba"
+}
+ui_name: "s001_basement_security"
+nodes {
+  idRef {
+    id: "53db1e7664343199d131b7c0"
+  }
+  index: 0
+  text: "{{GM}}Two security guards from BHS (a local security subsidiary of a much larger outfit) are sitting at a table, playing poker, apparently on a break. They nod at you.{{/GM}}\n\nMorning, $(story.pc_polite_salutation)! Everything going swimmingly?"
+  branches {
+    responseText: "Morning, boys! Except for a slight case of jet lag, everything\'s just great!"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Ugh, don\'t talk to me until I\'ve had my first cup of soykaf."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Security{{/CC}} Not that it\'s any of my business, but your partner\'s holster seems to be missing its ID tag."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 14
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "53db26dd64343199d131b868"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53db1dfd64343199d131b7b8"
+  }
+}
+nodes {
+  idRef {
+    id: "53db214364343199d131b7d9"
+  }
+  index: 1
+  text: "{{GM}}They nod at you again, and return to their game.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53db225564343199d131b7df"
+  }
+  index: 2
+  text: "Really? Oh drek, you\'re right, $(story.pc_polite_salutation). I\'ve got to get a new one from the security locker."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53db1c8364343199d131b7b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53db23bb64343199d131b803"
+  }
+  index: 3
+  text: "Not in the middle of the game you don\'t."
+  branches {
+    responseText: "As long as you get it done."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I can pick it up for you. What was today\'s code again?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53db1dfd64343199d131b7b8"
+  }
+}
+nodes {
+  idRef {
+    id: "53db243164343199d131b807"
+  }
+  index: 4
+  text: "0310, I think. Or was that yesterday\'s? I don\'t know why they need to keep changing them every single day, once a week ought to be enough."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53db1c8364343199d131b7b7"
+  }
+  actions {
+    ops {
+      functionName: "Add Item to Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "alcamaiSecurityLockerCode"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

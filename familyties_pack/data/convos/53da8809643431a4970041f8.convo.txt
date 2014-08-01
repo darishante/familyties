@@ -7,7 +7,7 @@ nodes {
     id: "53da883b643431a4970041fe"
   }
   index: 0
-  text: "{{GM}}Augusta Lubbock is the security guard on duty at the back door. She eyes you with slight bemusement.{{/GM}}\n\n... Good Morning, $(story.pc_salutation) $(story.pc_lastname). How was your vacation?"
+  text: "{{GM}}Augusta Lubbock is one of the fairly few orks employed by Alcamai, and the security guard on duty at the back door. She eyes you with slight bemusement.{{/GM}}\n\n... Good Morning, $(story.pc_salutation) $(story.pc_lastname). How was your vacation?"
   branches {
     responseText: "{{CC}}Etiquette: Corporate{{/CC}} Skiing all day, partying all night, you know how it goes. Buzz me in?"
     conditions {

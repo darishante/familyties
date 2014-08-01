@@ -555,7 +555,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Seattle:Security/ElfFemaleExecSecurity"
+    prefab_name: "Berlin:Aztechnology/OrkFemaleAztechGuard"
     character_sheet_id: "BaseCivilian"
     character_mod {
       stats {
@@ -577,6 +577,7 @@ characters {
         move_speed: 0
       }
       skills {
+        etiquette_corporate: 0
       }
       specializations {
       }
@@ -584,15 +585,113 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "Civilians"
+    team_id: "BHS"
     char_name: "Augusta"
     pc_spawn_number: -1
     portrait {
-      filename: "pc_elffemale_06_platinum"
+      filename: "pc_orkfemale_05b_blondedreads"
     }
     description_bio: "Receptionist for the Alcamai Cosmetics office in Omaha"
     karma: 6
     is_prop_character: true
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "53db1c8364343199d131b7b7"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Security/HumanMaleSecurity"
+    character_sheet_id: "Lonestar_Lv1_Human_Pistol"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Pi 1 Fichetti Security 500"
+    }
+    team_id: "BHS"
+    char_name: "Jed"
+    pc_spawn_number: -1
+    portrait {
+      filename: "generic_humanmale_courier"
+    }
+    karma: 30
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53db1dfd64343199d131b7b8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 2
+    conversationPoint {
+      conversationID: "53db1e5d64343199d131b7ba"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Security/HumanMaleSecurity"
+    character_sheet_id: "Lonestar_Lv1_Human_Pistol"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Pi 1 Fichetti Security 500"
+    }
+    team_id: "BHS"
+    char_name: "Henry"
+    pc_spawn_number: -1
+    portrait {
+      filename: "generic_humanmale_rent-a-cop"
+    }
+    karma: 30
   }
 }
 goals {
@@ -644,26 +743,26 @@ allow_drawn_weapons: false
 team_affiliations {
   team_name: "Shadowrunners"
   affiliation: 0
-  affiliation: 1
-  affiliation: 1
   affiliation: 0
-}
-team_affiliations {
-  team_name: "Gangers"
-  affiliation: 1
-  affiliation: 0
-  affiliation: 1
-  affiliation: 0
-}
-team_affiliations {
-  team_name: "LoneStar"
-  affiliation: 1
-  affiliation: 1
   affiliation: 0
   affiliation: 0
 }
 team_affiliations {
-  team_name: "Civilians"
+  team_name: "BHS"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Alcamai"
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+  affiliation: 0
+}
+team_affiliations {
+  team_name: "Omaha PD"
   affiliation: 0
   affiliation: 0
   affiliation: 0

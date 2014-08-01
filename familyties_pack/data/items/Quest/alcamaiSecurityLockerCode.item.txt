@@ -1,0 +1,8 @@
+id: "alcamaiSecurityLockerCode"
+type: ItemType_QuestItem
+uirep {
+  name: "Security Code"
+  description: "Access code for the security locker is 0310 (or something like it maybe?)"
+}
+credentials: 0
+sorting_group: "Quest"
