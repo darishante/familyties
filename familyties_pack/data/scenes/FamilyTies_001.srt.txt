@@ -470,10 +470,10 @@ regions {
 regions {
   name: "Camera Region"
   position {
-    x: -13
-    y: 5
-    width: 19
-    height: -18
+    x: -28
+    y: 36
+    width: 35
+    height: -63
   }
   enabledAtStart: true
   is_camera_region: true
