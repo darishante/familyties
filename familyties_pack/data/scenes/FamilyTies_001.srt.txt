@@ -749,6 +749,126 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "gol_GetDisguise"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53dc9e11643431f9fc06db0b"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Some Clothes Suitable for Work"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dca053643431f9fc06db23"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "gol_GetDisguise"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53dca104643431f9fc06db26"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Some Clothes Suitable for Work"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dca245643431f9fc06db27"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "OfficeHallway"
   position {
@@ -796,10 +916,10 @@ regions {
 regions {
   name: "Basement Camera Region"
   position {
-    x: -28
-    y: 13
-    width: 34
-    height: -32
+    x: -25
+    y: 27
+    width: 30
+    height: -45
   }
   enabledAtStart: true
   is_camera_region: true
@@ -1117,7 +1237,7 @@ characters {
   gridPoint {
     x: -16
     y: 0
-    z: 6
+    z: 5
   }
   orientation: ORIENTATION_W
   idRef {
@@ -1210,6 +1330,173 @@ characters {
     karma: 30
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Extras/HumanFemaleWorkingclassJacket"
+    character_sheet_id: "Errant_Lv1_Human_Pistol"
+    equipment_sheet_id: "Errant_Lv1_Pistol_NoGrenade"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    team_id: "Omaha PD"
+    char_name: "Det. Tamaryk"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanfemale_02b_detective"
+    }
+    karma: 37
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -2
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Extras/HumanFemaleWorkingclass"
+    character_sheet_id: "Errant_Lv1_Human_Mage"
+    equipment_sheet_id: "Errant_Lv1_Spellcasting"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    team_id: "Omaha PD"
+    char_name: "Det. Wainwright"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanfemale_11"
+    }
+    portrait_code_override: ""
+    karma: 43
+  }
+}
 goals {
   name: "Get In The Office"
   type: GoalType_Primary
@@ -1284,10 +1571,33 @@ team_affiliations {
   affiliation: 0
   affiliation: 0
 }
+scene_disguises {
+  id: "Corporate Salaryman"
+  type: ItemType_Disguise
+  uirep {
+    icon: "icon_outfit_disguise_corporate"
+    name: "Corporate Salaryman"
+    description: "Grey suit, grey tie, grey skin."
+  }
+  gear_bundle: "DisguiseSalaryman"
+  outfit_texture: "disguise_salaryman"
+  sorting_group: "Disguises"
+}
+scene_disguises {
+  id: "Scientist"
+  type: ItemType_Disguise
+  uirep {
+    icon: "icon_outfit_disguise_scientist"
+    name: "Scientist / Medical"
+    description: "Scrubs and a lab coat. Must provide own clipboard."
+  }
+  gear_bundle: "DisguiseScientist"
+  outfit_texture: "disguise_scientist"
+  gear_prefab: "gear_disguise_scientist"
+  sorting_group: "Disguises"
+}
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

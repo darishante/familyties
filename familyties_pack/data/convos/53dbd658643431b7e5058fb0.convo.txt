@@ -9,7 +9,7 @@ nodes {
   index: 0
   text: "Security Locker - Authorized Use Only"
   branches {
-    responseText: "0310"
+    responseText: "0301"
     nextNodeIndex: 1
   }
   branches {

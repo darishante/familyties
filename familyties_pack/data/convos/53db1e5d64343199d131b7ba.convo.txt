@@ -172,6 +172,57 @@ nodes {
     }
   }
 }
+nodes {
+  idRef {
+    id: "53dca362643431f9fc06db78"
+  }
+  index: 5
+  text: "Hey $(story.pc_polite_salutation), turns out I\'d just put the tag on the wrong side of the holster. So I\'ve got it now, no need to worry!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53db1c8364343199d131b7b7"
+  }
+}
 roots {
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor Has Item"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "alcamaiSecurityLockerCode"
+          }
+        }
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 5
 }
