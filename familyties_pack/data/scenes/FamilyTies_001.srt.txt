@@ -115,6 +115,53 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "pc_jobtitle"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Append (string)"
+              args {
+                call_value {
+                  functionName: "Get Story Variable (string)"
+                  args {
+                  }
+                  args {
+                    string_value: "pc_alcamai"
+                  }
+                }
+              }
+              args {
+                string_value: " "
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "pc_careerpath"
+              }
+            }
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -518,7 +565,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "liftDownToGarage"
@@ -596,6 +643,20 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
+      }
+    }
   }
   isActive: true
   idRef {
@@ -603,7 +664,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "gol_GetToMyDesk"
@@ -683,6 +744,20 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
+      }
+    }
   }
   isActive: true
   idRef {
@@ -747,7 +822,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "gol_GetDisguise"
@@ -798,6 +873,20 @@ triggers {
             int_value: 1
           }
         }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
       }
     }
   }
@@ -860,10 +949,321 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
+      }
+    }
   }
   isActive: true
   idRef {
     id: "53dca245643431f9fc06db27"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "interrogationStart"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53dbd36e643431b7e5058f8d"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53dcac89643431f9fc06dba0"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53dc96ed643431f9fc06dac9"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dcb330643431f9fc06dbce"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkForTroll"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "OR"
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 4
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 3
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.2
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "racismFactor"
+          }
+        }
+      }
+      args {
+        string_value: ", and probably already making snap judgments due to your goblinoid features"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dd11786434313d23a40953"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "checkForElfOrDwarf"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "OR"
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "racismFactor"
+          }
+        }
+      }
+      args {
+        string_value: ", and probably already slightly suspicious because of your metahuman heritage"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53dd14386434313d23a40993"
   }
   elseActions {
   }
@@ -1150,9 +1550,9 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 0
+    x: -70
     y: 0
-    z: -2
+    z: -7
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1497,6 +1897,70 @@ characters {
     karma: 43
   }
 }
+variables {
+  float_value: 2
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "Suspicion"
+    typeName: "float"
+  }
+}
+variables {
+  string_value: ""
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "racismFactor"
+    typeName: "string"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "currentLoop"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "motive"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "means"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "opportunity"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "investigation"
+    typeName: "int"
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "nextLoop"
+    typeName: "int"
+  }
+}
 goals {
   name: "Get In The Office"
   type: GoalType_Primary
@@ -1523,7 +1987,7 @@ mapName: "FamilyTies_001"
 parentStory: ""
 scene_title: "2055: BACK AT THE OFFICE"
 scene_subtitle: ""
-scene_synopsis: "After steering a particularily vicious project to completion the higher ups at Alcamai Cosmetics gave you an entire week of vacation. It was almost enough to make you relax and forget the pressures of your job.\n\nYour flight back to Omaha was delayed by nearly 12 hours, so instead of a well deserved night\'s sleep in your own bed, you ended up having a horrible red-eye through some nasty weather. From the airport you rushed into a taxi and just barely made it to the basement entrance in time, still in your worn-out holiday duds..."
+scene_synopsis: "After steering a particularily vicious project to completion the higher ups at Alcamai Cosmetics gave you an entire week of vacation. It was almost enough to make you relax and forget the pressures of your job.\n\nYour flight back to Omaha was delayed by nearly 12 hours, so instead of a well deserved night\'s sleep in your own bed, you ended up having a soul-crushing layover in Seattle and then a horrible red-eye through some supernaturally nasty weather. From the airport you rushed into a taxi and just barely made it to the basement entrance in time, still in your worn-out holiday duds..."
 scene_image: ""
 scene_continue_button_skip: false
 scene_restore_runner_health: false
@@ -1598,6 +2062,8 @@ scene_disguises {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

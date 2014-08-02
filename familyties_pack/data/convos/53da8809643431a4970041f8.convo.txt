@@ -192,7 +192,7 @@ nodes {
         }
       }
       args {
-        string_value: "analyst"
+        string_value: "Assistant"
       }
     }
     ops {
@@ -266,7 +266,7 @@ nodes {
         }
       }
       args {
-        string_value: "researcher"
+        string_value: "Researcher"
       }
     }
     ops {
@@ -340,7 +340,7 @@ nodes {
         }
       }
       args {
-        string_value: "manager"
+        string_value: "Manager"
       }
     }
     ops {

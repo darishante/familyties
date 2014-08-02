@@ -73,6 +73,22 @@ nodes {
         }
       }
     }
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 0.1
+        }
+      }
+    }
     nextNodeIndex: 1
     inputBypass: true
     auxiliaryLink: true

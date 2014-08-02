@@ -380,9 +380,9 @@ worldMapLocation {
 }
 mapName: "Family_Ties_000"
 parentStory: ""
-scene_title: "HISTORY: HIRED BY A CORPORATION"
+scene_title: "2051: HIRED BY A CORPORATION"
 scene_subtitle: ""
-scene_synopsis: "It\'s hard to believe that even from beginnings as humble as yours one can find a job at a prestigious company. Okay, Alcamai Cosmetics is not exactly Aztechnology, but it\'s regular pay and maybe even the beginning of a career.\n\nPlease enter all the required information. Unlike the huddled SINless masses, you have a real first name, last name, social security number and the like. Individuality is overrated."
+scene_synopsis: "It\'s hard to believe that even from beginnings as humble as yours one can find a job at a prestigious company. Okay, Alcamai Cosmetics is not exactly Aztechnology, but it\'s regular pay and maybe even the beginning of a career.\n\n(Please enter all the required information. Unlike the huddled SINless masses, you have a real first name, last name, social security number and the like. Individuality is overrated.)"
 scene_image: ""
 scene_continue_button_skip: false
 scene_restore_runner_health: false
@@ -432,6 +432,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

@@ -3267,7 +3267,7 @@ props {
     inspectInteraction {
       dispalyTime: 0
       fadeTime: 5
-      inspectText: "$(story.pc_salutation) $(story.pc_firstname) $(story.pc_lastname)\nJunior $(story.pc_alcamai)"
+      inspectText: "$(story.pc_salutation) $(story.pc_firstname) $(story.pc_lastname)\n$(story.pc_jobtitle)"
       disableAfterInteracting: false
     }
   }

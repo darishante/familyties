@@ -12,6 +12,18 @@ variables {
   }
 }
 variables {
+  name: "pc_careerpath"
+  typeName: "string"
+  defaultValue {
+    string_value: "Administrative"
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "pc_careerpath"
+      typeName: "string"
+    }
+  }
+}
+variables {
   name: "pc_firstname"
   typeName: "string"
   defaultValue {
@@ -19,6 +31,18 @@ variables {
     variableref_value {
       scope: TsVariableScope_Story
       name: "pc_firstname"
+      typeName: "string"
+    }
+  }
+}
+variables {
+  name: "pc_jobtitle"
+  typeName: "string"
+  defaultValue {
+    string_value: "Assistant"
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "pc_jobtitle"
       typeName: "string"
     }
   }

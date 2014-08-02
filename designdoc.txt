@@ -14,11 +14,10 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 
 2. Historia
 
-
 2033 - 2047 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
 
 2043 - 2047 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
-o	keskiluokkainen perheenäiti; trolli
+o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu)
 o	taksonomian tutkija; örkki (academic)
 o	tv-juontaja; haltia (socialite)
 o	Knight Errantin turvamies Seattlessa; ihminen (security)
@@ -32,17 +31,29 @@ Etenee muiden perheenjäsenten kautta, hahmosta tulee shadowrunner ja
 koettaa selvittää, mitä hämärää orpokodissa on hänelle ja hänen 
 sisaruksilleen oikein tehty.
 
+3. Rakenne
 
-3. Hahmot
+Tarkoitus on, että skenaariossa kulkee mukana jatkuvasti hahmon tekemiä valintoja, ja niillä on selkeitä seurauksia. Esim: hahmo on luultavasti ekasta skenusta lähtien etsintäkuulutettu, mutta etsinnän vakavuus riippuu siitä, mitä hahmo on tehnyt. Poliisimurhaajaa haetaan todella innokkaasti, kadonnutta satunnaista epäiltyä vähemmän.
 
-3.1 Alcamai Cosmetics
+
+
+4. Hahmot
+
+4.1 Alcamai Cosmetics
 
 Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko myyjö, tutkija tai nuorempi manageri
 
 Augusta - Turvahenkilö, respatyöntekijä
 
+Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia
 
-4. Tarina ja lokaatiot
+Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia
+
+[Näistä kahdesta etsivästä voisi olla kiva tehdä jatkuvia hahmoja.]
+
+
+
+5. Tarina ja lokaatiot
 
  - Alcamai, josta saadaan potkut
  - murhatun sisaruksen koti Red Hillissä
@@ -50,13 +61,17 @@ Augusta - Turvahenkilö, respatyöntekijä
 
 
 
-5. Skenaarioiden rundown
+6. Skenaarioiden rundown
 
-5.1 Alcamai
+6.1 Alcamai
 
  - sisään
  - hanki valepuku
    * jos ei onnistu, poliisin epäluulo suurempi
  - optional: löydä ase
+ - selviä poliisikuulustelusta
 
+6.2 Siskon koti
+
+ - murhapaikka Red Hillissä
 
