@@ -246,7 +246,7 @@ nodes {
     id: "53da9abb64343190a831b81a"
   }
   index: 2
-  text: "Hope you enjoy returning to work, doctor! Oh, and despite you guys in the research division having a lax dress code, those clothes are not going to cut it. If your manager catches you looking like that there\'s going to be hell to pay."
+  text: "Hope you enjoy returning to work, doctor! Oh, and despite you guys in the research having a lax dress code, those clothes are not going to cut it. If your manager catches you looking like that there\'s going to be hell to pay."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53da6bbe643431a4970041c4"

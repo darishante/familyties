@@ -4295,5 +4295,13 @@ props {
   idRef {
     id: "53dcaa72643431f9fc06db8b"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "Grenade 1 (Flash)"
+      destroyOnPickup: false
+    }
+  }
   lod: 0
 }
