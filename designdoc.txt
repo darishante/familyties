@@ -17,11 +17,11 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 2033 - 2047 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
 
 2043 - 2047 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
-o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu)
-o	taksonomian tutkija; örkki (academic)
-o	tv-juontaja; haltia (socialite)
-o	Knight Errantin turvamies Seattlessa; ihminen (security)
-o	shadowrunner, kääpiö (shadowrun)
+o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu) - Brooklyn
+o	taksonomian tutkija; örkki (academic) - Noah
+o	tv-juontaja; haltia (socialite) - Alexander
+o	Knight Errantin turvamies Seattlessa; ihminen (security) - Grace
+o	shadowrunner, kääpiö (shadowrun) - Hannah
 o	korporaatti, pelaajahahmo (corporate / socialite / academic)
 
 Pelaajahahmo työskentelee aluksi Alcamai Cosmetics -firmalla Omahassa. Lentää sieltä ulos ekan tehtävän aikana. Joku on murhannut jonkun sen perheenjäsenen, jostain syystä sitä epäillään - jotain Alcamain firman salaisuuksia löytyy 
