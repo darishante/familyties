@@ -1,5 +1,29 @@
 id: "Family Ties content"
 variables {
+  name: "AlcamaiResult"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "AlcamaiResult"
+      typeName: "int"
+    }
+  }
+}
+variables {
+  name: "OmahaArrestResult"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "OmahaArrestResult"
+      typeName: "int"
+    }
+  }
+}
+variables {
   name: "pc_alcamai"
   typeName: "string"
   defaultValue {
@@ -83,7 +107,22 @@ variables {
     }
   }
 }
+variables {
+  name: "WantedLevel"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "WantedLevel"
+      typeName: "int"
+    }
+  }
+}
+description: "The origin of a shadowrunner."
 startScene: "Family_Ties_000"
+allowCharacterGen: true
+useDefaultEquipment: false
 resalePercent: 75
 upgradeToThreeApLevel: 117
 character_roster {

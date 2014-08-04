@@ -1,0 +1,19 @@
+idRef {
+  id: "53dfb61c6434313c15058edf"
+}
+ui_name: "s001_wainwright"
+nodes {
+  idRef {
+    id: "53dfb6236434313c15058ee5"
+  }
+  index: 0
+  text: "Unless you want to confess to something, I suggest you stop wasting my time."
+  branches {
+    responseText: "Nevermind."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

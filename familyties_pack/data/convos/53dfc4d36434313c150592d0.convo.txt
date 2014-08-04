@@ -1,0 +1,19 @@
+idRef {
+  id: "53dfc4d36434313c150592d0"
+}
+ui_name: "s001_oldtimer_test"
+nodes {
+  idRef {
+    id: "53dfc4dc6434313c150592d6"
+  }
+  index: 0
+  text: "{{GM}}A man of about 50 dressed in an overall is carrying a mechanics kit. He speaks with a definite English accent.{{/GM}}\n\nGood day to you, $(story.pc_polite_salutation). I\'m repairing your air conditioning units."
+  branches {
+    responseText: "Right."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

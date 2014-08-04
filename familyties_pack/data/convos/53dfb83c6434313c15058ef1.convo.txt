@@ -1,0 +1,51 @@
+idRef {
+  id: "53dfb83c6434313c15058ef1"
+}
+ui_name: "s001_introspection_after_interrogation"
+nodes {
+  idRef {
+    id: "53dfb8566434313c15058ef7"
+  }
+  index: 0
+  text: "The detectives leave you alone in your office. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53dfb96c6434313c15058eff"
+  }
+  index: 1
+  text: "Someone left your old nickname $(l.name) on the scene of a murder. It\'s a ... what?\n\nCalling card? A taunt? An attempt to frame you?\n\nA plea for help?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53dfba796434313c15058f03"
+  }
+  index: 2
+  text: "Who would even know the name $(l.name)? Only your sisters and brothers, you\'d guess. Probably. It\'s been so many years...\n\nBrooklyn is dead.\n\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53dfbae66434313c15058f06"
+  }
+  index: 3
+  text: "The Seattle PD will try to catch the murderer.\n\nThat\'s not enough.\n\nYou\'re going to catch the next flight to Seattle."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

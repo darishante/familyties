@@ -1,6 +1,6 @@
-minX: -83
+minX: -102
 minZ: -22
-numX: 86
+numX: 137
 numZ: 39
 props {
   name: "secretLab_wall_windowClosedEnd01"
@@ -3235,8 +3235,14 @@ props {
     z: -1
   }
   orientation: ORIENTATION_S
+  displayName: "PCs Desk"
   idRef {
     id: "53dbd30f643431b7e5058f89"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
   }
   lod: 0
 }
@@ -4302,6 +4308,140 @@ props {
       itemName: "Grenade 1 (Flash)"
       destroyOnPickup: false
     }
+  }
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -102
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "asylum_floor_padded01"
+  gridPoint {
+    x: -100
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53df750b643431fe85059bd4"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 31
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 31
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc2586434313c150592c5"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc25a6434313c150592c6"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc25b6434313c150592c7"
+  }
+  lod: 0
+}
+props {
+  name: "haven_building_03base02"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 31
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc2a46434313c150592c8"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc2a46434313c150592c9"
+  }
+  lod: 0
+}
+props {
+  name: "haven_building_03base02"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc2a76434313c150592ca"
+  }
+  lod: 0
+}
+props {
+  name: "haven_building_03base02"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53dfc2c36434313c150592cb"
   }
   lod: 0
 }

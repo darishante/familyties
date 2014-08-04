@@ -353,7 +353,7 @@ nodes {
     id: "53dd18346434313d23a409d9"
   }
   index: 3
-  text: "{{GM}}The detectives share a quick glance; slightly concerned maybe, but not really changing their approach.{{/GM}}"
+  text: "{{GM}}The detectives share a quick glance; slightly concerned that you are politically connected. They don\'t immediately apologize and leave, however.{{/GM}}"
   branches {
     responseText: ""
     nextNodeIndex: 8
@@ -481,7 +481,7 @@ nodes {
     id: "53dd18d16434313d23a409dd"
   }
   index: 6
-  text: "{{GM}}The detectives share a quick glance; slightly concerned maybe, but not really changing their approach.{{/GM}}"
+  text: "{{GM}}The detectives share a quick glance; slightly concerned that you are politically connected. They don\'t immediately apologize and leave, however.{{/GM}}"
   branches {
     responseText: ""
     nextNodeIndex: 8
@@ -811,7 +811,7 @@ nodes {
     id: "53dd1d816434313d23a40a17"
   }
   index: 8
-  text: "We need to ask you a couple of questions, concerning your professional expertise, your whereabouts in the past 24 hours and your family.\n\nDEBUG: $(scene.Suspicion)\nCurrent loop $(scene.currentloop)\nNext loop: $(scene.nextloop)\nInvestigation: $(scene.investigation)"
+  text: "$(scene.mainInterrogation)\n\nDEBUG: $(scene.Suspicion)\nCurrent loop $(scene.currentloop)\nNext loop: $(scene.nextloop)\nInvestigation: $(scene.investigation)"
   branches {
     responseText: "Professionally, my title is $(story.pc_jobtitle), what about my expertise?"
     actions {
@@ -827,6 +827,20 @@ nodes {
         }
         args {
           int_value: 1
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "mainInterrogation"
+            }
+          }
+        }
+        args {
+          string_value: "What about our other questions?"
         }
       }
     }
@@ -852,6 +866,20 @@ nodes {
         }
         args {
           int_value: 2
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "mainInterrogation"
+            }
+          }
+        }
+        args {
+          string_value: "What about our other questions?"
         }
       }
     }
@@ -907,6 +935,20 @@ nodes {
           int_value: 1
         }
       }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "mainInterrogation"
+            }
+          }
+        }
+        args {
+          string_value: "What about our other questions?"
+        }
+      }
     }
     nextNodeIndex: 7
     onlyOnce: true
@@ -932,6 +974,20 @@ nodes {
           int_value: 4
         }
       }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "mainInterrogation"
+            }
+          }
+        }
+        args {
+          string_value: "What about our other questions?"
+        }
+      }
     }
     nextNodeIndex: 42
     onlyOnce: true
@@ -943,11 +999,6 @@ nodes {
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc9981643431f9fc06daca"
-  }
-  actions {
-    ops {
-      functionName: "No Effect"
-    }
   }
 }
 nodes {
@@ -3312,7 +3363,7 @@ nodes {
           }
         }
         args {
-          float_value: 0.1
+          float_value: 0.2
         }
       }
       ops {
@@ -3345,6 +3396,104 @@ nodes {
       }
     }
     nextNodeIndex: 26
+  }
+  branches {
+    responseText: "{{CC}}Charisma 4{{/CC}} Well, maybe not exactly an old friend. However, here\'s the number I got from a new friend I met at the bar. She can vouch for the couple of hours we spent together."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 0.1
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "currentLoop"
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "nextLoop"
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 7
+    auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -4036,7 +4185,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "{{CC}}Intelligence 3 (Lie){{/CC}} Nope, doesn\'t ring a bell."
+    responseText: "{{CC}}Intelligence 3 (Lie){{/CC}} \"$(s.name)\" ... nope, doesn\'t ring a bell."
     conditions {
       ops {
         functionName: "Compare Actor Attribute"
@@ -4438,8 +4587,23 @@ nodes {
           float_value: 1.5
         }
       }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 63
+    auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Fight{{/CC}} The hell with this."
@@ -4647,7 +4811,7 @@ nodes {
     id: "53dde02c643431cf41e511dd"
   }
   index: 44
-  text: "All right, let\'s do this then. \n\n$(story.pc_firstname) $(story.pc_familyname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
+  text: "All right, let\'s do this then. \n\n$(story.pc_firstname) $(story.pc_lastname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc96ed643431f9fc06dac9"
@@ -4658,10 +4822,1606 @@ nodes {
     id: "53ddfb1464343133600597fd"
   }
   index: 45
-  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation.\n\nAs to what this is really about ... I\'m sorry to inform you that your sister Brooklyn is dead.\n\nIt seems that she has been murdered.\n\nIt happened in Seattle during the last 24 hours.\n\nDEBUG: $(scene.suspicion)"
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 46
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          float_value: 3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 47
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          float_value: 4
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 52
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 57
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: 62
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: 63
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 66
+  }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53de2527643431346ae50ae7"
+  }
+  index: 46
+  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation. As to what this is really about ... \n\nI\'m sorry to inform you that your sister Brooklyn is dead. She has been murdered.  It happened in her home in Seattle during the last 24 hours.\n\nAs for the \"$(l.name)\", bit, it was found written on the scene. We have been asked by Seattle authorities to look into this matter in Omaha.\n\nDEBUG: $(scene.suspicion)"
+  branches {
+    responseText: "Brooklyn is what now? Is this your sick idea of a joke?"
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "... I see. Thank you for being so very upfront about it, and not acting like a total dick at all."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I was afraid that was where we were heading. You mind leaving me alone now? "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "(Say nothing)"
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df2a846434317875058fc5"
+  }
+  index: 47
+  text: "I understand that you\'re upset. However, Seattle PD wanted us to talk to you, since there are several factors here which make you a person of interest."
+  branches {
+    responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
+    nextNodeIndex: 48
+  }
+  branches {
+    responseText: "Lawyer. Right now."
+    nextNodeIndex: 49
+  }
+  branches {
+    responseText: "{{CC}}Charisma 2{{/CC}} Surely you don\'t really think I\'m the one you\'re looking for?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 50
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df3ba3643431277b0592a7"
+  }
+  index: 48
+  text: "It is possible, yes."
+  branches {
+    responseText: "Go to hell."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I didn\'t."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df3a17643431277b058fc3"
+  }
+  index: 49
+  text: "Oh you\'ll get a lawyer all right."
+  branches {
+    responseText: " "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df468e643431277b059578"
+  }
+  index: 50
+  text: "... Probably not. We\'re going to request you to stay in Omaha, in case we need to ask some more questions.\n\nWe\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname)."
+  branches {
+    responseText: "All right, I can do that. Now, excuse me please?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You are going to catch the one who really did it, right?"
+    nextNodeIndex: 51
+  }
+  branches {
+    responseText: "Goodbye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df468e643431277b05957c"
+  }
+  index: 51
+  text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df432a643431277b05943d"
+  }
+  index: 52
+  text: "The Seattle PD has tagged you as a person of interest in the case, and I can see why."
+  branches {
+    responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
+    nextNodeIndex: 53
+  }
+  branches {
+    responseText: "Lawyer. Right now."
+    nextNodeIndex: 54
+  }
+  branches {
+    responseText: "{{CC}}Charisma 3{{/CC}} Look, you tell me my sister is dead. I haven\'t even seen her in years, and then you turn up to tell me she\'s been murdered! I had nothing to do with it! I was in the same city, yes, but I didn\'t even know she lived in Seattle these days!"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 55
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df432a643431277b059440"
+  }
+  index: 53
+  text: "That\'s what it looks like to us."
+  branches {
+    responseText: "Go to hell."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I didn\'t."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df432a643431277b059449"
+  }
+  index: 54
+  text: "Oh you\'ll get a lawyer all right."
+  branches {
+    responseText: " "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df46ca643431277b059598"
+  }
+  index: 55
+  text: "We\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname).\n\nWe\'ll have to look into the matter further. As of now, don\'t leave town."
+  branches {
+    responseText: "All right, I can do that. Now, excuse me please?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You are going to catch the one who really did it, right?"
+    nextNodeIndex: 56
+  }
+  branches {
+    responseText: "Goodbye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df46ca643431277b05959c"
+  }
+  index: 56
+  text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df4022643431277b059413"
+  }
+  index: 57
+  text: "And didn\'t you have quite the interesting story to tell."
+  branches {
+    responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
+    nextNodeIndex: 58
+  }
+  branches {
+    responseText: "Lawyer. Right now."
+    nextNodeIndex: 59
+  }
+  branches {
+    responseText: "{{CC}}Charisma 4{{/CC}} I can\'t believe this. I can\'t believe any of this. I loved Brooklyn, even if I hadn\'t seen her in ages. And I didn\'t think to go see her when I was in Seattle, didn\'t even know she was there. If I had gone to her ... maybe I could have stopped whoever killed her. But I didn\'t, I wasn\'t there when she needed me... Arrest me if you like, I don\'t even care."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 60
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df4022643431277b059416"
+  }
+  index: 58
+  text: "That\'s what it looks like to us."
+  branches {
+    responseText: "Go to hell."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I didn\'t."
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df4022643431277b05941f"
+  }
+  index: 59
+  text: "Oh you\'ll get a lawyer all right."
+  branches {
+    responseText: " "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df474d643431277b0595a6"
+  }
+  index: 60
+  text: "We\'re sorry for your sister, $(story.pc_salutation) $(story.pc_lastname). As for arresting you, I hope it won\'t be necessary. Stay in town, however, and try to keep out of trouble."
+  branches {
+    responseText: "Yeah, I can do that. Now, excuse me please?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You are going to catch the one who really did it, right?"
+    nextNodeIndex: 61
+  }
+  branches {
+    responseText: "Goodbye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df474d643431277b0595aa"
+  }
+  index: 61
+  text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df3b3c643431277b0592a5"
+  }
+  index: 62
+  text: "$(story.pc_firstname) $(story.pc_lastname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
+  branches {
+    responseText: "{{CC}}Go quietly{{/CC}}"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Threaten with a weapon{{/CC}} No, I don\'t think so. I think I\'m going to get out of here and you are going to let me."
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item Holstered"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 1.5
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Fight{{/CC}} The hell with this."
+    actions {
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 3
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df48d1643431277b0596cc"
+  }
+  index: 63
+  text: "That was a terminally stupid move, $(story.pc_lastname).\n\nDo you even know how to use that thing? Put it down before someone gets hurt."
+  branches {
+    responseText: "Try me."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Surrender weapon{{/CC}} Okay, not really."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Ranged Combat 2 + speciality{{/CC}}Do you see my hands shaking?"
+    conditions {
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (int)"
+            args {
+              call_value {
+                functionName: "Get Variable (int)"
+                args {
+                  string_value: "weaponSpec"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 64
+  }
+  branches {
+    responseText: "{{CC}}Sufficiently Dangerous Perp {{/CC}}The question isn\'t whether I can shoot. The question is, do you want a firefight in the middle of a crowded office with a dozen bystanders getting in the crossfire?"
+    conditions {
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          float_value: 4.5
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 0.5
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 7
+        }
+      }
+    }
+    nextNodeIndex: 65
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53df5c0e643431fe8505906d"
+  }
+  index: 64
+  text: "... I think $(l.he) means it, Wainwright."
+  branches {
+    responseText: " "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df5c5b643431fe85059071"
+  }
+  index: 65
+  text: "You bastard. You\'ll get yours for this.\n\n{{GM}}She composes herself.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df5cc7643431fe85059076"
+  }
+  index: 66
+  text: "All right, let\'s no one do anything stupid here. No one needs to get hurt.\n\nThe ball is in your court, $(story.pc_lastname). What happens now? We\'re not going let you get any hostages, including us, so you can forget about that right away."
+  branches {
+    responseText: "I\'m going to get some stuff from my locker, and then I\'m going to leave. You will let me, or things will turn nasty."
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: 67
+  }
+  branches {
+    responseText: "{{CC}}Fight{{/CC}} I\'m thinking bullets."
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 1.5
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53df5e86643431fe850591b9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Get Out of Alcamai Cosmetics"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53dfbf906434313c150592c0"
+  }
+  index: 67
+  text: "All right, let\'s do exactly that."
+  branches {
+    responseText: ""
+    nextNodeIndex: 68
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53dfbfa96434313c150592c3"
+  }
+  index: 68
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53df5fb5643431fe8505954a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53dfc1936434313c150592c4"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
 }
 roots {

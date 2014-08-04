@@ -1,0 +1,22 @@
+idRef {
+  id: "53dfb59b6434314e0c059045"
+}
+ui_name: "s001_tamaryk"
+nodes {
+  idRef {
+    id: "53dfb5a76434314e0c05904b"
+  }
+  index: 0
+  text: "I\'m sorry for your loss, $(story.pc_lastname). We\'ll let you know if we hear anything about the case or if we need to ask you some more questions."
+  branches {
+    responseText: "Okay."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}
