@@ -3840,7 +3840,7 @@ nodes {
     id: "53dde479643431cf41e511f2"
   }
   index: 32
-  text: "You did have something slightly like a family, didn\'t you, once at least? Your next of kin was listed as \"sister\" at one point. Brooklyn $(story.pc_lastname), right? But not any more."
+  text: "You did have something slightly like a family, didn\'t you, once at least? Your next of kin was listed as \"sister\" at one point. Brooklyn $(story.pc_lastname), right? But not for a few years."
   branches {
     responseText: "Brooklyn. Yeah. She\'s my sister. I also have brothers and other sisters."
     nextNodeIndex: 30
@@ -4185,7 +4185,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "{{CC}}Intelligence 3 (Lie){{/CC}} \"$(s.name)\" ... nope, doesn\'t ring a bell."
+    responseText: "{{CC}}Willpower 3 (Lie) {{/CC}} \"$(s.name)\" ... nope, doesn\'t ring a bell."
     conditions {
       ops {
         functionName: "Compare Actor Attribute"
@@ -4212,7 +4212,7 @@ nodes {
               string_value: "ActorAttributes"
             }
             args {
-              int_value: 4
+              int_value: 5
             }
           }
         }
@@ -4335,7 +4335,7 @@ nodes {
     nextNodeIndex: 41
   }
   branches {
-    responseText: "{{CC}}Intelligence 4 (Lie){{/CC}} Not sure, but it sounds like something Brooklyn made up when we were children."
+    responseText: "{{CC}}Intelligence 4 (Lie) {{/CC}} Not sure, but it sounds like something Brooklyn made up when we were children."
     conditions {
       ops {
         functionName: "Compare Actor Attribute"
@@ -4609,50 +4609,6 @@ nodes {
     responseText: "{{CC}}Fight{{/CC}} The hell with this."
     actions {
       ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
         functionName: "Add To Variable (float)"
         args {
           call_value {
@@ -4667,15 +4623,12 @@ nodes {
         }
       }
       ops {
-        functionName: "Set Team Alliance"
+        functionName: "Trigger: Run Alternate Trigger"
         args {
           call_value {
-            functionName: "Get Preset Value (string)"
+            functionName: "Get Map Item (Trigger)"
             args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
+              string_value: "53df5e86643431fe850591b9"
             }
           }
         }
@@ -4683,84 +4636,7 @@ nodes {
           call_value {
             functionName: "Get Preset Value (int)"
             args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
+              string_value: "WithOrWithout"
             }
             args {
               int_value: 1
@@ -4771,18 +4647,7 @@ nodes {
           call_value {
             functionName: "Get Preset Value (int)"
             args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
+              string_value: "WaitOrNot"
             }
             args {
               int_value: 0
@@ -4791,9 +4656,12 @@ nodes {
         }
         args {
           call_value {
-            functionName: "Get Map Item (SceneDimension)"
+            functionName: "Get Preset Value (int)"
             args {
-              string_value: "Default"
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
             }
           }
         }
@@ -5223,6 +5091,60 @@ nodes {
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc96ed643431f9fc06dac9"
+  }
+  actions {
+    ops {
+      functionName: "Add Tag to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "KnowsBrooklynMurdered"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Tag to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "KnowsHandleLeftOnCrimeScene"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
   }
 }
 nodes {
@@ -5994,7 +5916,7 @@ nodes {
     nextNodeIndex: -1
   }
   branches {
-    responseText: "{{CC}}Ranged Combat 2 + speciality{{/CC}}Do you see my hands shaking?"
+    responseText: "{{CC}}Ranged Combat 2 + speciality {{/CC}}Do you see my hands shaking?"
     conditions {
       ops {
         functionName: "AND"
@@ -6199,13 +6121,56 @@ nodes {
   index: 66
   text: "All right, let\'s no one do anything stupid here. No one needs to get hurt.\n\nThe ball is in your court, $(story.pc_lastname). What happens now? We\'re not going let you get any hostages, including us, so you can forget about that right away."
   branches {
+    responseText: "First, you\'re going to tell me what this is all about. Why are you here and what do you want to bust me for?"
+    conditions {
+      ops {
+        functionName: "Evaluate Tag Pattern for Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "KnowsBrooklynMurdered"
+        }
+      }
+    }
+    nextNodeIndex: 67
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "53dfce6b643431d21a05960d"
+    }
+  }
+  branches {
     responseText: "I\'m going to get some stuff from my locker, and then I\'m going to leave. You will let me, or things will turn nasty."
     actions {
       ops {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 67
+    nextNodeIndex: 68
   }
   branches {
     responseText: "{{CC}}Fight{{/CC}} I\'m thinking bullets."
@@ -6313,13 +6278,121 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53dfbf906434313c150592c0"
+    id: "53dfcea4643431d21a05960f"
   }
   index: 67
+  text: "{{GM}}Wainwright looks at you coldly.{{/GM}}\n\nYour sister, Brooklyn $(story.pc_lastname) is dead. She was murdered in her home in Seattle, around the time you were in town. Seattle PD told us to check you out, as she\'d listed you as next of kin - as apparently you had her, some years back. We were a bit skeptical, since you seemed to be nothing except a soft corporate lackey. Guess their hunch was right."
+  branches {
+    responseText: "Their hunch was bullshit. Now I\'m going to get some stuff from my desk, and then I\'m going to leave. You will let me, or things will turn nasty."
+    nextNodeIndex: 68
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Fight{{/CC}} Hunch this."
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 1.5
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53df5e86643431fe850591b9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+  actions {
+    ops {
+      functionName: "Add Tag to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "KnowsBrooklynMurdered"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53dfbf906434313c150592c0"
+  }
+  index: 68
   text: "All right, let\'s do exactly that."
   branches {
     responseText: ""
-    nextNodeIndex: 68
+    nextNodeIndex: 69
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6330,7 +6403,7 @@ nodes {
   idRef {
     id: "53dfbfa96434313c150592c3"
   }
-  index: 68
+  index: 69
   text: ""
   nodeType: ConversationNodeType_Simple
   actions {

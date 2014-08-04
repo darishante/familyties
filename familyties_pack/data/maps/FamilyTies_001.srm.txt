@@ -108,39 +108,9 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    prerequisites {
-      ops {
-        functionName: "Comparison (string)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (string)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "pc_alcamai"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "IsOrIsNot"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          string_value: "bum"
-        }
-      }
-    }
     doorPoint {
       doorState: false
-      aiOnlyDoor: false
+      aiOnlyDoor: true
       doorSound: "DoorSlide"
       doorSoundBundle: "props"
     }
@@ -361,6 +331,49 @@ props {
     z: -4
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "53dfe24a643431d21a059d85"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Get Out of Alcamai Cosmetics"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -1372,6 +1385,46 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53db6e3d64343176dd31b7cd"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Get Out of Alcamai Cosmetics"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -3017,9 +3070,9 @@ props {
 props {
   name: "system_gizmo_lightbulb"
   gridPoint {
-    x: -78
+    x: -76
     y: 0
-    z: 2
+    z: 1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -4354,6 +4407,14 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53dfc2586434313c150592c5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "FamilyTies_002"
+      confirmation_text: "Leave Alcamai Cosmetics?"
+    }
   }
   lod: 0
 }

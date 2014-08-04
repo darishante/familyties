@@ -1,0 +1,37 @@
+idRef {
+  id: "53dfd8a2643431d21a059b01"
+}
+ui_name: "s001_what_the_hell"
+nodes {
+  idRef {
+    id: "53dfd8ad643431d21a059b07"
+  }
+  index: 0
+  text: "{{GM}}You\'ve made it outside Alcamai Chemicals. You have no idea what the cops actually wanted.\n\nYou don\'t really care either. Bridges have been burned. It\'s time to disappear.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53dfd954643431d21a059b0f"
+  }
+  index: 1
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "End Story With Epilogue"
+      args {
+        call_value {
+          functionName: "Nothing Selected"
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -401,16 +401,12 @@ nodes {
   }
   actions {
     ops {
-      functionName: "Kill Actor"
+      functionName: "Trigger: Run Alternate Trigger"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Get Map Item (Trigger)"
           args {
-            call_value {
-              functionName: "Triggering Actor"
-            }
-          }
-          args {
+            string_value: "53df5e86643431fe850591b9"
           }
         }
       }
@@ -418,7 +414,29 @@ nodes {
         call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "DeathMethod"
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
           }
           args {
             int_value: 0
