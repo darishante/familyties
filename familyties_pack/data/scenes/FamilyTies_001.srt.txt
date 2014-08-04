@@ -3087,11 +3087,11 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -78
+    x: -6
     y: 0
-    z: -13
+    z: -12
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_N
   idRef {
     id: "53dfc44b6434313c150592ce"
   }
