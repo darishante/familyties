@@ -63,6 +63,12 @@ Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia
 
 6. Skenaarioiden rundown
 
+6.0 Työhaastattelu
+
+ - valitaan ura, etunimi ja sukunimi
+
+Karmapalkkio:
+
 6.1 Alcamai
 
  - sisään
@@ -71,7 +77,18 @@ Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia
  - optional: löydä ase
  - selviä poliisikuulustelusta
 
-6.2 Siskon koti
+6.1.1 Poliisiasema
+ - jos poliisikuulustelu päättyy putkaan, hankkiudu ulos sieltä, joko lakimiehen avulla tai murtokeinoilla
+ 
+Karmapalkkio yht: +2
+
+
+6.2. Mielikuvitusleikki
+ - pelaajahahmo, Brooklyn ja ?joku kolmas sisarus? leikkivät shadowrunnereita
+
+Karmapalkkio: +1 ??
+
+6.3 Siskon koti
 
  - murhapaikka Red Hillissä
 
