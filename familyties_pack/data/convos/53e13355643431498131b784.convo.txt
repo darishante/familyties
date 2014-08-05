@@ -1,0 +1,19 @@
+idRef {
+  id: "53e13355643431498131b784"
+}
+ui_name: "s003_brooklyn_the_space_knight"
+nodes {
+  idRef {
+    id: "53e13365643431498131b78a"
+  }
+  index: 0
+  text: "{{GM}}Brooklyn is dressed in bright green space knight armor and carries a laser rifle and a laser machete. She looks like she isn\'t afraid of anything.{{/GM}}\n\nLet\'s go get those invading toothy monsters, $(l.name)!"
+  branches {
+    responseText: "Let\'s do it! For M\303\226RGENSTEIN!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

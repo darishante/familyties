@@ -57,6 +57,50 @@ triggers {
   }
   is_oneshot: true
 }
+regions {
+  name: "Morgenstein"
+  position {
+    x: -1
+    y: -9
+    width: 37
+    height: 42
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53e13448643431498131b79a"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.3
+    y: 1.1
+    z: -0.5
+  }
+  directional_light_color {
+    r: 0.94901961
+    g: 0.05882353
+    b: 0.6
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.25490198
+    g: 0.25490198
+    b: 0.3882353
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: "Berlin-Set3-Legwork"
+  default_music: "Berlin-Set3-Combat"
+  loop_combat_music: true
+  loop_default_music: true
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
@@ -90,6 +134,14 @@ characters {
   idRef {
     id: "53e127a46434313876058f3c"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "53e13355643431498131b784"
+      turnToFace: true
+    }
+  }
   lod: 0
   character_instance {
     character_mod {
@@ -112,10 +164,10 @@ mapName: "FamilyTies003"
 parentStory: ""
 scene_title: "2599: SPACE CRUISER M\303\226RGENSTEIN"
 scene_subtitle: ""
-scene_synopsis: "The Space Cruiser \"M\303\226RGENSTEIN\" is under attack! Horrible multitoothed alien monsters have breached the hull during an asteroid storm and are trying to destroy the command centre!\n\nFortunately, the brave defenders YOURNAME and Brooklyn are standing watch. Arming themselves with whatever they can find they launch a fearless assault on the horrible invaders..."
+scene_synopsis: "The Space Cruiser \"M\303\226RGENSTEIN\" is under attack! Horrible multitoothed alien monsters have breached the hull during an asteroid storm and are trying to destroy the command centre!\n\nFortunately, the brave defenders - you and Brooklyn - are standing watch. Arming yourselves with whatever you can find you launch a fearless assault on the horrible invaders..."
 scene_image: ""
 scene_continue_button_skip: false
-scene_restore_runner_health: false
+scene_restore_runner_health: true
 directional_light_dir {
   x: -0.5
   y: -1
@@ -147,13 +199,13 @@ scene_dimensions {
 }
 character_roster {
   roster_entries {
-    reference_id: "lvl1_troll_samurai"
+    reference_id: "Brooklyn the Space Knight"
     hiring_conditions {
     }
     hiring_cost: -1
   }
 }
-show_hiring_screen_on_scene_load: false
+show_hiring_screen_on_scene_load: true
 scene_hiring_prerequisites {
   prereq_description: ""
   prereq_conditions {
@@ -163,6 +215,7 @@ hiring_slot_count: 0
 hiring_minimum_karma: 0
 hiring_maximum_karma: 0
 hire_from_content_pack: "518d7672643431b03f0041aa"
+hire_from_content_pack: "53da5ef2643431a4970041a8"
 roster_overrides {
   roster_entries {
     reference_id: "lvl1_troll_samurai"
