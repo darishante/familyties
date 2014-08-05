@@ -4607,9 +4607,9 @@ patrolRoutes {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -70
+    x: 0
     y: 0
-    z: -5
+    z: -2
   }
   orientation: ORIENTATION_N
   idRef {

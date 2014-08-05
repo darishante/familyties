@@ -1,0 +1,180 @@
+triggers {
+  name: "EnterTheDream"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "No Effect"
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e1232f6434313876058f2d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "NewTrigger"
+  events {
+  }
+  conditions {
+  }
+  actions {
+  }
+  isActive: true
+  idRef {
+    id: "53e123326434313876058f2e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: 1
+    y: 1.5
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e123c56434313876058f2f"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Guard - Protect"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 0
+  }
+}
+characters {
+  name: "system_spawner_playerSpawner"
+  gridPoint {
+    x: 1
+    y: 1.5
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e127a46434313876058f3c"
+  }
+  lod: 0
+  character_instance {
+    character_mod {
+      archetypeName: "Player"
+    }
+    team_id: "Shadowrunners"
+    char_name: "New Actor"
+    enabled_at_start: true
+    pc_spawn_number: 1
+  }
+}
+worldMapLocation {
+  filename: ""
+  location {
+    x: 0
+    y: 0
+  }
+}
+mapName: "FamilyTies003"
+parentStory: ""
+scene_title: "2599: SPACE CRUISER M\303\226RGENSTEIN"
+scene_subtitle: ""
+scene_synopsis: "The Space Cruiser \"M\303\226RGENSTEIN\" is under attack! Horrible multitoothed alien monsters have breached the hull during an asteroid storm and are trying to destroy the command centre!\n\nFortunately, the brave defenders YOURNAME and Brooklyn are standing watch. Arming themselves with whatever they can find they launch a fearless assault on the horrible invaders..."
+scene_image: ""
+scene_continue_button_skip: false
+scene_restore_runner_health: false
+directional_light_dir {
+  x: -0.5
+  y: -1
+  z: -0.75
+}
+directional_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+ambient_light_color {
+  r: 0.50196081
+  g: 0.50196081
+  b: 0.50196081
+}
+allow_drawn_weapons: true
+team_affiliations {
+  team_name: "Shadowrunners"
+  affiliation: 0
+  affiliation: 1
+}
+team_affiliations {
+  team_name: "Aliens"
+  affiliation: 1
+  affiliation: 0
+}
+scene_dimensions {
+  dimension_name: "Default"
+}
+character_roster {
+  roster_entries {
+    reference_id: "lvl1_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+  }
+}
+show_hiring_screen_on_scene_load: false
+scene_hiring_prerequisites {
+  prereq_description: ""
+  prereq_conditions {
+  }
+}
+hiring_slot_count: 0
+hiring_minimum_karma: 0
+hiring_maximum_karma: 0
+hire_from_content_pack: "518d7672643431b03f0041aa"
+roster_overrides {
+  roster_entries {
+    reference_id: "lvl1_troll_samurai"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+    content_pack_source: "518d7672643431b03f0041aa"
+  }
+}
+use_hiring_cost_warning: false
+hiring_average_cost: 0
+override_hiring_average_cost: false
+show_equip_screen_on_scene_load: false
+can_move_outside_camera_regions: true
+can_start_before_triggers: true
