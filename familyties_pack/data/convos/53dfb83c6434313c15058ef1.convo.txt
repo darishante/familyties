@@ -4,48 +4,194 @@ idRef {
 ui_name: "s001_introspection_after_interrogation"
 nodes {
   idRef {
-    id: "53dfb8566434313c15058ef7"
+    id: "53e11b826434314574058fb7"
   }
   index: 0
   text: "The detectives leave you alone in your office. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
   branches {
-    responseText: ""
+    responseText: " "
     nextNodeIndex: 1
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dfb96c6434313c15058eff"
+    id: "53e11b866434314574058fba"
   }
   index: 1
-  text: "Someone left your old nickname $(l.name) on the scene of a murder. It\'s a ... what?\n\nCalling card? A taunt? An attempt to frame you?\n\nA plea for help?"
+  text: ""
   branches {
     responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*Nickname*"
+        }
+      }
+    }
     nextNodeIndex: 2
   }
-  nodeType: ConversationNodeType_Simple
-}
-nodes {
-  idRef {
-    id: "53dfba796434313c15058f03"
-  }
-  index: 2
-  text: "Who would even know the name $(l.name)? Only your sisters and brothers, you\'d guess. Probably. It\'s been so many years...\n\nBrooklyn is dead.\n\n"
   branches {
     responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Nickname*"
+        }
+      }
+    }
     nextNodeIndex: 3
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dfbae66434313c15058f06"
+    id: "53e11b866434314574058fbd"
+  }
+  index: 2
+  text: "The Seattle PD will try to catch the murderer.\n\nThat\'s not enough. A murdered troll in the slums. It\'s a surprise they sent the detectives to question you.\n\nYou\'re going to get on the next flight to Seattle."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e11b866434314574058fc0"
   }
   index: 3
-  text: "The Seattle PD will try to catch the murderer.\n\nThat\'s not enough.\n\nYou\'re going to catch the next flight to Seattle."
+  text: "Someone left your old nickname $(l.name) on the scene of a murder. It\'s a ... what?\n\nCalling card? A taunt? An attempt to frame you?\n\nA plea for help?"
+  branches {
+    responseText: " "
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e11b866434314574058fc3"
+  }
+  index: 4
+  text: "Who would even know the name $(l.name)? Only your sisters and brothers, you\'d guess. Probably. It\'s been so many years...\n\nBrooklyn is dead.\n\n"
+  branches {
+    responseText: " "
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e11a696434314574058f84"
+  }
+  index: 5
+  text: "It takes fifteen minutes for Zhang to get you out of the police station. You hardly notice what\'s happening.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
+  branches {
+    responseText: " "
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 5
 }

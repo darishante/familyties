@@ -1,0 +1,1374 @@
+idRef {
+  id: "53e0b799643431b530059ab6"
+}
+ui_name: "s001_lawyer"
+nodes {
+  idRef {
+    id: "53e0b7a5643431b530059abc"
+  }
+  index: 0
+  text: "{{GM}}Tamaryk and Wainwright cuff you, read you your rights. Your co-workers whisper and pretend to look elsewhere while you are escorted out of Alcamai Building. After a ride in an unmarked car you arrive at the local station house, a crumbling pile of brick in a cheap neighborhood of downton Omaha.\n\nEverything moves by in a haze, but your lawyer from Alcamai is not slow. He\'s already on the scene when you arrive, and sends the police away to speak with you in the privacy of an interrogation room.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53da6b5c643431a4970041c3"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0ba23643431e64d058ee1"
+  }
+  index: 1
+  text: ""
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -2
+        }
+      }
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -2
+        }
+      }
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -3
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          float_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          float_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53da6b5c643431a4970041c3"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0bb7f643431e64d058ee4"
+  }
+  index: 2
+  text: "All right, let\'s take it from the beginning. Did the detectives beat you up, plant anything on you or otherwise act in an unprofessional manner?"
+  branches {
+    responseText: "Wainwright is a dick, but no, not really."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nah, it was a standard good cop - bad cop routine, with no bad touching involved."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I need to get out of here right now."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "What\'s going on here? Why was I arrested? The police haven\'t told me a single thing!"
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0c15d6434319e50058f27"
+  }
+  index: 3
+  text: "Yeah, that. You might want to sit down for this.\n\nIn a nutshell, your sister Brooklyn has been murdered. It happened in her home in Seattle, within the last 24 hours - the same time you were in town. You are a suspect. Seattle PD has asked Omaha PC for assistance, which is where Tamaryk and Wainwright came in."
+  branches {
+    responseText: "... what?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Brooklyn - why? How?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "WHAT?!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: -2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0c3876434319e50058f8a"
+  }
+  index: 4
+  text: "The details are still really sketchy, but that\'s what seems to be solid. Also, the fact that someone vaguely matching your description - which probably at this stage means \"a suspicious $(l.race) $(l.guy)\" was seen around the crime scene.\n\nAs your attorney, I\'d also like to know how you can possibly have a sister who\'s a troll."
+  branches {
+    responseText: "I\'m an orphan. Brooklyn and some others were given the same last name as me in a state orphanage in Saskatoon, and we decided to roll with it, even if the six of us were like a cheap metaethnic joke come to life... but..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Never fragging mind that. I didn\'t do it! I love Brooklyn, even if I haven\'t seen her in a couple of years. And you\'re telling me someone murdered her!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "SuspiciousFigureSeen,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: -3
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0c67c6434319e50058f8e"
+  }
+  index: 5
+  text: "The details are still really sketchy, but that\'s what seems to be solid. Also, the fact that someone vaguely matching your description - which probably at this stage means \"a suspicious $(l.race) $(l.guy)\" was seen around the crime scene.\n\nYour company files say you\'re an orphan, but I looked up your family details for this. You have five siblings listed - and Brooklyn was the only troll among them. How\'d you manage that?"
+  branches {
+    responseText: "Quite a bunch of us abandoned kids were given the same last name in a state orphanage in Saskatoon, and we decided to roll with it. Me and Brooklyn were the only trolls, Noah is a dwarf, Alexander an elf .... but fucking hell, man..."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Never fragging mind that. I didn\'t do it! I love Brooklyn, even if I haven\'t seen her in a couple of years. And you\'re telling me someone murdered her!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: -3
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "SuspiciousFigureSeen,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0c8096434319e50058fcd"
+  }
+  index: 6
+  text: "Yeah, I know. And I\'m sorry, really. I have a little sister, and ... well, yeah.\n\nBut wow, we need to figure out what to do here."
+  branches {
+    responseText: " "
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0cb246434319e50059076"
+  }
+  index: 7
+  text: "So far, the police don\'t seem to have that much of a case. You haven\'t really given them anything they can use against you - well played.\n\nHowever, it\'s a bit of a delicate situation at the moment. Alcamai Cosmetics has had its share of scandals lately, and it cannot really afford more. So our strategy is going to be to construct you an air-tight alibi and keep you well clear of anything that might be even remotely suspicious.\n\nThis means that I\'ll get you out of here, and from then on you\'ll do as I say until this thing is over. Sound ok?"
+  branches {
+    responseText: "What about Brooklyn? Someone murdered her!"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "So I should just let this go?"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "All right."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0cd966434319e5005907b"
+  }
+  index: 8
+  text: "That\'s a job for the police. Seattle PD is ...\n\n{{GM}}He pauses, trying to come up with something positive to say that isn\'t an outright lie.{{/GM}}\n\n... well, if they can\'t pin it on you, they\'re going to have to do their job."
+  branches {
+    responseText: "Brooklyn lived in the slums, didn\'t she? It\'s a surprise Seattle PD has cared even this much."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0cde46434319e5005907d"
+  }
+  index: 9
+  text: "Yes, exactly. Look, what happened was terrible, no doubt about it, but at the moment the important thing to do is make sure you are cleared of any charges.\n\nAs for your sister ... all you can do is hope she gets justice."
+  branches {
+    responseText: "Justice. Yeah. Fat chance of that."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0ce406434319e5005907f"
+  }
+  index: 10
+  text: "Good. I knew you\'d be reasonable about this."
+  branches {
+    responseText: "So, what do we do now?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0cefd643431b355058f4b"
+  }
+  index: 11
+  text: "The detectives who brought you in are really rather suspicious of you, and frankly you\'ve given them plenty of reasons for that. What the hell were you thinking back in the office? No matter what the police say, you need to keep your cool! It says so right in the employee handbook!\n\nThe company is not at all pleased at the idea of having another scandal. You\'re not left out to hang here, but there\'s some damage control that needs to be done.\n\nFirst of all, the willful neglicience clause of my contract has been invoked, which means that you\'re going to have to pay most of my fees - at employee rates, but still. We\'re starting out at $(scene.lawyerFee) nuyen for this little talk, and then we\'ll go from there."
+  branches {
+    responseText: "{{CC}}Pay $(scene.lawyerFee){{/CC}} All right, here\'s the money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerFee"
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerFee"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "lawyerRep"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "My vacation just ate all my money, and this week\'s paycheck isn\'t due until Friday."
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerFee"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            int_value: 100
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Round (Math)"
+              args {
+                call_value {
+                  functionName: "Get Variable (float)"
+                  args {
+                    string_value: "Suspicion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0d522643431b355058fc9"
+  }
+  index: 12
+  text: "Very good, thank you. Now we can move forward with this."
+  branches {
+    responseText: "What about Brooklyn? Someone murdered her!"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0d549643431b355058fcf"
+  }
+  index: 13
+  text: "That\'s a job for the police. Seattle PD is ...\n\n{{GM}}He pauses, trying to come up with something positive to say that isn\'t an outright lie.{{/GM}}\n\n... well, if they can\'t pin it on you, they\'re going to have to do their job. But the only way for them to do that is for you to play ball with the company now."
+  branches {
+    responseText: " "
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0d61c643431b355058fd5"
+  }
+  index: 14
+  text: "You\'re broke. Well, that changes things a bit.\n\nThe company made it very clear that they\'re not going to pay me. I\'ve got a feeling this is going to go all kinds of wrong really soon. Yeah, I\'m out of here.\n\nHave fun with your public defender. Some free legal advice: from now on, never speak again."
+  branches {
+    responseText: "I --"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "You son of a bitch. You better hope I never come across you in a dark alley."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "Don\'t you dare walk out on me! What about Brooklyn? WHAT ABOUT MY SISTER?"
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0d891643431b355059036"
+  }
+  index: 15
+  text: "{{GM}}Zhang leaves the interrogation room, leaving you alone.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0d768643431b355058fda"
+  }
+  index: 16
+  text: "{{GM}}Zhang quickly leaves the interrogation room.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0d842643431b355059034"
+  }
+  index: 17
+  text: "Maybe you did it. I\'m not paid to care.\n\n{{GM}}Zhang leaves the room.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0dcd4643431ab59058f1c"
+  }
+  index: 18
+  text: "{{GM}}Zhang draws a deep breath, looks at his PDA, then looks back up at you.{{/GM}}\n\nI mean, you made a complete mess of things back at the office. You almost caused a shoot-out, for chrissake. I\'m surprised the detectives didn\'t just shoot you and claim self-defense."
+  branches {
+    responseText: "They\'re lucky I didn\'t shoot them, you mean."
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "They practically accused me of killing Brooklyn."
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: "I\'m sorry. I lost my temper. Who wouldn\'t have?"
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0dec4643431ab59058f26"
+  }
+  index: 19
+  text: "I ... You... No. Just no.\n\nYou\'re a goddamn disaster. The company hinted that I might just want to drop the case, and that\'s exactly what I\'m going to do. Get another lawyer. Also, I\'m told that if things went like this, I was to tell you that you are no longer employed by Alcamai Cosmetics. Your personal effects will be delivered to your home, or to your prison, whichever may apply.\n\n{{GM}}Zhang gets up and leaves.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0de55643431ab59058f24"
+  }
+  index: 20
+  text: "Cops love it when you make it easy like that, you ass. Suspect gets violent or mouths off, suspect is way easier to prosecute, cuts down on all that pesky investigation.\n\nBut yeah, the company told me that it might be better to cut and run, so that\'s what I\'m doing here. Starting now, you are no longer employed by Alcamai Cosmetics, and I\'m no longer your lawyer. I hope things turn out okay for you, but frankly I doubt it. Whether you did it or not, you will not be difficult to prosecute.\n\n{{GM}}Zhang gets up and leaves.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e0e06a643431ab59058f28"
+  }
+  index: 21
+  text: "Anyone with a brain, for starters.\n\nLook. I\'ll do what I can for you, but the company has decided to cut you loose. They\'re firing you - fired you already, actually. I was sent to check if there\'s anything worth salvaging here, and maybe there is, but for the time being, I cannot represent you. I suggest you get another lawyer, although it may be expensive. Maybe you can avoid getting thrown into prison for your sister\'s murder, but you just made it a lot easier for the police to not look for another suspect.\n\n{{GM}}Zhang gets up and leaves.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0e16f643431ab59058f83"
+  }
+  index: 22
+  text: "The important thing to do now is lay low. That means once we leave here, don\'t talk to the police unless I\'m with you. Don\'t talk to anyone about what may or may not have happened - no one at the office, not your family, not your friends, no one. Don\'t leave town, don\'t make waves, don\'t make yourself any kind of a target for the investigation. The police are reluctant to prosecute a corp employee anyway, but they will if they think they can win or if you annoy them. And if that happens, well, Alcamai is definitely going to cut losses.\n\nUnderstood?"
+  branches {
+    responseText: "Yeah."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Understood."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "This is fragged up."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e0e469643431ab590590c7"
+  }
+  index: 23
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "lawyerRep"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53e0f1f1643431ab5905981e"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53df5fb5643431fe8505954a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

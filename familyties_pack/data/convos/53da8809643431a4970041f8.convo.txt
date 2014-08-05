@@ -444,6 +444,94 @@ nodes {
         }
       }
     }
+    ops {
+      functionName: "Set Team Alliance"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeamAlliance"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Team Alliance"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeamAlliance"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
   }
 }
 nodes {
@@ -452,6 +540,29 @@ nodes {
   }
   index: 5
   text: "I\'d hurry up if I were you, $(story.pc_polite_salutation), someone\'s going to miss you in a couple of minutes!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53da6bbe643431a4970041c4"
+  }
+}
+nodes {
+  idRef {
+    id: "53e0a281643431b53005965e"
+  }
+  index: 6
+  text: "Leaving already, $(story.pc_polite_salutation)?"
+  branches {
+    responseText: "Yes, there\'s something I need to do."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m taking a personal day. Or a personal several days, whatever."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "(Say nothing)"
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53da6bbe643431a4970041c4"
@@ -494,15 +605,23 @@ roots {
   responseText: ""
   conditions {
     ops {
-      functionName: "Comparison (string)"
+      functionName: "Evaluate Goal"
       args {
         call_value {
-          functionName: "Get Story Variable (string)"
+          functionName: "Get Map Item (Goal)"
           args {
-            string_value: "53da5ef2643431a4970041a8"
+            string_value: "Start The Day At Your Desk"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
           }
           args {
-            string_value: "pc_alcamai"
+            int_value: 1
           }
         }
       }
@@ -513,14 +632,15 @@ roots {
             string_value: "IsOrIsNot"
           }
           args {
-            int_value: 0
+            int_value: 1
           }
         }
-      }
-      args {
-        string_value: "bum"
       }
     }
   }
   nextNodeIndex: 5
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 6
 }

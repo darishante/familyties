@@ -369,7 +369,7 @@ nodes {
     id: "53dd0e7c6434313d23a408f8"
   }
   index: 4
-  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They seem to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?\n\nDEBUG: $(scene.suspicion)"
+  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They seem to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
   branches {
     responseText: "Yes, that\'s me. What\'s this all about?"
     nextNodeIndex: 8
@@ -811,7 +811,7 @@ nodes {
     id: "53dd1d816434313d23a40a17"
   }
   index: 8
-  text: "$(scene.mainInterrogation)\n\nDEBUG: $(scene.Suspicion)\nCurrent loop $(scene.currentloop)\nNext loop: $(scene.nextloop)\nInvestigation: $(scene.investigation)"
+  text: "$(scene.mainInterrogation)"
   branches {
     responseText: "Professionally, my title is $(story.pc_jobtitle), what about my expertise?"
     actions {
@@ -1179,7 +1179,7 @@ nodes {
     id: "53dd32ce6434313d23a40edd"
   }
   index: 10
-  text: "They call it \"risk management\", but we all know what it really means: corporate wet work. You do that kind of stuff, $(story.pc_lastname)? Violent persuasion, assassination, threatening the opposition, kidnapping?\n\n\nDEBUG: Current loop $(scene.currentloop)\nNext loop: $(scene.nextloop)"
+  text: "They call it \"risk management\", but we all know what it really means: corporate wet work. You do that kind of stuff, $(story.pc_lastname)? Violent persuasion, assassination, threatening the opposition, kidnapping?"
   branches {
     responseText: "We know what it means, but I\'m not going to answer that."
     actions {
@@ -1427,7 +1427,7 @@ nodes {
     id: "53dd40176434313d23a4167f"
   }
   index: 13
-  text: "Your expertise is \"$(story.pc_careerpath)\". Magic is a dangerous and potent force. How about the forces that you command? You know some dangerous things, right? Everyone who\'s got the gift does.\n\n{{GM}}You realize that Wainwright wears a talisman and her eyes have the darkness of someone who knows of the occult. About time for even Omaha PD to start hiring mages.{{/GM}}\n\nDEBUG: Current loop $(scene.currentloop)\nNext loop: $(scene.nextloop)"
+  text: "Your expertise is \"$(story.pc_careerpath)\". Magic is a dangerous and potent force. How about the forces that you command? You know some dangerous things, right? Everyone who\'s got the gift does.\n\n{{GM}}You realize that Wainwright wears a talisman and her eyes have the darkness of someone who knows of the occult. About time for even Omaha PD to start hiring mages.{{/GM}}"
   branches {
     responseText: "Everyone does. That doesn\'t mean anything."
     actions {
@@ -4459,7 +4459,7 @@ nodes {
     id: "53dd2cd16434313d23a40c2c"
   }
   index: 42
-  text: "We\'re just having a friendly conversation. Why would you need a shyster?\n\nDEBUG: Current loop $(scene.currentloop)\nNext loop $(scene.nextloop)"
+  text: "We\'re just having a friendly conversation. Why would you need a shyster?"
   branches {
     responseText: "Friendly conversation, right."
     actions {
@@ -4602,7 +4602,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 63
+    nextNodeIndex: 64
     auxiliaryLink: true
   }
   branches {
@@ -4683,6 +4683,66 @@ nodes {
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc96ed643431f9fc06dac9"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "arrest"
+          }
+        }
+      }
+      args {
+        int_value: 8
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53e0b2e9643431b530059969"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
 }
 nodes {
@@ -4808,7 +4868,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 47
+    nextNodeIndex: 48
   }
   branches {
     responseText: ""
@@ -4880,7 +4940,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 52
+    nextNodeIndex: 53
   }
   branches {
     responseText: ""
@@ -4952,7 +5012,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 57
+    nextNodeIndex: 58
   }
   branches {
     responseText: ""
@@ -4988,7 +5048,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 62
+    nextNodeIndex: 63
   }
   branches {
     responseText: ""
@@ -5024,7 +5084,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 63
+    nextNodeIndex: 64
   }
   branches {
     responseText: ""
@@ -5055,7 +5115,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 66
+    nextNodeIndex: 68
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5067,19 +5127,18 @@ nodes {
     id: "53de2527643431346ae50ae7"
   }
   index: 46
-  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation. As to what this is really about ... \n\nI\'m sorry to inform you that your sister Brooklyn is dead. She has been murdered.  It happened in her home in Seattle during the last 24 hours.\n\nAs for the \"$(l.name)\", bit, it was found written on the scene. We have been asked by Seattle authorities to look into this matter in Omaha.\n\nDEBUG: $(scene.suspicion)"
+  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation. As to what this is really about ... \n\nI\'m sorry to inform you that your sister Brooklyn is dead. She has been murdered.  It happened in her home in Seattle during the last 24 hours.\n\nAs for the \"$(l.name)\", bit, it was found written on the scene. We have been asked by Seattle authorities to look into this matter in Omaha."
   branches {
     responseText: "Brooklyn is what now? Is this your sick idea of a joke?"
+    nextNodeIndex: 47
+  }
+  branches {
+    responseText: "... I see. Thank you for being so very upfront about it, and not acting like a total dick at all. You going to tell me what exactly happened to her?"
     nextNodeIndex: 45
     auxiliaryLink: true
   }
   branches {
-    responseText: "... I see. Thank you for being so very upfront about it, and not acting like a total dick at all."
-    nextNodeIndex: 45
-    auxiliaryLink: true
-  }
-  branches {
-    responseText: "I was afraid that was where we were heading. You mind leaving me alone now? "
+    responseText: "... I was afraid that was where we were heading. Brooklyn. God. What happened to her?"
     nextNodeIndex: 45
     auxiliaryLink: true
   }
@@ -5094,53 +5153,65 @@ nodes {
   }
   actions {
     ops {
-      functionName: "Add Tag to Actor"
+      functionName: "Set Variable (string)"
       args {
         call_value {
-          functionName: "Get Map Item (SenseTagList)"
+          functionName: "Get Story Variable (string)"
           args {
-            string_value: "KnowsBrooklynMurdered"
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
           }
         }
       }
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Append (string)"
           args {
-            call_value {
-              functionName: "Get Map Item (Player)"
-              args {
-                int_value: 0
-              }
-            }
+            string_value: "BrooklynMurdered,"
           }
           args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
           }
         }
       }
     }
     ops {
-      functionName: "Add Tag to Actor"
+      functionName: "Set Variable (string)"
       args {
         call_value {
-          functionName: "Get Map Item (SenseTagList)"
+          functionName: "Get Story Variable (string)"
           args {
-            string_value: "KnowsHandleLeftOnCrimeScene"
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
           }
         }
       }
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Append (string)"
           args {
-            call_value {
-              functionName: "Get Map Item (Player)"
-              args {
-                int_value: 0
-              }
-            }
+            string_value: "NicknameAtMurderScene,"
           }
           args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
           }
         }
       }
@@ -5149,17 +5220,33 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53df2a846434317875058fc5"
+    id: "53e0ac9d643431b53005979b"
   }
   index: 47
-  text: "I understand that you\'re upset. However, Seattle PD wanted us to talk to you, since there are several factors here which make you a person of interest."
+  text: "No, it isn\'t. My condolences."
+  branches {
+    responseText: "What happened to her?"
+    nextNodeIndex: 45
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53df2a846434317875058fc5"
+  }
+  index: 48
+  text: "I understand that you\'re upset, but we cannot give you details of an ongoing investigation at this point.\n\nHowever, Seattle PD wanted us to talk to you, since there are several factors here which make you a person of interest."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 48
+    nextNodeIndex: 49
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 49
+    nextNodeIndex: 50
   }
   branches {
     responseText: "{{CC}}Charisma 2{{/CC}} Surely you don\'t really think I\'m the one you\'re looking for?"
@@ -5228,7 +5315,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 50
+    nextNodeIndex: 51
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5239,7 +5326,7 @@ nodes {
   idRef {
     id: "53df3ba3643431277b0592a7"
   }
-  index: 48
+  index: 49
   text: "It is possible, yes."
   branches {
     responseText: "Go to hell."
@@ -5260,7 +5347,7 @@ nodes {
   idRef {
     id: "53df3a17643431277b058fc3"
   }
-  index: 49
+  index: 50
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
@@ -5276,7 +5363,7 @@ nodes {
   idRef {
     id: "53df468e643431277b059578"
   }
-  index: 50
+  index: 51
   text: "... Probably not. We\'re going to request you to stay in Omaha, in case we need to ask some more questions.\n\nWe\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname)."
   branches {
     responseText: "All right, I can do that. Now, excuse me please?"
@@ -5284,7 +5371,7 @@ nodes {
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 51
+    nextNodeIndex: 52
   }
   branches {
     responseText: "Goodbye."
@@ -5299,7 +5386,7 @@ nodes {
   idRef {
     id: "53df468e643431277b05957c"
   }
-  index: 51
+  index: 52
   text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5310,15 +5397,15 @@ nodes {
   idRef {
     id: "53df432a643431277b05943d"
   }
-  index: 52
-  text: "The Seattle PD has tagged you as a person of interest in the case, and I can see why."
+  index: 53
+  text: "We aren\'t going to share any more details with you at this time. The Seattle PD has tagged you as a person of interest in the case, and I can see why."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 53
+    nextNodeIndex: 54
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 54
+    nextNodeIndex: 55
   }
   branches {
     responseText: "{{CC}}Charisma 3{{/CC}} Look, you tell me my sister is dead. I haven\'t even seen her in years, and then you turn up to tell me she\'s been murdered! I had nothing to do with it! I was in the same city, yes, but I didn\'t even know she lived in Seattle these days!"
@@ -5387,7 +5474,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 55
+    nextNodeIndex: 56
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5398,7 +5485,7 @@ nodes {
   idRef {
     id: "53df432a643431277b059440"
   }
-  index: 53
+  index: 54
   text: "That\'s what it looks like to us."
   branches {
     responseText: "Go to hell."
@@ -5419,7 +5506,7 @@ nodes {
   idRef {
     id: "53df432a643431277b059449"
   }
-  index: 54
+  index: 55
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
@@ -5435,7 +5522,7 @@ nodes {
   idRef {
     id: "53df46ca643431277b059598"
   }
-  index: 55
+  index: 56
   text: "We\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname).\n\nWe\'ll have to look into the matter further. As of now, don\'t leave town."
   branches {
     responseText: "All right, I can do that. Now, excuse me please?"
@@ -5443,7 +5530,7 @@ nodes {
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 56
+    nextNodeIndex: 57
   }
   branches {
     responseText: "Goodbye."
@@ -5458,7 +5545,7 @@ nodes {
   idRef {
     id: "53df46ca643431277b05959c"
   }
-  index: 56
+  index: 57
   text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5469,15 +5556,15 @@ nodes {
   idRef {
     id: "53df4022643431277b059413"
   }
-  index: 57
-  text: "And didn\'t you have quite the interesting story to tell."
+  index: 58
+  text: "Why don\'t you tell us."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 58
+    nextNodeIndex: 59
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 59
+    nextNodeIndex: 60
   }
   branches {
     responseText: "{{CC}}Charisma 4{{/CC}} I can\'t believe this. I can\'t believe any of this. I loved Brooklyn, even if I hadn\'t seen her in ages. And I didn\'t think to go see her when I was in Seattle, didn\'t even know she was there. If I had gone to her ... maybe I could have stopped whoever killed her. But I didn\'t, I wasn\'t there when she needed me... Arrest me if you like, I don\'t even care."
@@ -5546,7 +5633,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 60
+    nextNodeIndex: 61
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5557,7 +5644,7 @@ nodes {
   idRef {
     id: "53df4022643431277b059416"
   }
-  index: 58
+  index: 59
   text: "That\'s what it looks like to us."
   branches {
     responseText: "Go to hell."
@@ -5578,7 +5665,7 @@ nodes {
   idRef {
     id: "53df4022643431277b05941f"
   }
-  index: 59
+  index: 60
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
@@ -5594,15 +5681,15 @@ nodes {
   idRef {
     id: "53df474d643431277b0595a6"
   }
-  index: 60
-  text: "We\'re sorry for your sister, $(story.pc_salutation) $(story.pc_lastname). As for arresting you, I hope it won\'t be necessary. Stay in town, however, and try to keep out of trouble."
+  index: 61
+  text: "{{GM}}Tamaryk glances sharply at her partner, who shrugs.{{/GM}}\n\nWe\'re sorry for your sister, $(story.pc_salutation) $(story.pc_lastname). As for arresting you, I hope it won\'t be necessary. Stay in town, however, and try to keep out of trouble."
   branches {
     responseText: "Yeah, I can do that. Now, excuse me please?"
     nextNodeIndex: -1
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 61
+    nextNodeIndex: 62
   }
   branches {
     responseText: "Goodbye."
@@ -5617,7 +5704,7 @@ nodes {
   idRef {
     id: "53df474d643431277b0595aa"
   }
-  index: 61
+  index: 62
   text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5628,10 +5715,134 @@ nodes {
   idRef {
     id: "53df3b3c643431277b0592a5"
   }
-  index: 62
+  index: 63
   text: "$(story.pc_firstname) $(story.pc_lastname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
   branches {
-    responseText: "{{CC}}Go quietly{{/CC}}"
+    responseText: "{{CC}}Comply with the officers{{/CC}} This is ... I didn\'t ... hell."
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 8
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53e0b2e9643431b530059969"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Say nothing, but comply{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 8
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53e0b2e9643431b530059969"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -5704,50 +5915,6 @@ nodes {
     responseText: "{{CC}}Fight{{/CC}} The hell with this."
     actions {
       ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
         functionName: "Add To Variable (float)"
         args {
           call_value {
@@ -5762,15 +5929,12 @@ nodes {
         }
       }
       ops {
-        functionName: "Set Team Alliance"
+        functionName: "Trigger: Run Alternate Trigger"
         args {
           call_value {
-            functionName: "Get Preset Value (string)"
+            functionName: "Get Map Item (Trigger)"
             args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
+              string_value: "53df5e86643431fe850591b9"
             }
           }
         }
@@ -5778,84 +5942,7 @@ nodes {
           call_value {
             functionName: "Get Preset Value (int)"
             args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Map Item (SceneDimension)"
-            args {
-              string_value: "Default"
-            }
-          }
-        }
-      }
-      ops {
-        functionName: "Set Team Alliance"
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
+              string_value: "WithOrWithout"
             }
             args {
               int_value: 1
@@ -5866,18 +5953,7 @@ nodes {
           call_value {
             functionName: "Get Preset Value (int)"
             args {
-              string_value: "TeamAlliance"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (string)"
-            args {
-              string_value: "FactionList"
+              string_value: "WaitOrNot"
             }
             args {
               int_value: 0
@@ -5886,9 +5962,12 @@ nodes {
         }
         args {
           call_value {
-            functionName: "Get Map Item (SceneDimension)"
+            functionName: "Get Preset Value (int)"
             args {
-              string_value: "Default"
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
             }
           }
         }
@@ -5905,15 +5984,91 @@ nodes {
   idRef {
     id: "53df48d1643431277b0596cc"
   }
-  index: 63
+  index: 64
   text: "That was a terminally stupid move, $(story.pc_lastname).\n\nDo you even know how to use that thing? Put it down before someone gets hurt."
   branches {
     responseText: "Try me."
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Variable (float)"
+            args {
+              string_value: "Suspicion"
+            }
+          }
+        }
+        args {
+          float_value: 1.5
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53df5e86643431fe850591b9"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
     responseText: "{{CC}}Surrender weapon{{/CC}} Okay, not really."
-    nextNodeIndex: -1
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "arrest"
+            }
+          }
+        }
+        args {
+          int_value: 8
+        }
+      }
+    }
+    nextNodeIndex: 65
   }
   branches {
     responseText: "{{CC}}Ranged Combat 2 + speciality {{/CC}}Do you see my hands shaking?"
@@ -6014,10 +6169,10 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 64
+    nextNodeIndex: 66
   }
   branches {
-    responseText: "{{CC}}Sufficiently Dangerous Perp {{/CC}}The question isn\'t whether I can shoot. The question is, do you want a firefight in the middle of a crowded office with a dozen bystanders getting in the crossfire?"
+    responseText: "{{CC}}Sufficiently Dangerous Perp{{/CC}} The question isn\'t whether I can shoot. The question is, do you want a firefight in the middle of a crowded office with a dozen bystanders getting in the crossfire?"
     conditions {
       ops {
         functionName: "Comparison (float)"
@@ -6075,7 +6230,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 65
+    nextNodeIndex: 67
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6084,9 +6239,66 @@ nodes {
 }
 nodes {
   idRef {
+    id: "53e0b27b643431b53005982c"
+  }
+  index: 65
+  text: "Thanks for not making us shoot you. I hate it when we have to do that."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53e0b2e9643431b530059969"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
     id: "53df5c0e643431fe8505906d"
   }
-  index: 64
+  index: 66
   text: "... I think $(l.he) means it, Wainwright."
   branches {
     responseText: " "
@@ -6102,7 +6314,7 @@ nodes {
   idRef {
     id: "53df5c5b643431fe85059071"
   }
-  index: 65
+  index: 67
   text: "You bastard. You\'ll get yours for this.\n\n{{GM}}She composes herself.{{/GM}}"
   branches {
     responseText: " "
@@ -6118,7 +6330,7 @@ nodes {
   idRef {
     id: "53df5cc7643431fe85059076"
   }
-  index: 66
+  index: 68
   text: "All right, let\'s no one do anything stupid here. No one needs to get hurt.\n\nThe ball is in your court, $(story.pc_lastname). What happens now? We\'re not going let you get any hostages, including us, so you can forget about that right away."
   branches {
     responseText: "First, you\'re going to tell me what this is all about. Why are you here and what do you want to bust me for?"
@@ -6156,7 +6368,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 67
+    nextNodeIndex: 69
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -6170,7 +6382,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 68
+    nextNodeIndex: 70
   }
   branches {
     responseText: "{{CC}}Fight{{/CC}} I\'m thinking bullets."
@@ -6274,17 +6486,34 @@ nodes {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "WantedLevel"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
   }
 }
 nodes {
   idRef {
     id: "53dfcea4643431d21a05960f"
   }
-  index: 67
+  index: 69
   text: "{{GM}}Wainwright looks at you coldly.{{/GM}}\n\nYour sister, Brooklyn $(story.pc_lastname) is dead. She was murdered in her home in Seattle, around the time you were in town. Seattle PD told us to check you out, as she\'d listed you as next of kin - as apparently you had her, some years back. We were a bit skeptical, since you seemed to be nothing except a soft corporate lackey. Guess their hunch was right."
   branches {
     responseText: "Their hunch was bullshit. Now I\'m going to get some stuff from my desk, and then I\'m going to leave. You will let me, or things will turn nasty."
-    nextNodeIndex: 68
+    nextNodeIndex: 70
     auxiliaryLink: true
   }
   branches {
@@ -6357,27 +6586,33 @@ nodes {
   }
   actions {
     ops {
-      functionName: "Add Tag to Actor"
+      functionName: "Set Variable (string)"
       args {
         call_value {
-          functionName: "Get Map Item (SenseTagList)"
+          functionName: "Get Story Variable (string)"
           args {
-            string_value: "KnowsBrooklynMurdered"
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
           }
         }
       }
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Append (string)"
           args {
-            call_value {
-              functionName: "Get Map Item (Player)"
-              args {
-                int_value: 0
-              }
-            }
+            string_value: "BrooklynMurdered,"
           }
           args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
           }
         }
       }
@@ -6388,11 +6623,11 @@ nodes {
   idRef {
     id: "53dfbf906434313c150592c0"
   }
-  index: 68
+  index: 70
   text: "All right, let\'s do exactly that."
   branches {
     responseText: ""
-    nextNodeIndex: 69
+    nextNodeIndex: 71
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6403,7 +6638,7 @@ nodes {
   idRef {
     id: "53dfbfa96434313c150592c3"
   }
-  index: 69
+  index: 71
   text: ""
   nodeType: ConversationNodeType_Simple
   actions {

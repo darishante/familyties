@@ -4,21 +4,97 @@ idRef {
 ui_name: "s001_what_the_hell"
 nodes {
   idRef {
-    id: "53dfd8ad643431d21a059b07"
+    id: "53e10fe56434313b6d058f71"
   }
   index: 0
-  text: "{{GM}}You\'ve made it outside Alcamai Chemicals. You have no idea what the cops actually wanted.\n\nYou don\'t really care either. Bridges have been burned. It\'s time to disappear.{{/GM}}"
+  text: ""
   branches {
-    responseText: " "
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
     nextNodeIndex: 1
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Brooklyn*"
+        }
+      }
+    }
+    nextNodeIndex: 3
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dfd954643431d21a059b0f"
+    id: "53e10fe86434313b6d058f74"
   }
   index: 1
+  text: "{{GM}}You\'ve made it outside Alcamai Chemicals. You have no idea what the cops actually wanted.\n\nYou don\'t really care either. Bridges have been burned. It\'s time to disappear.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e10fe86434313b6d058f77"
+  }
+  index: 2
   text: ""
   nodeType: ConversationNodeType_Simple
   actions {
@@ -31,6 +107,227 @@ nodes {
       }
     }
   }
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fd0"
+  }
+  index: 3
+  text: "You reach the open air. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fd3"
+  }
+  index: 4
+  text: ""
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Nickname*"
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*Nickname*"
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fd6"
+  }
+  index: 5
+  text: "Someone left your childhood - and let\'s face it, teenage - nickname $(l.name) on the scene of a murder. It\'s a ... what?\n\nCalling card? A taunt? An attempt to frame you?\n\nA plea for help?"
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fd9"
+  }
+  index: 6
+  text: "Who would even know the name $(l.name)? Only your sisters and brothers, you\'d guess. Probably. It\'s been so many years...\n\nBrooklyn is dead.\n\n"
+  branches {
+    responseText: " "
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fdf"
+  }
+  index: 7
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "DeadCitizens"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "DeadCitizens"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fe2"
+  }
+  index: 8
+  text: "Somehow you made it out without killing anyone. That\'s a small blessing. The police in will be not as devoted to finding a fugitive who\'s not a confirmed cop killer."
+  branches {
+    responseText: " "
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fe5"
+  }
+  index: 9
+  text: "Inside people died. That\'s going to complicate matters. Now you\'re not just suspected of killing Brooklyn, you\'re pretty much a known killer.\n\nPolice will be looking for you harder. Let them."
+  branches {
+    responseText: " "
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e110656434313b6d058fe8"
+  }
+  index: 10
+  text: "The only thing that matters is Brooklyn. The Seattle PD will never care for a troll murdered in the slums enough to find anyone. It\'s a wonder they cared enough to send someone to question you.\n\nYou\'re going on the next flight to Seattle."
+  nodeType: ConversationNodeType_Simple
 }
 roots {
   nextNodeIndex: 0
