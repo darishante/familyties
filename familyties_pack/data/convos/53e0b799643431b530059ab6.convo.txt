@@ -1170,7 +1170,7 @@ nodes {
     id: "53e0dcd4643431ab59058f1c"
   }
   index: 18
-  text: "{{GM}}Zhang draws a deep breath, looks at his PDA, then looks back up at you.{{/GM}}\n\nI mean, you made a complete mess of things back at the office. You almost caused a shoot-out, for chrissake. I\'m surprised the detectives didn\'t just shoot you and claim self-defense."
+  text: "{{GM}}Zhang draws a deep breath, looks at his PDA, then looks back up at you.{{/GM}}\n\nYou made a complete mess of things back at the office. You almost caused a shoot-out, for chrissake. I\'m surprised the detectives didn\'t just shoot you and claim self-defense."
   branches {
     responseText: "They\'re lucky I didn\'t shoot them, you mean."
     nextNodeIndex: 19

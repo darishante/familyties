@@ -1692,53 +1692,107 @@ nodes {
   index: 17
   text: "We\'d like to know if you possess any combat training, dangerous magical training or expertise with other immediately hazardous areas of skill?"
   branches {
-    responseText: "{{CC}}Close Combat 2{{/CC}} My hands are basically registered as lethal weapons."
+    responseText: "{{CC}}Close Combat 2 / Chi Casting 1{{/CC}} My hands are basically registered as lethal weapons."
     conditions {
       ops {
-        functionName: "Compare Actor Skill"
+        functionName: "OR"
         args {
           call_value {
-            functionName: "Get Map Item (Player)"
+            functionName: "Compare Actor Skill"
             args {
-              int_value: 0
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 2
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Preset Value (int)"
+            functionName: "Compare Actor Skill"
             args {
-              string_value: "BaseOrCurrent"
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
             }
             args {
-              int_value: 0
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
             }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
             args {
-              string_value: "ActorSkills"
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
             }
             args {
               int_value: 1
             }
           }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          int_value: 2
         }
       }
     }
@@ -2451,10 +2505,51 @@ nodes {
                         }
                         args {
                           call_value {
-                            functionName: "Compare Actor Specialization"
+                            functionName: "AND"
                             args {
                               call_value {
-                                functionName: "Get Map Item (Player)"
+                                functionName: "Compare Actor Specialization"
+                                args {
+                                  call_value {
+                                    functionName: "Get Map Item (Player)"
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "BaseOrCurrent"
+                                    }
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "ActorSpecializations"
+                                    }
+                                    args {
+                                      int_value: 8
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "Comparison Ops"
+                                    }
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
+                                }
                                 args {
                                   int_value: 0
                                 }
@@ -2462,39 +2557,52 @@ nodes {
                             }
                             args {
                               call_value {
-                                functionName: "Get Preset Value (int)"
+                                functionName: "Compare Actor Skill"
                                 args {
-                                  string_value: "BaseOrCurrent"
+                                  call_value {
+                                    functionName: "Get Map Item (Player)"
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "BaseOrCurrent"
+                                    }
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "ActorSkills"
+                                    }
+                                    args {
+                                      int_value: 4
+                                    }
+                                  }
+                                }
+                                args {
+                                  call_value {
+                                    functionName: "Get Preset Value (int)"
+                                    args {
+                                      string_value: "Comparison Ops"
+                                    }
+                                    args {
+                                      int_value: 0
+                                    }
+                                  }
                                 }
                                 args {
                                   int_value: 0
                                 }
                               }
-                            }
-                            args {
-                              call_value {
-                                functionName: "Get Preset Value (int)"
-                                args {
-                                  string_value: "ActorSpecializations"
-                                }
-                                args {
-                                  int_value: 8
-                                }
-                              }
-                            }
-                            args {
-                              call_value {
-                                functionName: "Get Preset Value (int)"
-                                args {
-                                  string_value: "Comparison Ops"
-                                }
-                                args {
-                                  int_value: 0
-                                }
-                              }
-                            }
-                            args {
-                              int_value: 0
                             }
                           }
                         }
@@ -6196,7 +6304,7 @@ nodes {
           }
         }
         args {
-          float_value: 4.5
+          float_value: 4.7
         }
       }
     }

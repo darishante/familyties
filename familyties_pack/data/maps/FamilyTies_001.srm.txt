@@ -4566,6 +4566,20 @@ props {
     z: -46
   }
   orientation: ORIENTATION_E
+  displayName: "Interrogation Room Door"
+  idRef {
+    id: "53e252106434314ecbe50a00"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: false
+      doorSound: "DoorOpenClose"
+      doorSoundBundle: "Berlin:ambient_slums"
+    }
+  }
   lod: 0
 }
 props {
@@ -4596,6 +4610,19 @@ props {
     z: -46
   }
   orientation: ORIENTATION_W
+  idRef {
+    id: "53e2523b6434314ecbe50a02"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "There is a camera watching the interrogation room, but it doesn\'t look like it\'s worked in ages."
+      disableAfterInteracting: false
+    }
+  }
   lod: 0
 }
 props {
@@ -5571,6 +5598,84 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53e1e8c76434319f9731b7bf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEdge06"
+  gridPoint {
+    x: -53
+    y: 0
+    z: -49
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e259bd6434314ecbe50f89"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEdge06"
+  gridPoint {
+    x: -53
+    y: 0
+    z: -47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e25a086434314ecbe50f8d"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEdge06"
+  gridPoint {
+    x: -53
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e25a106434314ecbe50f8e"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_bunkerDoor01Front"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -49
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_bunkerDoor01Back"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -51
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_wall_glassDoor01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -50
+  }
+  orientation: ORIENTATION_S
+  displayName: "Police Station Exit"
+  idRef {
+    id: "53e25ed66434314ecbe51347"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
