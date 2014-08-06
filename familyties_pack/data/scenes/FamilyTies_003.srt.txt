@@ -149,8 +149,9 @@ characters {
     z: 2
   }
   orientation: ORIENTATION_S
+  displayName: "Player Spawner"
   idRef {
-    id: "53e127a46434313876058f3c"
+    id: "53e220806434319f9731b7d2"
   }
   interactionRoot {
     isEnabled: true
@@ -166,7 +167,7 @@ characters {
       archetypeName: "Player"
     }
     team_id: "Shadowrunners"
-    char_name: "New Actor"
+    char_name: "Brooklyn the Space Knight"
     enabled_at_start: true
     pc_spawn_number: 1
   }
@@ -223,7 +224,7 @@ character_roster {
     hiring_cost: -1
   }
 }
-show_hiring_screen_on_scene_load: false
+show_hiring_screen_on_scene_load: true
 scene_hiring_prerequisites {
   prereq_description: ""
   prereq_conditions {
@@ -235,6 +236,13 @@ hiring_maximum_karma: 0
 hire_from_content_pack: "518d7672643431b03f0041aa"
 hire_from_content_pack: "53da5ef2643431a4970041a8"
 roster_overrides {
+  roster_entries {
+    reference_id: "Brooklyn the Space Knight"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+    content_pack_source: "53da5ef2643431a4970041a8"
+  }
 }
 use_hiring_cost_warning: false
 hiring_average_cost: 0

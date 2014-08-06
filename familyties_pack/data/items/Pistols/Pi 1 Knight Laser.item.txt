@@ -11,7 +11,6 @@ coreAttribute: Attribute_Quickness
 coreSkill: Skill_RangedCombat
 coreSpecialization: Specialization_RC_Pistol
 apCost: 1
-prereqStrings: "Player.SKILL.Skill_RangedCombat >= 1"
 maxAmmo: 30
 baseHPDamage: 9
 baseAPDamage: 0
@@ -42,3 +41,10 @@ affectsEnemy: true
 canTargetActor: true
 store_cost: 0
 sorting_group: "Pistols"
+
+passiveStatusEffects {
+statMods {
+skill: Skill_RangedCombat
+intModValue: 1
+}
+}
