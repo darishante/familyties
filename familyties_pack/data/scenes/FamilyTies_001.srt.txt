@@ -5467,7 +5467,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Berlin:Aztechnology/OrkFemaleAztechGuard"
+    prefab_name: "Seattle:Core/OrkFemale"
     character_sheet_id: "Errant_Lv1_Ork_Shotgun"
     equipment_sheet_id: "Errant_Lv1_Shotgun"
     character_mod {
@@ -5528,6 +5528,9 @@ characters {
       vulnerabilities {
       }
     }
+    equipment {
+      prefab_name: "Outfit_Security"
+    }
     team_id: "BHS"
     char_name: "Augusta"
     pc_spawn_number: -1
@@ -5535,6 +5538,7 @@ characters {
       filename: "pc_orkfemale_05b_blondedreads"
     }
     description_bio: "Receptionist for the Alcamai Cosmetics office in Omaha"
+    portrait_code_override: "s4h6c1"
     karma: 41
     is_prop_character: true
   }
@@ -5552,7 +5556,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Seattle:Security/HumanMaleSecurity"
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Lonestar_Lv1_Human_Pistol"
     character_mod {
       stats {
@@ -5575,12 +5579,16 @@ characters {
     equipment {
       prefab_name: "Pi 1 Fichetti Security 500"
     }
+    equipment {
+      prefab_name: "Outfit_Security"
+    }
     team_id: "BHS"
     char_name: "Jed"
     pc_spawn_number: -1
     portrait {
       filename: "generic_humanmale_courier"
     }
+    portrait_code_override: "s6h5b0"
     karma: 30
   }
 }
@@ -5652,7 +5660,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Seattle:Security/HumanMaleSecurity"
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Lonestar_Lv1_Human_Pistol"
     character_mod {
       stats {
@@ -5675,12 +5683,16 @@ characters {
     equipment {
       prefab_name: "Pi 1 Fichetti Security 500"
     }
+    equipment {
+      prefab_name: "Outfit_Security"
+    }
     team_id: "BHS"
     char_name: "Henry"
     pc_spawn_number: -1
     portrait {
       filename: "generic_humanmale_rent-a-cop"
     }
+    portrait_code_override: "s5h6b0"
     karma: 30
   }
 }
@@ -5993,7 +6005,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Berlin:Business/HumanMaleBusinessMan"
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "BaseCivilian"
     character_mod {
       stats {
@@ -6021,6 +6033,9 @@ characters {
       archetypeName: "Non-Combatant"
       vulnerabilities {
       }
+    }
+    equipment {
+      prefab_name: "Outfit_Corporate Salaryman"
     }
     team_id: "Alcamai"
     char_name: "Bill"
@@ -6297,6 +6312,8 @@ scene_disguises {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

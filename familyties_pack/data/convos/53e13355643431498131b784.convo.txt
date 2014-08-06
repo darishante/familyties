@@ -16,4 +16,8 @@ nodes {
 }
 roots {
   nextNodeIndex: 0
+  onlyOnce: true
+  idRef {
+    id: "53e265fc6434314ecbe513cc"
+  }
 }
