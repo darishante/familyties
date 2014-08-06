@@ -36,7 +36,7 @@ rangeModTable: -24
 noiseLevel: 9
 noiseRounds: 1
 ammoReloadAPCost: 1
-abilityModes: "Single (Pistol)"
+modelessAbilities: "Shoot (LBlast)"
 affectsEnemy: true
 canTargetActor: true
 store_cost: 0

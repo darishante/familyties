@@ -1,0 +1,46 @@
+id: "Shoot (LBlast)"
+uirep {
+	icon: "icon_single"
+	name: "Laser Blast"
+	description: "A pulse of light!"
+}
+anim_action: AnimAction_Attack
+ammoCost: 1
+apCostMod: 0
+hpDamageMod: 0
+apDamageMod: 0
+accuracyMod: 0
+prereqStrings: "Item.FLAG.WEAPON_CUR_AMMO > 0"
+damageBucket{
+	successEntries{
+		weight: 0.25
+		value: 2
+	}
+	successEntries{
+		weight: 0.25
+		value: 1.5
+	}
+	successEntries{
+		weight: 0.5
+		value: 1
+	}
+	failureEntries{
+		weight: 0.5
+		value: 1
+	}
+	failureEntries{
+		weight: 0.5
+		value: 0.5
+	}
+}
+attackRatingMod: 0
+offensiveAbility: true
+fxrep{
+	preActionFxName: ""
+	actionFxName: "GunSingleFireAction"
+	postActionFxName: ""
+	hitReactionFxName: "FireballHitReaction"
+	missReactionFxName: "GunMissReaction"
+}
+toHitFunction: "actorWeaponAttackToHit"
+damageFunction: "weaponDamage"
