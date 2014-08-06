@@ -1,7 +1,7 @@
 minX: -5
-minZ: -1
-numX: 27
-numZ: 7
+minZ: -5
+numX: 29
+numZ: 15
 props {
   name: "factory_floor_walkwayPlate04"
   gridPoint {
@@ -224,4 +224,108 @@ props {
       b: 1
     }
   }
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 19
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e05f6434319f9731b783"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 19
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e0616434319f9731b784"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 19
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e0686434319f9731b785"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 19
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e06a6434319f9731b786"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 21
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e06d6434319f9731b787"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 21
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e0706434319f9731b789"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 21
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e0796434319f9731b78a"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 21
+    y: 0
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e1e07c6434319f9731b78b"
+  }
+  lod: 0
 }
