@@ -235,86 +235,27 @@ triggers {
   name: "Bunch 1 SpotsChars"
   events {
     ops {
-      functionName: "On Actor Awareness of Another Actor"
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53e26f116434314ecbe513d6"
+          }
+        }
+      }
     }
   }
   conditions {
+  }
+  actions {
     ops {
-      functionName: "Evaluate Tag for Actor"
-      args {
-        call_value {
-          functionName: "Specific Actor"
-          args {
-            call_value {
-              functionName: "Triggering Actor"
-            }
-          }
-          args {
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "HasOrHasNot"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
+      functionName: "Activate Actor Spawner By Tag"
       args {
         call_value {
           functionName: "Get Map Item (SenseTagList)"
           args {
             string_value: "Bunch 1"
-          }
-        }
-      }
-    }
-  }
-  actions {
-    ops {
-      functionName: "Set Team Alliance"
-      args {
-        call_value {
-          functionName: "Get Preset Value (string)"
-          args {
-            string_value: "FactionList"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "TeamAlliance"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (string)"
-          args {
-            string_value: "FactionList"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (SceneDimension)"
-          args {
-            string_value: "Default"
           }
         }
       }
@@ -371,6 +312,50 @@ regions {
   default_music: "Berlin-Set3-Combat"
   loop_combat_music: true
   loop_default_music: true
+}
+regions {
+  name: "Bunch 1 Spawn"
+  position {
+    x: 15
+    y: 1
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53e26f116434314ecbe513d6"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -497,6 +482,7 @@ characters {
     team_id: "Aliens"
     char_name: "Arcturan Space-Wolf"
     GeneralTags: "Bunch 1"
+    enabled_at_start: false
     pc_spawn_number: -1
     karma: 52
   }
@@ -509,6 +495,7 @@ characters {
     z: 9
   }
   orientation: ORIENTATION_N
+  GeneralTags: "Bunch 1"
   idRef {
     id: "53e2659f6434314ecbe513c5"
   }
@@ -579,6 +566,8 @@ characters {
     }
     team_id: "Aliens"
     char_name: "Arcturan Space-Wolf"
+    GeneralTags: "Bunch 1"
+    enabled_at_start: false
     pc_spawn_number: -1
     karma: 52
   }
@@ -623,7 +612,7 @@ allow_drawn_weapons: true
 team_affiliations {
   team_name: "Shadowrunners"
   affiliation: 0
-  affiliation: 0
+  affiliation: 1
 }
 team_affiliations {
   team_name: "Aliens"
