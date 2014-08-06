@@ -30,28 +30,46 @@ triggers {
       }
     }
     ops {
-      functionName: "No Effect"
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Pi 1 Knight Laser"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
     }
   }
   isActive: true
   idRef {
     id: "53e1232f6434313876058f2d"
-  }
-  elseActions {
-  }
-  is_oneshot: true
-}
-triggers {
-  name: "NewTrigger"
-  events {
-  }
-  conditions {
-  }
-  actions {
-  }
-  isActive: true
-  idRef {
-    id: "53e123326434313876058f2e"
   }
   elseActions {
   }

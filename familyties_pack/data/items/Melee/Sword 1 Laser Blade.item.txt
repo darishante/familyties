@@ -1,0 +1,25 @@
+id: "Sword 1 Laser Blade"
+type: ItemType_Melee1H
+uirep {
+  icon: "icon_melee_katanaknockoff"
+  name: "Knight Laser Blade"
+  description: "An elegant weapon of the Space Knights, not as clumsy as a laser pistol."
+}
+equipPrefabName: "Katana"
+anim_type: AnimType_Melee1H
+coreAttribute: Attribute_Strength
+coreSkill: Skill_CloseCombat
+coreSpecialization: Specialization_CC_Edged
+apCost: 1
+prereqStrings: "Player.SKILL.Skill_CloseCombat >= 1"
+maxAmmo: 0
+baseHPDamage: 6
+baseAPDamage: 0
+rangeModTable: 10
+noiseLevel: 0
+noiseRounds: 0
+abilityModes: "Melee (Advanced Sword)"
+affectsEnemy: true
+canTargetActor: true
+store_cost: 0
+sorting_group: "Melee"

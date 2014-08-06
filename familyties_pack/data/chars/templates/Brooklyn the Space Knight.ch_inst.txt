@@ -59,10 +59,10 @@ character_mod {
   }
 }
 equipment {
-  prefab_name: "Sword 1 Machete"
+  prefab_name: "Pi 1 Knight Laser"
 }
 equipment {
-  prefab_name: "AR 1 AK98"
+  prefab_name: "Sword 1 Laser Blade"
 }
 team_id: "Shadowrunners"
 char_name: "Brooklyn the Space Knight"
