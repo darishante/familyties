@@ -1,0 +1,452 @@
+idRef {
+  id: "53e339836434313cf7e50c15"
+}
+ui_name: "s004_lawyer_calls"
+nodes {
+  idRef {
+    id: "53e339906434313cf7e50c1b"
+  }
+  index: 0
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e339ad6434313cf7e50c1e"
+  }
+  index: 1
+  text: "{{GM}}Your PDA chimes, and a face appears on the screen. It\'s Zhang, the lawyer.\n\nHello, $(story.pc_salutation) $(story.pc_lastname). I was wondering if we should meet and discuss our strategy about the charges against you sometime soon?"
+  branches {
+    responseText: "Yes, let\'s talk."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Never mind that. I\'m setting up my own defense."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Now\'s not a good time. Can you call me back?"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e0b67e643431b530059ab5"
+  }
+}
+nodes {
+  idRef {
+    id: "53e33a586434313cf7e50c21"
+  }
+  index: 2
+  text: "{{GM}}Your PDA chimes, and a face appears on the screen. You\'re pretty sure you\'ve seen it earlier, at Alcamai, and surely enough, the call certificate confirms that the caller is from the Omaha office.{{/GM}}\n\nHello, $(story.pc_salutation) $(story.pc_lastname)! I\'m Cameron Zhang, a lawyer for the company. I was told you had some detectives question you at the office this morning, and it seems you\'re a suspect in a homicide case. The company is very concerned. Do you require legal assistance?"
+  branches {
+    responseText: "... I might."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "No, I\'ve got this."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Do you know my sister has been murdered? I\'ve got more important things to worry about here."
+    nextNodeIndex: 3
+    onlyOnce: true
+    idRef {
+      id: "53e3453564343179fbe50b05"
+    }
+  }
+  branches {
+    responseText: "Now\'s really not a good time. Call me back?"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e3454364343179fbe50b07"
+  }
+  index: 3
+  text: "Yes, I heard, and I\'m sorry. Nonetheless this is not something you should shrug off. The only thing you can do right now is focus on her death not being pinned on you."
+  branches {
+    responseText: "All right, let\'s talk."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m handling my legal affairs perfectly well on my own, but thanks."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e33f6c64343179fbe50abc"
+  }
+  index: 4
+  text: "{{GM}}Your PDA chimes, and a face appears on the screen. It\'s Zhang, the lawyer.\n\nHello, $(story.pc_salutation) $(story.pc_lastname). I was wondering if we should meet and discuss our strategy about the charges against you sometime soon?"
+  branches {
+    responseText: "How much would this cost me?"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Yeah, never mind that. I\'m setting up my own defense."
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Now\'s not really a good time. Can you call me back?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e34f2264343179fbe50b62"
+  }
+  index: 5
+  text: "300 nuyen per hour, with the company subsidies already figured in."
+  branches {
+    responseText: "{{CC}}Pay 300{{/CC}} Very well, I\'ll transfer the funds."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 300
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 300
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I can\'t afford your rates. I\'m going to set up my own defense."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_alcamai"
+            }
+          }
+        }
+        args {
+          string_value: "fired"
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Can you call me back?"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3506a64343179fbe50b6d"
+  }
+  index: 6
+  text: "That\'s... really not a good idea. The charges mentioned here are pretty serious. You do need a competent lawyer to represent you, and Alcamai might fire you just as a precaution if you try to handle it without legal representation, in order to avoid unpleasant publicity."
+  branches {
+    responseText: "Since I don\'t have the money, I guess I\'m out of options. {{CC}}Hang up.{{/CC}}\n"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m quitting anyway. {{CC}}Hang up.{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3400264343179fbe50ac1"
+  }
+  index: 7
+  text: "That\'s... really not a good idea. The charges mentioned here are pretty serious. You do need a competent lawyer to represent you, and Alcamai might fire you just as a precaution if you try to handle it without legal representation, in order to avoid unpleasant publicity.\n"
+  branches {
+    responseText: "I\'m quitting anyway. The company can frag off for all I care. {{CC}}Hang up.{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_alcamai"
+            }
+          }
+        }
+        args {
+          string_value: "fired"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "This is something I\'m better off handling on my own, trust me."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3414664343179fbe50ac5"
+  }
+  index: 8
+  text: "You don\'t know what you\'re doing, $(story.pc_lastname). If you choose to go ahead with this, I\'m pretty sure the company will cut you loose."
+  branches {
+    responseText: "Yeah, I\'m sure they will. Bye now."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I know perfectly well what I\'m doing. Goodbye."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Hang up.{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "pc_alcamai"
+          }
+        }
+      }
+      args {
+        string_value: "fired"
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e3426e64343179fbe50adf"
+  }
+  index: 9
+  text: "All right, we\'ll talk later!"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

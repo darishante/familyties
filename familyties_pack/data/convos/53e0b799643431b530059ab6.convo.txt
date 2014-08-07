@@ -680,6 +680,23 @@ nodes {
         int_value: 1
       }
     }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
   }
 }
 nodes {
@@ -717,6 +734,38 @@ nodes {
       }
       args {
         int_value: -2
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "BrooklynMurdered,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -906,6 +955,23 @@ nodes {
         int_value: 2
       }
     }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
   }
 }
 nodes {
@@ -1080,6 +1146,23 @@ nodes {
             }
           }
         }
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "pc_alcamai"
+          }
+        }
+      }
+      args {
+        string_value: "probation"
       }
     }
   }

@@ -369,7 +369,7 @@ nodes {
     id: "53dd0e7c6434313d23a408f8"
   }
   index: 4
-  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They seem to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
+  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They seem to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?\n\ndebug: $(scene.Suspicion)"
   branches {
     responseText: "Yes, that\'s me. What\'s this all about?"
     nextNodeIndex: 8
@@ -5095,12 +5095,12 @@ nodes {
               string_value: "Comparison Ops"
             }
             args {
-              int_value: 4
+              int_value: 3
             }
           }
         }
         args {
-          float_value: 5
+          float_value: 4
         }
       }
     }

@@ -155,6 +155,18 @@ variables {
     }
   }
 }
+variables {
+  name: "ZhangRep"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ZhangRep"
+      typeName: "int"
+    }
+  }
+}
 description: "The origin of a shadowrunner."
 startScene: "Family_Ties_000"
 allowCharacterGen: true

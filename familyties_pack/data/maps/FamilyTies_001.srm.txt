@@ -5489,7 +5489,7 @@ props {
   gridPoint {
     x: -70
     y: 2
-    z: -8
+    z: -5
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5676,6 +5676,231 @@ props {
     isEnabled: true
     interactionRadius: 1
     interactionIcon: InteractionIcon_Warp
+  }
+  lod: 0
+}
+props {
+  name: "factory_furniture_computerTerminal_lights"
+  gridPoint {
+    x: -79
+    y: 0.5
+    z: -8
+  }
+  orientation: ORIENTATION_E
+  displayName: "DeskComputerSecurity"
+  idRef {
+    id: "53e35ab564343179fbe50ba8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "An open email on the screen mentions the basement security locker door code has changed from 0300."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicOfficeChair01"
+  gridPoint {
+    x: -78.5
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_wallDecoration_displayMonitor01_lights"
+  gridPoint {
+    x: -52
+    y: 0.5
+    z: -49
+  }
+  orientation: ORIENTATION_S
+  displayName: "PoliceInfoMonitor"
+  idRef {
+    id: "53e36f116434316e0ce50c78"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "The info display on the wall displays a garbled stream of characters, and a gently blinking message to contact technical support."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -55
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37bb26434316e0ce51366"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37bb76434316e0ce51367"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -45
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37bc06434316e0ce51368"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -43
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37bc26434316e0ce51369"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickWindowEdge02"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -57
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37c1d6434316e0ce5136b"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEdge01"
+  gridPoint {
+    x: -50
+    y: 0
+    z: -54
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e37c296434316e0ce5136c"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEdge01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: -54
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e37c636434316e0ce5136e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_furniture_officeCouch"
+  gridPoint {
+    x: -51
+    y: 0
+    z: -52.33
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "asylum_furniture_plainDesk"
+  gridPoint {
+    x: -63
+    y: 0
+    z: -51
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "office_appliance_coffeeMachine"
+  gridPoint {
+    x: -49
+    y: 0.5
+    z: -57.3
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_table07"
+  gridPoint {
+    x: -50
+    y: 0
+    z: -57
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEdge01"
+  gridPoint {
+    x: -60
+    y: 0
+    z: -52
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37ee46434316e0ce51370"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEdge06"
+  gridPoint {
+    x: -60
+    y: 0
+    z: -54
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e37ef46434316e0ce51372"
   }
   lod: 0
 }

@@ -1,0 +1,72 @@
+idRef {
+  id: "53e35fd564343179fbe50ba9"
+}
+ui_name: "s001_surrender_now"
+nodes {
+  idRef {
+    id: "53e35fe864343179fbe50baf"
+  }
+  index: 0
+  text: "Hey! You! How did you get out the interrogation room?\n\nStop right now and put your hands over your head!"
+  branches {
+    responseText: "{{CC}}Run or fight{{/CC}}"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Surrender{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Goal Status"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Leave the Police Station"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Fade Camera Out"
+        args {
+          float_value: 2
+        }
+        args {
+          float_value: 1
+        }
+      }
+      ops {
+        functionName: "End Story With Epilogue"
+        args {
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
