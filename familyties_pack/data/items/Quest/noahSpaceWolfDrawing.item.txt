@@ -1,0 +1,8 @@
+id: "noahSpaceWolfDrawing"
+type: ItemType_QuestItem
+uirep {
+  name: "Noah\'s Drawing of a Space-Wolf"
+  description: "This is an anatomical drawing made by your brother Noah when he was just a child. Even then he had a gift for biology and the way living things are put together."
+}
+credentials: 0
+sorting_group: "Quest"

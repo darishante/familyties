@@ -1,0 +1,49 @@
+idRef {
+  id: "53e3a5596434316822e509ff"
+}
+ui_name: "s003_hannahs_computer"
+nodes {
+  idRef {
+    id: "53e3a56a6434316822e50a05"
+  }
+  index: 0
+  text: "This computer belongs to Hannah \"Half Shatter\" $(story.pc_lastname), M\303\226RGENSTEIN\'s decking officer and alien technology specialist. It\'s full of detailed notes on how to combat various kinds of alien menaces by using the ship\'s computer systems as well as an assortment of exotic weapons. Most of the plans are really complicated and bizarre, and require access to the Matrix of the ship. Apparently the captain has disconnected Half Shatter\'s Matrix link from here for some transgression.\n\nHowever, the notes point out that the code for accessing onboard turrets is 1984."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HannahDwarfDecker,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

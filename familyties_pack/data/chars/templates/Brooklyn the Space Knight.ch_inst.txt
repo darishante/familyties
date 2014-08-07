@@ -69,7 +69,7 @@ char_name: "Brooklyn the Space Knight"
 pc_spawn_number: -1
 hiring_type: HiringType_Forced
 portrait {
-  filename: "pc_trollfemale_06a_beauty"
+  filename: "npc_brooklyn_spaceknight"
 }
 karma: 43
 hiring_cost_override: 0

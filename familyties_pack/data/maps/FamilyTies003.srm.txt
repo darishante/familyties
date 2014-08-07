@@ -745,3 +745,203 @@ props {
     }
   }
 }
+props {
+  name: "haven_tech_missionComputer"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e39e486434315815e50af5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "53e3a5596434316822e509ff"
+      turnToFace: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "factory_wallDecoration_displayMonitor01"
+  gridPoint {
+    x: 26
+    y: 2
+    z: -9
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate04"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e399146434315815e50abf"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e399166434315815e50ac0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "Berlin_Grenade 3 (Frag)"
+      destroyOnPickup: true
+    }
+  }
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate04"
+  gridPoint {
+    x: 28
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e399186434315815e50ac1"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicBookshelf01"
+  gridPoint {
+    x: 24
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicBookshelf01"
+  gridPoint {
+    x: 25
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e39c3a6434315815e50af0"
+  }
+  lod: 0
+}
+props {
+  name: "office_clutter_bookStacks01"
+  gridPoint {
+    x: 21
+    y: 1
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_table01"
+  gridPoint {
+    x: 21
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_clutter_bookStacks01"
+  gridPoint {
+    x: 21
+    y: 1
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e39c846434315815e50af1"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_lighting_workLightString"
+  gridPoint {
+    x: 25
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_lighting_workLightString"
+  gridPoint {
+    x: 25
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e39c9f6434315815e50af2"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_balconyPole01"
+  gridPoint {
+    x: 24.8
+    y: 1
+    z: -4.2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate04"
+  gridPoint {
+    x: 25
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e39d026434315815e50af3"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_clutter_shoePile"
+  gridPoint {
+    x: 24
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
