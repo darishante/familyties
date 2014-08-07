@@ -23,3 +23,10 @@ affectsEnemy: true
 canTargetActor: true
 store_cost: 0
 sorting_group: "Melee"
+
+passiveStatusEffects {
+statMods {
+skill: Skill_CloseCombat
+intModValue: 3
+}
+}

@@ -1,0 +1,94 @@
+idRef {
+  id: "53e3b7cc6434316822e50a97"
+}
+ui_name: "s003_turret_1"
+nodes {
+  idRef {
+    id: "53e3b7da6434316822e50a9d"
+  }
+  index: 0
+  text: "M\303\226RGENSTEIN DEFENSE TURRET 1\n\nEnter secret code to enable!"
+  branches {
+    responseText: "{{CC}}Decking 1{{/CC}} Hack the turret"
+    nextNodeIndex: -1
+    inputBypass: true
+  }
+  branches {
+    responseText: "1984"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_InputNumpad
+  inputMaxLength: 4
+}
+nodes {
+  idRef {
+    id: "53e3b8606434316822e50aa1"
+  }
+  index: 1
+  text: "TURRET ACTIVATED - SCANNING FOR HOSTILES!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53e3b76a6434316822e50a95"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e3b76a6434316822e50a95"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

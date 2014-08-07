@@ -45,6 +45,6 @@ sorting_group: "Pistols"
 passiveStatusEffects {
 statMods {
 skill: Skill_RangedCombat
-intModValue: 1
+intModValue: 3
 }
 }
