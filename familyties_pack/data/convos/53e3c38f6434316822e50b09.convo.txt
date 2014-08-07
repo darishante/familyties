@@ -1,0 +1,218 @@
+idRef {
+  id: "53e3c38f6434316822e50b09"
+}
+ui_name: "s003_principal_calls"
+nodes {
+  idRef {
+    id: "53e3c4f56434316822e50b2b"
+  }
+  index: 0
+  text: ""
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3c4fa6434316822e50b2e"
+  }
+  index: 1
+  text: "{{GM}}Suddenly, a voice cuts through the ship. It booms over the whistle of your weapons and the screams of the space-wolves.{{/GM}}\n\n$(story.pc_firstname)? Brooklyn? You had better not be making a mess in there!"
+  branches {
+    responseText: "I\'m not $(story.pc_firstname), I\'m $(s.name), the space knight!"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No sir, we\'re being really tidy!"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Be very quiet{{/CC}}"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e3c2386434316822e50b08"
+  }
+}
+nodes {
+  idRef {
+    id: "53e3c51a6434316822e50b3b"
+  }
+  index: 2
+  text: "We\'re playing space war! We finished schoolwork already!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e220806434319f9731b7d2"
+  }
+}
+nodes {
+  idRef {
+    id: "53e3c9786434318d33b69ef2"
+  }
+  index: 3
+  text: "Space war? Children, what do the home rules say about playing violent games?"
+  branches {
+    responseText: "... That they will only make you do violent things."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t remember."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "We\'re not playing space war, we\'re playing space adventures and it\'s not at all violent."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e3c2386434316822e50b08"
+  }
+}
+nodes {
+  idRef {
+    id: "53e3cac86434318d33b69ef7"
+  }
+  index: 4
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "droneActivated"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "droneActivated"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3caeb6434318d33b69efa"
+  }
+  index: 5
+  text: "Have you taken the cleaning drone from the closet, $(story.pc_firstname)?"
+  branches {
+    responseText: "... Yes, sir."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No I haven\'t, it must have been somebody else!"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t remember."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3cb936434318d33b69f00"
+  }
+  index: 6
+  text: "{{/GM}}Principal Gaitlin seems to be about to say something, but then he gets interrupted by one of the other adults, and forgets about you.\n\nYou and Brooklyn forget about the tedious reality of Saskatoon Residential Children\'s Center for a brief while, and return to M\303\226RGENSTEIN!{{/GM}}"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Stop Music"
+      }
+    }
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53e3cc566434318d33b69f35"
+  }
+  index: 7
+  text: ""
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

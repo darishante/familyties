@@ -9,7 +9,53 @@ nodes {
   index: 0
   text: "M\303\226RGENSTEIN DEFENSE TURRET 1\n\nEnter secret code to enable!"
   branches {
-    responseText: "{{CC}}Decking 1{{/CC}} Hack the turret"
+    responseText: "{{CC}}Decking 2{{/CC}} Hack the turret"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
     nextNodeIndex: -1
     inputBypass: true
   }

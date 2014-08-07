@@ -1,7 +1,7 @@
-minX: -5
-minZ: -17
-numX: 61
-numZ: 31
+minX: -40
+minZ: -31
+numX: 96
+numZ: 45
 props {
   name: "factory_floor_walkwayPlate04"
   gridPoint {
@@ -1752,6 +1752,85 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53e3b7246434316822e50a94"
+  }
+  lod: 0
+}
+props {
+  name: "office_floor_woodTile01"
+  gridPoint {
+    x: -39
+    y: 0
+    z: -31
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_floor_woodTile01"
+  gridPoint {
+    x: -39
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c00f6434316822e50b02"
+  }
+  lod: 0
+}
+props {
+  name: "office_floor_woodTile01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c0116434316822e50b03"
+  }
+  lod: 0
+}
+props {
+  name: "office_floor_woodTile01"
+  gridPoint {
+    x: -37
+    y: 0
+    z: -31
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c0126434316822e50b04"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    matrixSpawnPoint {
+      dimension: "Default"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wall_wood02"
+  gridPoint {
+    x: -40
+    y: 0
+    z: -31
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_wall_wood02"
+  gridPoint {
+    x: -40
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c0426434316822e50b05"
   }
   lod: 0
 }

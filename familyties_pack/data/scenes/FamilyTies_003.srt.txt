@@ -779,6 +779,108 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "PrincipalCalls"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "spaceWolvesKilled"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Play Music"
+      args {
+        call_value {
+          functionName: "Get Map Item (Music)"
+          args {
+            string_value: ""
+          }
+          args {
+            string_value: "Silence"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53e3c38f6434316822e50b09"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53e3c2386434316822e50b08"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e3c1396434316822e50b07"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Morgenstein"
   position {
@@ -818,7 +920,7 @@ regions {
     a: 1
   }
   ambience_template: ""
-  combat_music: "Berlin-Set3-Legwork"
+  combat_music: "Berlin-Set3-Combat"
   default_music: "Berlin-Set3-Combat"
   loop_combat_music: true
   loop_default_music: true
@@ -1012,6 +1114,50 @@ regions {
   default_music: ""
   loop_combat_music: true
   loop_default_music: false
+}
+regions {
+  name: "Dawkins RTC"
+  position {
+    x: -21
+    y: -2
+    width: -69
+    height: -68
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53e3bd566434316822e50b00"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.85
+    y: -1
+    z: -0.4
+  }
+  directional_light_color {
+    r: 0.2
+    g: 0.14901961
+    b: 0.14901961
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.050980393
+    g: 0.10196079
+    b: 0.050980393
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: "Seattle-Set3-Legwork"
+  loop_combat_music: true
+  loop_default_music: true
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -1444,6 +1590,65 @@ characters {
     }
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -38
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c2386434316822e50b08"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/ElfMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 3
+        quickness: 3
+        strength: 3
+        charisma: 3
+        intelligence: 3
+        willpower: 3
+        essence: 0
+        hp: 30
+        ap: 1
+        armor: 2
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        close_combat: 1
+      }
+      specializations {
+        unarmed: 1
+      }
+      vulnerabilities {
+        normal: VulnerabilityLevel_Immune
+        magic: VulnerabilityLevel_Immune
+      }
+    }
+    equipment {
+      prefab_name: "SamuraiTrenchcoat"
+    }
+    team_id: "Others"
+    char_name: "Principal Gaitlin"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_elfmale_00b"
+    }
+    portrait_code_override: "s2h5c4b9c4"
+    karma: 62
+  }
+}
 variables {
   bool_value: false
   variableref_value {
@@ -1531,13 +1736,17 @@ team_affiliations {
 scene_dimensions {
   dimension_name: "Default"
 }
+scene_dimensions {
+  dimension_name: "Dawkins RTC"
+  initial_alarm_state: 0
+  turns_per_round: 1
+}
 character_roster {
   roster_entries {
     reference_id: "Brooklyn the Space Knight"
     hiring_conditions {
     }
     hiring_cost: -1
-    content_pack_source: "53da5ef2643431a4970041a8"
   }
 }
 show_hiring_screen_on_scene_load: true
