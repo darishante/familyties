@@ -1,0 +1,1015 @@
+minX: -8
+minZ: -19
+numX: 22
+numZ: 19
+props {
+  name: "undergroundBase_floor_oldCement04"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement06"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement04"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement06"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3b8d83736636414000125"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_tech_mainframePillar01"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "factory_tech_mainframePillar01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_floorDecoration_loadingArea"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3ba713736636414000126"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3ba773736636414000127"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3ba853736636414000128"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3ba943736636414000129"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_floor_23"
+  gridPoint {
+    x: 1
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_floor_24"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_floor_23"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3d5c16434318d33b69f5b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "The garage appears heavily fortified."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc4a373663641400012a"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc54373663641400012b"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc5b373663641400012c"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc61373663641400012d"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc6a373663641400012e"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc74373663641400012f"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc7e3736636414000130"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bc863736636414000131"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bd583736636414000132"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bd5d3736636414000133"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bd623736636414000134"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bd663736636414000135"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 10
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3bd6c3736636414000136"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_multiLaneSingle02Mid"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_multiLaneSingle02Mid"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3be453736636414000137"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_ground_multiLaneSingle02Mid"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3be4a3736636414000138"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_building_02edge05"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_signs_billboarddamaged01"
+  gridPoint {
+    x: 12
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge07"
+  gridPoint {
+    x: 11
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c1453736636414000139"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c14f373663641400013a"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c154373663641400013b"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c159373663641400013c"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c15e373663641400013d"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c166373663641400013e"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEnd01"
+  gridPoint {
+    x: 4
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEnd04"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorDoor01Front"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEnd01"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEnd02"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "factory_wall_angledDoor01Mid"
+  gridPoint {
+    x: -1
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  displayName: "Door"
+  idRef {
+    id: "53e3d5946434318d33b69f59"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: false
+      doorSound: "DoorOpenClose"
+      doorSoundBundle: "Berlin:ambient_haven"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge03"
+  gridPoint {
+    x: -1
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge05"
+  gridPoint {
+    x: -3
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge05"
+  gridPoint {
+    x: -5
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c61a373663641400013f"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge05"
+  gridPoint {
+    x: 1
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c61e3736636414000140"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge05"
+  gridPoint {
+    x: 3
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6243736636414000141"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_angledEdge05"
+  gridPoint {
+    x: 5
+    y: 3
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6283736636414000142"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: -5
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: -3
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6983736636414000144"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: -5
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c69e3736636414000145"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: -1
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6aa3736636414000146"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 1
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6af3736636414000147"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 3
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6c73736636414000149"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 5
+    y: 5
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6cb373663641400014a"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 6
+    y: 5
+    z: -12
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6d4373663641400014b"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 8
+    y: 5
+    z: -12
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6df373663641400014c"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 10
+    y: 5
+    z: -12
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e3c6e4373663641400014d"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 12
+    y: 5
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c6ee373663641400014e"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 12
+    y: 5
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c701373663641400014f"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_wallDecoration_angledTop01"
+  gridPoint {
+    x: 12
+    y: 5
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c7073736636414000150"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_building_02edge05"
+  gridPoint {
+    x: -8
+    y: 4
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c7ae3736636414000151"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c7ec3736636414000152"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c7f73736636414000153"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c7fd3736636414000154"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3c87d3736636414000156"
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_wallDecoration_ancients"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "factory_wall_techDoor01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_oldCement05"
+  gridPoint {
+    x: 0
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3cabe3736636414000157"
+  }
+  lod: 0
+}

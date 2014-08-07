@@ -6551,10 +6551,13 @@ characters {
     team_id: "Alcamai"
     char_name: "Old Timer"
     pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
     portrait {
       filename: "npc_oldtimer_test"
     }
-    karma: 6
+    karma: 3
+    hiring_cost_override: 1500
+    id: "Old Timer"
   }
 }
 characters {
