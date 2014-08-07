@@ -1834,3 +1834,63 @@ props {
   }
   lod: 0
 }
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 53
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3da34643431413e06dac9"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 53
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3da34643431413e06daca"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 53
+    y: 0
+    z: -21
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3da37643431413e06dacb"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "FamilyTies_004"
+      confirmation_text: "DEBUG: Leave the imaginary world of M\303\226RGENSTEIN and head for Seattle?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_walkwayPlate04"
+  gridPoint {
+    x: 53
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e3da37643431413e06dacc"
+  }
+  lod: 0
+}
