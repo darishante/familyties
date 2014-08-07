@@ -41,13 +41,15 @@ Tarkoitus on, että skenaariossa kulkee mukana jatkuvasti hahmon tekemiä valint
 
 4.1 Alcamai Cosmetics
 
-Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko myyjö, tutkija tai nuorempi manageri
+Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri
 
 Augusta - Turvahenkilö, respatyöntekijä
 
 Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia
 
 Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia
+
+Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen tarvittaessa.
 
 [Näistä kahdesta etsivästä voisi olla kiva tehdä jatkuvia hahmoja.]
 
