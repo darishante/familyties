@@ -14,14 +14,18 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 
 2. Historia
 
+(Pitäisikö sijoittaa tämän ajan sijasta vuoteen 2075 niin voisi käyttää nykyistä Red Hill -matskua suoraan?)
+
+
 2033 - 2047 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
 
 2043 - 2047 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
+
 o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu) - Brooklyn
 o	taksonomian tutkija; örkki (academic) - Noah
 o	tv-juontaja; haltia (socialite) - Alexander
 o	Knight Errantin turvamies Seattlessa; ihminen (security) - Grace
-o	shadowrunner, kääpiö (shadowrun) - Hannah
+o	shadowrunner, kääpiö (shadowrun) - Hannah "Half Shatter", paranoidi dekkeri
 o	korporaatti, pelaajahahmo (corporate / socialite / academic)
 
 Pelaajahahmo työskentelee aluksi Alcamai Cosmetics -firmalla Omahassa. Lentää sieltä ulos ekan tehtävän aikana. Joku on murhannut jonkun sen perheenjäsenen, jostain syystä sitä epäillään - jotain Alcamain firman salaisuuksia löytyy 
@@ -69,7 +73,7 @@ Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä täst
 
  - valitaan ura, etunimi ja sukunimi
 
-Karmapalkkio:
+Karmapalkkio: 0
 
 6.1 Alcamai
 
@@ -86,7 +90,8 @@ Karmapalkkio yht: +2
 
 
 6.2. Mielikuvitusleikki
- - pelaajahahmo, Brooklyn ja ?joku kolmas sisarus? leikkivät shadowrunnereita
+ - sijoittuu menneisyyteen
+ - pelaajahahmo, Brooklyn (ja ehkä joku kolmas?) leikkivät avaruussotaa 
 
 Karmapalkkio: +1 ??
 
