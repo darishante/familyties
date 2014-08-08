@@ -12,7 +12,9 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 
 
 
-2. Historia
+2. Taustaa
+
+2.1 Historia
 
 (Pitäisikö sijoittaa tämän ajan sijasta vuoteen 2075 niin voisi käyttää nykyistä Red Hill -matskua suoraan?)
 
@@ -35,27 +37,44 @@ Etenee muiden perheenjäsenten kautta, hahmosta tulee shadowrunner ja
 koettaa selvittää, mitä hämärää orpokodissa on hänelle ja hänen 
 sisaruksilleen oikein tehty.
 
-3. Rakenne
+2.2 Rakenne
 
 Tarkoitus on, että skenaariossa kulkee mukana jatkuvasti hahmon tekemiä valintoja, ja niillä on selkeitä seurauksia. Esim: hahmo on luultavasti ekasta skenusta lähtien etsintäkuulutettu, mutta etsinnän vakavuus riippuu siitä, mitä hahmo on tehnyt. Poliisimurhaajaa haetaan todella innokkaasti, kadonnutta satunnaista epäiltyä vähemmän.
+
+
+2.3 Teemat
+
+ * Monimuotoisuus
+ 
+Skenaarion keskellä on perhe, joka päättää olla perhe huolimatta siitä, että he ovat kaikista ihmisyyden ja metaihmisyyden haaroista. Tämä on heille voimavara (parissa kohdassa varmaan myös heikkous).
+
+Pelin alun on tarkoitus olla enemmän "middle America" kuin loppuosan; Omahan väestöstä 90% on ihmisiä, ja perinteiset roolit ovat kunniassa. Seattlen taas pitäisi olla hilpeä kaaos, jossa kuka tahansa voi olla mitä tahansa. Käytetään rohkeasti etnisiä ryhmiä, seksuaalisia vähemmistöjä, obskuureja metaihmisyyskomboja jne. Ympäröivällä yhteiskunnalla saattaa olla näiden suhteen ennakkoluuloja, mutta skenaarion ei tulisi pönkittää näitä.
+
+Esimerkkinä: perheen älykkö, biotieteiden tohtori Noah, on örkki.
+
+
+ * Vaihtoehdot väkivallalle
+ 
+Jos peliin tuodaan keikkoja, joilla äärimmäisen korkea bodycount on välttämätön, näiden pitäisi olla optionaalisia sivujuonia. Tavoite on antaa pelaajalle mahdollisuus pelata shadowrunneria, joka ei ole mikään yhden hengen käänteinen väestöräjähdys. Taistelut voivat olla välttämättömiä, mutta esim. pelaajahahmon aloitteesta käynnistyvät yhteenotot olisi hyvä olla joko ohitettavissa tai todella harvinasia. Tutkitaan myös mahdollisuutta tehdä ei-letaaleja aseita. Näiden tulisi olla suht hankalia - toimivat tyyliin "vähennetään action pointit nollaan ja sitten pannaan hahmo nippusiteisiin / rautoihin, STR yli 5 murtautuu siteistä ulos" - eikä mitään simppeliä shorthandia sille, että "ammutaan joku, mutta siten että se ei kuole".
+
+Samaan aikaan pelin ei tulisi mikromanageroida moralisoinnin kanssa; ts. karmapalkkioiden tulisi olla pelityyliin nähden agnostisia. Sen sijaan väkivallattomista ratkaisuista olisi hyvä jakaa muita palkkioita - rahaa, esineitä, infoa jne. Lisäksi reiluuden nimessä joillain NPC:illä voi olla DocWagon -sopimuksia; jos pidetään kirjaa siitä, ketä kaikkia on tapettu, on myös syytä antaa ammutuille tai piestyille NPC:ille mahdollisuus selvitä. SRR ei ota tähän suuremmin kantaa, mutta me voisimme.
+
+[Taustana: koetin joskus pelata Deus Ex Human Revolutionia psykohahmolla, mutta se tuntui väärältä kun koko ajan missasin ekspaa tappamalla väkeä sen sijaan että olisin hiipinyt ja kolkkaillut. Alkuperäinen Deus Ex jakoi pisteitä etenemisestä riippumatta siitä miten sen suoritit, tähtäämme samaan.]
+
 
 
 
 4. Hahmot
 
-4.1 Alcamai Cosmetics
-
 Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri
 
-Augusta - Turvahenkilö, respatyöntekijä
+Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia. Seuraa pelaajahahmoa Seattleen?
 
-Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia
+Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia. Seuraa pelaajahahmoa Seattleen?
 
-Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia
+Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen jos siitä on hänelle etua.
 
-Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen tarvittaessa.
 
-[Näistä kahdesta etsivästä voisi olla kiva tehdä jatkuvia hahmoja.]
 
 
 
