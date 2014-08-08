@@ -1021,7 +1021,7 @@ nodes {
     id: "53e0cefd643431b355058f4b"
   }
   index: 11
-  text: "The detectives who brought you in are really rather suspicious of you, and frankly you\'ve given them plenty of reasons for that. What the hell were you thinking back in the office? No matter what the police say, you need to keep your cool! It says so right in the employee handbook!\n\nThe company is not at all pleased at the idea of having another scandal. You\'re not left out to hang here, but there\'s some damage control that needs to be done.\n\nFirst of all, the willful neglicience clause of my contract has been invoked, which means that you\'re going to have to pay most of my fees - at employee rates, but still. We\'re starting out at $(scene.lawyerFee) nuyen for this little talk, and then we\'ll go from there."
+  text: "The detectives who brought you in are really rather suspicious of you, and frankly you\'ve given them plenty of reasons for that. What the hell were you thinking back in the office? The employee handbook has a section on how to handle police inquiries, and this was not how to do it!\n\nThe company is not at all pleased at the idea of having another scandal. You\'re not left out to hang here, but there\'s some damage control that needs to be done.\n\nFirst of all, the willful neglicience clause of my contract has been invoked, which means that you\'re going to have to pay most of my fees - at employee rates, but still. We\'re starting out at $(scene.lawyerFee) nuyen for this little talk, and then we\'ll go from there."
   branches {
     responseText: "{{CC}}Pay $(scene.lawyerFee){{/CC}} All right, here\'s the money."
     conditions {

@@ -83,6 +83,30 @@ nodes {
   index: 1
   text: "{{GM}}They nod at you again, and return to their game.{{/GM}}"
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db1dfd64343199d131b7b8"
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -181,6 +205,30 @@ nodes {
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53db1c8364343199d131b7b7"
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db1dfd64343199d131b7b8"
+          }
+        }
+      }
+    }
   }
 }
 roots {

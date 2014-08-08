@@ -4071,87 +4071,70 @@ props {
 props {
   name: "secretLab_furniture_lockerOpen"
   gridPoint {
-    x: -20
-    y: 0
-    z: 10
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dc9e11643431f9fc06db0b"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    prerequisites {
-      ops {
-        functionName: "Match (string)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (string)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "pc_alcamai"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "IsOrIsNot"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          string_value: "researcher"
-        }
-      }
-    }
-    pickupItem {
-      itemName: "Corporate Salaryman"
-      destroyOnPickup: false
-    }
-  }
-  lod: 0
-}
-props {
-  name: "secretLab_furniture_lockerClosed"
-  gridPoint {
-    x: -20
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "secretLab_furniture_lockerClosed"
-  gridPoint {
-    x: -20
-    y: 0
-    z: 11
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dc9e30643431f9fc06db0d"
-  }
-  lod: 0
-}
-props {
-  name: "secretLab_furniture_lockerClosed"
-  gridPoint {
-    x: -20
+    x: -22.64
     y: 0
     z: 9
   }
   orientation: ORIENTATION_S
   idRef {
+    id: "53dc9e11643431f9fc06db0b"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  displayName: "Locker Closed 3"
+  idRef {
+    id: "53e48a1a643431fe15e50a0a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 10
+  }
+  orientation: ORIENTATION_S
+  displayName: "Locker Closed 2"
+  idRef {
+    id: "53dc9e30643431f9fc06db0d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  displayName: "Locker Closed 1"
+  idRef {
     id: "53dc9e36643431f9fc06db0e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }
@@ -5901,6 +5884,63 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53e37ef46434316e0ce51372"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  displayName: "Special Locker"
+  idRef {
+    id: "53e486846434310611a40450"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 13
+  }
+  orientation: ORIENTATION_S
+  displayName: "Locker Closed 4"
+  idRef {
+    id: "53e486876434310611a40451"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_lockerClosed"
+  gridPoint {
+    x: -22.64
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  displayName: "Locker Closed 5"
+  idRef {
+    id: "53e486896434310611a40452"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }

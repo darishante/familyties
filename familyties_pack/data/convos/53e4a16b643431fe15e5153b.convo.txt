@@ -1,0 +1,268 @@
+idRef {
+  id: "53e4a16b643431fe15e5153b"
+}
+ui_name: "s003_suddenly_half_shatter"
+nodes {
+  idRef {
+    id: "53e4a195643431fe15e51545"
+  }
+  index: 0
+  text: "{{GM}}Suddenly, out of an impossibly small hatchway in the floor a tiny figure pops out. It\'s Hannah \"Half Shatter\" $(story.pc_lastname), the computer and exotic weapons specialist of M\303\226RGENSTEIN.{{/GM}}\n\nBrooklyn! $(l.name)! You need to override the guns! I can\'t do it from here, but there\'s a terminal behind you that you can use for that! The code is 1-9-8-4!"
+  branches {
+    responseText: "I\'m on it!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No way, we\'re just going to blast those turrets to bits!"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53e4a667643431fe15e5156a"
+  }
+  index: 1
+  text: "{{GM}}A blast from a turret sends Half Shatter yelping and ducking back into the duct.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53e4a4c5643431fe15e5155d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "53e4c1cb6434319e2931b7c5"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53e4a280643431fe15e51548"
+  }
+  index: 2
+  text: "{{GM}}Suddenly, out of an impossibly small hatchway in the floor a tiny figure pops out. It\'s Hannah \"Half Shatter\" $(story.pc_lastname), the computer and exotic weapons specialist of M\303\226RGENSTEIN.{{/GM}}\n\nBrooklyn! $(l.name)! You overrode the turret controls! Good job! But there\'s still more space-wolves out here!"
+  branches {
+    responseText: "Where have you been?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53e4a2fb643431fe15e5154d"
+  }
+  index: 3
+  text: "I was trying to get the main defense computer working again - it broke after the rocks hit us. I\'ve mostly done it, too, but a couple of the guns still need manual activation.\n\nAnyway, I\'m going to come along with you now!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53e4b5ec643431fe15e516e7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53e49e50643431fe15e514fc"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53e49e50643431fe15e514fc"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "53e4a4c5643431fe15e5155d"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 2
+}

@@ -24,6 +24,18 @@ variables {
   }
 }
 variables {
+  name: "GaitlinRep"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "GaitlinRep"
+      typeName: "int"
+    }
+  }
+}
+variables {
   name: "NamesOfDeadPeople"
   typeName: "string"
   defaultValue {
@@ -167,7 +179,7 @@ variables {
     }
   }
 }
-description: "The origin of a shadowrunner."
+description: "The origin story of a shadowrunner - from the shiny offices of a corporate giant, into the strange and chaotic world of the other half.\n\nPlease note: The story requires you to start with an etiquette suitable for a company employee: Academic, Corporate or Socialite."
 startScene: "Family_Ties_000"
 allowCharacterGen: true
 useDefaultEquipment: false

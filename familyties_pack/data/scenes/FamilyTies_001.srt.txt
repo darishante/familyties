@@ -959,6 +959,28 @@ triggers {
         float_value: 0.1
       }
     }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db098464343133c9a404ce"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1024,80 +1046,6 @@ triggers {
   elseActions {
   }
   is_oneshot: false
-}
-triggers {
-  name: "gol_GetDisguise"
-  events {
-    ops {
-      functionName: "On Item Interaction"
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "53dc9e11643431f9fc06db0b"
-          }
-        }
-      }
-    }
-  }
-  conditions {
-  }
-  actions {
-    ops {
-      functionName: "Set Goal Status"
-      args {
-        call_value {
-          functionName: "Get Map Item (Goal)"
-          args {
-            string_value: "Find Some Clothes Suitable for Work"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "GoalStatus"
-          }
-          args {
-            int_value: 2
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Add To Variable (float)"
-      args {
-        call_value {
-          functionName: "Get Variable (float)"
-          args {
-            string_value: "Suspicion"
-          }
-        }
-      }
-      args {
-        float_value: 0.1
-      }
-    }
-  }
-  isActive: true
-  idRef {
-    id: "53dca053643431f9fc06db23"
-  }
-  elseActions {
-  }
-  is_oneshot: true
 }
 triggers {
   name: "gol_GetDisguise"
@@ -5245,7 +5193,7 @@ triggers {
         }
       }
       args {
-        float_value: 3
+        float_value: 2.7
       }
     }
   }
@@ -5290,16 +5238,724 @@ triggers {
         float_value: 2
       }
       args {
-        float_value: 4
+        float_value: 7
       }
       args {
-        float_value: 5
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "racismFactor"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: ". They must have been waiting here for quite a while"
+          }
+          args {
+            call_value {
+              functionName: "Get Variable (string)"
+              args {
+                string_value: "racismFactor"
+              }
+            }
+          }
+        }
       }
     }
   }
   isActive: true
   idRef {
     id: "53e363ab6434316e08e509ff"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "SeekClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53dc9e36643431f9fc06db0e"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The locker contains a credstick."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.05
+      }
+    }
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 5
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e487bd643431fe15e509ff"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "FindClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e486846434310611a40450"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+          }
+          args {
+            string_value: "pc_alcamai"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "researcher"
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "You find a dress shirt and a tie in your size."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.1
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Corporate Salaryman"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Some Clothes Suitable for Work"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e486846434310611a40450"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e4884f643431fe15e50a03"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "SeekClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53dc9e30643431f9fc06db0d"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The locker contains nothing useful."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.05
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e48ab7643431fe15e50a0c"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "SeekClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e48a1a643431fe15e50a0a"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The locker contains nothing useful."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.05
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e48abb643431fe15e50a0d"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "SeekClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e486876434310611a40451"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The locker contains nothing useful."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.05
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e48abe643431fe15e50a0e"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "SeekClothes"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53e486896434310611a40452"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Triggering Prop"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "The locker contains nothing useful."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 0.05
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e48ac3643431fe15e50a0f"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "SuspicionLimit"
+  events {
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        float_value: 2.7
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Variable (float)"
+          args {
+            string_value: "Suspicion"
+          }
+        }
+      }
+      args {
+        float_value: 2.7
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53e48b12643431fe15e50a10"
   }
   elseActions {
   }

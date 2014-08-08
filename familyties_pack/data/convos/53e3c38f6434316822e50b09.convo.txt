@@ -38,6 +38,25 @@ nodes {
   sourceInSceneRef {
     id: "53e3c2386434316822e50b08"
   }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -187,13 +206,32 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
 }
 nodes {
   idRef {
     id: "53e3cb936434318d33b69f00"
   }
   index: 6
-  text: "{{/GM}}Principal Gaitlin seems to be about to say something, but then he gets interrupted by one of the other adults, and forgets about you.\n\nYou and Brooklyn forget about the tedious reality of Saskatoon Residential Children\'s Center for a brief while, and return to M\303\226RGENSTEIN!{{/GM}}"
+  text: "{{/GM}}Principal Gaitlin seems to be about to say something, but then he gets interrupted by one of the other adults, and forgets about you.\n\nYou forget about the tedious reality of Saskatoon Residential Children\'s Home for a brief while, and return to M\303\226RGENSTEIN!{{/GM}}"
   branches {
     responseText: ""
     actions {
