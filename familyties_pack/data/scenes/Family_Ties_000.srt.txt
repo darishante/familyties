@@ -220,6 +220,40 @@ triggers {
         string_value: "ma\'am"
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "bro"
+          }
+        }
+      }
+      args {
+        string_value: "sis"
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "insult"
+          }
+        }
+      }
+      args {
+        string_value: "bitch"
+      }
+    }
   }
   isActive: true
   idRef {
@@ -304,6 +338,40 @@ triggers {
       }
       args {
         string_value: "sir"
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "bro"
+          }
+        }
+      }
+      args {
+        string_value: "bro"
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "insult"
+          }
+        }
+      }
+      args {
+        string_value: "bitch"
       }
     }
   }

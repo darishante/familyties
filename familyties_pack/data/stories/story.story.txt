@@ -12,6 +12,18 @@ variables {
   }
 }
 variables {
+  name: "bro"
+  typeName: "string"
+  defaultValue {
+    string_value: "sis"
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "bro"
+      typeName: "string"
+    }
+  }
+}
+variables {
   name: "DeadCitizens"
   typeName: "int"
   defaultValue {
@@ -32,6 +44,18 @@ variables {
       scope: TsVariableScope_Story
       name: "GaitlinRep"
       typeName: "int"
+    }
+  }
+}
+variables {
+  name: "insult"
+  typeName: "string"
+  defaultValue {
+    string_value: "bitch"
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "insult"
+      typeName: "string"
     }
   }
 }
