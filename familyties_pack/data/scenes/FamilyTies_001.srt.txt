@@ -6010,8 +6010,8 @@ regions {
   position {
     x: -25
     y: 27
-    width: 30
-    height: -45
+    width: 29
+    height: -46
   }
   enabledAtStart: true
   is_camera_region: true
