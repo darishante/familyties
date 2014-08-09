@@ -1,0 +1,35 @@
+id: "Narcoject"
+type: ItemType_Consumable
+uirep {
+  icon: "icon_jazz"
+  name: "Narcoject"
+  description: "Knockout drug that decreases Strength by 3 for 5 rounds"
+}
+coreAttribute: Attribute_Intelligence
+coreSkill: Skill_Biotech
+apCost: 1
+maxAmmo: 0
+baseHPDamage: 0
+baseAPDamage: 0
+rangeModTable: 0
+noiseLevel: 0
+noiseRounds: 0
+modelessAbilities: "CombatHypo"
+affectsEnemy: true
+canTargetSelf: false
+canTargetActor: true
+isDebuff: true
+activationStatusEffects {
+  uirep {
+    icon: "icon_jazz"
+    name: "Narcoject: Strength -3"
+  }
+  stackingCategory: "Narcoject"
+  statMods {
+    attribute: Attribute_Strength
+    intModValue: -3
+  }
+}
+store_cost: 150
+sorting_group: "Drugs"
+is_consumable: true

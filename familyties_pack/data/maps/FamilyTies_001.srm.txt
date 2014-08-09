@@ -145,6 +145,9 @@ props {
     z: -6
   }
   orientation: ORIENTATION_E
+  idRef {
+    id: "53e516976434316a435d1291"
+  }
   lod: 0
 }
 props {

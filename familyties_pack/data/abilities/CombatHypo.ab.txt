@@ -1,0 +1,23 @@
+id: "CombatHypo"
+uirep {
+	icon: "icon_medkit"
+	name: "CombatHypo"
+	description: "CombatStim targets."
+}
+apCostMod: 0
+hpDamageMod: 0
+apDamageMod: 0
+accuracyMod: 0
+attackRatingMod: 0
+effectDuration: 5
+offensiveAbility: true
+
+fxrep{
+	preActionFxName: ""
+	actionFxName: "MedkitUseAction"
+	postActionFxName: ""
+	hitReactionFxName: "MedkitHitReaction"
+	missReactionFxName: ""
+}
+toHitFunction: "actorWeaponAttackToHit"
+damageFunction: "buffTarget"
