@@ -88,13 +88,13 @@ props {
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
-    x: 5
+    x: 6
     y: 7
     z: 7
   }
   orientation: ORIENTATION_S
   idRef {
-    id: "53e7d2e3643431b40b4f3259"
+    id: "53e7d495643431b40b4f325c"
   }
   interactionRoot {
     isEnabled: true
@@ -102,7 +102,7 @@ props {
     inspectInteraction {
       dispalyTime: 0
       fadeTime: 0
-      inspectText: "The Clubs: Jazz Club, Red Runners\', Caf\303\251 Ley Line"
+      inspectText: "Red Hill Park & club area"
       disableAfterInteracting: false
     }
   }
