@@ -20,6 +20,44 @@ characters {
     pc_spawn_number: 0
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -30
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e688e7373663101a001947"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Objects/SecurityCam"
+    character_sheet_id: "Camera"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Security Camera"
+    pc_spawn_number: -1
+    portrait {
+      filename: ""
+    }
+  }
+}
 worldMapLocation {
   filename: ""
   location {
