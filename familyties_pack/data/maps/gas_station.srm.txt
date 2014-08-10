@@ -2703,3 +2703,13 @@ props {
   orientation: ORIENTATION_S
   lod: 0
 }
+props {
+  name: "warehouse_storage_box"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -38
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}

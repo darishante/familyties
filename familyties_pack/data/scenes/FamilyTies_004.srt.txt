@@ -259,9 +259,9 @@ regions {
 regions {
   name: "Outside Garage Door"
   position {
-    x: -1
+    x: -2
     y: -11
-    width: 2
+    width: 3
     height: -2
   }
   enabledAtStart: true
@@ -329,7 +329,7 @@ characters {
     y: 0
     z: -30
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_W
   idRef {
     id: "53e688e7373663101a001947"
   }
