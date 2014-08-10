@@ -85,3 +85,26 @@ props {
   }
   lod: 0
 }
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 5
+    y: 7
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7d2e3643431b40b4f3259"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 20
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "The Clubs: Jazz Club, Red Runners\', Caf\303\251 Ley Line"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
