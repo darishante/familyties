@@ -96,7 +96,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "Class C Drone Turret"
+              string_value: "DroneAttackC_Doberman"
             }
           }
         }
