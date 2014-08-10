@@ -1,6 +1,6 @@
-minX: 1
+minX: -2
 minZ: 2
-numX: 13
+numX: 16
 numZ: 13
 props {
   name: "system_invisible_nonsolidProp"
@@ -49,9 +49,9 @@ props {
 props {
   name: "redhill_wall_mapfront"
   gridPoint {
-    x: 1
+    x: -2
     y: 0
-    z: 7
+    z: 4
   }
   orientation: ORIENTATION_S
   idRef {
