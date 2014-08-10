@@ -363,9 +363,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -5.4
-    y: 3
-    z: -11
+    x: -5.22
+    y: 1.83
+    z: -10.77
   }
   orientation: ORIENTATION_S
   idRef {
