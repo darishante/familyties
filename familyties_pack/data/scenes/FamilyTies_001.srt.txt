@@ -6053,7 +6053,7 @@ regions {
   name: "GarageLiftDown"
   position {
     x: -8
-    y: -14
+    y: -16
     width: 0
     height: 0
   }
@@ -7157,7 +7157,7 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -6
+    x: -5
     y: 0
     z: -12
   }

@@ -23,3 +23,9 @@ content_pack_dependencies {
   package_name: "Seattle"
   package_description: "Seattle Area Environments and Tilesets"
 }
+content_pack_dependencies {
+  package_id: "52260e6c646630402900164a"
+  package_version: "1.0"
+  package_name: "Memphis Motors"
+  package_description: "Memphis Motors - Vehicle Prop Pack"
+}

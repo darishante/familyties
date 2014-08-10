@@ -1183,21 +1183,11 @@ props {
   lod: 0
 }
 props {
-  name: "barrens_vehicle_wingoMotorcycle01"
-  gridPoint {
-    x: -12
-    y: 0
-    z: -14
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "barrens_vehicle_mcCainMotorcycle01"
   gridPoint {
     x: -12
     y: 0
-    z: -11
+    z: -14
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -1205,9 +1195,9 @@ props {
 props {
   name: "barrens_vehicle_headTurnerMotorcycle01"
   gridPoint {
-    x: -5
+    x: -12
     y: 0
-    z: -14
+    z: -16
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1381,59 +1371,6 @@ props {
 props {
   name: "undergroundBase_floor_concrete01"
   gridPoint {
-    x: -4
-    y: 0
-    z: -12
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53db6e3d64343176dd31b7cd"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    prerequisites {
-      ops {
-        functionName: "Evaluate Goal"
-        args {
-          call_value {
-            functionName: "Get Map Item (Goal)"
-            args {
-              string_value: "Get Out of Alcamai Cosmetics"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "GoalStatus"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "IsOrIsNot"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-      }
-    }
-    interactionIcon: InteractionIcon_Warp
-  }
-  lod: 0
-}
-props {
-  name: "undergroundBase_floor_concrete01"
-  gridPoint {
     x: -6
     y: 0
     z: -12
@@ -1579,7 +1516,7 @@ props {
   gridPoint {
     x: -8
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1592,7 +1529,7 @@ props {
   gridPoint {
     x: -6
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1605,7 +1542,7 @@ props {
   gridPoint {
     x: -4
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1618,7 +1555,7 @@ props {
   gridPoint {
     x: -14
     y: 0
-    z: -15
+    z: -17
   }
   orientation: ORIENTATION_W
   idRef {
@@ -1631,7 +1568,7 @@ props {
   gridPoint {
     x: -14
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1644,7 +1581,7 @@ props {
   gridPoint {
     x: -10
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1657,7 +1594,7 @@ props {
   gridPoint {
     x: -12
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_N
   idRef {
@@ -1748,7 +1685,7 @@ props {
   gridPoint {
     x: -9
     y: 0
-    z: -16
+    z: -18
   }
   orientation: ORIENTATION_E
   displayName: "Garage elevator door"
@@ -5944,6 +5881,238 @@ props {
     isEnabled: true
     interactionRadius: 1
     interactionIcon: InteractionIcon_Generic
+  }
+  lod: 0
+}
+props {
+  name: "MemphisMotors_Car_EuroCarWestWindMidnight"
+  gridPoint {
+    x: -5
+    y: 0
+    z: -15.75
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7283a643431a4c4702e30"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7283b643431a4c4702e31"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_windowClosedEnd01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7283e643431a4c4702e32"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72843643431a4c4702e33"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Get Out of Alcamai Cosmetics"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7284a643431a4c4702e34"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e7284f643431a4c4702e35"
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_windowClosedEnd01"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53e7287c643431a4c4702e36"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -2
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e37"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -4
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e38"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -6
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e39"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e3a"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e3b"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e3c"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete01"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53e72886643431a4c4702e3d"
   }
   lod: 0
 }
