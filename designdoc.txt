@@ -3,8 +3,8 @@ FAMILY TIES design doc
 Tekijät:
 
 Dare - pseudokoodi, tarina, editointi
-Heikki - kuvitus, tarina
-Topi - 
+Heikki - kuvitus, Red Hill
+Topi - world editor, keikat
 
 0. Vaatimukset
 
@@ -112,6 +112,8 @@ Karmapalkkio: 0
    * jos ei onnistu, poliisin epäluulo suurempi
  - optional: löydä ase
  - selviä poliisikuulustelusta
+ 
+ ?? miksi poliiseilla valtuuksia toimia suuryrityksen sisällä ??
 
 6.1.1 Poliisiasema
  - jos poliisikuulustelu päättyy putkaan, hankkiudu ulos sieltä, joko lakimiehen avulla tai murtokeinoilla
@@ -127,13 +129,13 @@ Karmapalkkio: +1 ??
 
 6.3 Siskon koti
 
- - murhapaikka Red Hillissä
+ - murhapaikka Red Hillissä, saapuu paikalle aivan zonetettuna
  - Half Shatter saapuu, kiskoo mukaan ensimmäiseen älyttömään tehtävään
  - ehkä: miksi hahmon lempinimi löytyi murhapaikalta?
 
 6.4 Keikka 01
 
- - Half Shatter lähtee etsimään todisteita jostain kummasta
+ - tarvitaan toimintapääomaa; käydään kysymässä fikseriltä 
 
 6.5 Flashback 02
 
@@ -141,5 +143,24 @@ Karmapalkkio: +1 ??
 
 6.6 Muistotilaisuus
 
+6.7 Red Hillin hiekkalaatikko aukeaa
+
+ 
 
 
+7. Red Hill Sandbox
+
+ - osta kämppä
+   * halvin kämppä saatetaan ryöstää tai sisään saattaa muuttaa joku valtaaja
+   * kalliimpi kämppä: parempi
+   
+ - faktiot: lone star, frans + alamaailma, gogo-jengi
+ - faktioilla on hahmoon suhtautuminen
+ - lisäksi hahmolla on maineita "tough", "honest" jotka saattaa vaikuttaa (vaikka jengi vihaisi miten, ei uskalla käydä riittävän kovan päälle)
+
+ - fast travel: tarvitaan fillari, skooteri, prätkä tai auto
+   * kaikilla välineillä ei pääse kaikkiin paikkoihin?? (esim. autolla ei pääse basaariin tai fokukseen)
+   * auto on mahdollisesti huonoin kulkuväline
+
+ - 
+ 
