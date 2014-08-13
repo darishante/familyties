@@ -4,12 +4,16 @@ Tekijät:
 
 Dare - pseudokoodi, tarina, editointi
 Heikki - kuvitus, tarina
+Topi - 
 
 0. Vaatimukset
 
 Shadowrun Returns
 Dragonfall
 Memphis Motor Pack (UGC)
+
+Kohdejärjestelmä: nykyaikainen tietokone, ei erityisesti mitoitettu pädeille
+
 
 
 
@@ -26,9 +30,9 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 (Pitäisikö sijoittaa tämän ajan sijasta vuoteen 2075 niin voisi käyttää nykyistä Red Hill -matskua suoraan?)
 
 
-2033 - 2047 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
+2053 - 2067 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
 
-2043 - 2047 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
+2063 - 2067 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
 
 o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu) - Brooklyn
 o	taksonomian tutkija; örkki (academic) - Noah
@@ -124,4 +128,18 @@ Karmapalkkio: +1 ??
 6.3 Siskon koti
 
  - murhapaikka Red Hillissä
+ - Half Shatter saapuu, kiskoo mukaan ensimmäiseen älyttömään tehtävään
+ - ehkä: miksi hahmon lempinimi löytyi murhapaikalta?
+
+6.4 Keikka 01
+
+ - Half Shatter lähtee etsimään todisteita jostain kummasta
+
+6.5 Flashback 02
+
+ - Grace
+
+6.6 Muistotilaisuus
+
+
 

@@ -1378,10 +1378,10 @@ triggers {
 regions {
   name: "Morgenstein"
   position {
-    x: -6
-    y: -39
-    width: 63
-    height: 64
+    x: -13
+    y: -72
+    width: 88
+    height: 99
   }
   enabledAtStart: true
   is_camera_region: true
