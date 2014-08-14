@@ -251,18 +251,5 @@ roots {
       }
     }
   }
-  actions {
-    ops {
-      functionName: "Activate Actor Spawner"
-      args {
-        call_value {
-          functionName: "Get Map Item (Actor Reference)"
-          args {
-            string_value: "53e4a4c5643431fe15e5155d"
-          }
-        }
-      }
-    }
-  }
   nextNodeIndex: 2
 }

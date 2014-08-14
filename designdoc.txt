@@ -77,8 +77,8 @@ Samaan aikaan pelin ei tulisi mikromanageroida moralisoinnin kanssa; ts. karmapa
 
 
  * Brooklyn murhataan
- * Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle
- * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon
+ * Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle - ei korkealle, mutta jonnekin
+ * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon. Tutkimus omahassa annetaan halvimman tarjouksen tekijälle, joten sen poimii Omahan kaupunki ja paikallinen poliisi
 
 
 
