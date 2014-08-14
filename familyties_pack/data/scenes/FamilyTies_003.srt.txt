@@ -1540,6 +1540,243 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "BasementDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ecea58643431b99131c695"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53ecea65643431b99131c696"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53ecec2b643431b99131c6b5"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "BackToReality"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53ecf446643431b99131c6ba"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53ecf1fb643431b99131c6b8"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Ambient Light Color"
+      args {
+        float_value: 255
+      }
+      args {
+        float_value: 255
+      }
+      args {
+        float_value: 255
+      }
+      args {
+        float_value: 255
+      }
+      args {
+        float_value: 2
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "53ecf1fb643431b99131c6b8"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53ecf88a64343112a306daca"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53ecf152643431b99131c6b7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53ecf2c4643431b99131c6b9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "BackToPlaytime"
+  events {
+    ops {
+      functionName: "On Region Exit"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53ecf446643431b99131c6ba"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Region Enabled"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53ecf1fb643431b99131c6b8"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Ambient Light Color"
+      args {
+        float_value: 65
+      }
+      args {
+        float_value: 65
+      }
+      args {
+        float_value: 99
+      }
+      args {
+        float_value: 255
+      }
+      args {
+        float_value: 2
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (CameraRegion)"
+          args {
+            string_value: "53ecf1fb643431b99131c6b8"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53ecf76164343112a306dac9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Morgenstein"
   position {
@@ -1941,6 +2178,94 @@ regions {
   teleport_source_fx: ""
   teleport_destination_fx: ""
   teleport_pc_only: true
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Basement"
+  position {
+    x: 18
+    y: -47
+    width: 15
+    height: 12
+  }
+  enabledAtStart: false
+  is_camera_region: true
+  idRef {
+    id: "53ecf1fb643431b99131c6b8"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "BasementTrigger"
+  position {
+    x: 19
+    y: -46
+    width: 13
+    height: 11
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53ecf446643431b99131c6ba"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
   directional_light_dir {
     x: -0.5
     y: -1
@@ -2969,6 +3294,61 @@ characters {
     }
     portrait_code_override: "s3h1c13"
     karma: 34
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -40
+  }
+  orientation: ORIENTATION_E
+  displayName: "RealGaitlin"
+  idRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/ElfMale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "SamuraiTrenchcoat"
+    }
+    team_id: "Others"
+    char_name: "Principal Gaitlin"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_elfmale_09_seanmcdonough"
+    }
+    portrait_code_override: "s2h5c4b9c4"
+    karma: 6
   }
 }
 variables {

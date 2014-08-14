@@ -1,0 +1,30 @@
+idRef {
+  id: "53ecf88a64343112a306daca"
+}
+ui_name: "s003_principal_in_basement"
+nodes {
+  idRef {
+    id: "53ecf8b664343112a306dad0"
+  }
+  index: 0
+  text: "All right, children. You know you\'re not supposed to play in the basement without teacher supervision. You\'ll only make a terrible mess. It\'s almost bedtime anyway."
+  branches {
+    responseText: "We still have 15 minutes! And we\'re not making any kind of mess!"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "But the Arcturan space-wolves will overrun M\303\226RGENSTEIN if we don\'t defend it!"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Quickly turn around and run back into the basement{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -179,8 +179,80 @@ nodes {
           }
         }
       }
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "spiritCalled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
     }
     nextNodeIndex: 6
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "spiritCalled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -250,6 +322,48 @@ nodes {
   index: 7
   text: ""
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ece4de643431b99131c61d"
+  }
+  index: 8
+  text: "You haven\'t touched the urn that has the ashes of Lumpy the Goldfish have you?"
+  branches {
+    responseText: "It\'s not Lumpy, there are other spirits living there!"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "... No."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t remember."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
 }
 roots {
   nextNodeIndex: 0

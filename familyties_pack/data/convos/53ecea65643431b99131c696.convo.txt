@@ -1,0 +1,201 @@
+idRef {
+  id: "53ecea65643431b99131c696"
+}
+ui_name: "s003_at_the_door"
+nodes {
+  idRef {
+    id: "53ecea73643431b99131c69c"
+  }
+  index: 0
+  text: "{{GM}}You arrive at a big hatch set in the bulkhead of the ship.{{/GM}}\n\nI don\'t wanna go there."
+  branches {
+    responseText: "Yeah. Let\'s go somewhere else."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Open the door{{/CC}}"
+    actions {
+      ops {
+        functionName: "Delete Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "53ecea58643431b99131c695"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Play Sound"
+        args {
+          call_value {
+            functionName: "Get Map Item (Sound)"
+            args {
+              string_value: "props"
+            }
+            args {
+              string_value: "DoorSlide"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e220806434319f9731b7d2"
+  }
+}
+nodes {
+  idRef {
+    id: "53eceb7d643431b99131c6a4"
+  }
+  index: 1
+  text: "{{GM}}You arrive at a big hatch set in the bulkhead of the ship.{{/GM}}\n\nThe vacuum of space lies beyond. We need to go some other way."
+  branches {
+    responseText: "Yeah, let\'s go somewhere else."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Open the door{{/CC}}"
+    actions {
+      ops {
+        functionName: "Delete Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "53ecea58643431b99131c695"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Play Sound"
+        args {
+          call_value {
+            functionName: "Get Map Item (Sound)"
+            args {
+              string_value: "props"
+            }
+            args {
+              string_value: "DoorSlide"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "halfShatterIsOut"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "halfShatterIsOut"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 1
+}
