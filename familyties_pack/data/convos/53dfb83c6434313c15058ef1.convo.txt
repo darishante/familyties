@@ -93,7 +93,7 @@ nodes {
     id: "53e11b866434314574058fbd"
   }
   index: 2
-  text: "The Seattle PD will try to catch the murderer.\n\nThat\'s not enough. A murdered troll in the slums. It\'s a surprise they sent the detectives to question you.\n\nYou\'re going to get on the next flight to Seattle."
+  text: "HBK will try to catch the murderer.\n\n... Since when was Brooklyn a corporate citizen anyway? Last you heard, she was a drifter with no marketable skills and no prospects. And yet, if she\'d really been worth something to HBK, they would have sent a real corporate hound to talk to you, not subcontraced the job to Omaha PD who can barely write parking tickets. Chances are the investigation in Seattle is going to be handled by someone equally cheap and incompetent.\n\nThat\'s not enough.\n\nYou\'re going to get on the next flight to Seattle."
   nodeType: ConversationNodeType_Simple
 }
 nodes {

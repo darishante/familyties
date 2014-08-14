@@ -73,17 +73,49 @@ Samaan aikaan pelin ei tulisi mikromanageroida moralisoinnin kanssa; ts. karmapa
 [Taustana: koetin joskus pelata Deus Ex Human Revolutionia psykohahmolla, mutta se tuntui väärältä kun koko ajan missasin ekspaa tappamalla väkeä sen sijaan että olisin hiipinyt ja kolkkaillut. Alkuperäinen Deus Ex jakoi pisteitä etenemisestä riippumatta siitä miten sen suoritit, tähtäämme samaan.]
 
 
+2.4 Tapahtumakulku
+
+
+ * Brooklyn murhataan
+ * Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle
+ * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon
+
 
 
 4. Hahmot
 
-Pelaajahahmo - Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri
+
+4.1 Sisarukset
+
+Pelaajahahmo 
+------------
+
+Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri. Vapaasta hahmoluonnista johtuen tabula rasa jonka pelaajan toimet täyttävät, erityisyhteyksiä sisarukseen jolla sama metaetnisyys, orpokodin jälkeinen tausta yhteydessä sisarukseen, jolla sama Etiquette (Alexander tai Noah).
+
+Pelaajan suhtautumistavasta riippuen joko onnellinen korporaatti, joka ihan viihtyi työssään tai katkera proto-shadowrunner (mahd. jopa taustaa wetworkin parissa).
+
+
+Hannah "Half Shatter"
+----------------------
+Kääpiödekkeri, shadowrunner. Lapsena hyvin vilkas mielikuvitus ja hyperaktiivinen luonne, aikuisena rajatapauksellisen paranoidi salaliittoteoreetikko ja melkein-sosiopaatti - lähes tunnoton murhaaja, joka kuvittelee omistavansa jotain periaatteita, mutta nämä periaatteet ovat todellisuudessa aika hatarat. Kuitenkin hyvin lojaali ystävilleen, perheelleen ja yhteisölleen. Ei murhannut Brooklynia, vaikka pelaajahahmo saattaakin näin epäillä.
+
+Hannah on kääpiöksikin hyvin pienikokoinen, ja melkoinen klaustrofili: hän änkee lyhyine raajoineen jatkuvasti läpi suunnilleen dronenmentävstä luukuista, ja asuu aivan mikroskooppisessa kolosessa.
+
+
+
+
+
+
+4.2 Omaha
 
 Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia. Seuraa pelaajahahmoa Seattleen?
 
 Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia. Seuraa pelaajahahmoa Seattleen?
 
 Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen jos siitä on hänelle etua.
+
+
+
 
 
 

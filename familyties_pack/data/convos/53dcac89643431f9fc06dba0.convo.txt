@@ -217,11 +217,11 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 6
   }
   branches {
     responseText: ""
-    nextNodeIndex: 7
+    nextNodeIndex: 9
   }
   nodeType: ConversationNodeType_Simple
   actions {
@@ -276,20 +276,53 @@ nodes {
     id: "53dd0e5f6434313d23a408e5"
   }
   index: 1
-  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They try to make an effort to look casual, but don\'t quite pull it off.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
+  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). It\'s strange to see them here, considering Alcamai has extraterritoriality rights in Nebraska and is normally off-limits to police. The two try to make an effort to look casual, but don\'t quite pull it off.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
   branches {
     responseText: "Yes, that\'s me. What\'s this all about?"
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   branches {
     responseText: "Call me $(story.pc_firstname), please. How can I help you?"
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   branches {
-    responseText: "Sorry, the donut shop is across the street."
+    responseText: "We will. Or someone in Seattle will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
     nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Administrative section{{/CC}}Aren\'t you a bit out of your jurisdiction? This compound is Alcamai Cosmetics soil, and Omaha PD has no authority here."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Administrative"
+        }
+      }
+    }
+    nextNodeIndex: 3
   }
   branches {
     responseText: "{{CC}}Etiquette: Socialite{{/CC}} Detectives. I believe I play golf with your captain, Queseda. What can I do for you?"
@@ -355,7 +388,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 5
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -370,7 +403,7 @@ nodes {
   text: "Yeah, real cute, never heard that one before."
   branches {
     responseText: ""
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -396,13 +429,59 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53dd18346434313d23a409d9"
+    id: "53ecd0f7643431b99131b9fd"
   }
   index: 3
+  text: "We\'re not here under the authority of Omaha PD, but rather Hildebrandt-Kleinfort-Bernal. HBK are investigating an insurance claim, and since they\'ve got no presence in Omaha, the city picked up the contract. As you undoubtedly know, HBK has an operational agreement with Alcamai.\n\n{{GM}}She hands you an extraterritoriality visa document for both of the detectives. It\'s signed by a junior VP of Alcamai, all proper and orderly.{{/GM}}"
+  branches {
+    responseText: "Oh, fellow corporate lackeys then. Well, what can I do for you?"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I see."
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "So this is a financial matter then?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc96ed643431f9fc06dac9"
+  }
+}
+nodes {
+  idRef {
+    id: "53ecd425643431b99131ba02"
+  }
+  index: 4
+  text: "Not quite."
+  branches {
+    responseText: "Interesting."
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Great,"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53dc9981643431f9fc06daca"
+  }
+}
+nodes {
+  idRef {
+    id: "53dd18346434313d23a409d9"
+  }
+  index: 5
   text: "{{GM}}The detectives share a quick glance; slightly concerned that you are politically connected. They don\'t immediately apologize and leave, however.{{/GM}}"
   branches {
     responseText: ""
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -414,16 +493,16 @@ nodes {
   idRef {
     id: "53dd0e7c6434313d23a408f8"
   }
-  index: 4
-  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor). They try to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
+  index: 6
+  text: "{{GM}}Surprisingly, there are already people in your office. Not your co-workers, but two tired-looking women with badges. Omaha PD, by the looks of it$(scene.racismFactor).  It\'s strange to see them here, considering Alcamai has extraterritoriality rights in Nebraska and is normally off-limits to police. They try to make an effort to look casual, but your street clothes earn a raised eyebrow from both.{{/GM}}\n\nGood morning, $(story.pc_polite_salutation). I\'m detective Tamaryk, and this is my partner, detective Wainwright. I\'m assuming you are $(story.pc_firstname) $(story.pc_lastname)?"
   branches {
     responseText: "Yes, that\'s me. What\'s this all about?"
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   branches {
     responseText: "Call me $(story.pc_firstname), please. How can I help you?"
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   branches {
@@ -433,7 +512,41 @@ nodes {
   }
   branches {
     responseText: "Violating the office dress code is a crime now? Drek."
-    nextNodeIndex: 5
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "{{CC}}Administrative section{{/CC}}Aren\'t you a bit out of your jurisdiction? This compound is Alcamai Cosmetics soil, and Omaha PD has no authority here."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Administrative"
+        }
+      }
+    }
+    nextNodeIndex: 3
+    auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Etiquette: Socialite{{/CC}} Detectives. I believe I play golf with your captain, Queseda. What can I do for you?"
@@ -499,7 +612,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 6
+    nextNodeIndex: 8
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -510,11 +623,11 @@ nodes {
   idRef {
     id: "53dd0e7c6434313d23a40900"
   }
-  index: 5
+  index: 7
   text: "Wearing something like that ought to be, but that\'s not why we\'re here."
   branches {
     responseText: ""
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -526,11 +639,11 @@ nodes {
   idRef {
     id: "53dd18d16434313d23a409dd"
   }
-  index: 6
+  index: 8
   text: "{{GM}}The detectives share a quick glance; slightly concerned that you are politically connected. They don\'t immediately apologize and leave, however.{{/GM}}"
   branches {
     responseText: ""
-    nextNodeIndex: 8
+    nextNodeIndex: 10
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -542,7 +655,7 @@ nodes {
   idRef {
     id: "53dd1cd46434313d23a409e0"
   }
-  index: 7
+  index: 9
   text: ""
   branches {
     responseText: ""
@@ -621,7 +734,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 8
+    nextNodeIndex: 10
   }
   branches {
     responseText: ""
@@ -668,7 +781,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 9
+    nextNodeIndex: 11
   }
   branches {
     responseText: ""
@@ -715,7 +828,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 24
+    nextNodeIndex: 26
   }
   branches {
     responseText: ""
@@ -762,7 +875,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 32
   }
   branches {
     responseText: ""
@@ -814,7 +927,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
   }
   branches {
     responseText: ""
@@ -845,7 +958,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 45
+    nextNodeIndex: 47
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -856,7 +969,7 @@ nodes {
   idRef {
     id: "53dd1d816434313d23a40a17"
   }
-  index: 8
+  index: 10
   text: "$(scene.mainInterrogation)"
   branches {
     responseText: "Professionally, my title is $(story.pc_jobtitle), what about my expertise?"
@@ -890,7 +1003,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 9
+    nextNodeIndex: 11
     onlyOnce: true
     idRef {
       id: "53dd238d6434313d23a40ae5"
@@ -929,7 +1042,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 24
+    nextNodeIndex: 26
     onlyOnce: true
     idRef {
       id: "53dd24136434313d23a40b50"
@@ -996,7 +1109,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     onlyOnce: true
     idRef {
       id: "53dd24176434313d23a40b51"
@@ -1035,7 +1148,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd24216434313d23a40b52"
@@ -1051,7 +1164,7 @@ nodes {
   idRef {
     id: "53dd22f16434313d23a40ae1"
   }
-  index: 9
+  index: 11
   text: ""
   branches {
     responseText: ""
@@ -1084,7 +1197,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 10
+    nextNodeIndex: 12
   }
   branches {
     responseText: ""
@@ -1151,11 +1264,11 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 13
+    nextNodeIndex: 15
   }
   branches {
     responseText: ""
-    nextNodeIndex: 17
+    nextNodeIndex: 19
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -1224,7 +1337,7 @@ nodes {
   idRef {
     id: "53dd32ce6434313d23a40edd"
   }
-  index: 10
+  index: 12
   text: "They call it \"risk management\", but we all know what it really means: corporate wet work. You do that kind of stuff, $(story.pc_lastname)? Violent persuasion, assassination, threatening the opposition, kidnapping?"
   branches {
     responseText: "We know what it means, but I\'m not going to answer that."
@@ -1272,10 +1385,10 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 11
+    nextNodeIndex: 13
   }
   branches {
-    responseText: "{{CC}}Lie{{/CC}} That\'s not what it means! I manage risk by ... mathematics. And graphs. Corporate violence, never heard of it!"
+    responseText: "{{CC}}Lie{{/CC}} That\'s not what it means! I\'m a mathematician and a statistician, not some kind of hired killer!"
     actions {
       ops {
         functionName: "Add To Variable (float)"
@@ -1320,7 +1433,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 12
+    nextNodeIndex: 14
   }
   branches {
     responseText: "{{CC}}Intelligence 3 (Lie){{/CC}} You\'re thinking \"operative risk management\". I\'m in actual risk management, which is not quite as exciting, violent or illegal."
@@ -1403,7 +1516,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   branches {
@@ -1424,7 +1538,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd38546434313d23a410e5"
@@ -1440,11 +1554,11 @@ nodes {
   idRef {
     id: "53dd340d6434313d23a40ee1"
   }
-  index: 11
+  index: 13
   text: "Yeah, we didn\'t really expect you to."
   branches {
     responseText: "So."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1456,11 +1570,11 @@ nodes {
   idRef {
     id: "53dd34876434313d23a40f10"
   }
-  index: 12
+  index: 14
   text: "{{GM}}Tamaryk rolls her eyes.{{/GM}}"
   branches {
     responseText: "Whatever."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1472,7 +1586,7 @@ nodes {
   idRef {
     id: "53dd40176434313d23a4167f"
   }
-  index: 13
+  index: 15
   text: "Your expertise is \"$(story.pc_careerpath)\". Magic is a dangerous and potent force. How about the forces that you command? You know some dangerous things, right? Everyone who\'s got the gift does.\n\n{{GM}}You realize that Wainwright wears a talisman and her eyes have the darkness of someone who knows of the occult. About time for even Omaha PD to start hiring mages.{{/GM}}"
   branches {
     responseText: "Everyone does. That doesn\'t mean anything."
@@ -1520,7 +1634,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 14
+    nextNodeIndex: 16
   }
   branches {
     responseText: "{{CC}}Lie{{/CC}} Actually I don\'t wield any magic, but don\'t tell my boss. He\'d fire me."
@@ -1568,7 +1682,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 15
+    nextNodeIndex: 17
   }
   branches {
     responseText: "{{CC}}Intelligence 4{{/CC}} As a fellow practicioner - is this really a direction you want to take this? This line of questioning sounds a bit like a witch hunt to me."
@@ -1651,7 +1765,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 16
+    nextNodeIndex: 18
+    hideIfUnavailable: true
   }
   branches {
     responseText: "I think I could use a lawyer."
@@ -1671,7 +1786,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd38546434313d23a410e5"
@@ -1687,11 +1802,11 @@ nodes {
   idRef {
     id: "53dd40176434313d23a41682"
   }
-  index: 14
+  index: 16
   text: "Not by itself it doesn\'t."
   branches {
     responseText: "I assume there is a point to all this?"
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1703,11 +1818,11 @@ nodes {
   idRef {
     id: "53dd40176434313d23a41688"
   }
-  index: 15
+  index: 17
   text: "You are an idiot."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1719,11 +1834,11 @@ nodes {
   idRef {
     id: "53dd43426434313d23a41693"
   }
-  index: 16
+  index: 18
   text: "... True. Believe me, I wouldn\'t like a situation where all of us were regarded with suspicion."
   branches {
     responseText: "So let\'s not go there."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1735,7 +1850,7 @@ nodes {
   idRef {
     id: "53ddc092643431cf41e50a84"
   }
-  index: 17
+  index: 19
   text: "We\'d like to know if you possess any combat training, dangerous magical training or expertise with other immediately hazardous areas of skill?"
   branches {
     responseText: "{{CC}}Close Combat 2 / Chi Casting 1{{/CC}} My hands are basically registered as lethal weapons."
@@ -1886,7 +2001,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 18
+    nextNodeIndex: 20
   }
   branches {
     responseText: "{{CC}}Ranged Combat 2{{/CC}} Yes, I can shoot a gun."
@@ -1983,7 +2098,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 19
+    nextNodeIndex: 21
   }
   branches {
     responseText: "{{CC}}Drone Combat 1{{/CC}} I do know about battle drones if that\'s what you mean."
@@ -2080,7 +2195,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 20
+    nextNodeIndex: 22
   }
   branches {
     responseText: "{{CC}}Spellcasting / Conjuring / Summoning 2{{/CC}} I believe you already know that I\'m magically gifted."
@@ -2285,7 +2400,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 21
+    nextNodeIndex: 23
   }
   branches {
     responseText: "No. I\'ve never needed anything of the sort."
@@ -2695,7 +2810,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
@@ -2744,18 +2859,20 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 22
+    nextNodeIndex: 24
   }
   branches {
-    responseText: "{{CC}}Etiquette: Corporate (Lie) {{/CC}} No. It is the policy of Alcamai Chemicals that all combat training and the like shall be disclosed on the Employee Security Sheet, and you\'ve probably already seen mine."
+    responseText: "{{CC}}Administrative Section (Lie) {{/CC}} No. It is the policy of Alcamai Chemicals that all combat training and the like shall be disclosed on the Employee Security Sheet, and you\'ve probably already seen mine."
     conditions {
       ops {
-        functionName: "Compare Actor Skill"
+        functionName: "Comparison (string)"
         args {
           call_value {
-            functionName: "Get Map Item (Player)"
+            functionName: "Get Story Variable (string)"
             args {
-              int_value: 0
+            }
+            args {
+              string_value: "pc_careerpath"
             }
           }
         }
@@ -2763,37 +2880,15 @@ nodes {
           call_value {
             functionName: "Get Preset Value (int)"
             args {
-              string_value: "BaseOrCurrent"
+              string_value: "IsOrIsNot"
             }
             args {
-              int_value: 0
+              int_value: 1
             }
           }
         }
         args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "ActorSkills"
-            }
-            args {
-              int_value: 13
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: 1
+          string_value: "Administrative"
         }
       }
     }
@@ -2827,7 +2922,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 23
+    nextNodeIndex: 25
+    hideIfUnavailable: true
   }
   branches {
     responseText: "This sounds like the kind of question one should answer only when a lawyer is present."
@@ -2847,7 +2943,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd38546434313d23a410e5"
@@ -2863,16 +2959,16 @@ nodes {
   idRef {
     id: "53ddcd3d643431cf41e50bff"
   }
-  index: 18
+  index: 20
   text: "A kung-fu whiz, eh?"
   branches {
     responseText: "More like kraw maga."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
     responseText: "It keeps me in shape."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2884,16 +2980,16 @@ nodes {
   idRef {
     id: "53ddcc97643431cf41e50b7b"
   }
-  index: 19
+  index: 21
   text: "Not exactly a rare skill these days, right?"
   branches {
     responseText: "Right."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
     responseText: "It\'s one I need for basic self defense."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2905,16 +3001,16 @@ nodes {
   idRef {
     id: "53ddcddd643431cf41e50c8f"
   }
-  index: 20
+  index: 22
   text: "You need that kind of knowledge often with the industrial robots around here?"
   branches {
     responseText: "You\'d be surprised."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
     responseText: "No, it\'s something I rarely need these days."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2926,16 +3022,16 @@ nodes {
   idRef {
     id: "53ddcba1643431cf41e50b75"
   }
-  index: 21
+  index: 23
   text: "Well, it is fairly obvious.\n\n{{GM}}From her talisman and a certain look in her eye, you can pretty much tell that Wainwright is a magician herself.{{/GM}}"
   branches {
     responseText: "Takes one to know one.\n"
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
     responseText: "So, is there more?"
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2947,11 +3043,11 @@ nodes {
   idRef {
     id: "53ddca2e643431cf41e50b71"
   }
-  index: 22
+  index: 24
   text: "Trust me, $(story.pc_lastname), that\'s really not what\'s being implied here. Having access to means of violence does not make you cool, it only makes you a suspect. But I guess that\'s a \"yes\"."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2963,11 +3059,11 @@ nodes {
   idRef {
     id: "53ddc986643431cf41e50b00"
   }
-  index: 23
+  index: 25
   text: "Yes, of course it would show up there.\n\n{{GM}}And if Alcamai was a bigger company, that would probably even be true.{{/GM}}"
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2979,7 +3075,7 @@ nodes {
   idRef {
     id: "53dd2c1b6434313d23a40ba0"
   }
-  index: 24
+  index: 26
   text: "Seattle, right, right. Nice city, if a bit chaotic sometimes.\n\nYou were just in transit weren\'t you? Spent all your time at the airport? Is there anyone who can confirm that you never left the terminal?"
   branches {
     responseText: "Not really, no. They kept delaying my flight and finally I got fed up and just tried to sleep."
@@ -3027,12 +3123,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Lie{{/CC}} Actually I ran into an old friend and we spent the time in a bar chatting."
-    nextNodeIndex: 25
+    nextNodeIndex: 27
   }
   branches {
     responseText: "{{CC}}Decking 1{{/CC}} I think it would show up on my data footprint if I\'d logged off at any time."
@@ -3129,7 +3225,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 27
+    nextNodeIndex: 29
+    hideIfUnavailable: true
   }
   branches {
     responseText: "{{CC}}Summoning 2{{/CC}} I did commune with an air spirit. We discussed the weather, basically."
@@ -3226,7 +3323,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 28
+    nextNodeIndex: 30
+    hideIfUnavailable: true
   }
   branches {
     responseText: "{{CC}}Strength 3{{/CC}} I went to the gym there for a few hours. Not too many people there; they\'d probably remember me."
@@ -3309,7 +3407,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 29
+    nextNodeIndex: 31
+    hideIfUnavailable: true
   }
   branches {
     responseText: "I\'d like to talk with my lawyer before answering that."
@@ -3329,7 +3428,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd38546434313d23a410e5"
@@ -3403,7 +3502,7 @@ nodes {
   idRef {
     id: "53ddd3d7643431cf41e50f41"
   }
-  index: 25
+  index: 27
   text: "We\'d like their name and contact information."
   branches {
     responseText: "... okay, you got me, I spent all the time by myself."
@@ -3451,7 +3550,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   branches {
@@ -3549,7 +3648,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 26
+    nextNodeIndex: 28
+    hideIfUnavailable: true
   }
   branches {
     responseText: "{{CC}}Charisma 4{{/CC}} Well, maybe not exactly an old friend. However, here\'s the number I got from a new friend I met at the bar. She can vouch for the couple of hours we spent together."
@@ -3646,7 +3746,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3658,11 +3759,11 @@ nodes {
   idRef {
     id: "53ddd601643431cf41e50f45"
   }
-  index: 26
+  index: 28
   text: "You know Fujiko Omatsune? My daughter would love her autograph!\n\n{{GM}}Wainwright glares at her partner, she glances back and shrugs.{{/GM}}\n\nShe really would, though."
   branches {
     responseText: "I\'ll have to see what I can do."
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3674,11 +3775,11 @@ nodes {
   idRef {
     id: "53ddd81e643431cf41e50fe9"
   }
-  index: 27
+  index: 29
   text: "Matrix footprints are not particularily difficult to forge, but if that\'s what you\'ve got, it\'s better than nothing."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3690,11 +3791,11 @@ nodes {
   idRef {
     id: "53ddd9b6643431cf41e51084"
   }
-  index: 28
+  index: 30
   text: "Spirits are usually not really that reliable as witnesses, and their grasp of location can be tenous. I suppose that still counts for something."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3706,11 +3807,11 @@ nodes {
   idRef {
     id: "53dddaad643431cf41e51135"
   }
-  index: 29
+  index: 31
   text: "All right, we\'ll check with them. I guess someone like you would stick in their mind."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3722,7 +3823,7 @@ nodes {
   idRef {
     id: "53dd2c1f6434313d23a40ba5"
   }
-  index: 30
+  index: 32
   text: ""
   branches {
     responseText: ""
@@ -3753,7 +3854,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 31
+    nextNodeIndex: 33
   }
   branches {
     responseText: ""
@@ -3784,7 +3885,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 32
+    nextNodeIndex: 34
   }
   branches {
     responseText: ""
@@ -3820,7 +3921,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 33
+    nextNodeIndex: 35
   }
   branches {
     responseText: ""
@@ -3851,7 +3952,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 36
+    nextNodeIndex: 38
   }
   branches {
     responseText: ""
@@ -3882,7 +3983,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 39
+    nextNodeIndex: 41
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -3923,21 +4024,21 @@ nodes {
   idRef {
     id: "53dde3ec643431cf41e511eb"
   }
-  index: 31
-  text: "No, I read that you\'re an orphan. Raised in a state orphanage in Saskatoon. You have come quite a way from those humble origins. I guess most state orphans end up in the slums or prison, but here you are, having a career with one of the most promising employees in Nebraska. How\'d you manage that, all by yourself?"
+  index: 33
+  text: "No, I read that you\'re an orphan. Raised in a state orphanage in Saskatoon. You have come quite a way from those humble origins. I guess most state orphans end up in the slums or prison, but here you are, having a career with one of the most promising employers in Nebraska. How\'d you manage that, all by yourself?"
   branches {
     responseText: "Plain luck, I guess."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   branches {
     responseText: "I don\'t give up easily."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   branches {
     responseText: "Just because I\'m an orphan doesn\'t mean I\'m \"all by myself\"."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -3993,11 +4094,11 @@ nodes {
   idRef {
     id: "53dde479643431cf41e511f2"
   }
-  index: 32
+  index: 34
   text: "You did have something slightly like a family, didn\'t you, once at least? Your next of kin was listed as \"sister\" at one point. Brooklyn $(story.pc_lastname), right? But not for a few years."
   branches {
     responseText: "Brooklyn. Yeah. She\'s my sister. I also have brothers and other sisters."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   branches {
@@ -4051,7 +4152,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 32
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   branches {
@@ -4105,7 +4207,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 32
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4133,7 +4236,7 @@ nodes {
   idRef {
     id: "53ddf0076434313360058f8e"
   }
-  index: 33
+  index: 35
   text: ""
   branches {
     responseText: ""
@@ -4169,7 +4272,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 34
+    nextNodeIndex: 36
   }
   branches {
     responseText: ""
@@ -4205,7 +4308,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 35
+    nextNodeIndex: 37
   }
   nodeType: ConversationNodeType_Simple
   actions {
@@ -4229,16 +4332,16 @@ nodes {
   idRef {
     id: "53ddf0766434313360058f91"
   }
-  index: 34
+  index: 36
   text: "{{GM}}Detective Tamaryk adopts an obviously fake look of confusion.{{/GM}}\n\nSo, Brooklyn is your sister. Only she\'s, you know.\n\nA troll.\n\nAnd you\'re ... not."
   branches {
     responseText: "It was a state orphanage, all six of us were abandoned, and they didn\'t have a clue about anyone\'s parents. They assigned us the same last name based on some algorhitm. We decided to roll with it. Since we didn\'t have a biological family, we decided to make one. We were just kids."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   branches {
     responseText: "The specifics of this really are none of your goddamn business, detective."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4250,16 +4353,16 @@ nodes {
   idRef {
     id: "53ddf14c6434313360058f9b"
   }
-  index: 35
+  index: 37
   text: "It says here that you also have other siblings. And one of them is ... \n\n... an elf. And another is an ork.\n\nDid your mother have a really wild party or something?"
   branches {
     responseText: "It was a state orphanage, all six of us were abandoned, and they didn\'t have a clue about anyone\'s parents. They assigned us the same last name based on some algorhitm. We decided to roll with it. Since we didn\'t have a biological family, we decided to make one. We were just kids."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   branches {
     responseText: "Fuck you, detective."
-    nextNodeIndex: 30
+    nextNodeIndex: 32
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4271,7 +4374,7 @@ nodes {
   idRef {
     id: "53ddf238643431336005907d"
   }
-  index: 36
+  index: 38
   text: "Okay, Brooklyn is your sister. No need to get agitated.\n\nAnother thing, though. Does \"$(l.name)\" mean anything to you?"
   branches {
     responseText: "Wha- That was my nickname as a kid, my sisters and brothers used it. How\'d you know it?"
@@ -4291,10 +4394,10 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 37
+    nextNodeIndex: 39
   }
   branches {
-    responseText: "{{CC}}Lie{{/CC}} Tha- I mean, no. Never heard of it in my life."
+    responseText: "{{CC}}Lie{{/CC}}No. Never heard of it in my life."
     actions {
       ops {
         functionName: "Add To Variable (float)"
@@ -4311,7 +4414,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 38
+    nextNodeIndex: 40
   }
   branches {
     responseText: "... I don\'t know where you\'re going with this, but I\'d like to speak to my lawyer."
@@ -4331,7 +4434,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 44
     onlyOnce: true
     idRef {
       id: "53dd38546434313d23a410e5"
@@ -4386,7 +4489,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4414,11 +4518,11 @@ nodes {
   idRef {
     id: "53ddf4d86434313360059146"
   }
-  index: 37
+  index: 39
   text: "A nickname. How cute."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4430,11 +4534,11 @@ nodes {
   idRef {
     id: "53ddf50c643431336005920d"
   }
-  index: 38
+  index: 40
   text: "Sure you haven\'t. Just checking."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4446,7 +4550,7 @@ nodes {
   idRef {
     id: "53ddf905643431336005963e"
   }
-  index: 39
+  index: 41
   text: "Glad we could sort that out.\n\nSo, does \"$(l.name)\" mean anything to you? At all?"
   branches {
     responseText: "That was my nickname as a kid, my sisters and brothers used it. How\'d you know it?"
@@ -4466,7 +4570,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 40
+    nextNodeIndex: 42
   }
   branches {
     responseText: "{{CC}}Lie{{/CC}} No. Never heard of it in my life."
@@ -4486,7 +4590,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 41
+    nextNodeIndex: 43
   }
   branches {
     responseText: "{{CC}}Intelligence 4 (Lie) {{/CC}} Not sure, but it sounds like something Brooklyn made up when we were children."
@@ -4552,7 +4656,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
+    hideIfUnavailable: true
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4580,11 +4685,11 @@ nodes {
   idRef {
     id: "53ddf9056434313360059641"
   }
-  index: 40
+  index: 42
   text: "A nickname. How cute."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4596,11 +4701,11 @@ nodes {
   idRef {
     id: "53ddf9056434313360059647"
   }
-  index: 41
+  index: 43
   text: "Sure you haven\'t. Just checking."
   branches {
     responseText: " "
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -4612,7 +4717,7 @@ nodes {
   idRef {
     id: "53dd2cd16434313d23a40c2c"
   }
-  index: 42
+  index: 44
   text: "We\'re just having a friendly conversation. Why would you need a shyster?"
   branches {
     responseText: "Friendly conversation, right."
@@ -4637,7 +4742,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     onlyOnce: true
     idRef {
       id: "53dd3f696434313d23a41615"
@@ -4646,7 +4751,7 @@ nodes {
   }
   branches {
     responseText: "No, let me call my lawyer before saying anything else."
-    nextNodeIndex: 43
+    nextNodeIndex: 45
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -4657,7 +4762,7 @@ nodes {
   idRef {
     id: "53dd2d916434313d23a40c3d"
   }
-  index: 43
+  index: 45
   text: "Fine. You have that right, of course. We\'re having this conversation in your office instead of the station house as a courtesy to you and Alcamai, but if you insist on a lawyer being present, we will also need to insist to bring you in. That all right with you?"
   branches {
     responseText: "... okay, let\'s keep talking here."
@@ -4682,7 +4787,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 7
+    nextNodeIndex: 9
     onlyOnce: true
     idRef {
       id: "53dd3f706434313d23a41616"
@@ -4691,7 +4796,7 @@ nodes {
   }
   branches {
     responseText: "You want to arrest me, arrest me. My lawyer is going to rip you a new one."
-    nextNodeIndex: 44
+    nextNodeIndex: 46
   }
   branches {
     responseText: "{{CC}}Threaten with a weapon{{/CC}} No, I don\'t think so. I think I\'m going to get out of here and you are going to let me."
@@ -4756,7 +4861,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 64
+    nextNodeIndex: 66
     auxiliaryLink: true
   }
   branches {
@@ -4832,8 +4937,8 @@ nodes {
   idRef {
     id: "53dde02c643431cf41e511dd"
   }
-  index: 44
-  text: "All right, let\'s do this then. \n\n$(story.pc_firstname) $(story.pc_lastname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
+  index: 46
+  text: "All right, let\'s do this then. \n\n$(story.pc_firstname) $(story.pc_lastname), by the mutual extraterritoriality exception agreement between Hildebrantd-Kleinfort-Bernal and Alcamai Cosmetics, you are under arrest for murder of a corporate citizen. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc96ed643431f9fc06dac9"
@@ -4903,7 +5008,7 @@ nodes {
   idRef {
     id: "53ddfb1464343133600597fd"
   }
-  index: 45
+  index: 47
   text: ""
   branches {
     responseText: ""
@@ -4950,7 +5055,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 46
+    nextNodeIndex: 48
   }
   branches {
     responseText: ""
@@ -5022,7 +5127,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 48
+    nextNodeIndex: 50
   }
   branches {
     responseText: ""
@@ -5094,7 +5199,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 53
+    nextNodeIndex: 55
   }
   branches {
     responseText: ""
@@ -5166,7 +5271,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 58
+    nextNodeIndex: 60
   }
   branches {
     responseText: ""
@@ -5202,7 +5307,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 63
+    nextNodeIndex: 65
   }
   branches {
     responseText: ""
@@ -5238,7 +5343,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 64
+    nextNodeIndex: 66
   }
   branches {
     responseText: ""
@@ -5269,7 +5374,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 68
+    nextNodeIndex: 70
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5280,25 +5385,25 @@ nodes {
   idRef {
     id: "53de2527643431346ae50ae7"
   }
-  index: 46
-  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation. As to what this is really about ... \n\nI\'m sorry to inform you that your sister Brooklyn is dead. She has been murdered.  It happened in her home in Seattle during the last 24 hours.\n\nAs for the \"$(l.name)\", bit, it was found written on the scene. We have been asked by Seattle authorities to look into this matter in Omaha."
+  index: 48
+  text: "All right, $(story.pc_polite_salutation), thank you for your co-operation. As to what this is really about ... \n\nI\'m sorry to inform you that your sister Brooklyn is dead. She has been murdered.  It happened in her home in Seattle during the last 24 hours.\n\nAs for the \"$(l.name)\", bit, it was found written on the scene. As she had HBK citizenship and insurance, we are looking into this matter in Omaha."
   branches {
     responseText: "Brooklyn is what now? Is this your sick idea of a joke?"
-    nextNodeIndex: 47
+    nextNodeIndex: 49
   }
   branches {
     responseText: "... I see. Thank you for being so very upfront about it, and not acting like a total dick at all. You going to tell me what exactly happened to her?"
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "... I was afraid that was where we were heading. Brooklyn. God. What happened to her?"
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "(Say nothing)"
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5376,11 +5481,11 @@ nodes {
   idRef {
     id: "53e0ac9d643431b53005979b"
   }
-  index: 47
+  index: 49
   text: "No, it isn\'t. My condolences."
   branches {
     responseText: "What happened to her?"
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5392,15 +5497,15 @@ nodes {
   idRef {
     id: "53df2a846434317875058fc5"
   }
-  index: 48
-  text: "I understand that you\'re upset, but we cannot give you details of an ongoing investigation at this point.\n\nHowever, Seattle PD wanted us to talk to you, since there are several factors here which make you a person of interest."
+  index: 50
+  text: "I understand that you\'re upset, but we cannot give you details of an ongoing investigation at this point.\n\nHowever, HBK Claims Investigation Dept. wanted us to talk to you, since there are several factors here which make you a person of interest."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 49
+    nextNodeIndex: 51
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 50
+    nextNodeIndex: 52
   }
   branches {
     responseText: "{{CC}}Charisma 2{{/CC}} Surely you don\'t really think I\'m the one you\'re looking for?"
@@ -5469,7 +5574,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 51
+    nextNodeIndex: 53
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5480,16 +5585,16 @@ nodes {
   idRef {
     id: "53df3ba3643431277b0592a7"
   }
-  index: 49
+  index: 51
   text: "It is possible, yes."
   branches {
     responseText: "Go to hell."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "I didn\'t."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5501,11 +5606,11 @@ nodes {
   idRef {
     id: "53df3a17643431277b058fc3"
   }
-  index: 50
+  index: 52
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5517,7 +5622,7 @@ nodes {
   idRef {
     id: "53df468e643431277b059578"
   }
-  index: 51
+  index: 53
   text: "... Probably not. We\'re going to request you to stay in Omaha, in case we need to ask some more questions.\n\nWe\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname)."
   branches {
     responseText: "All right, I can do that. Now, excuse me please?"
@@ -5525,7 +5630,7 @@ nodes {
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 52
+    nextNodeIndex: 54
   }
   branches {
     responseText: "Goodbye."
@@ -5540,8 +5645,8 @@ nodes {
   idRef {
     id: "53df468e643431277b05957c"
   }
-  index: 52
-  text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+  index: 54
+  text: "We will. Or someone in Seattle will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc9981643431f9fc06daca"
@@ -5551,15 +5656,15 @@ nodes {
   idRef {
     id: "53df432a643431277b05943d"
   }
-  index: 53
-  text: "We aren\'t going to share any more details with you at this time. The Seattle PD has tagged you as a person of interest in the case, and I can see why."
+  index: 55
+  text: "We aren\'t going to share any more details with you at this time. HBK Claims Investigation Dept. has tagged you as a person of interest in the case, and I can see why."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 54
+    nextNodeIndex: 56
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 55
+    nextNodeIndex: 57
   }
   branches {
     responseText: "{{CC}}Charisma 3{{/CC}} Look, you tell me my sister is dead. I haven\'t even seen her in years, and then you turn up to tell me she\'s been murdered! I had nothing to do with it! I was in the same city, yes, but I didn\'t even know she lived in Seattle these days!"
@@ -5628,7 +5733,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 56
+    nextNodeIndex: 58
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5639,16 +5745,16 @@ nodes {
   idRef {
     id: "53df432a643431277b059440"
   }
-  index: 54
+  index: 56
   text: "That\'s what it looks like to us."
   branches {
     responseText: "Go to hell."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "I didn\'t."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5660,11 +5766,11 @@ nodes {
   idRef {
     id: "53df432a643431277b059449"
   }
-  index: 55
+  index: 57
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5676,7 +5782,7 @@ nodes {
   idRef {
     id: "53df46ca643431277b059598"
   }
-  index: 56
+  index: 58
   text: "We\'re sorry for your loss, $(story.pc_salutation) $(story.pc_lastname).\n\nWe\'ll have to look into the matter further. As of now, don\'t leave town."
   branches {
     responseText: "All right, I can do that. Now, excuse me please?"
@@ -5684,7 +5790,7 @@ nodes {
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 57
+    nextNodeIndex: 59
   }
   branches {
     responseText: "Goodbye."
@@ -5699,8 +5805,8 @@ nodes {
   idRef {
     id: "53df46ca643431277b05959c"
   }
-  index: 57
-  text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+  index: 59
+  text: "We will. Or someone in Seattle will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53dc9981643431f9fc06daca"
@@ -5710,15 +5816,15 @@ nodes {
   idRef {
     id: "53df4022643431277b059413"
   }
-  index: 58
+  index: 60
   text: "Why don\'t you tell us."
   branches {
     responseText: "Seriously? My sister is murdered, and you think I had something to do with it?"
-    nextNodeIndex: 59
+    nextNodeIndex: 61
   }
   branches {
     responseText: "Lawyer. Right now."
-    nextNodeIndex: 60
+    nextNodeIndex: 62
   }
   branches {
     responseText: "{{CC}}Charisma 4{{/CC}} I can\'t believe this. I can\'t believe any of this. I loved Brooklyn, even if I hadn\'t seen her in ages. And I didn\'t think to go see her when I was in Seattle, didn\'t even know she was there. If I had gone to her ... maybe I could have stopped whoever killed her. But I didn\'t, I wasn\'t there when she needed me... Arrest me if you like, I don\'t even care."
@@ -5787,7 +5893,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 61
+    nextNodeIndex: 63
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5798,16 +5905,16 @@ nodes {
   idRef {
     id: "53df4022643431277b059416"
   }
-  index: 59
+  index: 61
   text: "That\'s what it looks like to us."
   branches {
     responseText: "Go to hell."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "I didn\'t."
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5819,11 +5926,11 @@ nodes {
   idRef {
     id: "53df4022643431277b05941f"
   }
-  index: 60
+  index: 62
   text: "Oh you\'ll get a lawyer all right."
   branches {
     responseText: " "
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -5835,7 +5942,7 @@ nodes {
   idRef {
     id: "53df474d643431277b0595a6"
   }
-  index: 61
+  index: 63
   text: "{{GM}}Tamaryk glances sharply at her partner, who shrugs.{{/GM}}\n\nWe\'re sorry for your sister, $(story.pc_salutation) $(story.pc_lastname). As for arresting you, I hope it won\'t be necessary. Stay in town, however, and try to keep out of trouble."
   branches {
     responseText: "Yeah, I can do that. Now, excuse me please?"
@@ -5843,7 +5950,7 @@ nodes {
   }
   branches {
     responseText: "You are going to catch the one who really did it, right?"
-    nextNodeIndex: 62
+    nextNodeIndex: 64
   }
   branches {
     responseText: "Goodbye."
@@ -5858,7 +5965,7 @@ nodes {
   idRef {
     id: "53df474d643431277b0595aa"
   }
-  index: 62
+  index: 64
   text: "We will. Or Seattle PD will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -5869,8 +5976,8 @@ nodes {
   idRef {
     id: "53df3b3c643431277b0592a5"
   }
-  index: 63
-  text: "$(story.pc_firstname) $(story.pc_lastname), you are under arrest for murder. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
+  index: 65
+  text: "$(story.pc_firstname) $(story.pc_lastname), by the mutual extraterritoriality exception agreement between Hildebrantd-Kleinfort-Bernal and Alcamai Cosmetics, you are under arrest for murder of a corporate citizen. You have the right to remain silent, anything you say can and will be used against you in a court of law..."
   branches {
     responseText: "{{CC}}Comply with the officers{{/CC}} This is ... I didn\'t ... hell."
     actions {
@@ -6070,7 +6177,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
@@ -6146,7 +6253,7 @@ nodes {
   idRef {
     id: "53df48d1643431277b0596cc"
   }
-  index: 64
+  index: 66
   text: "That was a terminally stupid move, $(story.pc_lastname).\n\nDo you even know how to use that thing? Put it down before someone gets hurt."
   branches {
     responseText: "Try me."
@@ -6230,7 +6337,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 65
+    nextNodeIndex: 67
   }
   branches {
     responseText: "{{CC}}Ranged Combat 2 + speciality {{/CC}}Do you see my hands shaking?"
@@ -6331,7 +6438,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 66
+    nextNodeIndex: 68
   }
   branches {
     responseText: "{{CC}}Sufficiently Dangerous Perp{{/CC}} The question isn\'t whether I can shoot. The question is, do you want a firefight in the middle of a crowded office with a dozen bystanders getting in the crossfire?"
@@ -6392,7 +6499,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 67
+    nextNodeIndex: 69
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6403,7 +6510,7 @@ nodes {
   idRef {
     id: "53e0b27b643431b53005982c"
   }
-  index: 65
+  index: 67
   text: "Thanks for not making us shoot you. I hate it when we have to do that."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6460,11 +6567,11 @@ nodes {
   idRef {
     id: "53df5c0e643431fe8505906d"
   }
-  index: 66
+  index: 68
   text: "... I think $(l.he) means it, Wainwright."
   branches {
     responseText: " "
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -6476,11 +6583,11 @@ nodes {
   idRef {
     id: "53df5c5b643431fe85059071"
   }
-  index: 67
+  index: 69
   text: "You bastard. You\'ll get yours for this.\n\n{{GM}}She composes herself.{{/GM}}"
   branches {
     responseText: " "
-    nextNodeIndex: 45
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -6492,7 +6599,7 @@ nodes {
   idRef {
     id: "53df5cc7643431fe85059076"
   }
-  index: 68
+  index: 70
   text: "All right, let\'s no one do anything stupid here. No one needs to get hurt.\n\nThe ball is in your court, $(story.pc_lastname). What happens now? We\'re not going let you get any hostages, including us, so you can forget about that right away."
   branches {
     responseText: "First, you\'re going to tell me what this is all about. Why are you here and what do you want to bust me for?"
@@ -6530,7 +6637,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 69
+    nextNodeIndex: 71
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -6544,7 +6651,7 @@ nodes {
         functionName: "No Effect"
       }
     }
-    nextNodeIndex: 70
+    nextNodeIndex: 72
   }
   branches {
     responseText: "{{CC}}Fight{{/CC}} I\'m thinking bullets."
@@ -6671,11 +6778,11 @@ nodes {
   idRef {
     id: "53dfcea4643431d21a05960f"
   }
-  index: 69
+  index: 71
   text: "{{GM}}Wainwright looks at you coldly.{{/GM}}\n\nYour sister, Brooklyn $(story.pc_lastname) is dead. She was murdered in her home in Seattle, around the time you were in town. Seattle PD told us to check you out, as she\'d listed you as next of kin - as apparently you had her, some years back. We were a bit skeptical, since you seemed to be nothing except a soft corporate lackey. Guess their hunch was right."
   branches {
     responseText: "Their hunch was bullshit. Now I\'m going to get some stuff from my desk, and then I\'m going to leave. You will let me, or things will turn nasty."
-    nextNodeIndex: 70
+    nextNodeIndex: 72
     auxiliaryLink: true
   }
   branches {
@@ -6785,11 +6892,11 @@ nodes {
   idRef {
     id: "53dfbf906434313c150592c0"
   }
-  index: 70
+  index: 72
   text: "All right, let\'s do exactly that."
   branches {
     responseText: ""
-    nextNodeIndex: 71
+    nextNodeIndex: 73
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -6800,7 +6907,7 @@ nodes {
   idRef {
     id: "53dfbfa96434313c150592c3"
   }
-  index: 71
+  index: 73
   text: ""
   nodeType: ConversationNodeType_Simple
   actions {
