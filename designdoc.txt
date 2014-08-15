@@ -66,19 +66,25 @@ Esimerkkinä: perheen älykkö, biotieteiden tohtori Noah, on örkki.
 
  * Vaihtoehdot väkivallalle
  
-Jos peliin tuodaan keikkoja, joilla äärimmäisen korkea bodycount on välttämätön, näiden pitäisi olla optionaalisia sivujuonia. Tavoite on antaa pelaajalle mahdollisuus pelata shadowrunneria, joka ei ole mikään yhden hengen käänteinen väestöräjähdys. Taistelut voivat olla välttämättömiä, mutta esim. pelaajahahmon aloitteesta käynnistyvät yhteenotot olisi hyvä olla joko ohitettavissa tai todella harvinasia. Tutkitaan myös mahdollisuutta tehdä ei-letaaleja aseita. Näiden tulisi olla suht hankalia - toimivat tyyliin "vähennetään action pointit nollaan ja sitten pannaan hahmo nippusiteisiin / rautoihin, STR yli 5 murtautuu siteistä ulos" - eikä mitään simppeliä shorthandia sille, että "ammutaan joku, mutta siten että se ei kuole".
+Jos peliin tuodaan keikkoja, joilla äärimmäisen korkea bodycount on välttämätön, näiden pitäisi olla optionaalisia sivujuonia. Tavoite on antaa pelaajalle mahdollisuus pelata shadowrunneria, joka ei ole mikään yhden hengen käänteinen väestöräjähdys. Taistelut voivat olla välttämättömiä, mutta esim. pelaajahahmon aloitteesta käynnistyvät yhteenotot olisi hyvä olla joko ohitettavissa tai todella harvinasia. Samaten mieluiten ei tavoitteita, jotka ovat muotoa "tapa kaikki x", ainakaan varoittamatta hahmoa etukäteen että kyseessä on nimenomaan murhakeikka.
 
-Samaan aikaan pelin ei tulisi mikromanageroida moralisoinnin kanssa; ts. karmapalkkioiden tulisi olla pelityyliin nähden agnostisia. Sen sijaan väkivallattomista ratkaisuista olisi hyvä jakaa muita palkkioita - rahaa, esineitä, infoa jne. Lisäksi reiluuden nimessä joillain NPC:illä voi olla DocWagon -sopimuksia; jos pidetään kirjaa siitä, ketä kaikkia on tapettu, on myös syytä antaa ammutuille tai piestyille NPC:ille mahdollisuus selvitä. SRR ei ota tähän suuremmin kantaa, mutta me voisimme.
+Tutkitaan myös mahdollisuutta tehdä ei-letaaleja aseita. Näiden tulisi olla suht hankalia - toimivat tyyliin "vähennetään action pointit nollaan ja sitten pannaan hahmo nippusiteisiin / rautoihin, STR yli 5 murtautuu siteistä ulos" - eikä mitään simppeliä shorthandia sille, että "ammutaan joku, mutta siten että se ei kuole".
+
+Pelin ei tulisi kuitenkaan mikromanageroida moralisoinnin kanssa; ts. karmapalkkioiden tulisi olla pelityyliin nähden agnostisia. Sen sijaan väkivallattomista ratkaisuista olisi hyvä jakaa muita palkkioita - rahaa, esineitä, infoa jne. Lisäksi reiluuden nimessä joillain NPC:illä voi olla DocWagon -sopimuksia; jos pidetään kirjaa siitä, ketä kaikkia on tapettu, on myös syytä antaa ammutuille tai piestyille NPC:ille mahdollisuus selvitä. SRR ei ota tähän suuremmin kantaa, mutta me voisimme.
 
 [Taustana: koetin joskus pelata Deus Ex Human Revolutionia psykohahmolla, mutta se tuntui väärältä kun koko ajan missasin ekspaa tappamalla väkeä sen sijaan että olisin hiipinyt ja kolkkaillut. Alkuperäinen Deus Ex jakoi pisteitä etenemisestä riippumatta siitä miten sen suoritit, tähtäämme samaan.]
 
 
-2.4 Tapahtumakulku
+2.4 Tapahtumakulku ennen pelin alkua
 
-
- * Brooklyn murhataan
- * Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle - ei korkealle, mutta jonnekin
+ * Half Shatter tekee shadowruneja eri firmoja vastaan. Hän toimittaa näistä hieman rahaa siskolleen Brooklynille, joka on myös suunnilleen hänen ainoa oikea kaverinsa Red Hillissä. Half Shatter hengaa paljon Brooklynin seurassa. Hänellä on myös tapana käyttää Brooklynin kotia varastamansa tavaran väliaikaisvarastona, koska hänen oma kotinsa on välillä tarkkailun kohteena.
+ * Brooklyn on käyttänyt peitenimeä [pelaajahahmon_handle] sekä esiintynyt tämän "look and feelillä" myydessään ja ostaessaan jotain tästä laittomasta saaliista.  
+ * Brooklyn soittaa videopuhelun Kentucky-nimisen poikaystävänsä kanssa. Puhelu päätyy Lone Starin remote surveillancen satunnaissyyniin, ja yhtäkkiä taustalla näkyy eräs kadonneeksi merkitty esine Novatechilta.
+ * Lone Starin signal corps paikantaa Kentuckyn, ja Red Hillin Lone Star käy poimimassa tämän talteen. Kuitenkin putkassa asiat menevät pieleen kun Kentucky karkaa ja häipyy kaupungista.
+ * Tyytymättömänä Lone Starin suoritukseen, Novatech palkkaa runneri Magneticin [sama sukupuoli ja metaetnisyys kuin pelaajahahmolla] hankkimaan varastetun tavaran takaisin ja tappamaan sen haltijan (jota Novatech pitää varkaana) opetukseksi. Magnetic jäljittää varastetun tavaran kauppiaan nimeltä [[pelaajahahmon handle]], murtautuu tämän kotiin, murhaa Brooklynin ja hakee varastetun tavaran takaisin. Hän jättää sinne tekstin 
+ * On selvää, että kyseessä ei ole tavallinen ryöstö: ainoastaan yksi asia on viety. Myöskään jengiviestejä ei ole, ja kaikki viittaa kliiniseen, ammattitaitoiseen toimintaan. Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha joka suorastaan huutaa yhtiökytköksiä, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle - ei korkealle, mutta jonnekin
  * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon. Tutkimus omahassa annetaan halvimman tarjouksen tekijälle, joten sen poimii Omahan kaupunki ja paikallinen poliisi
+ * Half Shatter tajuaa mitä on tapahtunut
 
 
 
@@ -87,34 +93,131 @@ Samaan aikaan pelin ei tulisi mikromanageroida moralisoinnin kanssa; ts. karmapa
 
 4.1 Sisarukset
 
-Pelaajahahmo 
-------------
+Syntymävuodet:
+
+2043 Alexander (33 v)
+2044 Grace (31v)
+2047 Hannah (28 v)
+2048 Noah (27 v) [hieman alle 50v ihminen]
+2049 [pelaajahahmo, jos muu kuin örkki] (26 v)
+2051 [pelaajahahmo, jos örkki] (24 v) (vastaa n. 40-vuotiasta ihmistä)
+2053 Brooklyn (22 v)
+
+http://www.shadowrun.com/forums/discussion/37337/how-fastslow-do-elves-age/p1
+
+"The closest to a canon explanation you're going to find will be in the Tir Tairngir sourcebook, where it says that elves age the same as humans until they reach about 20, and then the aging just turns off (or slows to a point where it just isn't recognizable). An 18 year old elf would look about like an 18 year old human."
+
+Toisaalta:
+
+http://www.amurgsval.org/shadowrun/metahuman_living.html
+
+Ota tuosta nyt sitten selvää.
+
+
+(PELAAJAHAHMO) 
+--------------
 
 Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri. Vapaasta hahmoluonnista johtuen tabula rasa jonka pelaajan toimet täyttävät, erityisyhteyksiä sisarukseen jolla sama metaetnisyys, orpokodin jälkeinen tausta yhteydessä sisarukseen, jolla sama Etiquette (Alexander tai Noah).
 
 Pelaajan suhtautumistavasta riippuen joko onnellinen korporaatti, joka ihan viihtyi työssään tai katkera proto-shadowrunner (mahd. jopa taustaa wetworkin parissa).
 
 
-Hannah "Half Shatter"
-----------------------
+ALEXANDER
+---------
+
+Haltiastara. Vanhin sisaruksista, mutta melkeinpä lapsellisin. Hurmuripoika, joka on pärjännyt lapsesta asti söpöydellään ja charmillaan. Lähti orpokodista kohti teinitähteyttä, ja jäi sille tielleen.
+
+Sisaruskatraan tyhjäpäisin.
+
+
+
+GRACE
+-----
+
+Ihminen, sisaruskatraan toiseksi vanhin, ylivoimaisesti vastuullisin; "vara-äiti". Huolehtivainen, välittävä, jalat maassa pitävä; "sisarusajattelu" oli alunperin hänen ideansa.
+
+Nyttemmin töissä vuoropäällikkönä turva-alan yrityksessä.
+
+
+
+
+HANNAH "HALF SHATTER"
+---------------------
+
 Kääpiödekkeri, shadowrunner. Lapsena hyvin vilkas mielikuvitus ja hyperaktiivinen luonne, aikuisena rajatapauksellisen paranoidi salaliittoteoreetikko ja melkein-sosiopaatti - lähes tunnoton murhaaja, joka kuvittelee omistavansa jotain periaatteita, mutta nämä periaatteet ovat todellisuudessa aika hatarat. Kuitenkin hyvin lojaali ystävilleen, perheelleen ja yhteisölleen. Ei murhannut Brooklynia, vaikka pelaajahahmo saattaakin näin epäillä.
 
 Hannah on kääpiöksikin hyvin pienikokoinen, ja melkoinen klaustrofili: hän änkee lyhyine raajoineen jatkuvasti läpi suunnilleen dronenmentävstä luukuista, ja asuu aivan mikroskooppisessa kolosessa.
 
+Shadowrunnerina katutasoa, ei kovin luotettavan maineessa, ei saa parhaita keikkoja.
 
+
+NOAH
+----
+
+Örkki. Hieman Hannahia nuorempi, mutta melkein yhtä vastuullinen kuin Grace. Siinä missä Hannah ja Alexander olivat pienenä aina viemässä lapsia vaikeuksiin, Noah oli kiskomassa heitä pois niistä. Varmasti perheen älykkäin.
+
+
+
+BROOKLYN
+--------
+
+Sisaruskatraan nuorin ja varmaankin empaattisin. Ei erityisen terävä, mutta sentään Alexanderia fiksumpi. Kevyesti fyysisesti vaikuttavin.
 
 
 
 
 4.2 Omaha
 
-Det. Tamaryk - Omahan murharyhmän etsivä, esittää hyvää poliisia. Seuraa pelaajahahmoa Seattleen?
+DET. TAMARYK - Omahan murharyhmän etsivä, esittää hyvää poliisia. Seuraa pelaajahahmoa Seattleen?
 
-Det. Wainwright - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia. Seuraa pelaajahahmoa Seattleen?
+DET. WAINWRIgHT - Omahan murharyhmän etsivä ja maagi, esittää pahaa poliisia. Seuraa pelaajahahmoa Seattleen?
 
-Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen jos siitä on hänelle etua.
+CAMERON ZHANG - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä tästä tulee hahmon kontakti ja fikseri myöhemmin. Ahne ja epämiellyttävä, mutta peittää sen jos siitä on hänelle etua.
 
 
+4.3 Red Hill
+
+
+MAGNETIC
+--------
+
+Kovan luokan shadowrunner, äärimmäisen lojaali työnantajalleen, tekee mitä lupaa vaikka se olisikin epämiellyttävää. Sukupuoli ja metaetnisyys samat kuin pelaajahahmolla, suuntautuminen öh vaikka gun adept tjsp? Asuu jossain fancyssä paikassa metroplexissä, mutta pelin alussa on elää vähän kovia aikoja ja päätyy slummailemaan mm. Red Hillissä; Red Runner's Barin tuoreita vakiokasvoja?
+
+Magnetic murhasi Brooklynin työnantajansa käskystä. Hän ei välttämättä ole kovin ylpeä tästä, mutta tehtäväkuvaus oli mikä oli.
+
+
+
+Hahmoja aakkosittain:
+---------------------
+
+(koetetaan välttää alkukirjainsoppaa, jossa kaikkien hahmojen nimet ovat samanlaisia)
+
+Alexander
+Brooklyn
+C
+D
+E
+Frans
+Grace, Gaitlin
+Hammer, Half Shatter
+I
+J
+K
+L
+Magnetic
+Noah
+Old Timer
+P
+Quercus [Tammi]
+R
+S
+Tamaryk
+U
+V
+Wainwright
+X
+Y
+Zhang
 
 
 
@@ -131,13 +234,13 @@ Cameron Zhang - lakimies, joka edustaa pelaajahahmoa. Oikein käsiteltynä täst
 
 6. Skenaarioiden rundown
 
-6.0 Työhaastattelu
+6.0 Työhaastattelu (2071)
 
  - valitaan ura, etunimi ja sukunimi
 
 Karmapalkkio: 0
 
-6.1 Alcamai
+6.1 Alcamai (2075)
 
  - sisään
  - hanki valepuku
@@ -145,7 +248,6 @@ Karmapalkkio: 0
  - optional: löydä ase
  - selviä poliisikuulustelusta
  
- ?? miksi poliiseilla valtuuksia toimia suuryrityksen sisällä ??
 
 6.1.1 Poliisiasema
  - jos poliisikuulustelu päättyy putkaan, hankkiudu ulos sieltä, joko lakimiehen avulla tai murtokeinoilla
@@ -154,8 +256,9 @@ Karmapalkkio yht: +2
 
 
 6.2. Mielikuvitusleikki
- - sijoittuu menneisyyteen
- - pelaajahahmo, Brooklyn (ja ehkä joku kolmas?) leikkivät avaruussotaa 
+ - sijoittuu menneisyyteen, 2061
+ - pelaajahahmo (12v / 10v), Brooklyn (8v) ja Half Shatter (14 v) leikkivät avaruussotaa
+ - selviää, että Brooklyn fanittaa pelaajahahmoa kauheasti
 
 Karmapalkkio: +1 ??
 
@@ -168,16 +271,33 @@ Karmapalkkio: +1 ??
 6.4 Keikka 01
 
  - tarvitaan toimintapääomaa; käydään kysymässä fikseriltä 
+ - Half Shatter
 
 6.5 Flashback 02
 
- - Grace
+ - Noah?
 
 6.6 Muistotilaisuus
 
 6.7 Red Hillin hiekkalaatikko aukeaa
 
+6.8 Keikka 02
+
+ - Noah ja yliopistomaailma
  
+6.9 Keikka 03
+
+ - Alexander ja tappava musabisnes
+ 
+6.10 Keikka 04
+
+ - Grace ja turvaoperaatiot
+ 
+6.11 Viimeinen keikka
+
+ - Magnetic ja Brooklynin kohtalo
+
+
 
 
 7. Red Hill Sandbox
@@ -194,5 +314,17 @@ Karmapalkkio: +1 ??
    * kaikilla välineillä ei pääse kaikkiin paikkoihin?? (esim. autolla ei pääse basaariin tai fokukseen)
    * auto on mahdollisesti huonoin kulkuväline
 
- - 
+7.1 Hammerin kanssa tehtävä yhteistyö
+
+ - miksi Brooklyn oli HBK:n vakuutuksessa?
+ - kun HammerRep > 5, tähän saa vastauksen: hän otti henkilökohtaisena loukkauksena sen, että aivan hänen tukikohtansa vieressä oli tehty murha, jolla oli selviä yritysyhteyksiä, joten hän teki pienen arkistointimokan, jonka seurauksena HBK kuvitteli menehtyneen olevan heidän vakuutusohjelmassaan
+ 
+
+7.2 Zhangin keikat
+
+ - Zhang pystyy myös avaamaan HBK:n kuviota samoin kuin Hammer
+ - pyytää pieniä palveluksia
+ 
+  
+ 
  
