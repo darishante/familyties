@@ -519,7 +519,7 @@ worldMapLocation {
 }
 mapName: "Family_Ties_000"
 parentStory: ""
-scene_title: "2051: HIRED BY A CORPORATION"
+scene_title: "2071: HIRED BY A CORPORATION"
 scene_subtitle: ""
 scene_synopsis: "Starting out life as an abandoned child in a state orphanage from Saskatoon, it\'s not been exactly easy to find a job at a prestigious company. Still, you have managed it somehow. Okay, Alcamai Cosmetics is not exactly Aztechnology, but it\'s regular pay and maybe even the beginning of a career.\n\n(Please enter all the required information. Unlike the huddled SINless masses, you have a real first name, last name, social security number and the like. Individuality is overrated.)"
 scene_image: ""
@@ -571,8 +571,6 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

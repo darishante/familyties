@@ -7546,9 +7546,9 @@ worldMapLocation {
 }
 mapName: "FamilyTies_001"
 parentStory: ""
-scene_title: "2055: BACK AT THE OFFICE"
+scene_title: "2075: BACK AT THE OFFICE"
 scene_subtitle: ""
-scene_synopsis: "After steering a particularily vicious project to completion the higher ups at Alcamai Cosmetics gave you an entire week of vacation. It was almost enough to make you relax and forget the pressures of your job.\n\nYour flight back to Omaha was delayed by nearly 12 hours, so instead of a well deserved night\'s sleep in your own bed, you ended up having a mind-numbing layover in Seattle and then a horrible red-eye through some supernaturally nasty weather. From the airport you rushed into a taxi and just barely made it to the basement entrance in time, still in your worn-out holiday duds..."
+scene_synopsis: "After steering a particularily vicious project to completion the higher ups at Alcamai Cosmetics gave you an entire week of vacation. It was almost enough to make you relax and forget the pressures of your job.\n\nYour flight back to Omaha was delayed by nearly 12 hours, so instead of a well deserved night\'s sleep in your own bed, you ended up having a mind-numbing layover in Seattle and then a horrible red-eye through some supernaturally nasty weather. From the airport you rushed into a taxi and just barely made it to the basement entrance in time, still in your worn-out holiday threads..."
 scene_image: ""
 scene_continue_button_skip: false
 scene_restore_runner_health: false
@@ -7623,8 +7623,6 @@ scene_disguises {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
