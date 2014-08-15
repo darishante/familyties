@@ -78,13 +78,14 @@ Pelin ei tulisi kuitenkaan mikromanageroida moralisoinnin kanssa; ts. karmapalkk
 2.4 Tapahtumakulku ennen pelin alkua
 
  * Half Shatter tekee shadowruneja eri firmoja vastaan. Hän toimittaa näistä hieman rahaa siskolleen Brooklynille, joka on myös suunnilleen hänen ainoa oikea kaverinsa Red Hillissä. Half Shatter hengaa paljon Brooklynin seurassa. Hänellä on myös tapana käyttää Brooklynin kotia varastamansa tavaran väliaikaisvarastona, koska hänen oma kotinsa on välillä tarkkailun kohteena.
- * Brooklyn on käyttänyt peitenimeä [pelaajahahmon_handle] sekä esiintynyt tämän "look and feelillä" myydessään ja ostaessaan jotain tästä laittomasta saaliista.  
- * Brooklyn soittaa videopuhelun Kentucky-nimisen poikaystävänsä kanssa. Puhelu päätyy Lone Starin remote surveillancen satunnaissyyniin, ja yhtäkkiä taustalla näkyy eräs kadonneeksi merkitty esine Novatechilta.
- * Lone Starin signal corps paikantaa Kentuckyn, ja Red Hillin Lone Star käy poimimassa tämän talteen. Kuitenkin putkassa asiat menevät pieleen kun Kentucky karkaa ja häipyy kaupungista.
+ * Brooklyn on käyttänyt peitenimeä "[pelaajahahmon_handle]" sekä esiintynyt tämän "look and feelillä" myydessään ja ostaessaan jotain tästä laittomasta saaliista. Syy tähän on, että Brooklyn tarvitsi peitehenkilöllisyyden, ja hänen veljensä/siskonsa tuli hänelle ekana mieleen.
+ * Brooklyn soittaa videopuhelun Kentucky-nimisen poikaystävänsä tjsp.? kanssa. Puhelu päätyy Lone Starin remote surveillancen satunnaissyyniin, ja yhtäkkiä taustalla näkyy eräs kadonneeksi merkitty esine Novatechilta.
+ * Lone Starin signal corps paikantaa puutteellisilla tiedoilla Kentuckyn, ja Red Hillin Lone Star käy poimimassa tämän talteen. Kuitenkin putkassa asiat menevät pieleen kun Kentucky karkaa ja häipyy kaupungista.
  * Tyytymättömänä Lone Starin suoritukseen, Novatech palkkaa runneri Magneticin [sama sukupuoli ja metaetnisyys kuin pelaajahahmolla] hankkimaan varastetun tavaran takaisin ja tappamaan sen haltijan (jota Novatech pitää varkaana) opetukseksi. Magnetic jäljittää varastetun tavaran kauppiaan nimeltä [[pelaajahahmon handle]], murtautuu tämän kotiin, murhaa Brooklynin ja hakee varastetun tavaran takaisin. Hän jättää sinne tekstin 
  * On selvää, että kyseessä ei ole tavallinen ryöstö: ainoastaan yksi asia on viety. Myöskään jengiviestejä ei ole, ja kaikki viittaa kliiniseen, ammattitaitoiseen toimintaan. Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha joka suorastaan huutaa yhtiökytköksiä, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle - ei korkealle, mutta jonnekin
  * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon. Tutkimus omahassa annetaan halvimman tarjouksen tekijälle, joten sen poimii Omahan kaupunki ja paikallinen poliisi
- * Half Shatter tajuaa mitä on tapahtunut
+
+ * Half Shatter tajuaa mitä on tapahtunut, jäljittää pelaajahahmon mahdollisen pidätyksen, ja sotkee matrixin kautta Omahan poliisiaseman järjestelmät niin, että pelaajahahmon selli aukeaa ja hän voi poistua.
 
 
 
