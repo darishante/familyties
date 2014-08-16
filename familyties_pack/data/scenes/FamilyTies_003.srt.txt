@@ -1946,7 +1946,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Region)"
           args {
-            string_value: "53e4a40a643431fe15e5155b"
+            string_value: "53ef15e0643431670306e182"
           }
         }
       }
@@ -1964,6 +1964,52 @@ triggers {
             string_value: "Bunch 4"
           }
         }
+      }
+    }
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "Look out! More space-wolves! And the one on the right is even bigger than the ohers!"
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
       }
     }
   }
@@ -3778,7 +3824,7 @@ characters {
   lod: 0
   character_instance {
     prefab_name: "Seattle:Creature/CreatureHellhound"
-    character_sheet_id: "Creature_Lv1_Hellhound"
+    character_sheet_id: "Creature_Lv2_Hellhound"
     character_mod {
       stats {
         body: 0
@@ -3795,8 +3841,8 @@ characters {
         force: 0
         morale: -1
         discipline: 0
-        awareness: -30
-        perception: -20
+        awareness: 0
+        perception: 0
         authority: 0
         protect_tether_range: 0
         move_speed: 0
@@ -3841,11 +3887,11 @@ characters {
       prefab_name: "Chomp"
     }
     team_id: "Aliens"
-    char_name: "Arcturan Space-Wolf"
+    char_name: "Arcturan Space-Direwolf"
     GeneralTags: "Bunch 4"
     enabled_at_start: false
     pc_spawn_number: -1
-    karma: 52
+    karma: 62
   }
 }
 characters {
