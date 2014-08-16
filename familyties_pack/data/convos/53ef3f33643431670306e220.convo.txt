@@ -1,0 +1,736 @@
+idRef {
+  id: "53ef3f33643431670306e220"
+}
+ui_name: "s003_trash_earring"
+nodes {
+  idRef {
+    id: "53ef3f3d643431670306e226"
+  }
+  index: 0
+  text: "{{GM}}Something small and bright glitters among the refuse on the floor, precariously on the edge of a drainpipe.{{/GM}}"
+  branches {
+    responseText: "Take a closer look"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Leave it alone"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef438a643431670306e2c5"
+  }
+  index: 1
+  text: "{{GM}}There is a small, silver earring in the shape of a winged creature. You reach out to grab it...\n\nA huge, real-as-the-orphanage rat jumps out of the sewer and hisses at you, apparently willing to fight you for the earring.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Close Combat / Strength{{/CC}} Stomp on the rat"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Spellcasting / Conjuring / Willpower{{/CC}} Stare the rat down"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Quickness{{/CC}} Grab the earring and move away from the rat"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Shoot the rat with your laser"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Leave the earring for the rat"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef4756643431670306e2fd"
+  }
+  index: 2
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Attribute"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorAttributes"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef64e2643431670306e32c"
+  }
+  index: 3
+  text: "{{GM}}You kick the rat square in its ratty little face. It yelps and retreats into the sewer.\n\nYou pick up the earring.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef6541643431670306e32e"
+  }
+  index: 4
+  text: "{{GM}}You try to stomp the rat, but barely miss. The rat bites your calf painfully, and then retreats into the sewer pipe.\n\nStill, you manage to pick up the earring.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Cause Damage"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef4855643431670306e301"
+  }
+  index: 5
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Attribute"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorAttributes"
+                }
+                args {
+                  int_value: 5
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Compare Actor Skill"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorSkills"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Compare Actor Skill"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorSkills"
+                    }
+                    args {
+                      int_value: 7
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef65c5643431670306e330"
+  }
+  index: 6
+  text: "{{GM}}Focusing your mind on the rat, you command it to get away from you. \n\nThere\'s a brief surge of arcane power, and then the rat decides to back off. You pick up the earring.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef6651643431670306e34e"
+  }
+  index: 7
+  text: "{{GM}}Focusing your mind on the rat, you command it to get away from you. It doesn\'t quite work.\n\nThe rat jumps at your face. You parry with your hand, and get bitten It hurts terribly! \n\nHaving established its domain, the rat scurries back into the sewers. You pick up the earring.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Cause Damage"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 8
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef485a643431670306e305"
+  }
+  index: 8
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef66f1643431670306e36b"
+  }
+  index: 9
+  text: "{{GM}}Quick as a flash, you grab the earring. The rat tries to bite your hand, but you are too fast. Ha!\n\nHissing, the rat retreats into the sewers.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef68b4643431670306e3aa"
+  }
+  index: 10
+  text: "{{GM}}Quickly you grab the earring, but the rat is even quicker. It bites your hand. It hurts!\n\nThen the rat hisses at you, and retreats into the sewer.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef6843643431670306e38a"
+  }
+  index: 11
+  text: "{{GM}}Turns out that your laser pistol is a toy made out of a painted coffee cup and some plastic bits, whereas the rat is quite real.\n\nIt grabs a rotting candy wrapper from the pile, and dives into the sewer. The glittering thing falls down after it.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef486a643431670306e309"
+  }
+  index: 12
+  text: "{{GM}}The rat grabs a rotting candy wrapper from the pile, and dives into the sewer. The glitterin thing falls down after it.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ef401d643431670306e240"
+  }
+  index: 13
+  text: "{{GM}}The glittering thing falls into the pipe, and is lost.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

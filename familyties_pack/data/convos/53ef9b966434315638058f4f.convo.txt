@@ -1,0 +1,226 @@
+idRef {
+  id: "53ef9b966434315638058f4f"
+}
+ui_name: "s003_leaving"
+nodes {
+  idRef {
+    id: "53ef9ba16434315638058f55"
+  }
+  index: 0
+  text: "{{GM}}Just as the door locks, there\'s a furious series of knocks from the other side. Gaitlin opens it, and a somewhat angry Hannah rushes in.{{/GM}}\n\nHey! You drekheads left me in the maintenance shaft! That\'s not cool! You should have taken me with you!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53ef9c196434315638058f58"
+  }
+  index: 1
+  text: "Left you where now, Hannah?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53ef9c306434315638058f5b"
+  }
+  index: 2
+  text: "... um, never mind.\n\n{{GM}}She glares at you.{{/GM}}\n\nYou jerks. I\'m gonna get you for this."
+  branches {
+    responseText: " "
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53ef9c826434315638058f5e"
+  }
+  index: 3
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53ef0aae643431670306e15d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "halfShatterIsOut"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "halfShatterIsOut"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53ef0aae643431670306e15d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: -1
+}

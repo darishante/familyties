@@ -1,15 +1,15 @@
 idRef {
-  id: "53e3b7cc6434316822e50a97"
+  id: "53ef99686434315638058ed9"
 }
-ui_name: "s003_turret_1"
+ui_name: "s003_turret_4"
 nodes {
   idRef {
-    id: "53e3b7da6434316822e50a9d"
+    id: "53ef99726434315638058edf"
   }
   index: 0
-  text: "M\303\226RGENSTEIN DEFENSE TURRET 1\n\nEnter secret code to enable!"
+  text: "M\303\226RGENSTEIN DEFENSE TURRET 4\n\nWARNING - Turret malfunction detected!\n\nEnter secret code to re-calibrate!\n\n{{GM}}The keypad on this computer has been chewed off, and there\'s no way to enter the control code{{/GM}}\n"
   branches {
-    responseText: "{{CC}}Decking 2{{/CC}} Hack the turret"
+    responseText: "{{CC}}Decking 3{{/CC}} Hack the controls"
     conditions {
       ops {
         functionName: "Compare Actor Skill"
@@ -52,27 +52,20 @@ nodes {
           }
         }
         args {
-          int_value: 2
+          int_value: 3
         }
       }
     }
     nextNodeIndex: 1
-    inputBypass: true
-    auxiliaryLink: true
   }
-  branches {
-    responseText: "1984"
-    nextNodeIndex: 1
-  }
-  nodeType: ConversationNodeType_InputNumpad
-  inputMaxLength: 4
+  nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53e3b8606434316822e50aa1"
+    id: "53ef9a146434315638058ef8"
   }
   index: 1
-  text: "TURRET ACTIVATED - SCANNING FOR HOSTILES!"
+  text: "TURRET RE-CALIBRATED - SCANNING FOR HOSTILES!"
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
@@ -84,7 +77,7 @@ nodes {
             call_value {
               functionName: "Get Map Item (Actor)"
               args {
-                string_value: "53e3b76a6434316822e50a95"
+                string_value: "53ef96e3643431670306e982"
               }
             }
           }
@@ -129,7 +122,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "53e3b76a6434316822e50a95"
+            string_value: "53ef8689643431670306e8b3"
           }
         }
       }
@@ -137,5 +130,6 @@ nodes {
   }
 }
 roots {
+  responseText: ""
   nextNodeIndex: 0
 }

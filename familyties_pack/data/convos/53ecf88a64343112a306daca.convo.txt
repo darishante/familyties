@@ -10,14 +10,121 @@ nodes {
   text: "All right, children. You know you\'re not supposed to play in the basement without teacher supervision. You\'ll only make a terrible mess. It\'s almost bedtime anyway."
   branches {
     responseText: "We still have 15 minutes! And we\'re not making any kind of mess!"
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 1
+    hideIfUnavailable: true
   }
   branches {
     responseText: "But the Arcturan space-wolves will overrun M\303\226RGENSTEIN if we don\'t defend it!"
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 5
+    hideIfUnavailable: true
   }
   branches {
     responseText: "{{CC}}Quickly turn around and run back into the basement{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     actions {
       ops {
         functionName: "Add To Variable (int)"
@@ -75,6 +182,122 @@ nodes {
       }
     }
     nextNodeIndex: 10
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "All right, sir."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Dragonfly earring{{/CC}} Sir, look at what we found. I think this belongs to Ms. Kerchav!"
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "dragonflyEarring"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -294,7 +517,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (Goal)"
           args {
-            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
           }
         }
       }
@@ -347,7 +570,7 @@ nodes {
     id: "53eef2e9643431670306de88"
   }
   index: 9
-  text: "Pay you? Young $(l.man), I\'m reconsidering letting you play in the basement atall."
+  text: "Pay you? Young $(l.man), I\'m reconsidering letting you play in the basement at all."
   branches {
     responseText: "Just kidding, we\'ll get right on it!"
     nextNodeIndex: -1
@@ -370,12 +593,152 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53eef719643431670306df4b"
+    id: "53ef8dfa643431670306e943"
   }
   index: 11
-  text: "Your playtime is now over. As a punishment for disobedience, you are grounded for a week. We\'ll be changing the locks on the basement doors as well, since they seem to foster a mutinous attitude in the children."
+  text: "My, you\'re right. Ms. Kerchav mentioned losing one of these in the basement. She\'ll be delighted to have it back.\n\nAnyway, it\'s time to go upstairs and go to bed."
   branches {
     responseText: " "
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53eef719643431670306df4b"
+  }
+  index: 12
+  text: "Your playtime is now over. As a punishment for disobedience, you are grounded for a week. We\'ll be changing the locks on the basement doors as well, since they seem to foster a mutinous attitude in the children."
+  branches {
+    responseText: "Oh drek."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "halfShatterIsOut"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Oh drek."
     conditions {
       ops {
         functionName: "Comparison (bool)"
@@ -411,7 +774,49 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 12
+    nextNodeIndex: 13
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Dragonfly earring{{/CC}} Sir, look at what we found. I think this belongs to Ms. Kerchav!"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "dragonflyEarring"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 16
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -422,8 +827,12 @@ nodes {
   idRef {
     id: "53eefb39643431670306df53"
   }
-  index: 12
+  index: 13
   text: "Fascist."
+  branches {
+    responseText: " "
+    nextNodeIndex: 14
+  }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53e4a4c5643431fe15e5155d"
@@ -431,12 +840,209 @@ nodes {
 }
 nodes {
   idRef {
+    id: "53ef75a2643431670306e527"
+  }
+  index: 14
+  text: "{{GM}}Principal Gaitlin takes you all upstairs, and locks the door behind you.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53ef9d886434315638058faa"
+  }
+  index: 15
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53ef9b966434315638058f4f"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53ecf152643431b99131c6b7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef742c643431670306e524"
+  }
+  index: 16
+  text: "{{GM}}Principal Gaitlin takes a look at the earring.{{/GM}}\n\nMy, you\'re right. Ms. Kerchav mentioned losing one of these in the basement.\n\nThis doesn\'t excuse you running away earlier though. You must respect those in authority and do what they tell you to do. We\'ll still be changing the locks, but I think we\'ll only ground you for a day."
+  branches {
+    responseText: " "
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
     id: "53eef906643431670306df4d"
   }
-  index: 13
+  index: 17
   text: "All right, let\'s all go upstairs now. Did you find Ms. Kerchav\'s earring?"
   branches {
     responseText: "There\'s still places we haven\'t looked, we need to go back."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "No."
     conditions {
       ops {
         functionName: "Evaluate Goal"
@@ -466,29 +1072,59 @@ nodes {
               string_value: "IsOrIsNot"
             }
             args {
-              int_value: 0
+              int_value: 1
             }
           }
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 18
     hideIfUnavailable: true
-  }
-  branches {
-    responseText: "No."
-    nextNodeIndex: -1
   }
   branches {
     responseText: "Yes."
     conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "dragonflyEarring"
+            }
+          }
+        }
+      }
       ops {
         functionName: "Evaluate Goal"
         args {
           call_value {
             functionName: "Get Map Item (Goal)"
             args {
-              string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+              string_value: "Kill All the Arcturan Space-Wolves"
             }
           }
         }
@@ -516,11 +1152,162 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 19
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53ef7288643431670306e4f4"
+  }
+  index: 18
+  text: "A shame. Ms. Kerchav will just have to purchase a new one."
+  branches {
+    responseText: " "
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ef72de643431670306e4f6"
+  }
+  index: 19
+  text: "Well done! I\'m sure Ms. Kerchav will be very pleased to hear that."
+  branches {
+    responseText: " "
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "GaitlinRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "dragonflyEarring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
 }
 roots {
@@ -603,7 +1390,7 @@ roots {
         call_value {
           functionName: "Get Map Item (Goal)"
           args {
-            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
           }
         }
       }
@@ -631,7 +1418,7 @@ roots {
       }
     }
   }
-  nextNodeIndex: 11
+  nextNodeIndex: 12
 }
 roots {
   responseText: ""
@@ -675,7 +1462,7 @@ roots {
         call_value {
           functionName: "Get Map Item (Goal)"
           args {
-            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+            string_value: "Recover Ms. Kerchav\'s Dragonfly Earring"
           }
         }
       }
@@ -703,5 +1490,5 @@ roots {
       }
     }
   }
-  nextNodeIndex: 13
+  nextNodeIndex: 17
 }

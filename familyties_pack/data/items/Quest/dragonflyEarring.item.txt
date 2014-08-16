@@ -1,0 +1,8 @@
+id: "dragonflyEarring"
+type: ItemType_QuestItem
+uirep {
+  name: "Dragonfly Earring"
+  description: "A tiny silver earring in the shape of a winged insects, property of Ms. Kerchav"
+}
+credentials: 0
+sorting_group: "Quest"
