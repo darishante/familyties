@@ -615,7 +615,7 @@ nodes {
     id: "53ef6c20643431670306e3f7"
   }
   index: 6
-  text: "That\'s not really how it works, Brooklyn."
+  text: "That\'s an awesome idea, Brooklyn! We\'ll just have to whip up a transformation ray."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "53e4a4c5643431fe15e5155d"
