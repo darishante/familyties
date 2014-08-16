@@ -6646,11 +6646,6 @@ nodes {
   }
   branches {
     responseText: "I\'m going to get some stuff from my locker, and then I\'m going to leave. You will let me, or things will turn nasty."
-    actions {
-      ops {
-        functionName: "No Effect"
-      }
-    }
     nextNodeIndex: 72
   }
   branches {
@@ -6779,7 +6774,7 @@ nodes {
     id: "53dfcea4643431d21a05960f"
   }
   index: 71
-  text: "{{GM}}Wainwright looks at you coldly.{{/GM}}\n\nYour sister, Brooklyn $(story.pc_lastname) is dead. She was murdered in her home in Seattle, around the time you were in town. Seattle PD told us to check you out, as she\'d listed you as next of kin - as apparently you had her, some years back. We were a bit skeptical, since you seemed to be nothing except a soft corporate lackey. Guess their hunch was right."
+  text: "{{GM}}Wainwright looks at you coldly.{{/GM}}\n\nYour sister, Brooklyn $(story.pc_lastname) is dead. She was murdered in her home in Seattle, around the time you were in town. She had insurance with HBK, and they subcontracted checking you out to us, as she\'d listed you as next of kin - as apparently you had her, some years back. We were a bit skeptical, since on the surface you seemed to be nothing but a soft wageslave. Guess their hunch was right."
   branches {
     responseText: "Their hunch was bullshit. Now I\'m going to get some stuff from my desk, and then I\'m going to leave. You will let me, or things will turn nasty."
     nextNodeIndex: 72

@@ -10,14 +10,512 @@ nodes {
   text: "All right, children. You know you\'re not supposed to play in the basement without teacher supervision. You\'ll only make a terrible mess. It\'s almost bedtime anyway."
   branches {
     responseText: "We still have 15 minutes! And we\'re not making any kind of mess!"
-    nextNodeIndex: -1
+    nextNodeIndex: 1
   }
   branches {
     responseText: "But the Arcturan space-wolves will overrun M\303\226RGENSTEIN if we don\'t defend it!"
-    nextNodeIndex: -1
+    nextNodeIndex: 5
   }
   branches {
     responseText: "{{CC}}Quickly turn around and run back into the basement{{/CC}}"
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "GaitlinRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+      ops {
+        functionName: "Order Actor to Move To (Region)"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Region)"
+            args {
+              string_value: "53ef08fb643431670306e06c"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "metGaitlin"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ee2399643431abdfa40459"
+  }
+  index: 1
+  text: "Please sir, we\'ll promise to clean up after ourselves! Not that there would be anything to clean up!"
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "halfShatterIsOut"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "halfShatterIsOut"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e220806434319f9731b7d2"
+  }
+}
+nodes {
+  idRef {
+    id: "53ee24b4643431abdfa4045e"
+  }
+  index: 2
+  text: "{{GM}}Hannah looks a bit guilty, but the principal doesn\'t seem to catch it.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53ee25ad643431abdfa40464"
+  }
+  index: 3
+  text: "$(story.pc_firstname), it\'s your responsibilty to make sure everything is neat and tidy after you\'ve finished.\n\n{{GM}}Even though Hannah is older than you, Principal Gaitlin lacks faith in her reliability.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53ee255c643431abdfa40461"
+  }
+  index: 4
+  text: "... I suppose it\'s all right for you to keep playing for fifteen more minutes. But you need to be upstairs at 9 PM sharp."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef107643431670306de79"
+  }
+  index: 5
+  text: "Will they now?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef14d643431670306de7d"
+  }
+  index: 6
+  text: "Yeah! They\'re really big and dangerous!\n\n{{GM}}Gaitlin almost smiles at her.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e220806434319f9731b7d2"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef16a643431670306de80"
+  }
+  index: 7
+  text: "While down there, I suppose you could keep an eye out for Ms. Kerchav\'s dragonfly earring. She dropped it in there two days ago, but doesn\'t really remember where. If you could bring it back for her, it would be much appreciated."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53eef27d643431670306de83"
+  }
+  index: 8
+  text: "I bet one of the space-wolves ate it!"
+  branches {
+    responseText: "We\'ll see if we can find it. A dragonfly, like in biology class?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "How much is Ms. Kerchav willing to pay us?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e220806434319f9731b7d2"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef2e9643431670306de88"
+  }
+  index: 9
+  text: "Pay you? Young $(l.man), I\'m reconsidering letting you play in the basement atall."
+  branches {
+    responseText: "Just kidding, we\'ll get right on it!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53ee2377643431abdfa40457"
+  }
+  index: 10
+  text: "Come back here right now!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef719643431670306df4b"
+  }
+  index: 11
+  text: "Your playtime is now over. As a punishment for disobedience, you are grounded for a week. We\'ll be changing the locks on the basement doors as well, since they seem to foster a mutinous attitude in the children."
+  branches {
+    responseText: " "
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "halfShatterIsOut"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53ecf152643431b99131c6b7"
+  }
+}
+nodes {
+  idRef {
+    id: "53eefb39643431670306df53"
+  }
+  index: 12
+  text: "Fascist."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
+  }
+}
+nodes {
+  idRef {
+    id: "53eef906643431670306df4d"
+  }
+  index: 13
+  text: "All right, let\'s all go upstairs now. Did you find Ms. Kerchav\'s earring?"
+  branches {
+    responseText: "There\'s still places we haven\'t looked, we need to go back."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Kill All the Arcturan Space-Wolves"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "No."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Yes."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
@@ -26,5 +524,184 @@ nodes {
   }
 }
 roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "metGaitlin"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "metGaitlin"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 11
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "metGaitlin"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Evaluate Goal"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 13
 }

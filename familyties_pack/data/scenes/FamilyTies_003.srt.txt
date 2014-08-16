@@ -342,7 +342,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Goal)"
           args {
-            string_value: "Everyone Must Make It"
+            string_value: "Find Ms. Kerchav\'s Dragonfly Earring"
           }
         }
       }
@@ -1638,6 +1638,34 @@ triggers {
       }
     }
     ops {
+      functionName: "Play Music"
+      args {
+        call_value {
+          functionName: "Get Map Item (Music)"
+          args {
+            string_value: ""
+          }
+          args {
+            string_value: "Silence"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Set Ambient Light Color"
       args {
         float_value: 255
@@ -1693,6 +1721,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53ecf76164343112a306dac9"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1700,7 +1750,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "BackToPlaytime"
@@ -1768,10 +1818,120 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53ecf2c4643431b99131c6b9"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Stop Music"
+    }
+  }
+  isActive: false
+  idRef {
+    id: "53ecf76164343112a306dac9"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "ExitTheDream"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Remove Item from Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Pi 1 Knight Laser"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "FamilyTies_004"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
-    id: "53ecf76164343112a306dac9"
+    id: "53ef0aae643431670306e15d"
   }
   elseActions {
   }
@@ -3391,6 +3551,14 @@ variables {
     typeName: "bool"
   }
 }
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "metGaitlin"
+    typeName: "bool"
+  }
+}
 senseTags: "Bunch 1"
 goals {
   name: "Kill All the Arcturan Space-Wolves"
@@ -3398,7 +3566,12 @@ goals {
   status: GoalStatus_Started
 }
 goals {
-  name: "Everyone Must Make It"
+  name: "Find Ms. Kerchav\'s Dragonfly Earring"
+  type: GoalType_Secondary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "New Scene Goal"
   type: GoalType_Primary
   status: GoalStatus_Hidden
 }
