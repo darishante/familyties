@@ -78,10 +78,10 @@ Pelin ei tulisi kuitenkaan mikromanageroida moralisoinnin kanssa; ts. karmapalkk
 2.4 Tapahtumakulku ennen pelin alkua
 
  * Half Shatter tekee shadowruneja eri firmoja vastaan. Hän toimittaa näistä hieman rahaa siskolleen Brooklynille, joka on myös suunnilleen hänen ainoa oikea kaverinsa Red Hillissä. Half Shatter hengaa paljon Brooklynin seurassa. Hänellä on myös tapana käyttää Brooklynin kotia varastamansa tavaran väliaikaisvarastona, koska hänen oma kotinsa on välillä tarkkailun kohteena.
- * Brooklyn on käyttänyt peitenimeä "[pelaajahahmon_handle]" sekä esiintynyt tämän "look and feelillä" myydessään ja ostaessaan jotain tästä laittomasta saaliista. Syy tähän on, että Brooklyn tarvitsi peitehenkilöllisyyden, ja hänen veljensä/siskonsa tuli hänelle ekana mieleen.
+ * Brooklyn on käyttänyt peitenimeä "[pelaajahahmon_handle]" sekä esiintynyt tämän "look and feelillä" myydessään ja ostaessaan jotain tästä laittomasta saaliista. Syy tähän on, että Brooklyn tarvitsi peitehenkilöllisyyden, ja hänen veljensä/siskonsa tuli hänelle ekana mieleen. Tätä varten hänen kotonaan on välillä käynyt tyyppi, jolla on sama metatyyppi ja sukupuoli kuin pelaajahahmolla - tämä on mocap-malli tjsp. [Onko liian tyhmää?]
  * Brooklyn soittaa videopuhelun Kentucky-nimisen poikaystävänsä tjsp.? kanssa. Puhelu päätyy Lone Starin remote surveillancen satunnaissyyniin, ja yhtäkkiä taustalla näkyy eräs kadonneeksi merkitty esine Novatechilta.
  * Lone Starin signal corps paikantaa puutteellisilla tiedoilla Kentuckyn, ja Red Hillin Lone Star käy poimimassa tämän talteen. Kuitenkin putkassa asiat menevät pieleen kun Kentucky karkaa ja häipyy kaupungista.
- * Tyytymättömänä Lone Starin suoritukseen, Novatech palkkaa runneri Magneticin [sama sukupuoli ja metaetnisyys kuin pelaajahahmolla] hankkimaan varastetun tavaran takaisin ja tappamaan sen haltijan (jota Novatech pitää varkaana) opetukseksi. Magnetic jäljittää varastetun tavaran kauppiaan nimeltä [[pelaajahahmon handle]], murtautuu tämän kotiin, murhaa Brooklynin ja hakee varastetun tavaran takaisin. Hän jättää sinne tekstin 
+ * Tyytymättömänä Lone Starin suoritukseen, Novatech palkkaa runneri Magneticin [??] hankkimaan varastetun tavaran takaisin ja tappamaan sen haltijan (jota Novatech pitää varkaana) opetukseksi. Magnetic jäljittää varastetun tavaran kauppiaan nimeltä [[pelaajahahmon handle]], murtautuu tämän kotiin, murhaa Brooklynin ja hakee varastetun tavaran takaisin. Hän jättää sinne tekstin 
  * On selvää, että kyseessä ei ole tavallinen ryöstö: ainoastaan yksi asia on viety. Myöskään jengiviestejä ei ole, ja kaikki viittaa kliiniseen, ammattitaitoiseen toimintaan. Hammer ottaa henkilökohtaisena loukkauksena sen, että aivan hänen asemansa vieressä on tehty törkeä murha joka suorastaan huutaa yhtiökytköksiä, ja järjestelee asioita siten, että Brooklynilta löytyy vakuutus, joka tuo murhan HKB:n tutkimuslistalle - ei korkealle, mutta jonnekin
  * vakuutustarkastajat seurailevat jälkiä, ja eräät heistä paikantavat Omahassa olleen Brooklynin siskon. Tutkimus omahassa annetaan halvimman tarjouksen tekijälle, joten sen poimii Omahan kaupunki ja paikallinen poliisi
 
@@ -325,7 +325,37 @@ Karmapalkkio: +1 ??
 
  - Zhang pystyy myös avaamaan HBK:n kuviota samoin kuin Hammer
  - pyytää pieniä palveluksia
+ - lopuksi voi järjestää tien takaisin Alcamai Cosmeticsin palvelukseen
  
-  
- 
- 
+
+
+8. Murhajuonen ratkaisu
+
+8.1 Murhaajan henkilöllisyys
+
+Magnetic-nimen runner.
+
+ - Ehkä: murhaaja arvotaan olemaan joku Red Runner's Barissa hengaavista runnereista, jotka saattavat tulla mukaan keikoillekin; ei välttämättä ole joka kerta Magnetic 
+
+ - Voisi pelata reilusti, ja arpoa epäillyn heti alusta, tai epäreilusti, ja arpoa syyllisen vasta kun peliä on pelattu hyvän aikaa
+
+8.2. Murhaan liittyvät löydettävissä olevat tiedonjyvät
+
+ - Brooklyn on murhattu
+ - murhapaikalta löytyi [handle]
+ - murhapaikan lähellä hiippaili pelaajahahmon näköinen tyyppi
+ - murhatapa oli ammattimainen
+ - Brooklyn myi varastettua tavaraa kotoaan
+ - Brooklyn kätki joskus Half Shatterin varastamaa kalustoa kotiinsa
+ - Brooklynin kodin lähellä nähty tyyppi oli näyttelijä, joka auttoi Brooklynia myynnissä
+ - Brooklyn käytti [handle]-peitenimeä varastetun tavaran myynnissä
+ - Brooklynilla oli Kentucky-niminen poikaystävä
+ - Lonestar pidätti Kentuckyn
+ - Kentucky karkasi Lonestarilta ja pakeni kaupungista
+ -  ...
+ - 
+ - murhaaja oli Magnetic [tai joku muu arvottu runneri]
+ - murhaaja kirjoitti [handle]-tekstin murhapaikalle
+ - motiivi oli varastetun tavaran palauttaminen ja rangaistus
+ - toimeksiantaja oli Novatech
+ - Novatech kuvitteli saavansa Half Shatterin
