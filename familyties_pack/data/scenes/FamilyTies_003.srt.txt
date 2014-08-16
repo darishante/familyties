@@ -173,7 +173,7 @@ triggers {
         }
       }
       args {
-        int_value: 8
+        int_value: 12
       }
     }
   }
@@ -1937,6 +1937,44 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "Bunch 4 SpotsChars"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53e4a40a643431fe15e5155b"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner By Tag"
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "Bunch 4"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53ef1617643431670306e183"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Morgenstein"
   position {
@@ -2417,6 +2455,50 @@ regions {
   is_camera_region: false
   idRef {
     id: "53ecf446643431b99131c6ba"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Bunch 4 Spawn"
+  position {
+    x: 15
+    y: -25
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53ef15e0643431670306e182"
   }
   highlight_color {
     r: 0
@@ -3401,11 +3483,11 @@ characters {
         move_speed: 0
       }
       skills {
-        ranged_combat: 0
+        ranged_combat: 1
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
-        decking: 0
+        decking: 1
         conjuring: 0
         spirit_summoning: 0
         drone_control: 0
@@ -3421,7 +3503,7 @@ characters {
         etiquette_academic: 0
       }
       specializations {
-        pistol: 0
+        pistol: 1
         rifle: 0
         shotgun: 0
         smg: 0
@@ -3431,18 +3513,18 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      attitude: AttitudeAggressive
+      attitude: AttitudeCautious
       vulnerabilities {
       }
-    }
-    equipment {
-      prefab_name: "Sword 1 Laser Blade"
     }
     equipment {
       prefab_name: "Grenade 1 (Frag)"
     }
     equipment {
       prefab_name: "HealthPack"
+    }
+    equipment {
+      prefab_name: "Pi 1 Knight Laser"
     }
     team_id: "Others"
     char_name: "Half Shatter"
@@ -3453,7 +3535,7 @@ characters {
       filename: "pc_dwarffemale_01_techie"
     }
     portrait_code_override: "s3h1c13"
-    karma: 34
+    karma: 38
   }
 }
 characters {
@@ -3509,6 +3591,346 @@ characters {
     }
     portrait_code_override: "s2h5c4b9c4"
     karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 12
+    y: 0
+    z: -30
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "Bunch 4"
+  idRef {
+    id: "53ef157a643431670306e17d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Creature/CreatureHellhound"
+    character_sheet_id: "Creature_Lv1_Hellhound"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: -1
+        discipline: 0
+        awareness: -30
+        perception: -20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Chomp"
+    }
+    team_id: "Aliens"
+    char_name: "Arcturan Space-Wolf"
+    GeneralTags: "Bunch 4"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 52
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -31
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "Bunch 4"
+  idRef {
+    id: "53ef158e643431670306e17e"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Creature/CreatureHellhound"
+    character_sheet_id: "Creature_Lv1_Hellhound"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: -1
+        discipline: 0
+        awareness: -30
+        perception: -20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Chomp"
+    }
+    team_id: "Aliens"
+    char_name: "Arcturan Space-Wolf"
+    GeneralTags: "Bunch 4"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 52
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 7
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "Bunch 4"
+  idRef {
+    id: "53ef15a7643431670306e180"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Creature/CreatureHellhound"
+    character_sheet_id: "Creature_Lv1_Hellhound"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: -1
+        discipline: 0
+        awareness: -30
+        perception: -20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Chomp"
+    }
+    team_id: "Aliens"
+    char_name: "Arcturan Space-Wolf"
+    GeneralTags: "Bunch 4"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 52
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 8
+    y: 0
+    z: -30
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "Bunch 4"
+  idRef {
+    id: "53ef15a9643431670306e181"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Creature/CreatureHellhound"
+    character_sheet_id: "Creature_Lv1_Hellhound"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: -1
+        discipline: 0
+        awareness: -30
+        perception: -20
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Chomp"
+    }
+    team_id: "Aliens"
+    char_name: "Arcturan Space-Wolf"
+    GeneralTags: "Bunch 4"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    karma: 52
   }
 }
 variables {
