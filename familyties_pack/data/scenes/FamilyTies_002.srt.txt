@@ -1,11 +1,107 @@
+triggers {
+  name: "NewTrigger"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Animation State Of Actor To Animation Modifier"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "AnimationState"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53efb53e643431563805912e"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "talking"
+          }
+          args {
+            string_value: "talking"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53efb68f643431563805912f"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+regions {
+  name: "Plane, daytime"
+  position {
+    x: -4
+    y: -6
+    width: -15
+    height: -12
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53efaebb64343156380590fb"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.6
+    y: -1.1
+    z: -0.8
+  }
+  directional_light_color {
+    r: 0.74901962
+    g: 0.86274511
+    b: 0.86274511
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.4509804
+    g: 0.54901963
+    b: 0.6
+    a: 1
+  }
+  ambience_template: "sewer-quiet"
+  combat_music: ""
+  default_music: "Silence"
+  loop_combat_music: true
+  loop_default_music: true
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 4
+    x: -11
     y: 0
-    z: -1
+    z: -13
   }
-  orientation: ORIENTATION_W
+  orientation: ORIENTATION_S
   idRef {
     id: "53db723f64343176dd31b7f3"
   }
@@ -29,11 +125,11 @@ worldMapLocation {
 }
 mapName: "FamilyTies_002"
 parentStory: ""
-scene_title: "OMAHA JAIL"
+scene_title: "OFF TO SEATTLE"
 scene_subtitle: ""
 scene_synopsis: "On reflection, this is not where you wanted to end up in."
 scene_image: ""
-scene_continue_button_skip: false
+scene_continue_button_skip: true
 scene_restore_runner_health: false
 directional_light_dir {
   x: -0.5
@@ -81,6 +177,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

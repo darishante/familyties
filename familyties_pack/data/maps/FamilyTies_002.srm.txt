@@ -1,13 +1,13 @@
-minX: 1
-minZ: -4
-numX: 5
-numZ: 5
+minX: -15
+minZ: -25
+numX: 43
+numZ: 24
 props {
   name: "morgue_wall_brickCorner01"
   gridPoint {
-    x: 1
+    x: 23
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -15,9 +15,9 @@ props {
 props {
   name: "morgue_floor_tile01"
   gridPoint {
-    x: 3
+    x: 25
     y: 0
-    z: -2
+    z: -4
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -25,9 +25,9 @@ props {
 props {
   name: "morgue_floor_tile01"
   gridPoint {
-    x: 1
+    x: 23
     y: 0
-    z: -2
+    z: -4
   }
   orientation: ORIENTATION_S
   idRef {
@@ -38,9 +38,9 @@ props {
 props {
   name: "morgue_wall_brickConnector01"
   gridPoint {
-    x: 1
+    x: 23
     y: 0
-    z: -1
+    z: -3
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -48,9 +48,9 @@ props {
 props {
   name: "morgue_wall_brickEnd01"
   gridPoint {
-    x: 1
+    x: 23
     y: 0
-    z: -2
+    z: -4
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -58,9 +58,9 @@ props {
 props {
   name: "morgue_floor_tile01"
   gridPoint {
-    x: 1
+    x: 23
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_S
   idRef {
@@ -71,9 +71,9 @@ props {
 props {
   name: "morgue_floor_tile01"
   gridPoint {
-    x: 3
+    x: 25
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_S
   idRef {
@@ -84,9 +84,9 @@ props {
 props {
   name: "warehouse_wall_interiorDoor01Back"
   gridPoint {
-    x: 3
+    x: 25
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -94,9 +94,9 @@ props {
 props {
   name: "morgue_wall_brickConnector01"
   gridPoint {
-    x: 4
+    x: 26
     y: 0
-    z: -4
+    z: -6
   }
   orientation: ORIENTATION_E
   idRef {
@@ -107,10 +107,448 @@ props {
 props {
   name: "tenements_furniture_rustedBedSpring"
   gridPoint {
-    x: 2
+    x: 24
     y: 0
-    z: -2
+    z: -4
   }
   orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb6434315638059100"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -11
+    y: 1
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efaebb6434315638059101"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb6434315638059103"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb6434315638059106"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb643431563805910c"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb643431563805910d"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb643431563805910e"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb643431563805910f"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb6434315638059110"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efaebb6434315638059111"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c86434315638059112"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -11.400002
+    y: 2
+    z: -24
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb3c86434315638059113"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_blackSpyVent01"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb3c86434315638059114"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c86434315638059116"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -13.400002
+    y: 2
+    z: -24
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb3c96434315638059117"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_blackSpyVent01"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb3c96434315638059118"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c96434315638059119"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_blackSpyVent01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -25
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb3c9643431563805911a"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c9643431563805911b"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c9643431563805911c"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c9643431563805911d"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -13
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c9643431563805911e"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c9643431563805911f"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -15
+    y: 0
+    z: -24
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb3c96434315638059120"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb4116434315638059126"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53efb4126434315638059127"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -13
+    y: 1
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb43d6434315638059128"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -9
+    y: 1
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53efb43f6434315638059129"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -11
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f04191643431184931b783"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedFemaleBarPatronSouth"
+  gridPoint {
+    x: -14
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedFemaleBarPatronSouth"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedMaleBarPatronSouth"
+  gridPoint {
+    x: -10
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedMaleBarPatronSouth"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -12
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f04385643431184931b786"
+  }
   lod: 0
 }

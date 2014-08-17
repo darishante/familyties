@@ -40,65 +40,57 @@ nodes {
   text: "... um, never mind.\n\n{{GM}}She glares at you.{{/GM}}\n\nYou jerks. I\'m gonna get you for this."
   branches {
     responseText: " "
-    nextNodeIndex: 3
-  }
-  nodeType: ConversationNodeType_Simple
-  sourceInSceneRef {
-    id: "53e4a4c5643431fe15e5155d"
-  }
-}
-nodes {
-  idRef {
-    id: "53ef9c826434315638058f5e"
-  }
-  index: 3
-  text: ""
-  nodeType: ConversationNodeType_Simple
-  actions {
-    ops {
-      functionName: "Trigger: Run Alternate Trigger"
-      args {
-        call_value {
-          functionName: "Get Map Item (Trigger)"
-          args {
-            string_value: "53ef0aae643431670306e15d"
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "53ef0aae643431670306e15d"
+            }
           }
         }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
-          }
-          args {
-            int_value: 1
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WaitOrNot"
-          }
-          args {
-            int_value: 0
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
           }
         }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "WithOrWithout"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
           }
-          args {
-            int_value: 0
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
           }
         }
       }
     }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53e4a4c5643431fe15e5155d"
   }
 }
 roots {

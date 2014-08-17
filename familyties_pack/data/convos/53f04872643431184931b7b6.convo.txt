@@ -1,0 +1,61 @@
+idRef {
+  id: "53f04872643431184931b7b6"
+}
+ui_name: "s003_on_a_plane"
+nodes {
+  idRef {
+    id: "53f0487a643431184931b7bc"
+  }
+  index: 0
+  text: "{{GM}}A plane to Seattle. You weren\'t really sleeping, just remembering what it was like to be kids together, with Brooklyn, with Hannah, with Noah, Grace and Alexander. You didn\'t really have anything except each other, but somehow that was enough.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f04969643431184931b7bf"
+  }
+  index: 1
+  text: "{{GM}}This is probably not the best idea you\'ve ever had. Still, what else can you do?{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f049de643431184931b7c2"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "FamilyTies_004"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

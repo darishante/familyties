@@ -4726,3 +4726,271 @@ props {
   }
   lod: 0
 }
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -29
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b788"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -27
+    y: 1
+    z: -70
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f043aa643431184931b789"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedMaleBarPatronSouth"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -69
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedMaleBarPatronSouth"
+  }
+  idRef {
+    id: "53f043aa643431184931b78a"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b78b"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b78c"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b78d"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b78e"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -29
+    y: 1
+    z: -70
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f043aa643431184931b790"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b791"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b792"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_SeatedFemaleBarPatronSouth"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -69
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SeatedFemaleBarPatronSouth"
+  }
+  idRef {
+    id: "53f043aa643431184931b793"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallSpot01"
+  gridPoint {
+    x: -31
+    y: 1
+    z: -70
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f043aa643431184931b794"
+  }
+  lod: 0
+}
+props {
+  name: "haven_furniture_subwayBenches"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b795"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_wall_whiteEdge01"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b796"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b797"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b798"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b799"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -30
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b79a"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -68
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b79b"
+  }
+  lod: 0
+}
+props {
+  name: "haven_floor_subwayfloor"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -70
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f043aa643431184931b79c"
+  }
+  lod: 0
+}

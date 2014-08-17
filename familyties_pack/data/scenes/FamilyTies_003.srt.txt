@@ -1983,12 +1983,206 @@ triggers {
       }
     }
     ops {
-      functionName: "Open Scene"
+      functionName: "Change Actor Team"
       args {
         call_value {
-          functionName: "Get Map Item (Scene)"
+          functionName: "Specific Actor"
           args {
-            string_value: "FamilyTies_004"
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53e4a4c5643431fe15e5155d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 2
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53e4a4c5643431fe15e5155d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "53f043fd643431184931b79d"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
           }
         }
       }
@@ -2455,6 +2649,72 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "PlaneToSeattle"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "53f043fd643431184931b79d"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Fade Camera In"
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53f04872643431184931b7b6"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53f04837643431184931b7b5"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Morgenstein"
   position {
@@ -2694,8 +2954,8 @@ regions {
   position {
     x: -21
     y: -2
-    width: -69
-    height: -68
+    width: -41
+    height: -38
   }
   enabledAtStart: true
   is_camera_region: true
@@ -2711,20 +2971,20 @@ regions {
   visible_at_start: false
   is_teleporter_region: false
   directional_light_dir {
-    x: -0.85
-    y: -1
+    x: -0.6
+    y: -0.3
     z: -0.4
   }
   directional_light_color {
-    r: 0.2
-    g: 0.14901961
-    b: 0.14901961
+    r: 0.10196079
+    g: 0.12156863
+    b: 0.12156863
     a: 1
   }
   ambient_light_color {
-    r: 0.050980393
-    g: 0.10196079
-    b: 0.050980393
+    r: 0.031372551
+    g: 0.031372551
+    b: 0.031372551
     a: 1
   }
   ambience_template: ""
@@ -3076,6 +3336,101 @@ regions {
   }
   visible_at_start: false
   is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Plane, daytime"
+  position {
+    x: -22
+    y: -62
+    width: -15
+    height: -12
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53f043aa643431184931b787"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.6
+    y: -1.1
+    z: -0.8
+  }
+  directional_light_color {
+    r: 0.74901962
+    g: 0.86274511
+    b: 0.86274511
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.4509804
+    g: 0.54901963
+    b: 0.6
+    a: 1
+  }
+  ambience_template: "sewer-quiet"
+  combat_music: ""
+  default_music: "Silence"
+  loop_combat_music: true
+  loop_default_music: true
+}
+regions {
+  name: "PlaneSeat"
+  position {
+    x: -29
+    y: -69
+    width: 1
+    height: 1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53f043fd643431184931b79d"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: -1
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: true
   directional_light_dir {
     x: -0.5
     y: -1
