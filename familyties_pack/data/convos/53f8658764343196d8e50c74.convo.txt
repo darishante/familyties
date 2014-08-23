@@ -1,0 +1,712 @@
+idRef {
+  id: "53f8658764343196d8e50c74"
+}
+ui_name: "s001_detective_office_desk"
+nodes {
+  idRef {
+    id: "53f8659164343196d8e50c7a"
+  }
+  index: 0
+  text: "{{GM}}A computer belonging to detective Wainwright has been left on. A number of system warnings flicker on the screen.{{/GM}}"
+  branches {
+    responseText: "Leave it alone"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Skim your case file"
+    nextNodeIndex: 1
+    onlyOnce: true
+    idRef {
+      id: "53f86d5164343196d8e50c83"
+    }
+  }
+  branches {
+    responseText: "Send an abusive message to the captain posing as Wainwright."
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "53f86d4e64343196d8e50c82"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Decking 1{{/CC}} Take a closer look at the system warnings."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 9
+    onlyOnce: true
+    idRef {
+      id: "53f87ca564343196d8e512bd"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8725e64343196d8e50c9e"
+  }
+  index: 1
+  text: "The case file has been compiled by a Lone Star outfit in Red Hill, Seattle. The lead investigator is someone called Max \"Hammer\" Jacobsen, and at present, they have no real suspects apart from you. Everything in the file matches what you have been told: a troll woman named Brooklyn $(story.pc_lastname) was found murdered in her home."
+  branches {
+    responseText: " "
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HammerIsLeadInvestigator,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f873c164343196d8e50cb5"
+  }
+  index: 2
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*SuspiciousFigureSeen*"
+        }
+      }
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*NicknameAtMurderScene*"
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*Nickname*"
+        }
+      }
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*SuspiciousFigureSeen*"
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*SuspiciousFigureSeen*"
+        }
+      }
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*NicknameAtMurderScene*"
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8757b64343196d8e50d2c"
+  }
+  index: 3
+  text: "What is entirely new is the mention of a $(l.race) $(l.man) seen around the crime scene, but Lone Star haven\'t been able to track $(l.him) down yet."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "SuspiciousFigureSeen,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f8761864343196d8e50d89"
+  }
+  index: 4
+  text: "What is entirely new is the mention of the text \"$(l.name)\" found on the murder scene. Your blood chills.\n\n$(l.name) was your childhood nickname, one used by Brooklyn and your other sisters and brothers. \n\nit is not yet linked to you in any official records."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "NicknameAtMurderScene,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f87ab564343196d8e51065"
+  }
+  index: 5
+  text: "There is also a mention of a $(l.race) $(l.man) seen around the crime scene, but Lone Star haven\'t been able to track $(l.him) down yet.\n\nWhat really chills your blood is the mention of the text \"$(l.name)\" found on the murder scene..\n\n$(l.name) was your childhood nickname, one used by Brooklyn and your other sisters and brothers. \n\nit is not yet linked to you in any official records."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "NicknameAtMurderScene,SuspiciousFigureSeen,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f878b664343196d8e51027"
+  }
+  index: 6
+  text: "There is quite a bit of additional data, but it resides on the Lone Star server in Seattle, and due to the system errors, is inaccessible from here right now."
+  branches {
+    responseText: "{{CC}}Etiquette: Security{{/CC}} Forge a note saying you have been released into the custody of your corporate lawyer"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 14
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Back to main menu"
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f87b2e64343196d8e5106b"
+  }
+  index: 7
+  text: "You quickly append your case file, and send a out a local notice that you\'re free to leave the station. Your forgery is not going to pass closer scrutiny, but it should be at least an hour until anyone notices."
+  branches {
+    responseText: " "
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53e25aae6434314ecbe50f8f"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f86d9664343196d8e50c85"
+  }
+  index: 8
+  text: "The office messaging system seems to be down at the moment, but a ranting tirade against \"fat and stupid desk jockeys\" signed by Det. Wainwright gets sent to the captain\'s queue."
+  branches {
+    responseText: " "
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "SentAbusiveEmailAsWainwright,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53f86e5764343196d8e50c93"
+  }
+  index: 9
+  text: "The security network of the police station seems to be malfunctioning due to external interference. Doors are unlocked in fire alarm mode, external connections are down, as is most of the alert system. It is possible the staff hasn\'t yet noticed anything to be amiss."
+  branches {
+    responseText: "{{CC}}Decking 3{{/CC}} Track down the source of external interference"
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "53f87ca864343196d8e512be"
+    }
+  }
+  branches {
+    responseText: "Back to main menu."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f86f8164343196d8e50c98"
+  }
+  index: 10
+  text: "The source of the traffic is obscured, but you manage to pinpoint it to Seattle, the district of Red Hill.\n\nYou recognize some of the technniques used in the attack, although you haven\'t seem them in years. It is Hannah, your sister. You haven\'t kept in touch with her, but last you heard, she was somewhere on the west coast as well. This cannot be a coincidence."
+  branches {
+    responseText: " "
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "PCThingsKnown"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HannahIsInvolved,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+                string_value: "53da5ef2643431a4970041a8"
+              }
+              args {
+                string_value: "PCThingsKnown"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

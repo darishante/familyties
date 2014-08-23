@@ -7,7 +7,7 @@ nodes {
     id: "53e0b7a5643431b530059abc"
   }
   index: 0
-  text: "{{GM}}Tamaryk and Wainwright cuff you, and read you your rights as a corporate citizen. Your co-workers whisper and pretend to look elsewhere while you are escorted out of Alcamai Building. After a ride in an unmarked car you arrive at the local station house, a crumbling pile of brick in a cheap neighborhood of downton Omaha.\n\nEverything moves by in a haze, but your lawyer from Alcamai is not slow. He\'s already on the scene when you arrive, and sends the police away to speak with you in the privacy of an interrogation room. It\'s not quite corporate ground, but for now it\'ll have to do.{{/GM}}"
+  text: "{{GM}}Tamaryk and Wainwright cuff you, and read you your rights as a corporate citizen. Your co-workers whisper and pretend to look elsewhere while you are escorted out of Alcamai Building. After a ride in an unmarked car you arrive at the local station house, a crumbling pile of brick in a cheap neighborhood of downton Omaha.\n\nEverything moves by in a haze, but your lawyer from Alcamai is not slow. He\'s already on the scene when you arrive, and sends the police away to speak with you in the privacy of an interrogation room. It\'s not quite corporate ground, but for now it\'ll have to do.{{/GM}}\n\nDEBUG: $(story.StorySoFar)"
   branches {
     responseText: ""
     nextNodeIndex: 1

@@ -7,7 +7,7 @@ nodes {
     id: "53e11b826434314574058fb7"
   }
   index: 0
-  text: "The detectives leave you alone in your office. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all eight feet and 500 pounds of her."
+  text: "The detectives leave you alone in your office. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all eight feet and 500 pounds of her.\n\nDEBUG: $(story.StorySoFar)"
   branches {
     responseText: " "
     nextNodeIndex: 1
@@ -126,7 +126,7 @@ nodes {
     id: "53e11a696434314574058f84"
   }
   index: 5
-  text: "It takes fifteen minutes for Zhang to get you out of the police station. You hardly notice what\'s happening.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
+  text: "It takes fifteen minutes for Zhang to get you out of the police station. You hardly notice what\'s happening.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all eight feet and 500 pounds of her.\n\nDEBUG: $(story.StorySoFar)"
   branches {
     responseText: " "
     nextNodeIndex: 1
