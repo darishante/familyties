@@ -203,25 +203,102 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53dd064e6434313d23a405f4"
+    id: "53f2d3bd643431fe81058f6e"
   }
   index: 1
-  text: "Welcome to Alcamai Cosmetics! Please enter your FAMILY NAME, as shown on your SIN.\n\nGiving fraudulent information will result in termination and possibly charges of fraud and/or identity theft."
+  text: "Please enter your YEAR OF BIRTH:"
   branches {
-    responseText: ""
+    responseText: "2049"
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Born2049"
+        }
+      }
+    }
     nextNodeIndex: 2
   }
   branches {
-    responseText: ""
-    nextNodeIndex: 3
+    responseText: "2051"
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Born2051"
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dd064e6434313d23a405f7"
+    id: "53f2d3c3643431fe81058f71"
   }
   index: 2
+  text: "Welcome to Alcamai Cosmetics! Please enter your FAMILY NAME, as shown on your SIN.\n\nGiving fraudulent information will result in termination and possibly charges of fraud and/or identity theft."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f2d3c3643431fe81058f74"
+  }
+  index: 3
   text: ""
   branches {
     responseText: "Adams"
@@ -244,7 +321,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -268,7 +345,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -292,7 +369,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -316,7 +393,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -340,7 +417,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -364,7 +441,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -388,7 +465,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -412,7 +489,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   branches {
@@ -436,16 +513,16 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 3
+    nextNodeIndex: 4
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dd064e6434313d23a40615"
+    id: "53f2d3c3643431fe81058f92"
   }
-  index: 3
+  index: 4
   text: "Please enter your FIRST NAME, as shown on your SIN, $(story.pc_salutation) $(story.pc_lastname)!\n"
   branches {
     responseText: "Pat"
@@ -468,7 +545,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
   }
   branches {
     responseText: "Christine"
@@ -491,7 +568,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
     auxiliaryLink: true
   }
   branches {
@@ -515,7 +592,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
     auxiliaryLink: true
   }
   branches {
@@ -539,7 +616,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
     auxiliaryLink: true
   }
   branches {
@@ -563,7 +640,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
     auxiliaryLink: true
   }
   branches {
@@ -587,16 +664,16 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 4
+    nextNodeIndex: 5
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dd064e6434313d23a40618"
+    id: "53f2d3c3643431fe81058f95"
   }
-  index: 4
+  index: 5
   text: "Welcome to Alcamai Cosmetics Recruiting System, $(story.pc_salutation) $(story.pc_firstname) $(story.pc_lastname)!\n\nPlease select the type of career that interests you:"
   branches {
     responseText: "{{CC}}Biotech 2{{/CC}} Biochemical Research"
@@ -665,7 +742,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
   }
   branches {
     responseText: "{{CC}}Decking 2{{/CC}} Data Systems"
@@ -734,7 +811,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
@@ -804,7 +881,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
@@ -976,7 +1053,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
@@ -1097,7 +1174,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
@@ -1221,7 +1298,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
@@ -1342,21 +1419,21 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   branches {
     responseText: "Administrative"
-    nextNodeIndex: 5
+    nextNodeIndex: 6
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
-    id: "53dd064e6434313d23a4061b"
+    id: "53f2d3c3643431fe81058f98"
   }
-  index: 5
+  index: 6
   text: "Career choice noted and approved!\n\nWe hope you have a bright future with us!"
   nodeType: ConversationNodeType_Simple
 }
