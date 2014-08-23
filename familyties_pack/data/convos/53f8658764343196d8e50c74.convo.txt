@@ -516,34 +516,6 @@ nodes {
           int_value: 1
         }
       }
-      ops {
-        functionName: "Comparison (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "WantedLevel"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          int_value: -1
-        }
-      }
     }
     nextNodeIndex: 7
   }

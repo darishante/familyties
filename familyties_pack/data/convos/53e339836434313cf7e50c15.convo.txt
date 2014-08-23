@@ -120,11 +120,42 @@ nodes {
   text: "{{GM}}Your PDA chimes, and a face appears on the screen. It\'s Zhang, the lawyer.\n\nHello, $(story.pc_salutation) $(story.pc_lastname). I was wondering if we should meet and discuss our strategy about the charges against you sometime soon?"
   branches {
     responseText: "Yes, let\'s talk."
-    nextNodeIndex: -1
-  }
-  branches {
-    responseText: ""
-    nextNodeIndex: -1
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "ZhangHired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    auxiliaryLink: true
   }
   branches {
     responseText: "Never mind that. I\'m setting up my own defense."
@@ -149,7 +180,42 @@ nodes {
   text: "{{GM}}Your PDA chimes, and a face appears on the screen. You\'re pretty sure you\'ve seen it earlier, at Alcamai, and surely enough, the call certificate confirms that the caller is from the Omaha office.{{/GM}}\n\nHello, $(story.pc_salutation) $(story.pc_lastname)! I\'m Cameron Zhang, a lawyer for the company. I was told you had some detectives question you at the office this morning, and it seems you\'re a suspect in a homicide case. The company is very concerned. Do you require legal assistance?"
   branches {
     responseText: "... I might."
-    nextNodeIndex: -1
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "ZhangHired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    auxiliaryLink: true
   }
   branches {
     responseText: "No, I\'ve got this."
@@ -198,7 +264,42 @@ nodes {
   text: "Yes, I heard, and I\'m sorry. Nonetheless this is not something you should shrug off. The only thing you can do right now is focus on her death not being pinned on you."
   branches {
     responseText: "All right, let\'s talk."
-    nextNodeIndex: -1
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "ZhangHired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 10
+    auxiliaryLink: true
   }
   branches {
     responseText: "I\'m handling my legal affairs perfectly well on my own, but thanks."
@@ -261,8 +362,41 @@ nodes {
           int_value: 300
         }
       }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "ZhangHired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 10
+    auxiliaryLink: true
   }
   branches {
     responseText: "I can\'t afford your rates. I\'m going to set up my own defense."
@@ -299,6 +433,38 @@ nodes {
         }
         args {
           int_value: -1
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "AlcamaiGotFired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -374,6 +540,38 @@ nodes {
           string_value: "fired"
         }
       }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "AlcamaiGotFired,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
     }
     nextNodeIndex: -1
   }
@@ -437,6 +635,38 @@ nodes {
         int_value: -1
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiGotFired,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 nodes {
@@ -447,6 +677,77 @@ nodes {
   text: "All right, we\'ll talk later!"
   nodeType: ConversationNodeType_Simple
 }
+nodes {
+  idRef {
+    id: "53f8a0c564343126f4058ff0"
+  }
+  index: 10
+  text: "All right! Now, you were supposed to stay in Omaha, but I see you\'ve totally ignored that. It wasn\'t the smartest thing to do, but I guess you\'ve headed to Seattle for your sister\'s funeral. I\'m sure that\'s not going to be a problem.\n\nWhat I suggest that you do is head to the local Lone Star office and talk to the people there. You know, take possession of any personal belongings, get seen and stuff like that. The lead investigator on this case is one Max Jacobsen - the locals call him Hammer for some reason. He may want to question you, but tell him that you want me to be there."
+  nodeType: ConversationNodeType_Simple
+}
 roots {
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "*ZhangHired*"
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "*ZhangHired*"
+      }
+    }
+  }
+  nextNodeIndex: 10
 }

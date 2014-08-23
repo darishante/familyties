@@ -5697,32 +5697,6 @@ props {
   lod: 0
 }
 props {
-  name: "morgue_wall_brickWindowEdge02"
-  gridPoint {
-    x: -64
-    y: 0
-    z: -45
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53e37bc06434316e0ce51368"
-  }
-  lod: 0
-}
-props {
-  name: "morgue_wall_brickWindowEdge02"
-  gridPoint {
-    x: -64
-    y: 0
-    z: -43
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53e37bc26434316e0ce51369"
-  }
-  lod: 0
-}
-props {
   name: "warehouse_wall_interiorWindowEdge01"
   gridPoint {
     x: -50
@@ -6225,19 +6199,6 @@ props {
   lod: 0
 }
 props {
-  name: "warehouse_wall_interiorEnd02"
-  gridPoint {
-    x: -58
-    y: 0
-    z: -46
-  }
-  orientation: ORIENTATION_W
-  idRef {
-    id: "53f8641764343196d8e50c69"
-  }
-  lod: 0
-}
-props {
   name: "warehouse_wall_interiorConnector01"
   gridPoint {
     x: -59
@@ -6293,5 +6254,150 @@ props {
     z: -57
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_decor_pottedPlant01"
+  gridPoint {
+    x: -59
+    y: 0
+    z: -54
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "mitte_decor_pottedPlant01"
+  gridPoint {
+    x: -52
+    y: 0
+    z: -53
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8a53764343126f4059061"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorDoor02Front"
+  gridPoint {
+    x: -61
+    y: 0
+    z: -46
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8a65f64343126f4059062"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEnd02"
+  gridPoint {
+    x: -62
+    y: 0
+    z: -46
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "53f8a65f64343126f4059063"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEnd02"
+  gridPoint {
+    x: -63
+    y: 0
+    z: -46
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "53f8a66f64343126f4059064"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorDoor02Front"
+  gridPoint {
+    x: -57
+    y: 0
+    z: -46
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8abaa64343126f4059200"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorEnd02"
+  gridPoint {
+    x: -58
+    y: 0
+    z: -46
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "53f8abbb64343126f4059201"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "There is a camera watching the interrogation room, but it doesn\'t look like it\'s worked in ages."
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_storage_shelving01"
+  gridPoint {
+    x: -62.48
+    y: 0
+    z: -45
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8ac8064343126f4059207"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "Nitro"
+      destroyOnPickup: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickEdge07"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -45
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8ac4864343126f4059204"
+  }
+  lod: 0
+}
+props {
+  name: "morgue_wall_brickEdge07"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -43
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8ac4f64343126f4059205"
+  }
   lod: 0
 }

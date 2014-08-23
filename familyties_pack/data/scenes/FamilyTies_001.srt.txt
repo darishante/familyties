@@ -2720,6 +2720,9 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Clear All Waypoints"
+    }
   }
   isActive: true
   idRef {
@@ -3496,6 +3499,9 @@ triggers {
           }
         }
       }
+    }
+    ops {
+      functionName: "Clear All Waypoints"
     }
   }
   isActive: true
@@ -4423,6 +4429,83 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "53e25ed66434314ecbe51347"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53dc9981643431f9fc06daca"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53dc9981643431f9fc06daca"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "53f8a6e564343126f4059065"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -4978,6 +5061,9 @@ triggers {
           }
         }
       }
+    }
+    ops {
+      functionName: "Clear All Waypoints"
     }
   }
   isActive: true
@@ -6884,6 +6970,70 @@ patrolRoutes {
   can_move_beyond_node: true
   idRef {
     id: "53df709d643431fe85059bd3"
+  }
+}
+patrolRoutes {
+  name: "WainwrightPatrol"
+  pathType: 0
+  nodes {
+    position {
+      x: -51
+      z: -57
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -58
+      z: -53
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: -63
+      z: -50
+    }
+    index: 2
+  }
+  nodes {
+    position {
+      x: -62
+      z: -43
+    }
+    index: 3
+  }
+  nodes {
+    position {
+      x: -61
+      z: -49
+    }
+    index: 4
+  }
+  nodes {
+    position {
+      x: -57
+      z: -49
+    }
+    index: 5
+  }
+  nodes {
+    position {
+      x: -59
+      z: -56
+    }
+    index: 6
+  }
+  nodes {
+    position {
+      x: -51
+      z: -57
+    }
+    index: 7
+  }
+  can_move_beyond_node: false
+  idRef {
+    id: "53f8a6e564343126f4059065"
   }
 }
 characters {

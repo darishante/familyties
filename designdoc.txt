@@ -52,6 +52,12 @@ sisaruksilleen oikein tehty.
 
 Tarkoitus on, että skenaariossa kulkee mukana jatkuvasti hahmon tekemiä valintoja, ja niillä on selkeitä seurauksia. Esim: hahmo on luultavasti ekasta skenusta lähtien etsintäkuulutettu, mutta etsinnän vakavuus riippuu siitä, mitä hahmo on tehnyt. Poliisimurhaajaa haetaan todella innokkaasti, kadonnutta satunnaista epäiltyä vähemmän.
 
+2.2.1 Tarinamuuttujia
+
+StorySoFar - lista asioista, joita on tapahtunut, ja joihin voi viitata jälkeenpäin. Sen sijaan että yrittäisimme tehdä miljoonaa erillistä tarinamuuttujaa jokaista tapahtumaa kohti, teemme sen sijaan yhden helvetin pitkän merkkijonomuuttujan. (Array olisi terveempi, mutta ei SRR sellaisia tunne...) Muuttujan rakenne on tyyliä "AlcamaiGotArrested,OmahaGotReleased", ja siihen lisätään juttuja aina kun jotain tapahtuu.
+
+PCThingsKnown - asioita, joita pelaajahahmo on saanut selville.
+
 
 2.3 Teemat
 

@@ -113,7 +113,7 @@ nodes {
     id: "53e110656434313b6d058fd0"
   }
   index: 3
-  text: "You reach the open air. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all 2 metres and 300 pounds of her."
+  text: "You reach the open air. Your mind spins and everything feels surreal. It\'s not just the sleep deprivation.\n\nBrooklyn.\n\nBrooklyn is dead.\n\nYour kid sister, all eight feet and 500 pounds of her."
   branches {
     responseText: ""
     nextNodeIndex: 4
