@@ -342,6 +342,21 @@ Karmapalkkio: +1 ??
  - Zhang pystyy myös avaamaan HBK:n kuviota samoin kuin Hammer
  - pyytää pieniä palveluksia
  - lopuksi voi järjestää tien takaisin Alcamai Cosmeticsin palvelukseen
+
+7.2.1 Alcamain varasto
+
+ - Focuksen lähellä on varasto, jossa pitäisi olla Alcamain tavaraa
+ - varastoon on asettunut Sauronin poikia
+ - näiden kanssa voi jutella, pelotella pois tai murhata
+ - Sauronin pojat eivät kuitenkaan suostu diiliin Alcamain kanssa
+ 
+7.2.2 Varaston tyhjennys
+
+ - oikeasti Zhang ei aio palauttaa varaston sisältöä Alcamaille (kosmetiikka on vanhaa), vaan myydä sen itse mustassa pörssissä
+ - tämän voi oivaltaa, ja asiasta voi neuvotella Zhangin kanssa
+ - Zhangin voi myös ilmiantaa Alcamaille, jolloin juristi feidaa juonesta; käy myös ilmi, että Alcamai aikoo dumpata pelaajahahmon --> ei tietä takaisin firmaan
+
+
  
 
 

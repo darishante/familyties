@@ -682,7 +682,163 @@ nodes {
     id: "53f8a0c564343126f4058ff0"
   }
   index: 10
-  text: "All right! Now, you were supposed to stay in Omaha, but I see you\'ve totally ignored that. It wasn\'t the smartest thing to do, but I guess you\'ve headed to Seattle for your sister\'s funeral. I\'m sure that\'s not going to be a problem.\n\nWhat I suggest that you do is head to the local Lone Star office and talk to the people there. You know, take possession of any personal belongings, get seen and stuff like that. The lead investigator on this case is one Max Jacobsen - the locals call him Hammer for some reason. He may want to question you, but tell him that you want me to be there."
+  text: "All right! Now, you were supposed to stay in Omaha, but I see you\'ve totally ignored that. It wasn\'t the smartest thing to do, but I guess you\'ve flown to Seattle for your sister\'s funeral. I\'m sure that\'s not going to be a problem.\n\nWhat I suggest you do is head to the local Lone Star office and talk to the people there. You know, take possession of any personal belongings, get seen and stuff like that. The lead investigator on this case is one Max Jacobsen - the locals call him Hammer for some reason. He may want to question you, but tell him that you want a lawyer present for any official discussion."
+  branches {
+    responseText: "I\'ve already met Hammer, but thanks."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*MetHammer*"
+        }
+      }
+    }
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I might have a word with him."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "How is talking to Lone Star going to help my case?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8b0ab64343126f4059484"
+  }
+  index: 11
+  text: "Since you\'re already in Seattle, it\'s going to look suspicious as hell if you don\'t meet with them."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8b0de64343126f4059487"
+  }
+  index: 12
+  text: "There\'s another small thing. It doesn\'t concern your defense, but it\'s something the company would like you to do while in Seattle.\n\nAlcamai had a small packaging plant in Red Hill, near Focus, some years back before the area got too volatile. Technically we still own the property and some inventory there - if there\'s anything left. We\'d like you to have a look at the place and report back."
+  branches {
+    responseText: "The company has some nerve to have me run errands while having to pay for my own lawyer."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "I am here on personal time, not on the clock."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "ZhangRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8b43264343126f405948b"
+  }
+  index: 13
+  text: "I\'m sure that if you do this, Alcamai will pick up my tab from there on."
+  branches {
+    responseText: "If I happen to be near Focus, I\'ll take a look."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f8b52f64343126f40594ca"
+  }
+  index: 14
+  text: "Yes, I realize that. Alcamai will naturally pay you overtime for this."
+  branches {
+    responseText: "If I happen to be near Focus, I\'ll take a look."
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
 }
 roots {
