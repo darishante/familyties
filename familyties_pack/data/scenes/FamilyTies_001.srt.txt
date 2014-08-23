@@ -1112,6 +1112,38 @@ triggers {
         float_value: 0.1
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiDressedForWork,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1713,6 +1745,38 @@ triggers {
         string_value: "fired"
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiFoughtPolice,AlcamaiGotFired,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -2073,6 +2137,38 @@ triggers {
           }
           args {
             int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiWasReleased,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
           }
         }
       }
@@ -3630,6 +3726,38 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "OmahaWasReleased,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -3819,6 +3947,38 @@ triggers {
       }
       args {
         int_value: -3
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiGotFired,OmahaWasDetained,OmahaPoliceSystemFailed,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -5557,6 +5717,38 @@ triggers {
           functionName: "Get Map Item (InteractableObject)"
           args {
             string_value: "53e486846434310611a40450"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiDressedForWork,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
           }
         }
       }

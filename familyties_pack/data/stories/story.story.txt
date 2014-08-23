@@ -180,6 +180,30 @@ variables {
   }
 }
 variables {
+  name: "StorySoFar"
+  typeName: "string"
+  defaultValue {
+    string_value: ""
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "StorySoFar"
+      typeName: "string"
+    }
+  }
+}
+variables {
+  name: "StorySoFar"
+  typeName: "string"
+  defaultValue {
+    string_value: ""
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "StorySoFar"
+      typeName: "string"
+    }
+  }
+}
+variables {
   name: "WantedLevel"
   typeName: "int"
   defaultValue {

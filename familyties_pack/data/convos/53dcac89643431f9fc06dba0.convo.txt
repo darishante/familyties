@@ -4102,7 +4102,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "{{CC}}Etiquette: Academic{{/CC}} I didn\'t really keep in touch with her that much after I graduated from university along with my brother, Noah. We didn\'t really have that much in common, unfortunately."
+    responseText: "{{CC}}Etiquette: Academic{{/CC}} I didn\'t really keep in touch with her that much after I graduated from university along with my brother, Noel. We didn\'t really have that much in common, unfortunately."
     conditions {
       ops {
         functionName: "Compare Actor Skill"
@@ -4149,6 +4149,40 @@ nodes {
         }
         args {
           int_value: 1
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "WentToUniversityWithNoel,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -4204,6 +4238,40 @@ nodes {
         }
         args {
           int_value: 1
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "WentIntoHighSocietyWithAlex,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
         }
       }
     }
