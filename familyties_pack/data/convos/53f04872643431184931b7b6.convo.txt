@@ -7,7 +7,7 @@ nodes {
     id: "53f0487a643431184931b7bc"
   }
   index: 0
-  text: "{{GM}}A plane to Seattle. You weren\'t really sleeping, just remembering what it was like to be kids together, with Brooklyn, with Hannah, with Noah, Grace and Alexander. You didn\'t really have anything except each other, but somehow that was enough.{{/GM}}"
+  text: "{{GM}}A plane to Seattle. You weren\'t really sleeping, just remembering what it was like to be kids together, with Brooklyn, with Hannah, with Noel, Grace and Alexander. You didn\'t really have anything except each other, but somehow that was enough.{{/GM}}"
   branches {
     responseText: ""
     nextNodeIndex: 1
@@ -21,7 +21,7 @@ nodes {
   index: 1
   text: "{{GM}}This is probably not the best idea you\'ve ever had. Still, what else can you do?{{/GM}}"
   branches {
-    responseText: ""
+    responseText: " "
     nextNodeIndex: 2
   }
   nodeType: ConversationNodeType_Simple

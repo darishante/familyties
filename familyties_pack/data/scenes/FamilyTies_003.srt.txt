@@ -4410,7 +4410,7 @@ characters {
         close_combat: 0
         throwing_weapons: 0
         spellcasting: 0
-        decking: 1
+        decking: 2
         conjuring: 0
         spirit_summoning: 0
         drone_control: 0
@@ -4449,16 +4449,19 @@ characters {
     equipment {
       prefab_name: "Pi 1 Knight Laser"
     }
+    equipment {
+      prefab_name: "RiggerFlightsuit"
+    }
     team_id: "Others"
     char_name: "Half Shatter"
     enabled_at_start: false
     pc_spawn_number: -1
     cyberware_jack: "Datajack"
     portrait {
-      filename: "pc_dwarffemale_01_techie"
+      filename: "npc_halfshatter_teen"
     }
-    portrait_code_override: "s3h1c13"
-    karma: 38
+    portrait_code_override: "s3h4c13"
+    karma: 41
   }
 }
 characters {

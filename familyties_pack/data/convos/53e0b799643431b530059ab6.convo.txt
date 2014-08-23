@@ -843,7 +843,7 @@ nodes {
   index: 5
   text: "The details are still really sketchy, but that\'s what seems to be solid. Also, the fact that someone vaguely matching your description - which probably at this stage means \"a suspicious $(l.race) $(l.guy)\" was seen around the crime scene.\n\nYour company files say you\'re an orphan, but I looked up your family details for this. You have five siblings listed - and Brooklyn was the only troll among them. How\'d you manage that?"
   branches {
-    responseText: "Quite a bunch of us abandoned kids were given the same last name in a state orphanage in Saskatoon, and we decided to roll with it. Me and Brooklyn were the only trolls, Noah is a dwarf, Alexander an elf .... but fucking hell, man..."
+    responseText: "Quite a bunch of us abandoned kids were given the same last name in a state orphanage in Saskatoon, and we decided to roll with it. Me and Brooklyn were the only trolls, Noel is an ork, Alexander an elf .... but fucking hell, man..."
     nextNodeIndex: 1
     auxiliaryLink: true
   }

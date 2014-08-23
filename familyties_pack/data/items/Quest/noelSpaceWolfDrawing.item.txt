@@ -1,0 +1,8 @@
+id: "noelSpaceWolfDrawing"
+type: ItemType_QuestItem
+uirep {
+  name: "Noel\'s Drawing of a Space-Wolf"
+  description: "This is an anatomical drawing made by your brother Noel when he was just a child. Even then he had a gift for biology and the way living things are put together."
+}
+credentials: 0
+sorting_group: "Quest"
