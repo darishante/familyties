@@ -292,9 +292,14 @@ Karmapalkkio: +1 ??
 
 6.5 Flashback 02
 
- - Noel?
+ - Noel
+ - 2060: oppitunti koulussa
+ - muuttuu epämääräiseksi maagiseksi uneksi, joka on aivan oikeasti uhkaava
+ - jokin maaginen hirviö käy pelaajahahmon ja Noelin kimppuun
 
 6.6 Muistotilaisuus
+
+ - käy ilmi, että Noel on nähnyt samaa unta kuin pelaajahahmo
 
 6.7 Red Hillin hiekkalaatikko aukeaa
 
