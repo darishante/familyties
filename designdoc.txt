@@ -35,7 +35,7 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 2063 - 2067 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
 
 o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu) - Brooklyn
-o	taksonomian tutkija; örkki (academic) - Noah
+o	taksonomian tutkija; örkki (academic) - Noel
 o	tv-juontaja; haltia (socialite) - Alexander
 o	Knight Errantin turvamies Seattlessa; ihminen (security) - Grace
 o	shadowrunner, kääpiö (shadowrun) - Hannah "Half Shatter", paranoidi dekkeri
@@ -61,7 +61,7 @@ Skenaarion keskellä on perhe, joka päättää olla perhe huolimatta siitä, et
 
 Pelin alun on tarkoitus olla enemmän "middle America" kuin loppuosan; Omahan väestöstä 90% on ihmisiä, ja perinteiset roolit ovat kunniassa. Seattlen taas pitäisi olla hilpeä kaaos, jossa kuka tahansa voi olla mitä tahansa. Käytetään rohkeasti etnisiä ryhmiä, seksuaalisia vähemmistöjä, obskuureja metaihmisyyskomboja jne. Ympäröivällä yhteiskunnalla saattaa olla näiden suhteen ennakkoluuloja, mutta skenaarion ei tulisi pönkittää näitä.
 
-Esimerkkinä: perheen älykkö, biotieteiden tohtori Noah, on örkki.
+Esimerkkinä: perheen älykkö, biotieteiden tohtori Noel, on örkki.
 
 
  * Vaihtoehdot väkivallalle
@@ -73,6 +73,16 @@ Tutkitaan myös mahdollisuutta tehdä ei-letaaleja aseita. Näiden tulisi olla s
 Pelin ei tulisi kuitenkaan mikromanageroida moralisoinnin kanssa; ts. karmapalkkioiden tulisi olla pelityyliin nähden agnostisia. Sen sijaan väkivallattomista ratkaisuista olisi hyvä jakaa muita palkkioita - rahaa, esineitä, infoa jne. Lisäksi reiluuden nimessä joillain NPC:illä voi olla DocWagon -sopimuksia; jos pidetään kirjaa siitä, ketä kaikkia on tapettu, on myös syytä antaa ammutuille tai piestyille NPC:ille mahdollisuus selvitä. SRR ei ota tähän suuremmin kantaa, mutta me voisimme.
 
 [Taustana: koetin joskus pelata Deus Ex Human Revolutionia psykohahmolla, mutta se tuntui väärältä kun koko ajan missasin ekspaa tappamalla väkeä sen sijaan että olisin hiipinyt ja kolkkaillut. Alkuperäinen Deus Ex jakoi pisteitä etenemisestä riippumatta siitä miten sen suoritit, tähtäämme samaan.]
+
+ * Shadowrunnerien palkkaaminen
+ 
+SR kohtelee helposti palkattavia runnereita vain simppeleinä ja ääriluotettavina apureina. Olisi kenties kiintoisampaa, jos näillä olisi yksilöllisiä piirteitä - että aivan kaikki eivät olisi täysin luotettavia ja että jokaisella olisi jotain kätkettyjä triggereitä jotka saavat heidät tekemään ei-optimaalisia asioita. Suora puolen vaihtaminen ei olisi hyvä idea (ja liian helppo kiertää vain murhaamalla runneri?), mutta jotain pientä ärsytystä voisi tapahtua. Yhdenkään palkattavan runnerin ei pitäisi olla täydellinen.
+
+ * No-win -tehtävät
+ 
+Joissain (ellei useimmissa?) keikoissa pitäisi olla optio jättää keikka kesken, joko liian tiukan vastustuksen tai muun uuden informaation takia. Pidän ajatuksesta, että joku epämääräinen fikseri (tai epämääräinen shadowrunneri) lähettää hahmot puutteellisella infolla ihan toivottomaan tilanteeseen, jossa nämä toteaa vastapuolen olevan käytännössä mahdoton voittaa. Tässä vaiheessa pitäisi ilmestyä optionaalinen tai vaihtoehtoinen tavoie "get out alive" - ei niin, että keikan pakollinen päätavoite vaihtuu, vaan että voi myös päättää unohtaa koko jutun. Jos tämä on hyvä päätös, pitäisi tästäkin tulla karmapalkkio - mutta pelaajalle ei pitäisi pakkosyöttää lähtemistä, hänen pitäisi itse oivaltaa, että nyt kuuluu ottaa pitkät.
+
+
 
 
 2.4 Tapahtumakulku ennen pelin alkua
@@ -99,7 +109,7 @@ Syntymävuodet:
 2043 Alexander (33 v)
 2044 Grace (31v)
 2047 Hannah (28 v)
-2048 Noah (27 v) [hieman alle 50v ihminen]
+2048 Noel (27 v) [hieman alle 50v ihminen]
 2049 [pelaajahahmo, jos muu kuin örkki] (26 v)
 2051 [pelaajahahmo, jos örkki] (24 v) (vastaa n. 40-vuotiasta ihmistä)
 2053 Brooklyn (22 v)
@@ -118,7 +128,7 @@ Ota tuosta nyt sitten selvää.
 (PELAAJAHAHMO) 
 --------------
 
-Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri. Vapaasta hahmoluonnista johtuen tabula rasa jonka pelaajan toimet täyttävät, erityisyhteyksiä sisarukseen jolla sama metaetnisyys, orpokodin jälkeinen tausta yhteydessä sisarukseen, jolla sama Etiquette (Alexander tai Noah).
+Firman työntekijä, ekassa keskustelussa käytetystä etiketistä riippuen joko assistantti, tutkija tai nuorempi manageri. Vapaasta hahmoluonnista johtuen tabula rasa jonka pelaajan toimet täyttävät, erityisyhteyksiä sisarukseen jolla sama metaetnisyys, orpokodin jälkeinen tausta yhteydessä sisarukseen, jolla sama Etiquette (Alexander tai Noel).
 
 Pelaajan suhtautumistavasta riippuen joko onnellinen korporaatti, joka ihan viihtyi työssään tai katkera proto-shadowrunner (mahd. jopa taustaa wetworkin parissa).
 
@@ -152,10 +162,10 @@ Hannah on kääpiöksikin hyvin pienikokoinen, ja melkoinen klaustrofili: hän �
 Shadowrunnerina katutasoa, ei kovin luotettavan maineessa, ei saa parhaita keikkoja.
 
 
-NOAH
+NOEL
 ----
 
-Örkki. Hieman Hannahia nuorempi, mutta melkein yhtä vastuullinen kuin Grace. Siinä missä Hannah ja Alexander olivat pienenä aina viemässä lapsia vaikeuksiin, Noah oli kiskomassa heitä pois niistä. Varmasti perheen älykkäin.
+Örkki. Hieman Hannahia nuorempi, mutta melkein yhtä vastuullinen kuin Grace. Siinä missä Hannah ja Alexander olivat pienenä aina viemässä lapsia vaikeuksiin, Noel oli kiskomassa heitä pois niistä. Varmasti perheen älykkäin.
 
 
 
@@ -206,7 +216,7 @@ J
 K
 L
 Magnetic
-Noah
+Noel
 Old Timer
 P
 Quercus [Tammi]
@@ -276,7 +286,7 @@ Karmapalkkio: +1 ??
 
 6.5 Flashback 02
 
- - Noah?
+ - Noel?
 
 6.6 Muistotilaisuus
 
@@ -284,7 +294,7 @@ Karmapalkkio: +1 ??
 
 6.8 Keikka 02
 
- - Noah ja yliopistomaailma
+ - Noel ja yliopistomaailma
  
 6.9 Keikka 03
 
