@@ -174,6 +174,40 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HalfShatterHomeHadNothing,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -238,6 +272,40 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HalfShatterHomeHadVodka,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -251,6 +319,40 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HalfShatterHomeHadVodka,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -264,6 +366,40 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HalfShatterHomeHadBeer,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -276,6 +412,40 @@ nodes {
     nextNodeIndex: 12
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "HalfShatterHomeHadCram,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -310,13 +480,22 @@ nodes {
   branches {
     responseText: "Do you have any idea why she might have been hit?"
     nextNodeIndex: 15
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "53fa147f643431b34ca406e9"
+    }
   }
   branches {
     responseText: "Got a clue as to how it was done?"
-    nextNodeIndex: 16
+    nextNodeIndex: 18
   }
   branches {
-    responseText: "Why in the name of Lowfyr was my childhood nickname scrawled on the scene?"
+    responseText: "Why in the name of Lowfyr was my ancient nickname scrawled on the scene?"
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "So, what we can do is look at the autopsy report and try to chase the HBK angle. Not too many leads here."
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
@@ -326,15 +505,544 @@ nodes {
     id: "53f9cd72643431aa2ba40766"
   }
   index: 15
-  text: "This is Red Hill. People get murdered a lot out here, but professional grade hits are reasonably rare. Brooklyn was just another slum-dweller making a living by doing whatever odd jobs came her way. Cleaning, sales clerking, your normal McJob stuff.\n\nIt\'s not like she had enemies either. You know Brooklyn. She was all smiles and hugs. Far as I could tell her neighbors liked her. She didn\'t mess with gangers either, and they didn\'t really mess with her."
+  text: "This is Red Hill. People get murdered a lot out here, but professional grade hits are reasonably rare. Brooklyn was just another slum-dweller making a living by doing whatever odd jobs came her way. Cleaning, sales clerking, your normal McJob stuff.\n\nIt\'s not like she had enemies either. You know Brooklyn. She was all smiles and hugs. Far as I could tell her neighbors liked her. She didn\'t mess with gangers either, and they didn\'t really mess with her.\n\nExcept..."
+  branches {
+    responseText: "Except what?"
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "..."
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa0f9c643431b34ca40488"
+  }
+  index: 16
+  text: "She had a corporate insurance and citizenship with HBK, apparently. As far as I know she\'s never worked a corporate job in her life."
+  branches {
+    responseText: "I heard that as well. It was a surprise, but I figured she must have worked for them at some point."
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "What do you make of it?"
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa10e0643431b34ca406aa"
+  }
+  index: 17
+  text: "I had no idea - I don\'t get it. HBK isn\'t even that big a player in Seattle right now. The local Lone Star cowpokes are handling the investigation anyway. But this is something we should probably look into.\n\nIt\'s not like I knew absolutely everything Brooks was doing anyway. I was pretty sure I knew most of it but even if we saw each other several times a week, that\'s only like 5% of the total waking hours."
+  branches {
+    responseText: "\"Brooks\". Gawd. Haven\'t heard that nickname in ages. She hated it."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "HBK hired goons to question me, so obviously they want something out of this."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
     id: "53f9cf8e643431aa2ba40768"
   }
-  index: 16
-  text: "Whoever did it also covered up their tracks a bit. I think the body\'s gone, but Lone Star has the autopsy report."
+  index: 18
+  text: "Whoever did it also covered up their tracks a bit. Her body\'s gone, but Lone Star has the autopsy report.\n\nSomeone mentioned it was a booby trap, but that\'s just second-hand. I took a look at the scene as well, but the rent-a-cowboys had already messed everything up.\n\nBut yeah. Professional work."
+  branches {
+    responseText: "What makes you think that?"
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa175d643431b34ca407df"
+  }
+  index: 19
+  text: "Mainly the fact that whoever it was didn\'t touch anything else. Neighbors didn\'t see drek, no one else got hurt, and nobody is bragging about it on the street.\n\nYeah, the low-lives here brag about murdering people. I checked some Red Hill scumbags first thing, but none of them knew anything. And they are definitely not smart enough to lie about it."
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadVodka*"
+        }
+      }
+    }
+    nextNodeIndex: 20
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadBeer*"
+        }
+      }
+    }
+    nextNodeIndex: 21
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadCram*"
+        }
+      }
+    }
+    nextNodeIndex: 22
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadNothing*"
+        }
+      }
+    }
+    nextNodeIndex: 23
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa1903643431b34ca407e2"
+  }
+  index: 20
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second drink.{{/GM}}"
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Hit me."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa19fb643431b34ca407ec"
+  }
+  index: 21
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second beer.{{/GM}}"
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Hit me."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa1a37643431b34ca407f1"
+  }
+  index: 22
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second cram patch.{{/GM}}"
+  branches {
+    responseText: "Hit me."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa1a3b643431b34ca407f6"
+  }
+  index: 23
+  text: "We should indeed.\n\n{{GM}}She pours herself another drink.{{/GM}}"
+  branches {
+    responseText: "I\'ll make a note of it."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa1e22643431b34ca40893"
+  }
+  index: 24
+  text: "You tell me."
+  branches {
+    responseText: "What the frag is that supposed to mean?"
+    nextNodeIndex: 25
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Huh?"
+    nextNodeIndex: 25
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Are you implying-"
+    nextNodeIndex: 25
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa1fb8643431b34ca40898"
+  }
+  index: 25
+  text: "I mean I don\'t know! I really don\'t have a clue. I\'m baffled!\n\nBut it sure wasn\'t Brooklyn\'s handwriting. Someone is trying to send a message. Only I don\'t understand what the message is. When was the last time you spoke with Brooklyn?"
+  branches {
+    responseText: "Um, two years ago I think."
+    nextNodeIndex: 26
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa2677643431b34ca40901"
+  }
+  index: 26
+  text: "... Two years? Jaysis, $(l.name), what the frag? Did you guys have a fight?"
+  branches {
+    responseText: "No, we just ... lost touch."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I know. I suck. I feel horrible."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Lay off, ok? I was busy. Like, when was the last time you contacted me? 2070?"
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa272d643431b34ca409d4"
+  }
+  index: 27
+  text: "Hey, in case you don\'t get it, my line of work and your line of work are something like natural enemies! You\'re a corporate drone, just like Grace!"
+  branches {
+    responseText: "And you\'re a criminal. Nice going there."
+    nextNodeIndex: 28
+  }
+  branches {
+    responseText: "Like you know anything about my line of work."
+    nextNodeIndex: 29
+  }
+  branches {
+    responseText: "{{CC}}Profession: Creative{{/CC}} Hannah, I do graphic design. The only natural enemy for graphic design is a shortage of caffeine or nicotine. I don\'t think you\'ve been causing those."
+    nextNodeIndex: 30
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Corporate or Shadowrunner{{/CC}} Right, because no one working for a corporation would ever talk to a shadowrunner for any reason. You must do most of your jobs for charities and churches."
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 13
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 17
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 31
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa2c25643431ba588e49c2"
+  }
+  index: 28
+  text: "Yeah, preach at me, just like fragging Grace.\n\nI don\'t need this drek. Brooklyn\'s dead, I\'m trying to figure out the why, the how and the who, and you don\'t get to fragging moralize to me about it."
+  branches {
+    responseText: "Right, okay. Sorry."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Say nothing{{/CC}}"
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa2c47643431ba588e49c4"
+  }
+  index: 29
+  text: "More than you know about mine.\n\n{{GM}}Hannah glares at you, and takes a sip of vodka.{{/GM}}"
+  branches {
+    responseText: "So...?"
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa2df8643431ba588e49c6"
+  }
+  index: 30
+  text: "{{GM}}Hannah cracks a smile.{{/GM}}\n\nI totally haven\'t! And I wouldn\'t!"
+  branches {
+    responseText: "We should have kept in touch. Me and you. Me and Brooklyn."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa2e8d643431ba588e4a37"
+  }
+  index: 31
+  text: "Yeah, but, I mean. I could have kidnapped your boss or something."
+  branches {
+    responseText: "Like that would have been a bad thing."
+    nextNodeIndex: 32
+  }
+  branches {
+    responseText: "If you had kidnapped my boss, I probably would have been the one paying for it anyway."
+    nextNodeIndex: 33
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa358d643431ba588e4a3d"
+  }
+  index: 32
+  text: "... I suppose it would have been doing you a favor, huh.\n\nYeah. Anyways."
+  branches {
+    responseText: "Anyways."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa3544643431ba588e4a3b"
+  }
+  index: 33
+  text: "{{GM}}Hannah has a chuckle.{{/GM}}\n\nYeah, I gues you might have. Sorry $(story.bro), I\'m a bit on edge these days. "
+  branches {
+    responseText: "It\'s okay. I\'m the same."
+    nextNodeIndex: 34
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fa35d2643431ba588e4a40"
+  }
+  index: 34
+  text: "I thought if you and Brooklyn had talked recently, or had some dealings, that might have explained your street name scribbled on the scene. Like a warning, y\'know? \"You\'re next!\" But if you hadn\'t, I have no idea what it could have meant, or where to go for more info.\n\nIf you don\'t know anything either, then we\'re flying blind here. I don\'t like it, it\'s the wrong kind of dangerous, but what can you do?"
   nodeType: ConversationNodeType_Simple
 }
 roots {
