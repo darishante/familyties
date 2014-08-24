@@ -1,0 +1,414 @@
+idRef {
+  id: "53f9b306643431aa2ba40659"
+}
+ui_name: "s004_half_shatter_at_home"
+nodes {
+  idRef {
+    id: "53f9b312643431aa2ba4065f"
+  }
+  index: 0
+  text: "{{GM}}Hannah still has a penchant for tight spaces. Her place is small, and even you feel a bit claustrophobic among all the clutter. Various pieces of high tech line the walls, and the only sounds come from systems your sister has installed to make this former infrastructural maintenance crawlspace her home.{{/GM}}\n\nMake yourself at home. Should be easier for you than Brooklyn. She was here from time to time, even though it might be hard to believe."
+  branches {
+    responseText: "I haven\'t really kept in touch with anyone. But you were living right next to Brooklyn?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9b703643431aa2ba40662"
+  }
+  index: 1
+  text: "{{GM}}Hannah\'s home is a former infrastructural crawlspace that she\'s converted into a living space. You can just about fit in there by crawling, and at one spot the ceiling is high enough for you to almost sit. Hanging around at your sister\'s is not going to become one of your favorite activities.{{/GM}}\n\nSorry about the, y\'know, scale. But the rent\'s cheap and all my gear fits. Brooklyn was pestering me to get something bigger, I just never really got around to it."
+  branches {
+    responseText: "I haven\'t really kept in touch with anyone. But you were living right next to Brooklyn?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9b885643431aa2ba40665"
+  }
+  index: 2
+  text: "{{GM}}Hannah\'s home is a former infrastructural crawlspace that she\'s converted into a living space. It\'s full of high-tech junk of all kinds, It\'s also very much built to her tiny size and claustrophilic tendencies. There\'s no way for you to stand up straight.{{/GM}}\n\nMake yourself at home. Brooklyn managed to squeeze herself in here a couple of times, so you should really have no problem."
+  branches {
+    responseText: "I haven\'t really kept in touch with anyone. But you were living right next to Brooklyn?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9b931643431aa2ba40676"
+  }
+  index: 3
+  text: "Yeah. She moved here shortly after leaving Saskatoon, and I ended up here as well after a couple of years down south. I think Grace moved to the metroplex first, back in \'64. She got a real job, and helped Brooklyn get settled. Grace was always looking after us, even after the we\'d left the nest."
+  branches {
+    responseText: "Have you kept in touch with Grace then?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "So you and Brooklyn and Grace, all together here in Seattle."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9bace643431aa2ba4067a"
+  }
+  index: 4
+  text: "Nah, it wasn\'t really like that. Grace has her serious wageslave job uptown. Brooklyn and me, we made our own way on the streets. Or in the shadows, in my case.\n\nHey, I promised we\'d get wasted. What\'s your poison? I\'ve got vodka, local beer and cram."
+  branches {
+    responseText: "Don\'t really touch the stuff. Soykaf is fine."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Give me a shot of vodka."
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Beer is fine."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Cram, why the hell not."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9bc87643431aa2ba40680"
+  }
+  index: 5
+  text: "Like hell. Our kid sister is dead. Sobriety is not an option."
+  branches {
+    responseText: "... yeah, you\'re right. I\'ll have whatever you\'re having."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Shouldn\'t we keep our wits about us?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Hannah, I\'m really not into-"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9be0a643431aa2ba40687"
+  }
+  index: 6
+  text: "This is my town, $(story.bro). I know when to stay alert and when to get roaring smashed. This is the latter occasion. Wiz?"
+  branches {
+    responseText: "Okay, whatever."
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} You think you\'re the only one who\'s ever lived close to the edge? Get drunk or high if you like, but I\'m still alive because I stay alert."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c28a643431aa2ba406dd"
+  }
+  index: 7
+  text: "{{GM}}Hannah looks a bit surprised.{{/GM}}\n\nYou\'re going to have to tell me about that sometime. Ah well, have it your way. I\'m having a drink anyway."
+  branches {
+    responseText: " "
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9bd90643431aa2ba40685"
+  }
+  index: 8
+  text: "{{GM}}Hannah grabs a bottle, pours two drinks, and gives you one.{{/GM}}\n\nNo fragging excuses. I\'m not drinking alone."
+  branches {
+    responseText: "... right. {{CC}}Drink up{{/CC}}"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} You think you\'re the only one who\'s ever lived close to the edge? Get drunk or high if you like, but I\'m still alive because I stay alert."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c01e643431aa2ba406b0"
+  }
+  index: 9
+  text: "{{GM}}Hannah grabs a bottle, pours two drinks, and gives you one.{{/GM}}\n\nNot the fancy stuff you\'re used to back in the corp world, but it\'ll get you drunk all the same."
+  branches {
+    responseText: "{{CC}}Drink up{{/CC}}"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c04f643431aa2ba406b2"
+  }
+  index: 10
+  text: "{{GM}}Hannah snorts, and gets a beer from the fridge, tossing it to you. She pours herself a stiff drink of vodka.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Drink up{{/CC}}"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9bec8643431aa2ba40689"
+  }
+  index: 11
+  text: "{{GM}}Hannah chuckles, and tosses you a cram patch, taking one herself as well.{{/GM}}\n\nWhy not indeed."
+  branches {
+    responseText: "{{CC}}Do the cram{{/CC}}"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c009643431aa2ba406ab"
+  }
+  index: 12
+  text: ""
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c654643431aa2ba40757"
+  }
+  index: 13
+  text: "So, yeah. Brooklyn. Drek.\n\nI found out she\'d been killed only after Lone Star was already on the scene. Fragheads are fast but incompetent. They messed up the scene before I could take a look at it, so I have no idea what they could have missed. All I know it was done in a real professional manner - it doesn\'t look like a Red Hill robbery gone wrong. Not too many common thieves would have wanted to mess with a big Troll lady anyway, there\'s easier marks in the neighborhood."
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9c98f643431aa2ba40761"
+  }
+  index: 14
+  text: "Hannah cracks her knuckles."
+  branches {
+    responseText: "Do you have any idea why she might have been hit?"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Got a clue as to how it was done?"
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "Why in the name of Lowfyr was my childhood nickname scrawled on the scene?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9cd72643431aa2ba40766"
+  }
+  index: 15
+  text: "This is Red Hill. People get murdered a lot out here, but professional grade hits are reasonably rare. Brooklyn was just another slum-dweller making a living by doing whatever odd jobs came her way. Cleaning, sales clerking, your normal McJob stuff.\n\nIt\'s not like she had enemies either. You know Brooklyn. She was all smiles and hugs. Far as I could tell her neighbors liked her. She didn\'t mess with gangers either, and they didn\'t really mess with her."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9cf8e643431aa2ba40768"
+  }
+  index: 16
+  text: "Whoever did it also covered up their tracks a bit. I think the body\'s gone, but Lone Star has the autopsy report."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 1
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 2
+}

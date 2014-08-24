@@ -1,0 +1,442 @@
+idRef {
+  id: "53f9950e6434317920e50ce0"
+}
+ui_name: "s004_half-shatter_appears"
+nodes {
+  idRef {
+    id: "53f995246434317920e50ce6"
+  }
+  index: 0
+  text: "\"Hey! $(l.name)! Over here!\"\n\n{{GM}}A whisper out of the darkness. The voice is very familiar, even though you haven\'t heard it in years.{{/GM}}"
+  branches {
+    responseText: "Hannah, come out of there."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Half Shatter."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Nice to see you too, sister."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Hannah. Was it you who took out the security at Omaha PD?"
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*OmahaEscapedPolice*"
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Sis. I was expecting you to show up ever since I noticed your handiwork back at Omaha PD."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HannahIsInvolved*"
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "HalfShatterRep"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f998d86434317920e50d3a"
+  }
+  index: 1
+  text: "{{GM}}Out of the shadows, your sister Hannah appears.{{GM}}\n\n$+(story.bro)!"
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f999b76434317920e50d3c"
+  }
+  index: 2
+  text: "{{GM}}Hannah steps out of the shadows to greet you.{{/GM}}\n\nSo you haven\'t entirely forgotten your family!"
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f99a106434317920e50d3e"
+  }
+  index: 3
+  text: "{{GM}}Your sister Hannah steps out of the shadows.{{/GM}}\n\nAnd you. Wish it wasn\'t for something this morbid."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9986d6434317920e50d38"
+  }
+  index: 4
+  text: "{{GM}}Hannah steps out into the light, looking a bit smug.{{/GM}}\n\nThat\'s right! I couldn\'t just leave you there. I figured you\'d want out, and was counting on you to come this way."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f996ed6434317920e50d1f"
+  }
+  index: 5
+  text: "{{GM}}Half Shatter steps out into the light, looking a bit smug.{{/GM}}\n\nOh, so you recognized my little trick - good for you! I couldn\'t very well leave you rotting in jail now could I?"
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f99f0c643431aa2ba40486"
+  }
+  index: 6
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f99f0c643431aa2ba40489"
+  }
+  index: 7
+  text: "{{GM}}Hannah is definitely a shadowrunner these days, and judging by the condition of her gear, not currently doing that hot. She\'s wearing light combat armor and carries a sumbachine gun at her hip. An edge of a cyberdeck sticks out of an oversized backpack - oversized for her anyway. She\'s still really tiny, even for a dwarf.\n\nShe smiles at you. Her usual manic grin is tempered with grief, however.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f99f0c643431aa2ba4048c"
+  }
+  index: 8
+  text: "{{GM}}Hannah is definitely a shadowrunner these days. She\'s wearing light combat armor and carries a sumbachine gun at her hip. An edge of a cyberdeck sticks out of an oversized backpack - oversized for her anyway. She\'s still really tiny, even for a dwarf.\n\nShe smiles at you. Her usual manic grin is tempered with grief, however.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f99f0c643431aa2ba4048f"
+  }
+  index: 9
+  text: "{{GM}}Hannah looks like a local - a dangerous local. She\'s wearing light combat armor and carries a sumbachine gun at her hip. An edge of a cyberdeck sticks out of an oversized backpack - oversized for her anyway. She\'s still really tiny, even for a dwarf.\n\nShe smiles at you. Her usual manic grin is tempered with grief, however.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9a01c643431aa2ba404dd"
+  }
+  index: 10
+  text: "I was hoping you were gonna turn up in Red Hill, what with your name on the crime scene and everything. I mean - I know you didn\'t do it - or more precisely, am pretty sure you didn\'t - you didn\'t, did you? - but someone did, and that someone was marking you for something. They are telling us that it isn\'t just Brooklyn, they are making it a family matter. They want us entangled. And boy are they going to get what they want."
+  branches {
+    responseText: "Hannah, slow down a bit. I haven\'t slept in ages."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sis, stop. You\'re giving me a headache."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Of course I didn\'t do it!"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9a296643431aa2ba404e2"
+  }
+  index: 11
+  text: "... okay. Okay. Drek. Sorry. I\'m all a mess, y\'know. It\'s just ... Brooklyn, fragging hell. They got her, $(l.name)."
+  branches {
+    responseText: "Who\'s \"they\"?"
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Poor Brooklyn. I hadn\'t seen her in years. Drek."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9a330643431aa2ba404e6"
+  }
+  index: 12
+  text: "I don\'t know who\'s behind this. Yet. But I\'m gonna find out, and when I do, I\'m gonna pay them back in fragging bullets and nukes.\n\nI mean \"we\". We\'re gonna pay them back. Right, $(story.bro)?"
+  branches {
+    responseText: "You read my mind. We\'ll find them and hurt them like they deserve."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I\'m not a badass like you, Hannah, but you\'re right. Brooklyn is going to have justice."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I don\'t know. I guess you\'re right. If we don\'t look out for each other, who will?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9a6b1643431aa2ba405ca"
+  }
+  index: 13
+  text: "Let\'s not stand around here talking like a couple of idiots. I\'ve got a place nearby. We\'ll go there and catch up and get really drunk and pass out. When we wake up we can make plans for a terrible and explosive vengeance."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
