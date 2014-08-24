@@ -59,6 +59,11 @@ StorySoFar - lista asioista, joita on tapahtunut, ja joihin voi viitata jälkeen
 PCThingsKnown - asioita, joita pelaajahahmo on saanut selville.
 
 
+2.2.2 Freemode / Turnmode
+
+TODO: lisätään pelaajahahmoon toggle, joka aktivoi turn moden / freemoden
+
+
 2.3 Teemat
 
  * Monimuotoisuus
@@ -284,6 +289,12 @@ Karmapalkkio: +1 ??
  - murhapaikka Red Hillissä, saapuu paikalle aivan zonetettuna
  - Half Shatter saapuu, kiskoo mukaan ensimmäiseen älyttömään tehtävään
  - ehkä: miksi hahmon lempinimi löytyi murhapaikalta?
+ - keinot päästä sisään:
+   * drone tai air spirit half shatterin käytävää pitkin
+   * decking 2 avaa oven lukon
+   * STR 4+ tai Killing Hands murtaa oven
+     o pihan diileriltä voi saada nitroa viidellä kympillä tai piirtämällä kuvan
+   * ?? entä jos puhdas spellcaster / conjurer jolla STR 1? 
 
 6.4 Keikka 01
 

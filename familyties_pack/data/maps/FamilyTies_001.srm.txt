@@ -7064,3 +7064,22 @@ props {
   }
   lod: 0
 }
+props {
+  name: "warehouse_storage_box"
+  gridPoint {
+    x: -62
+    y: 0
+    z: -42
+  }
+  orientation: ORIENTATION_S
+  displayName: "Your Stuff In Box"
+  idRef {
+    id: "53fa4e486434315960e8399e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}

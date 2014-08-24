@@ -7,7 +7,7 @@ nodes {
     id: "53df6069643431fe85059552"
   }
   index: 0
-  text: "{{GM}}You pick up your stuff from your desk.{{/GM}}"
+  text: "{{GM}}You pick up your personal gear.{{/GM}}"
   branches {
     responseText: ""
     conditions {
@@ -46,7 +46,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "Class C Drone Turret"
+              string_value: "DroneAttackC_Doberman"
             }
           }
         }
@@ -286,7 +286,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (Item)"
             args {
-              string_value: "Jazz"
+              string_value: "Nitro"
             }
           }
         }
@@ -452,7 +452,7 @@ nodes {
       ops {
         functionName: "Add Nuyen"
         args {
-          int_value: 500
+          int_value: 200
         }
       }
       ops {
@@ -1064,126 +1064,6 @@ nodes {
               string_value: "ActorSkills"
             }
             args {
-              int_value: 8
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "Comparison Ops"
-            }
-            args {
-              int_value: 3
-            }
-          }
-        }
-        args {
-          int_value: 2
-        }
-      }
-    }
-    actions {
-      ops {
-        functionName: "Add Item to Actor"
-        args {
-          call_value {
-            functionName: "Get Map Item (Item)"
-            args {
-              string_value: "Bound Toxic Spirit 1"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Specific Actor"
-            args {
-              call_value {
-                functionName: "Triggering Actor"
-              }
-            }
-            args {
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "WithOrWithout"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-      }
-      ops {
-        functionName: "Add Item to Actor"
-        args {
-          call_value {
-            functionName: "Get Map Item (Item)"
-            args {
-              string_value: "Bound Water Spirit 1"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Specific Actor"
-            args {
-              call_value {
-                functionName: "Triggering Actor"
-              }
-            }
-            args {
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "WithOrWithout"
-            }
-            args {
-              int_value: 1
-            }
-          }
-        }
-      }
-    }
-    nextNodeIndex: -1
-  }
-  branches {
-    responseText: ""
-    conditions {
-      ops {
-        functionName: "Compare Actor Skill"
-        args {
-          call_value {
-            functionName: "Triggering Actor"
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "BaseOrCurrent"
-            }
-            args {
-              int_value: 0
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Get Preset Value (int)"
-            args {
-              string_value: "ActorSkills"
-            }
-            args {
               int_value: 7
             }
           }
@@ -1246,6 +1126,126 @@ nodes {
             functionName: "Get Map Item (Item)"
             args {
               string_value: "Air Barrier 3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 8
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Bound Air Spirit 1"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Bound Water Spirit 1"
             }
           }
         }
