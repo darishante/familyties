@@ -1,0 +1,8 @@
+id: "yourSketchbook"
+type: ItemType_QuestItem
+uirep {
+  name: "Your Sketchbook"
+  description: "Your personal sketchbook, full of sketches and drawings"
+}
+credentials: 0
+sorting_group: "Quest"

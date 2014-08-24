@@ -6899,7 +6899,7 @@ regions {
   name: "BillRegion"
   position {
     x: -75
-    y: -9
+    y: -10
     width: 5
     height: 5
   }
@@ -7002,21 +7002,21 @@ patrolRoutes {
   nodes {
     position {
       x: -62
-      z: -43
+      z: -45
     }
     index: 3
   }
   nodes {
     position {
-      x: -61
-      z: -49
+      x: -62
+      z: -43
     }
     index: 4
   }
   nodes {
     position {
-      x: -57
-      z: -49
+      x: -58
+      z: -52
     }
     index: 5
   }
@@ -7663,7 +7663,7 @@ characters {
   gridPoint {
     x: -73.5
     y: 0
-    z: -7
+    z: -8
   }
   orientation: ORIENTATION_W
   idRef {
@@ -7829,7 +7829,7 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "Guard - Seek And Destroy"
+      archetypeName: "Guard - Protect"
       attitude: AttitudeCautious
       vulnerabilities {
       }

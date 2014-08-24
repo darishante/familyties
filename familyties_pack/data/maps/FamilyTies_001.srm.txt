@@ -2938,21 +2938,21 @@ props {
 props {
   name: "office_furniture_rectangleDesk02"
   gridPoint {
-    x: -79
+    x: -81
     y: 0
-    z: -14
+    z: -10.91
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_W
   lod: 0
 }
 props {
   name: "office_furniture_rectangleDesk02"
   gridPoint {
-    x: -79
+    x: -81
     y: 0
-    z: -2
+    z: -3
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   idRef {
     id: "53dbc8c0643431b7e5058f5b"
   }
@@ -2974,9 +2974,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk01"
   gridPoint {
-    x: -74
+    x: -75
     y: 0
-    z: -14
+    z: -14.54
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2984,9 +2984,9 @@ props {
 props {
   name: "office_furniture_rectangleDesk01"
   gridPoint {
-    x: -74
+    x: -74.06
     y: 0
-    z: -8
+    z: -9.51
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3242,9 +3242,9 @@ props {
 props {
   name: "sleekOffice_wall_midWallTop02"
   gridPoint {
-    x: -67
-    y: 0
-    z: 0
+    x: -68
+    y: -1
+    z: -1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -3252,9 +3252,9 @@ props {
 props {
   name: "sleekOffice_wall_midWallTop02"
   gridPoint {
-    x: -67
-    y: 0
-    z: -2
+    x: -68
+    y: -1
+    z: -3
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3269,32 +3269,6 @@ props {
       inspectText: "$(story.pc_salutation) $(story.pc_firstname) $(story.pc_lastname)\n$(story.pc_jobtitle)"
       disableAfterInteracting: false
     }
-  }
-  lod: 0
-}
-props {
-  name: "sleekOffice_wall_midWallTop02"
-  gridPoint {
-    x: -65
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53dbd349643431b7e5058f8b"
-  }
-  lod: 0
-}
-props {
-  name: "sleekOffice_wall_midWallTop02"
-  gridPoint {
-    x: -63
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53dbd35a643431b7e5058f8c"
   }
   lod: 0
 }
@@ -5384,7 +5358,7 @@ props {
 props {
   name: "diveBar_lighting_flourescentLight01"
   gridPoint {
-    x: -70
+    x: -71
     y: 2
     z: -11
   }
@@ -5534,19 +5508,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53e259bd6434314ecbe50f89"
-  }
-  lod: 0
-}
-props {
-  name: "warehouse_wall_interiorEdge06"
-  gridPoint {
-    x: -53
-    y: 0
-    z: -47
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53e25a086434314ecbe50f8d"
   }
   lod: 0
 }
@@ -6259,9 +6220,9 @@ props {
 props {
   name: "mitte_decor_pottedPlant01"
   gridPoint {
-    x: -59
+    x: -56
     y: 0
-    z: -54
+    z: -52
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -6417,11 +6378,11 @@ props {
 props {
   name: "tenements_furniture_futuristicOfficeChair01"
   gridPoint {
-    x: -78.5
+    x: -80.5
     y: 0
-    z: -13
+    z: -12
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   idRef {
     id: "53f8f5b96434313317e50a02"
   }
@@ -6430,11 +6391,11 @@ props {
 props {
   name: "tenements_furniture_futuristicOfficeChair01"
   gridPoint {
-    x: -78.5
+    x: -79.5
     y: 0
-    z: -1
+    z: -2
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   idRef {
     id: "53f8f5c06434313317e50a03"
   }
@@ -6789,6 +6750,316 @@ props {
       aiOnlyDoor: false
       doorSound: "DoorSlide"
       doorSoundBundle: "props"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -74
+    y: -1
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f987866434317920e50a03"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -74
+    y: -1
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f987896434317920e50a04"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -75
+    y: -1
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f987966434317920e50a05"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "Bill Maijaprunda\nCreative Assistant"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -75
+    y: -1
+    z: -10
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f9879b6434317920e50a06"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -82
+    y: -1.3
+    z: -10
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f987a26434317920e50a07"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -80
+    y: -1.3
+    z: -10
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f987d56434317920e50a08"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "Samuel Prescott\nLab Security"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -76
+    y: -1
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f987e16434317920e50a09"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "Edna St. Michael\nThaumaturgical Researcher"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -74
+    y: -1.3
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f988046434317920e50a0a"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -76
+    y: -1.3
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f988166434317920e50a0b"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -75
+    y: -1.3
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f9881a6434317920e50a0c"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -73
+    y: -1.3
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f9885b6434317920e50a0d"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -82
+    y: -1.3
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f988646434317920e50a0e"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -80
+    y: -1.3
+    z: -4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f9886f6434317920e50a10"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "Dr. Ruth Klein\nData Systems Manager"
+      disableAfterInteracting: false
+    }
+  }
+  lod: 0
+}
+props {
+  name: "office_furniture_rectangleDesk02"
+  gridPoint {
+    x: -81.35
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f988c56434317920e50a11"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicOfficeChair01"
+  gridPoint {
+    x: -80.5
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f9890c6434317920e50a12"
+  }
+  lod: 0
+}
+props {
+  name: "office_furniture_rectangleDesk02"
+  gridPoint {
+    x: -75
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53f98b936434317920e50caa"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicOfficeChair01"
+  gridPoint {
+    x: -76.5
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f98b9e6434317920e50cab"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEdge01"
+  gridPoint {
+    x: -53
+    y: 0
+    z: -47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f990406434317920e50cda"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_interiorWindowEdge01"
+  gridPoint {
+    x: -60
+    y: 0
+    z: -50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f992376434317920e50cdb"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_midWallTop02"
+  gridPoint {
+    x: -78
+    y: -1
+    z: -11
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f993726434317920e50cdd"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "Cameron Zhang\nLawyer"
+      disableAfterInteracting: false
     }
   }
   lod: 0
