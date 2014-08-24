@@ -5396,6 +5396,9 @@ triggers {
         float_value: 0.1
       }
     }
+    ops {
+      functionName: "No Effect"
+    }
   }
   isActive: true
   idRef {
@@ -7841,6 +7844,59 @@ characters {
       filename: "backer_humanmale_levieranburks"
     }
     karma: 25
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -81
+    y: 0
+    z: -18.8
+  }
+  orientation: ORIENTATION_W
+  displayName: "Edna"
+  idRef {
+    id: "53f8f5096434313317e50a00"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Outfit_Scientist"
+    }
+    team_id: "Alcamai"
+    char_name: "Edna"
+    pc_spawn_number: -1
+    portrait_code_override: "s6h1"
+    karma: 6
+    is_prop_character: true
   }
 }
 variables {

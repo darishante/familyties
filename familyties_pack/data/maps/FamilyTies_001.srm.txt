@@ -6401,3 +6401,395 @@ props {
   }
   lod: 0
 }
+props {
+  name: "office_appliance_waterCooler"
+  gridPoint {
+    x: -80
+    y: 0
+    z: -20.75
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f4c56434313317e509ff"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicOfficeChair01"
+  gridPoint {
+    x: -78.5
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f5b96434313317e50a02"
+  }
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicOfficeChair01"
+  gridPoint {
+    x: -78.5
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f5c06434313317e50a03"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f65f6434313317e50a04"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f65f6434313317e50a05"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -11
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f65f6434313317e50a06"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6616434313317e50a07"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6616434313317e50a08"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -13
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6616434313317e50a09"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6646434313317e50a0a"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6646434313317e50a0b"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_floor_reflected01"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -15
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6646434313317e50a0c"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteEdge05"
+  gridPoint {
+    x: -68
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f68b6434313317e50a0d"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteEdge05"
+  gridPoint {
+    x: -66
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6926434313317e50a0e"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteEdge05"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -16
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f6946434313317e50a0f"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteWindowEnd01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -21
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53f8f92a643431d018e509ff"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteWindow01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -19
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f92a643431d018e50a00"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteWindowEnd01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -17
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f932643431d018e50a01"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteEnd01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -22
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_windowEdge01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -12
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_doorWide01Front"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -14
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_windowEdge01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53f8f9a7643431d018e50a02"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_end01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -9
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_windowEdge01"
+  gridPoint {
+    x: -67
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f9dd643431d018e50a03"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_windowEdge01"
+  gridPoint {
+    x: -65
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8f9e7643431d018e50a04"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_end01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53f8f9f1643431d018e50a05"
+  }
+  lod: 0
+}
+props {
+  name: "medicalLab_wall_end01"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "53f8fa3c643431d018e50a06"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_wall_whiteDoorMid01"
+  gridPoint {
+    x: -69
+    y: -0.06
+    z: -15
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53f8fbcd643431d018e50a46"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_alcamai"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Researcher"
+        }
+      }
+    }
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: false
+      doorSound: "DoorSlide"
+      doorSoundBundle: "props"
+    }
+  }
+  lod: 0
+}
