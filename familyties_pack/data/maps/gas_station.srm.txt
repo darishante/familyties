@@ -1699,9 +1699,9 @@ props {
 props {
   name: "school_wall_stripeEdge01"
   gridPoint {
-    x: -4
+    x: -8
     y: 0
-    z: -44
+    z: -55
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2373,9 +2373,9 @@ props {
 props {
   name: "school_wall_stripeEdge01"
   gridPoint {
-    x: 1
+    x: -8
     y: 0
-    z: -43
+    z: -57
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2399,9 +2399,9 @@ props {
 props {
   name: "school_wall_stripeEdge01"
   gridPoint {
-    x: 2
+    x: -4
     y: 0
-    z: -46
+    z: -57
   }
   orientation: ORIENTATION_S
   idRef {
@@ -2442,9 +2442,9 @@ props {
 props {
   name: "school_wall_stripeEdge01"
   gridPoint {
-    x: 8
+    x: 4
     y: 0
-    z: -46
+    z: -55
   }
   orientation: ORIENTATION_E
   idRef {
@@ -2654,9 +2654,9 @@ props {
 props {
   name: "warehouse_storage_box"
   gridPoint {
-    x: -24
+    x: -21
     y: 0
-    z: -39
+    z: -55
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2883,9 +2883,9 @@ props {
 props {
   name: "sleekOffice_wallDecoration_displayMonitor01_lights"
   gridPoint {
-    x: -10
+    x: -12
     y: 0
-    z: -53
+    z: -56
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -2935,7 +2935,7 @@ props {
   gridPoint {
     x: -14
     y: 0
-    z: -51
+    z: -53
   }
   orientation: ORIENTATION_S
   lod: 0
