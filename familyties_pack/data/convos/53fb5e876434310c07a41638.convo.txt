@@ -1,0 +1,27 @@
+idRef {
+  id: "53fb5e876434310c07a41638"
+}
+ui_name: "s004-half_shatter_wins"
+nodes {
+  idRef {
+    id: "53fb5e986434310c07a4163e"
+  }
+  index: 0
+  text: "{{GM}}You fall over from a dirty fighting trick. Hannah breathes heavily. Then she offers you a hand to help you up, and grins.{{/GM}}\n\nWell. That was certainly fun."
+  branches {
+    responseText: "Like the bad old times."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'ll kick your ass next time."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You\'re a lunatic."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

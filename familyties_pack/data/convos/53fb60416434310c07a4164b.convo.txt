@@ -1,0 +1,51 @@
+idRef {
+  id: "53fb60416434310c07a4164b"
+}
+ui_name: "s004-half_shatter_loses"
+nodes {
+  idRef {
+    id: "53fb604a6434310c07a41651"
+  }
+  index: 0
+  text: "{{GM}}Your strike knocks Hannah over. She doesn\'t seem eager to get up again. Blood trickles from her nose. She grins.{{/GM}}\n\nOw. You\'ve learned to fight."
+  branches {
+    responseText: "Had enough?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Stay down."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Help her up{{/CC}}"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fb608c6434310c07a41658"
+  }
+  index: 1
+  text: "... yeah, I think this is plenty for tonight.\n\n{{GM}}She grabs a first aid kit, and takes a painkiller hypo.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fb60c36434310c07a4165a"
+  }
+  index: 2
+  text: "All right, uncle, sheesh.\n\n{{GM}}She raises her hands in surrender.{{/GM}}\n\nThat was fun."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fb608a6434310c07a41656"
+  }
+  index: 3
+  text: "{{GM}}She climbs back onto her feet, and settles onto a chair.{{GM}}\n\nYou\'re okay, $(story.bro)."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

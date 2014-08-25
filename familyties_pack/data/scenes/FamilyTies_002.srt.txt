@@ -1,5 +1,5 @@
 triggers {
-  name: "NewTrigger"
+  name: "HalfShatterConvo1"
   events {
     ops {
       functionName: "On Map Start"
@@ -9,12 +9,275 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Set Animation State Of Actor To Animation Modifier"
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53f9b306643431aa2ba40659"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53fb4d726434310c07a40b3b"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "HalfShatterDies"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "53fb5fe56434310c07a4164a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fb6c706434310c07a41e20"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53fb72f26434310c07a424fc"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "HalfShatterWinsFight"
+  events {
+    ops {
+      functionName: "On Actor Damage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Attribute"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BaseOrCurrent"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorAttributes"
+          }
+          args {
+            int_value: 8
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Arithmetic (int)"
+          args {
+            call_value {
+              functionName: "Get Actor Attribute"
+              args {
+                call_value {
+                  functionName: "Get Map Item (Player)"
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "BaseOrCurrent"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+              args {
+                call_value {
+                  functionName: "Get Preset Value (int)"
+                  args {
+                    string_value: "ActorAttributes"
+                  }
+                  args {
+                    int_value: 0
+                  }
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Arithmetic Ops"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53fb4c1e6434310c07a40b3a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
       args {
         call_value {
           functionName: "Get Preset Value (string)"
           args {
-            string_value: "AnimationState"
+            string_value: "FactionList"
           }
           args {
             int_value: 0
@@ -23,20 +286,100 @@ triggers {
       }
       args {
         call_value {
-          functionName: "Get Map Item (Actor)"
+          functionName: "Get Map Item (SceneDimension)"
           args {
-            string_value: "53efb53e643431563805912e"
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53fb5e876434310c07a41638"
           }
         }
       }
       args {
         call_value {
-          functionName: "Get Map Item (AnimationModifiers)"
+          functionName: "Get Map Item (Actor)"
           args {
-            string_value: "talking"
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
           }
           args {
-            string_value: "talking"
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fb6c706434310c07a41e20"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "HalfShatterRep"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
           }
         }
       }
@@ -44,7 +387,266 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "53efb68f643431563805912f"
+    id: "53fb599c6434310c07a415d5"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "HalfShatterLosesFight"
+  events {
+    ops {
+      functionName: "On Actor Damage"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "AND"
+      args {
+        call_value {
+          functionName: "Compare Actor Attribute"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53fb4c1e6434310c07a40b3a"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "BaseOrCurrent"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "ActorAttributes"
+              }
+              args {
+                int_value: 8
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Compare Actor Attribute"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53fb4c1e6434310c07a40b3a"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "BaseOrCurrent"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "ActorAttributes"
+              }
+              args {
+                int_value: 8
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 4
+              }
+            }
+          }
+          args {
+            int_value: 7
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53fb4c1e6434310c07a40b3a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53fb60416434310c07a4164b"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "HalfShatterRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fb6c706434310c07a41e20"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53fb5fe56434310c07a4164a"
   }
   elseActions {
   }
@@ -94,14 +696,58 @@ regions {
   loop_combat_music: true
   loop_default_music: true
 }
+regions {
+  name: "Cell"
+  position {
+    x: 21
+    y: -7
+    width: 7
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53fb4bac6434310c07a40b39"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -11
+    x: 26
     y: 0
-    z: -13
+    z: -3
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_W
   idRef {
     id: "53db723f64343176dd31b7f3"
   }
@@ -116,6 +762,81 @@ characters {
     pc_spawn_number: 0
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -4
+  }
+  orientation: ORIENTATION_S
+  displayName: "Half Shatter"
+  idRef {
+    id: "53fb4c1e6434310c07a40b3a"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "53fb77746434310c07a4266d"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/DwarfFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 2
+        quickness: 2
+        strength: 1
+        charisma: 1
+        intelligence: 2
+        willpower: 1
+        essence: 0
+        hp: 20
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 1
+        close_combat: 1
+        decking: 3
+        dodge: 1
+        etiquette_shadowrunner: 1
+      }
+      specializations {
+        smg: 1
+        unarmed: 1
+      }
+      attitude: AttitudeBoss
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "DeckerJacket"
+    }
+    equipment {
+      prefab_name: "CyberdeckKraftwerk1"
+    }
+    team_id: "Shadowrunners"
+    char_name: "Half Shatter"
+    pc_spawn_number: -1
+    cyberware_jack: "Datajack"
+    portrait {
+      filename: "npc_halfshatter_adult"
+    }
+    portrait_code_override: "s3h5c2"
+    karma: 38
+  }
+}
 worldMapLocation {
   filename: ""
   location {
@@ -125,9 +846,9 @@ worldMapLocation {
 }
 mapName: "FamilyTies_002"
 parentStory: ""
-scene_title: "OFF TO SEATTLE"
+scene_title: "TESTING"
 scene_subtitle: ""
-scene_synopsis: "On reflection, this is not where you wanted to end up in."
+scene_synopsis: "This scene is for testing only"
 scene_image: ""
 scene_continue_button_skip: true
 scene_restore_runner_health: false
@@ -195,5 +916,5 @@ use_hiring_cost_warning: false
 hiring_average_cost: 0
 override_hiring_average_cost: false
 show_equip_screen_on_scene_load: false
-can_move_outside_camera_regions: true
+can_move_outside_camera_regions: false
 can_start_before_triggers: true
