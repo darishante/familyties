@@ -53,6 +53,17 @@ props {
     z: -4
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "53fb6c706434310c07a41e20"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 3
+    conversationPoint {
+      conversationID: "53fb5b5f6434310c07a415d6"
+      turnToFace: true
+    }
+  }
   lod: 0
 }
 props {

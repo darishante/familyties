@@ -1,0 +1,149 @@
+idRef {
+  id: "53fb77746434310c07a4266d"
+}
+ui_name: "s004-half_shatter_second_time"
+nodes {
+  idRef {
+    id: "53fb77a16434310c07a42673"
+  }
+  index: 0
+  text: "{{GM}}Hannah is lying in a bean bag chair, with a couple of painkiller patches on her skin, nursing a glass of vodka.{{/GM}}\n\nI never got around to asking how you\'ve been, $(story.bro)."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fb785e6434310c07a4267c"
+  }
+  index: 1
+  text: "{{GM}}Hannah is lying in a bean bag chair, nursing a glass of vodka.{{/GM}}\n\nI never got around to asking how you\'ve been, $(story.bro)."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fb788c6434310c07a4267f"
+  }
+  index: 2
+  text: ""
+  branches {
+    responseText: "Bad\n"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Good"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Attribute"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BaseOrCurrent"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorAttributes"
+          }
+          args {
+            int_value: 8
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 25
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Attribute"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BaseOrCurrent"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorAttributes"
+          }
+          args {
+            int_value: 8
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        int_value: 25
+      }
+    }
+  }
+  nextNodeIndex: 1
+}
