@@ -39,12 +39,10 @@ o	Knight Errantin turvamies Seattlessa; ihminen (security) - Grace
 o	shadowrunner, kääpiö (shadowrun) - Hannah "Half Shatter", paranoidi dekkeri
 o	korporaatti, pelaajahahmo (corporate / socialite / academic)
 
-Pelaajahahmo työskentelee aluksi Alcamai Cosmetics -firmalla Omahassa. Lentää sieltä ulos ekan tehtävän aikana. Joku on murhannut jonkun sen perheenjäsenen, jostain syystä sitä epäillään - jotain Alcamain firman salaisuuksia löytyy 
-murhatun asunnolta.
+Pelaajahahmo työskentelee aluksi Alcamai Cosmetics -firmalla Omahassa. Lentää sieltä ulos ekan tehtävän aikana. Joku on murhannut Brooklynin, ja pelaajahahmo on epäilty..
 
 Etenee muiden perheenjäsenten kautta, hahmosta tulee shadowrunner ja 
-koettaa selvittää, mitä hämärää orpokodissa on hänelle ja hänen 
-sisaruksilleen oikein tehty.
+koettaa selvittää, mitä hänen siskolleen oikein on tapahtunut.
 
 2.2 Rakenne
 
@@ -59,7 +57,7 @@ PCThingsKnown - asioita, joita pelaajahahmo on saanut selville.
 
 2.2.2 Freemode / Turnmode
 
-TODO: lisätään pelaajahahmoon toggle, joka aktivoi turn moden / freemoden
+TODO: lisätään pelaajahahmoon toggle, joka aktivoi turn moden / freemoden (vai lisätäänkö? tämä mutkistaa esmes NPC:ien partiointia)
 
 
 2.3 Teemat
