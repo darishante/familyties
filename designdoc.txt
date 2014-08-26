@@ -6,6 +6,7 @@ Dare - pseudokoodi, tarina, editointi
 Heikki - kuvitus, Red Hill
 Topi - world editor, keikat
 
+
 0. Vaatimukset
 
 Shadowrun Returns
@@ -27,16 +28,13 @@ Shadowrun Returns -kampanja, joka kertoo siitä, miten korporaatista tulee shado
 
 2.1 Historia
 
-(Pitäisikö sijoittaa tämän ajan sijasta vuoteen 2075 niin voisi käyttää nykyistä Red Hill -matskua suoraan?)
+2053 - 2067 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa. Kenenkään tästä joukosta vanhemmista ei ollut tietoa, joten heille arvottiin algoritmillä sama sukunimi; nämä kuusi päättivät sitten olevansa sisarukset.
 
+2063 - 2067 hahmot päätyvät pois orpokodista omille teilleen.
 
-2053 - 2067 joukko orpoja ihmisiä ja metaihmisiä kasvoi yhdessä orpokodissa Saskatoonissa, juuri UCAS:in muodostumisen jälkeen. Heitä käytetään koekaniineina psykologisissa testeissä, tavoitteena tutkia suggestion ja hypnoosin vaikutuksia sekä kenties luoda erikoisagentteja UCAS:in mustiin operaatioihin [???] (Tämä voi myös olla jotain paljon arkisempaa.)
-
-2063 - 2067 hahmot päätyvät pois orpokodista ottokoteihin tai vaan lähtevät omilleen.
-
-o	keskiluokkainen perheenäiti; trolli (street - alussa murhattu) - Brooklyn
+o	slummissa asuva nainen; trolli (street - alussa murhattu) - Brooklyn
 o	taksonomian tutkija; örkki (academic) - Noel
-o	tv-juontaja; haltia (socialite) - Alexander
+o	viihdetaiteilija; haltia (socialite) - Alexander
 o	Knight Errantin turvamies Seattlessa; ihminen (security) - Grace
 o	shadowrunner, kääpiö (shadowrun) - Hannah "Half Shatter", paranoidi dekkeri
 o	korporaatti, pelaajahahmo (corporate / socialite / academic)
