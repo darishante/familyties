@@ -1308,7 +1308,7 @@ nodes {
     id: "53fc73ac643431b84ca405b5"
   }
   index: 22
-  text: "I never figured you for a corporate worker, really. I though that you would never fit in, same as me."
+  text: "I never figured you for a corporate worker, really. I thought that you would never fit in, same as me."
   branches {
     responseText: "{{CC}}Career: Risk Management{{/CC}} Yeah well, what I did wasn\'t really all meetings and memos."
     conditions {
@@ -1341,10 +1341,10 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 23
   }
   branches {
-    responseText: "{{CC}}Career: Administrative{{/CC}} It was dull like you wouldn\'t believe."
+    responseText: "{{CC}}Career: Administrative{{/CC}} You sort of get used to it."
     conditions {
       ops {
         functionName: "Comparison (string)"
@@ -1375,6 +1375,984 @@ nodes {
         }
       }
     }
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Career: Creative{{/CC}} It never really was about fitting in for me. Of course, my field was graphic design, so..."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Creative"
+        }
+      }
+    }
+    nextNodeIndex: 31
+  }
+  branches {
+    responseText: "{{CC}}Career: Biotechnology{{/CC}} I always did like playing with chemicals and stuff."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Biotechnology"
+        }
+      }
+    }
+    nextNodeIndex: 34
+  }
+  branches {
+    responseText: "{{CC}}Career: Robotics{{/CC}} Working with industrial drones for a living isn\'t really that bad."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Robotics"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Career: Data Systems{{/CC}} Well, the company did pay for my datajack."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Data Systems"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Career: Thaumaturgy{/CC}} Actually quite a few spellcasters are employed by megacorps these days."
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Thaumaturgy"
+        }
+      }
+    }
+    nextNodeIndex: 35
+  }
+  branches {
+    responseText: "{{CC}}Career: Spirit World Relations{{/CC}} Hey, I got to call on elemental beings and bind them into cosmetics products. What\'s there not to love?"
+    conditions {
+      ops {
+        functionName: "Comparison (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Spirit World Relations"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} \"Same as me\" ... funny thing, that."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 23
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "It was pretty difficult at times."
+    nextNodeIndex: 36
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fce439643431868013c6aa"
+  }
+  index: 23
+  text: "Huh?"
+  branches {
+    responseText: "I was running corporate black ops most of the time."
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "Never mind."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fce4a3643431868013c6ae"
+  }
+  index: 24
+  text: "... you\'re kidding, right?"
+  branches {
+    responseText: "Oh, Alcamai was hardly a big player, but we had our industrial espionage escapades. I was involved in quite a few of those, behind the scenes."
+    nextNodeIndex: 25
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} Some of your colleagues in the Midwest probably know me as $+(s.honorific) Johnson. "
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 26
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcf15f643431868013cd43"
+  }
+  index: 25
+  text: "I bet you were.\n\nI bet you had some really hardcore corporate wars with your rival lipstick and deodorant manufacturers."
+  branches {
+    responseText: "It\'s a competitive business."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fce638643431868013c7e6"
+  }
+  index: 26
+  text: "{{GM}}Hannah\'s jaw drops in a very satisfying manner.{{/GM}}\n\nHoly drek. I had no idea... Jaysis.\n\nHey, can you get me a job?\n\n"
+  branches {
+    responseText: "At the moment? No."
+    nextNodeIndex: 27
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I think that door is closed."
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "HalfShatterRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53fceebb643431868013cb4c"
+  }
+  index: 27
+  text: "Damn. I could always use more fixer contacts.\n\nTo think you were one ... Now I\'ve got to kick myself blue for not keeping in touch with you. I mean, for monetary reasons as well as personal."
+  branches {
+    responseText: "I\'m touched."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I wouldn\'t have hired you anyway."
+    nextNodeIndex: 28
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcef38643431868013cb67"
+  }
+  index: 28
+  text: "Why? What\'s wrong with me?"
+  branches {
+    responseText: "Have you met you?"
+    nextNodeIndex: 29
+  }
+  branches {
+    responseText: "Shadowrunners are expendable assets. I\'d have worried myself to death if I\'d sent you on a run."
+    nextNodeIndex: 30
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcefa7643431868013cb6b"
+  }
+  index: 29
+  text: "Har har."
+  branches {
+    responseText: "Yeah, har har..."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Grin at her{{/CC}}"
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcf29c643431868013cd4a"
+  }
+  index: 30
+  text: "I get that. Yeah. It would probably have been weird getting a job from my $(story.bro) anyway.\n\nHalf the time you expect $(l.honorific) Johnson to doublecross you anyway, it would feel almost unprofessional not to have that nagging doubt.\n\nI ... probably don\'t want to ask if you ever had to do that to anyone?"
+  branches {
+    responseText: "Yeah, don\'t ask me that, please."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Fortunately, no."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You know how these things go."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcecd0643431868013c9ce"
+  }
+  index: 31
+  text: "Are you still drawing? Do you have anything you can show me?"
+  branches {
+    responseText: "Maybe later."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Sketchbook{{/CC}} I\'ve got my sketchbook here. Knock yourself out."
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "yourSketchbook"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 32
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fced2e643431868013c9d2"
+  }
+  index: 32
+  text: "{{GM}}Hannah leafs through your sketchbook.{{/GM}}\n\nMan, you\'re good. I bet you could sell your art to people."
+  branches {
+    responseText: "Yeah, that\'s kind of what doing graphic design for a living means."
+    nextNodeIndex: 33
+  }
+  branches {
+    responseText: "Eh, that\'s just some random scribblings."
+    nextNodeIndex: 33
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fced8d643431868013c9d6"
+  }
+  index: 33
+  text: "No, I mean you could sell these even in Red Hill. The bazaar to the north has a market for all kinds of stuff, I\'ve seen people sell their art there, and this is better than the drek that\'s usually for sale."
+  branches {
+    responseText: "I\'ll keep that in mind."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "They can\'t afford me."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcf389643431868013ce14"
+  }
+  index: 34
+  text: "You get your own lab and everything?"
+  branches {
+    responseText: "Yep, I ran the lab."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_jobtitle"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Manager*"
+        }
+      }
+    }
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "It was a shared lab, but I got to do all the interesting stuff."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_jobtitle"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Researcher*"
+        }
+      }
+    }
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I wish."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_jobtitle"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Assistant*"
+        }
+      }
+    }
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fceab6643431868013c890"
+  }
+  index: 35
+  text: "Yeah, I know. I\'ve met several. \'Course, they were mostly combat mages."
+  branches {
+    responseText: "We didn\'t have those at Alcamai. As far as I know, anyway."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I\'d rather not hear any specifics. I want to be able to plead ignorance when questioned."
+    nextNodeIndex: 36
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fce6eb643431868013c7ea"
+  }
+  index: 36
+  text: "Is your life all work and no play these days then?"
+  branches {
+    responseText: "More like no work and no play. Alcamai decided to fire me just now."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*AlcamaiGotFired*"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m not sure if I even have a job any more. Alcamai is probably not too thrilled at me coming here instead of staying in Omaha like I was told."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*AlcamaiGotFired*"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Is that a question about my personal life?"
+    nextNodeIndex: 37
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fce909643431868013c7ef"
+  }
+  index: 37
+  text: "Yeah, it definitely is. So, spill, $(story.bro)."
+  branches {
+    responseText: "You\'ll have to keep guessing."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "It\'s complicated."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "RelationshipsAreComplicated,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I do have a girlfriend."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "LikesGirls,HasGirlfriend,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I do have a boyfriend."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "LikesBoys,HasBoyfriend,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "There\'s no one right now."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "IsSingle,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 38
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fceb41643431868013c929"
+  }
+  index: 38
+  text: "We\'ve so got to get you a date."
+  branches {
+    responseText: "We do not."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You remember that Brooklyn\'s dead, right? Dating\'s not exactly the thing on my mind right now."
+    nextNodeIndex: 39
+  }
+  branches {
+    responseText: "I dread the idea of a date you\'d set me up with."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Sounds like a hoot."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fcec63643431868013c92f"
+  }
+  index: 39
+  text: "I don\'t mean tonight! But y\'know, world keeps turning. Honor the dead by celebrating life and all that."
+  branches {
+    responseText: "Sounds like complete bullshit."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "... Hannah."
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
@@ -1485,5 +2463,40 @@ roots {
 }
 roots {
   responseText: "REM - THIS CAN NEVER BE CHOSEN!"
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 11
+          }
+        }
+      }
+    }
+  }
   nextNodeIndex: 22
 }
