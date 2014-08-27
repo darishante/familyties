@@ -388,12 +388,56 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "New Region"
+  position {
+    x: -30
+    y: -39
+    width: -63
+    height: 65
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53fe0502373663101800262b"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 8
+    x: -54
     y: 0
-    z: -5
+    z: -27
   }
   orientation: ORIENTATION_N
   idRef {
