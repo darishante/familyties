@@ -54,6 +54,17 @@ StorySoFar - lista asioista, joita on tapahtunut, ja joihin voi viitata jälkeen
 
 PCThingsKnown - asioita, joita pelaajahahmo on saanut selville.
 
+WantedLevel:
+
+ -1 - vangittu
+ 0 - ei erityistä hakua päällä
+ 1 - halutaan esittää kysymyksiä
+ 2 - epäilty murhasta
+ 3 - aseistettu ja vaarallinen murhaaja
+ 4 - public enemy #1
+
+
+
 
 2.2.2 Freemode / Turnmode
 

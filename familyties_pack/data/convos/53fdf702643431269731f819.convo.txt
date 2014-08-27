@@ -284,7 +284,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   branches {
@@ -338,12 +338,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} Tell me about the job."
-    nextNodeIndex: 6
+    nextNodeIndex: 26
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -379,6 +379,10 @@ nodes {
     responseText: "And you haven\'t just gone and gotten it because...?"
     nextNodeIndex: 5
   }
+  branches {
+    responseText: "There\'s a catch, isn\'t there?"
+    nextNodeIndex: 6
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -387,17 +391,610 @@ nodes {
   }
   index: 5
   text: "I want someone to watch my back while I access the node. Just to prevent any, ah, local color from getting any ideas. It is a rough neighborhood, and a decker in the Matrix is totally defenseless."
+  branches {
+    responseText: "There\'s nobody else you could get to help you?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You think I\'m enough?"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe0e7764343141cc188b3e"
+  }
+  index: 6
+  text: "Just a small one: there\'s a local gang squatting in the building. They are not particularily aggressive or anything, but I still don\'t fancy decking away by myself in the middle of their turf. Just having someone with me should keep them from having any stupid ideas."
+  branches {
+    responseText: "Don\'t you have, like, shadowrunner pals to help you with stuff like this?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "A gang. Terrific"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe100164343141cc188b46"
+  }
+  index: 7
+  text: "If I took someone else, I\'d have to share the reward with them. I\'d rather share it with you. It\'s not a huge amount of money, but it\'s a start."
+  branches {
+    responseText: "I don\'t know if I\'m up for this."
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Yeah, no thank you."
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Okay, what the hell. Let\'s do this!"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe1ddf64343141cc189006"
+  }
+  index: 8
+  text: "Wiz! Let\'s get moving!"
+  branches {
+    responseText: " "
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe0ffc64343141cc188b44"
+  }
+  index: 9
+  text: "Well, it\'s not that big a deal really. Just, y\'know. Insurance."
+  branches {
+    responseText: "No. This is crazy. Forget about it. I\'m not doing anything like that."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "I\'m going to regret this, but all right."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I suppose you know what you\'re doing. Very well. Let\'s do this."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe109364343141cc188b91"
+  }
+  index: 10
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe10b164343141cc188b94"
+  }
+  index: 11
+  text: "Y\'know, funny thing I saw on the news. Apparently someone working for Alcamai Cosmetics killed a cop - or several, I don\'t know - in Omaha yesterday morning. They have a name and description and everything - $(story.pc_firstname) $(story.pc_lastname), $+(l.race) $(l.man). There\'s a reward posted for $(l.him), 1500 nuyen. Maybe you might want to claim that instead?"
+  branches {
+    responseText: "What-"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Oh drek."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You bastard. Are you blackmailing me?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe118064343141cc188b99"
+  }
+  index: 12
+  text: "No, you idiot! I\'d never do anything like that! I\'m pointing out your fragging hypocrisy!\n\nYou\'re willing to murder some pigs, but unwilling to help me with a simple job. That\'s not just hypocritical, that\'s plain stupid. What the hell else are you going to do, give yourself up?"
+  branches {
+    responseText: "I want to help you, $(story.bro). Right now helping you means getting you some means to take care of yourself. This thing? It\'s good. It\'s easy and it\'s money.\n\nI know you can do it. You wouldn\'t be here if you couldn\'t. So stop whining and get with the program."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "... hell"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "It\'s not ... I mean ..."
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe120564343141cc188b9e"
+  }
+  index: 13
+  text: "Look. I don\'t care who you\'ve iced. I\'m sure you have your reasons, and I\'m not going to moralize. Buddha knows I\'ve had to leave a few bodies in my wake, and some of them called themselves cops. I am pointing out that at the moment you don\'t really have a lot of options. \n\nSo. We are doing this. This is your big sister, telling you what we are going to do because you are in trouble and this is how you survive."
+  branches {
+    responseText: "You\'re taking a page from Grace\'s book?"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "Yeah, I guess so. I still wish -- I don\'t know. I fragged up."
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Damn right I had my reasons. Okay, let\'s do this."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe159f64343141cc188bef"
+  }
+  index: 14
+  text: "The one thing she and I ever saw eye-to-eye on was that you need to take care of your family.\n\nI may have failed to protect Brooklyn, but I\'m not about to fail to protect you."
+  branches {
+    responseText: " "
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe152a64343141cc188be9"
+  }
+  index: 15
+  text: "Maybe you did, maybe you didn\'t. It doesn\'t really matter to me. I\'m here for you, no matter what."
+  branches {
+    responseText: "Thanks."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sorry if I sounded moralizing earlier. I had no right."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe18fd64343141cc188da0"
+  }
+  index: 16
+  text: "Y\'know what I saw on the news just now? You are a wanted fugitive. Apparently you escaped from Omaha PD while being questioned about a murder. They have your name and description out.\n\nI think it\'s safe to say your legal avenues of income are somewhat diminished right now."
+  branches {
+    responseText: "Drek."
+    nextNodeIndex: 17
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Oh no."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe19b064343141cc188da4"
+  }
+  index: 17
+  text: "I want to help you, $(story.bro). Right now helping you means getting you some means to take care of yourself. This thing? It\'s easy and it\'s money, which is like the best thing right now.\n\nSo, stop whining and get with the program. Maybe you can clear your name eventually, but to make it there you\'re going to need to survive until then. So we\'re doing this thing."
+  branches {
+    responseText: "I should have stayed in that cell."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*OmahaEscaped*"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You couldn\'t have cleared my name while arranging my escape?"
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*OmahaEscaped*"
+        }
+      }
+    }
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: "Well, when you put it that way."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "All right, I get it. Okay, let\'s go do this easy job of yours."
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe1b2f64343141cc188e84"
+  }
+  index: 18
+  text: "You whiny little $(story.insult)! I help you get out of trouble at personal risk, and you moan and gripe that I didn\'t do more?\n\nNo, I couldn\'t have cleared your record just like that. I may, at some point, but frankly right now I think I\'ma charge you for it, just because you are a thankless, insufferable little prat!"
+  branches {
+    responseText: "Seems like I\'ve got no choice. Okay, let\'s go do your job."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "... sorry. I shouldn\'t ... I mean, thanks for getting me out. And you\'re right. Let\'s do this."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "HalfShatterRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53fe1ca064343141cc188f0d"
+  }
+  index: 19
+  text: "Was that sarcasm?"
+  branches {
+    responseText: "Yes"
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No"
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe1f0564343141cc189089"
+  }
+  index: 20
+  text: "Fine! Then tell me your brilliant plan of raising enough money to do an investigation. Maybe you\'d like to fly back to Omaha, work your ass off - if they still want you - and wire me the nuyen while the trail grows cold?\n\nOne thing I\'m sure about though; if you were lying cold in a city morgue, and Brooklyn was investigating your murder with me, she wouldn\'t gripe because she had to do something a little out of her comfort zone. You already flew here, that was a good start - now follow through!"
+  branches {
+    responseText: "That was a low blow."
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "I could apply for a loan..."
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: "I\'ve got friends who\'ll lend me money."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 16
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 23
+  }
+  branches {
+    responseText: "All right, I get it. Okay, I\'ll help you do this."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe206b64343141cc189098"
+  }
+  index: 21
+  text: "It\'s true, though. She would do it. Hell, if you\'d died in a suspicious watercooler accident, I\'d go fragging undercover in your company and wear a tie and all that drek in order to get the bastards who did it. It\'s not like I\'m asking you to attack Aztechnology or something."
+  branches {
+    responseText: "I don\'t want to imagine you in a tie. All right, let\'s do this."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sheesh, enough already. Okay, I\'ll help you."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe20fd64343141cc18909e"
+  }
+  index: 22
+  text: "I bet the banks are just falling over themselves to give money to people who are facing a murder charge. Yeah, gotta get in on that before the bubble bursts."
+  branches {
+    responseText: "Okay, okay. I\'ll do it."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Sheesh, I get it no need to get sarcastic."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe21cd64343141cc1890a5"
+  }
+  index: 23
+  text: "Then call them!\n\nI\'ve noticed that rich friends tend to thin out when you\'re in real trouble, but if you can get someone to bankroll us, so much the better."
+  branches {
+    responseText: "Alex could finance us easily."
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "I\'m fairly sure that given enough time, I can find someone who\'s willing to lend us some petty cash."
+    nextNodeIndex: 25
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe222f64343141cc1890a8"
+  }
+  index: 24
+  text: "He could. He won\'t take my calls, though. He\'s surrounded by a wall of managers, secretaries, lawyers and doormen. You\'re welcome to try."
+  branches {
+    responseText: "Last time I tried to talk to him it took me 48 hours, but I eventually got through."
+    nextNodeIndex: 25
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe22a564343141cc1890ab"
+  }
+  index: 25
+  text: "Did I mention the trail was growing cold? Waiting around for someone to take your calls is not helping us.\n\nLook, call your rich friends, call Alex, call whoever, but call them after we do this job, okay?"
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
     id: "53fdfead643431269731f848"
   }
-  index: 6
+  index: 26
   text: "There\'s an old isolated Matrix node in the basement of the abandoned municipal building. It was cut of from the net something like ten years ago. There\'s a load of old infrastructural data still on it.\n\nLong story short, there\'s a cash money reward for that data. However one of the local gangs is squatting near the area where the terminal for the node is. They are probably not going to start anything, but no way am I sitting down in their turf unguarded. Someone just might get the idea to slice my throat for the hell of it."
   branches {
     responseText: "800 sounds like a pretty big sum to pay just for some infrastructural data."
-    nextNodeIndex: 7
+    nextNodeIndex: 27
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -406,7 +1003,7 @@ nodes {
   }
   branches {
     responseText: "Which gang is this and who are they affiliated with?"
-    nextNodeIndex: 8
+    nextNodeIndex: 28
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -415,7 +1012,7 @@ nodes {
   }
   branches {
     responseText: "Alright, let\'s do this."
-    nextNodeIndex: 10
+    nextNodeIndex: 30
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -423,11 +1020,11 @@ nodes {
   idRef {
     id: "53fe0161643431269731f84e"
   }
-  index: 7
+  index: 27
   text: "Red Hill has been hit with quite a few catastrophes in the last century, and a lot of stuff has just been lost. The records on, for instance, the sewers or the power cables, are practically nonexistent. A couple of local companies doing repair work and stuff like that have pooled their resources to pay for that data.\n\n... But yeah, they are not paying 800 for that, they\'re only offering 400. I figure there\'s some other stuff in there that\'s worth 400, some old municipal payroll codes and the like, which have no owner at present. If we can grab both sets of data, we can clear out a nice, tidy sum for a day\'s work."
   branches {
     responseText: "I see."
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -436,16 +1033,16 @@ nodes {
   idRef {
     id: "53fe02e1643431269731f85a"
   }
-  index: 8
+  index: 28
   text: "The Placeholders. They are just a bunch of street thugs without any big name connections. Not really bad as those things go, but y\'know, it\'s their territory. Somebody just might be having a really bad day or something."
   branches {
     responseText: "Got it."
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Etiquette: Gang{{/CC}} I think I\'ve met someone who was with them once."
-    nextNodeIndex: 9
+    nextNodeIndex: 29
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -453,16 +1050,16 @@ nodes {
   idRef {
     id: "53fe03a6643431269731f86b"
   }
-  index: 9
+  index: 29
   text: "Okay, is that good news or bad news?"
   branches {
     responseText: "I should be able to reason with them."
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   branches {
     responseText: "It\'s not bad news."
-    nextNodeIndex: 6
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -471,7 +1068,7 @@ nodes {
   idRef {
     id: "53fe03fd643431269731f873"
   }
-  index: 10
+  index: 30
   text: "Do you need anything before we go? I should have some spare gear lying around here somewhere."
   branches {
     responseText: "Give me a gun."
