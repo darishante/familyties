@@ -207,7 +207,7 @@ nodes {
           }
         }
         args {
-          string_value: "Biochemistry"
+          string_value: "Biotechnology"
         }
       }
     }

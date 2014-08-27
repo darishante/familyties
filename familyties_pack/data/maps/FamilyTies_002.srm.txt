@@ -43,6 +43,19 @@ props {
     z: -3
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "53fc81c5643431b84ca40c15"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 3
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "A picture of you and your family, taken in 2063."
+      disableAfterInteracting: false
+    }
+  }
   lod: 0
 }
 props {

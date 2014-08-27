@@ -2328,7 +2328,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "53db6e3d64343176dd31b7cd"
+            string_value: "53e72843643431a4c4702e33"
           }
         }
       }
