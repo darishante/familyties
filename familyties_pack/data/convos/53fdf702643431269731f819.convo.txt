@@ -355,11 +355,13 @@ nodes {
   text: "It\'s not your typical shadowrun. It\'s more like a salvage operation. We\'re not doing anything illegal or dangerous."
   branches {
     responseText: "How do you get eight hundred nuyen from a job that\'s not illegal or dangerous?"
-    nextNodeIndex: -1
+    nextNodeIndex: 4
+    auxiliaryLink: true
   }
   branches {
     responseText: "Really?"
-    nextNodeIndex: -1
+    nextNodeIndex: 4
+    auxiliaryLink: true
   }
   branches {
     responseText: "Please be a bit more specific."
@@ -372,7 +374,7 @@ nodes {
     id: "53fdfea5643431269731f846"
   }
   index: 4
-  text: "There\'s an abandoned Matrix node lying in the basement of an old municipal building. It should have a load of lost infrastructural data on it - not corporate secrets or anything like that, just stuff useful for people who are still actually living in "
+  text: "There\'s an abandoned Matrix node lying in the basement of an old municipal building. It should have a load of lost infrastructural data on it - not corporate secrets or anything like that, just stuff useful for people who are still actually living around here. A couple of local mom\'n\'pop-scale operations have pooled their resources and are offering rewards for data like that, to make their work easier.\n\nAnd me, I\'ve located the stuff they are looking for."
   branches {
     responseText: "And you haven\'t just gone and gotten it because...?"
     nextNodeIndex: 5
