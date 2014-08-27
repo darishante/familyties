@@ -1,0 +1,502 @@
+idRef {
+  id: "53fdf702643431269731f819"
+}
+ui_name: "s004-half_shatter_third_time"
+nodes {
+  idRef {
+    id: "53fdf719643431269731f81f"
+  }
+  index: 0
+  text: "Morning, $(story.bro). I\'ve been looking at our options.\n\nHow are you feeling?"
+  branches {
+    responseText: "Somewhat hung over, but I\'ll live."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop2"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*Vodka*"
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Like I\'ve slept for a week."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Like I\'ve been stuffed into a barrel."
+    conditions {
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdf892643431269731f824"
+  }
+  index: 1
+  text: "There\'s some seaweed flakes and soykaf. Help yourself.\n\nBefore we can start with looking at the leads we came up with last night, there\'s one thing we need. Money. I\'m going through a dry spell, and I\'m guessing you don\'t have much either? And don\'t start about handouts, ok? I\'m not asking any for myself.\n\n"
+  branches {
+    responseText: "All I\'ve got is some pocket change. I just returned from a vacation that ate all my money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'ve got a couple hundred."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 500
+        }
+      }
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I\'ve got a few hundred"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 500
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdfaa1643431269731f834"
+  }
+  index: 2
+  text: "That\'s probably not enough. I reckon we need about 1000 to even get started, and I have something like 200.\n\nFortunately I have a solution for that. There\'s a simple job I\'ve been meaning to take, and they payoff is 800, but it\'s a two-person gig. We\'re going to do it."
+  branches {
+    responseText: "Are you out of your mind? Do you think I\'m a shadowrunner?"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Please explain why I would possibly want to be a party to this."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Career: Risk Management{{/CC}} Not really my usual cup of tea, but keep talking."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "pc_careerpath"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "Risk Management"
+        }
+      }
+    }
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Sounds all right."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} Tell me about the job."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdfcf5643431269731f83e"
+  }
+  index: 3
+  text: "It\'s not your typical shadowrun. It\'s more like a salvage operation. We\'re not doing anything illegal or dangerous."
+  branches {
+    responseText: "How do you get eight hundred nuyen from a job that\'s not illegal or dangerous?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Really?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Please be a bit more specific."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdfea5643431269731f846"
+  }
+  index: 4
+  text: "There\'s an abandoned Matrix node lying in the basement of an old municipal building. It should have a load of lost infrastructural data on it - not corporate secrets or anything like that, just stuff useful for people who are still actually living in "
+  branches {
+    responseText: "And you haven\'t just gone and gotten it because...?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe070f643431269731f89d"
+  }
+  index: 5
+  text: "I want someone to watch my back while I access the node. Just to prevent any, ah, local color from getting any ideas. It is a rough neighborhood, and a decker in the Matrix is totally defenseless."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdfead643431269731f848"
+  }
+  index: 6
+  text: "There\'s an old isolated Matrix node in the basement of the abandoned municipal building. It was cut of from the net something like ten years ago. There\'s a load of old infrastructural data still on it.\n\nLong story short, there\'s a cash money reward for that data. However one of the local gangs is squatting near the area where the terminal for the node is. They are probably not going to start anything, but no way am I sitting down in their turf unguarded. Someone just might get the idea to slice my throat for the hell of it."
+  branches {
+    responseText: "800 sounds like a pretty big sum to pay just for some infrastructural data."
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "53fe02a3643431269731f84f"
+    }
+  }
+  branches {
+    responseText: "Which gang is this and who are they affiliated with?"
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "53fe03d6643431269731f86e"
+    }
+  }
+  branches {
+    responseText: "Alright, let\'s do this."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe0161643431269731f84e"
+  }
+  index: 7
+  text: "Red Hill has been hit with quite a few catastrophes in the last century, and a lot of stuff has just been lost. The records on, for instance, the sewers or the power cables, are practically nonexistent. A couple of local companies doing repair work and stuff like that have pooled their resources to pay for that data.\n\n... But yeah, they are not paying 800 for that, they\'re only offering 400. I figure there\'s some other stuff in there that\'s worth 400, some old municipal payroll codes and the like, which have no owner at present. If we can grab both sets of data, we can clear out a nice, tidy sum for a day\'s work."
+  branches {
+    responseText: "I see."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe02e1643431269731f85a"
+  }
+  index: 8
+  text: "The Placeholders. They are just a bunch of street thugs without any big name connections. Not really bad as those things go, but y\'know, it\'s their territory. Somebody just might be having a really bad day or something."
+  branches {
+    responseText: "Got it."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} I think I\'ve met someone who was with them once."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe03a6643431269731f86b"
+  }
+  index: 9
+  text: "Okay, is that good news or bad news?"
+  branches {
+    responseText: "I should be able to reason with them."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "It\'s not bad news."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe03fd643431269731f873"
+  }
+  index: 10
+  text: "Do you need anything before we go? I should have some spare gear lying around here somewhere."
+  branches {
+    responseText: "Give me a gun."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Something sharp for self defense, just in case."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Got a spare deck?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You wouldn\'t have a drone in this garabge heap?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "This is probably not your cup of tea, but have you got anything with a bit of magic in it?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "A grenade or two would be nice."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
