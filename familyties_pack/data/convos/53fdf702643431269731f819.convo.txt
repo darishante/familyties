@@ -95,11 +95,13 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 1
+    auxiliaryLink: true
   }
   branches {
     responseText: "Like I\'ve slept for a week."
-    nextNodeIndex: -1
+    nextNodeIndex: 1
+    auxiliaryLink: true
   }
   branches {
     responseText: "Like I\'ve been stuffed into a barrel."
@@ -615,7 +617,7 @@ nodes {
   index: 12
   text: "No, you idiot! I\'d never do anything like that! I\'m pointing out your fragging hypocrisy!\n\nYou\'re willing to murder some pigs, but unwilling to help me with a simple job. That\'s not just hypocritical, that\'s plain stupid. What the hell else are you going to do, give yourself up?"
   branches {
-    responseText: "I want to help you, $(story.bro). Right now helping you means getting you some means to take care of yourself. This thing? It\'s good. It\'s easy and it\'s money.\n\nI know you can do it. You wouldn\'t be here if you couldn\'t. So stop whining and get with the program."
+    responseText: "Drek fragging hoop this is all fragged up."
     nextNodeIndex: 13
     auxiliaryLink: true
   }
@@ -635,7 +637,7 @@ nodes {
     id: "53fe120564343141cc188b9e"
   }
   index: 13
-  text: "Look. I don\'t care who you\'ve iced. I\'m sure you have your reasons, and I\'m not going to moralize. Buddha knows I\'ve had to leave a few bodies in my wake, and some of them called themselves cops. I am pointing out that at the moment you don\'t really have a lot of options. \n\nSo. We are doing this. This is your big sister, telling you what we are going to do because you are in trouble and this is how you survive."
+  text: "Look. I don\'t care who you\'ve geeked. I\'m sure you have your reasons, and I\'m not going to moralize. Buddha knows I\'ve had to leave a few bodies in my wake, and some of them called themselves cops. I am pointing out that at the moment you don\'t really have a lot of options. \n\nSo. We are doing this. This is your big sister, telling you what we are going to do because you are in trouble and this is how you survive."
   branches {
     responseText: "You\'re taking a page from Grace\'s book?"
     nextNodeIndex: 14
@@ -1072,18 +1074,347 @@ nodes {
   text: "Do you need anything before we go? I should have some spare gear lying around here somewhere."
   branches {
     responseText: "Give me a gun."
-    nextNodeIndex: -1
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Berlin_Sh 1 Benelli (Sawed Off)"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 31
   }
   branches {
     responseText: "Something sharp for self defense, just in case."
-    nextNodeIndex: -1
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Sword 1 Machete"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 32
   }
   branches {
     responseText: "Got a spare deck?"
-    nextNodeIndex: -1
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "CyberdeckSony"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 33
   }
   branches {
     responseText: "You wouldn\'t have a drone in this garabge heap?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 10
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "DroneAttackC_Doberman"
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -1094,7 +1425,192 @@ nodes {
     responseText: "A grenade or two would be nice."
     nextNodeIndex: -1
   }
+  branches {
+    responseText: "I think I\'m good."
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe2dc564343141cc189492"
+  }
+  index: 31
+  text: "Here\'s an old sawed-off shotgun, will that do?"
+  branches {
+    responseText: "Sure"
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Berlin_Sh 1 Benelli (Sawed Off)"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "On second thought give me something else."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe2e8564343141cc189537"
+  }
+  index: 32
+  text: "This is my favorite steak knife. The steaks around here are really tough."
+  branches {
+    responseText: "It certainly looks menacing enough."
+    actions {
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Sword 1 Machete"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "On second thought give me something else."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe2d4364343141cc18947e"
+  }
+  index: 33
+  text: "Sure... but you are not going to need it. I\'m going to be doing the decking, you\'ll do the watching."
+  branches {
+    responseText: "Have you ever been to a municipal Matrix node? I have."
+    nextNodeIndex: 34
+  }
+  branches {
+    responseText: "No, I think it will be better the other way around."
+    nextNodeIndex: 34
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "On second thought, yeah, give me something else."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fe308864343141cc189559"
+  }
+  index: 34
+  text: "... I\'m not convinced, but here\'s the deck."
+  branches {
+    responseText: "Perfect."
+    nextNodeIndex: 30
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "CyberdeckSony"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
 }
 roots {
   nextNodeIndex: 0
