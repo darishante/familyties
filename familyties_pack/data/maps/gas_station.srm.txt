@@ -1,7 +1,7 @@
 minX: -133
 minZ: -149
 numX: 147
-numZ: 187
+numZ: 197
 props {
   name: "undergroundBase_floor_oldCement04"
   gridPoint {
@@ -11862,9 +11862,9 @@ props {
 props {
   name: "barrens_building_03base11"
   gridPoint {
-    x: -105
+    x: -107
     y: 0
-    z: 12
+    z: 13
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11902,9 +11902,9 @@ props {
 props {
   name: "barrens_building_03edge05"
   gridPoint {
-    x: -107
+    x: -110
     y: 0
-    z: 19
+    z: 11
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11912,9 +11912,9 @@ props {
 props {
   name: "barrens_building_04edge04"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
-    z: 23
+    z: 22
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11922,7 +11922,7 @@ props {
 props {
   name: "barrens_building_04edge01"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
     z: 25
   }
@@ -11932,9 +11932,9 @@ props {
 props {
   name: "barrens_building_04edge05"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
-    z: 27
+    z: 28
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11942,9 +11942,9 @@ props {
 props {
   name: "barrens_building_04edge07"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
-    z: 21
+    z: 19
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11972,9 +11972,9 @@ props {
 props {
   name: "barrens_building_04edge22"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
-    z: 30
+    z: 31
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -12002,9 +12002,9 @@ props {
 props {
   name: "barrens_building_05edge01"
   gridPoint {
-    x: -94
+    x: -91
     y: 0
-    z: 22
+    z: 33
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -12052,9 +12052,9 @@ props {
 props {
   name: "barrens_building_05edgeBorderBack03"
   gridPoint {
-    x: -101
+    x: -107
     y: 0
-    z: 18
+    z: 16
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -12885,9 +12885,9 @@ props {
 props {
   name: "haven_buildingOrnament_turkishPlanter02"
   gridPoint {
-    x: -86.25
+    x: -96.25
     y: 0
-    z: 28
+    z: 44
   }
   orientation: ORIENTATION_S
   idRef {
@@ -13062,7 +13062,7 @@ props {
 props {
   name: "haven_ground_bush03"
   gridPoint {
-    x: -59
+    x: -46
     y: 0
     z: 14
   }
