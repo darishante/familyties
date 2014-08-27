@@ -14,12 +14,28 @@ nodes {
   }
   branches {
     responseText: "I\'ll kick your ass next time."
-    nextNodeIndex: -1
+    nextNodeIndex: 1
   }
   branches {
     responseText: "You\'re a lunatic."
-    nextNodeIndex: -1
+    nextNodeIndex: 2
   }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdda4f643431269731eeca"
+  }
+  index: 1
+  text: "Keep dreaming, $(story.bro)."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fdda60643431269731eecc"
+  }
+  index: 2
+  text: "The best kind!"
   nodeType: ConversationNodeType_Simple
 }
 roots {

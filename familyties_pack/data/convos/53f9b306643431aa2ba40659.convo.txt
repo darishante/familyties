@@ -341,7 +341,7 @@ nodes {
     id: "53fb41a26434310c07a4089e"
   }
   index: 9
-  text: "Dragons take you and your Midwest middle management sensibilites, fragging $(story.pc_salutation) $(story.pc_lastname)."
+  text: "Dragons take you and your Midwest middle management sensibilites, fragging straight arrow."
   branches {
     responseText: "Chill."
     nextNodeIndex: 13
