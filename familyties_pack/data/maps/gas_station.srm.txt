@@ -1592,7 +1592,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -16.82
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -39.34
   }
   orientation: ORIENTATION_E
@@ -1752,7 +1752,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: -2.4286129e-017
+    y: -2.4286129e-17
     z: -35.23
   }
   orientation: ORIENTATION_S
@@ -2178,7 +2178,7 @@ props {
   name: "sleekOffice_storage_polyCabinet02"
   gridPoint {
     x: -17.64
-    y: 3.1225023e-017
+    y: 3.1225023e-17
     z: -37.57
   }
   orientation: ORIENTATION_E
@@ -2737,7 +2737,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: 3.469447e-018
+    y: 3.469447e-18
     z: -37.21
   }
   orientation: ORIENTATION_S
@@ -13559,7 +13559,7 @@ props {
   name: "barrens_street_dumpster01"
   gridPoint {
     x: -77.3
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 9.7
   }
   orientation: ORIENTATION_S
@@ -21579,6 +21579,15 @@ props {
     z: -1
   }
   orientation: ORIENTATION_S
+  displayName: "WayDown"
+  idRef {
+    id: "53fedf6d6434314eec31b875"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 2
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -22323,6 +22332,9 @@ props {
     z: 2
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "53fedce06434314eec31b86e"
+  }
   lod: 0
 }
 props {
@@ -23239,7 +23251,7 @@ props {
   name: "barrens_ground_twoLaneSingle03"
   gridPoint {
     x: -179
-    y: 2.5326963e-016
+    y: 2.5326963e-16
     z: -4
   }
   orientation: ORIENTATION_E

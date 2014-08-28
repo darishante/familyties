@@ -1515,7 +1515,7 @@ nodes {
     nextNodeIndex: 42
   }
   branches {
-    responseText: "{{CC}}Career: Thaumaturgy{/CC}} Actually quite a few spellcasters are employed by megacorps these days."
+    responseText: "{{CC}}Career: Thaumaturgy{{/CC}} Actually quite a few spellcasters are employed by megacorps these days."
     conditions {
       ops {
         functionName: "Comparison (string)"
@@ -3233,6 +3233,40 @@ nodes {
         }
         args {
           int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "RelationshipsWithDrones,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
         }
       }
     }

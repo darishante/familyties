@@ -235,7 +235,7 @@ nodes {
           }
         }
         args {
-          string_value: "Born2049"
+          string_value: "*Born2049*"
         }
       }
     }
@@ -269,7 +269,7 @@ nodes {
           }
         }
         args {
-          string_value: "Born2051"
+          string_value: "*Born2051*"
         }
       }
     }

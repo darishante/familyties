@@ -288,7 +288,7 @@ nodes {
     auxiliaryLink: true
   }
   branches {
-    responseText: "We will. Or someone in Seattle will.\n\n{{GM}}A reassuring tone of voice really work for detective Wainwright.{{/GM}}"
+    responseText: "Sorry, the donut shop is across the street."
     nextNodeIndex: 2
   }
   branches {
