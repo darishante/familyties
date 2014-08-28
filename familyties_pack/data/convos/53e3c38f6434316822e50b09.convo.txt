@@ -310,6 +310,34 @@ nodes {
       ops {
         functionName: "Stop Music"
       }
+      ops {
+        functionName: "Play Music"
+        args {
+          call_value {
+            functionName: "Get Map Item (Music)"
+            args {
+              string_value: "Berlin_Set3"
+            }
+            args {
+              string_value: "Berlin-Set3-Combat"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
     }
     nextNodeIndex: 7
   }

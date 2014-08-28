@@ -171,7 +171,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 2
+    auxiliaryLink: true
   }
   branches {
     responseText: "I\'ve got a couple hundred."
@@ -244,7 +245,7 @@ nodes {
     id: "53fdfaa1643431269731f834"
   }
   index: 2
-  text: "That\'s probably not enough. I reckon we need about 1000 to even get started, and I have something like 200.\n\nFortunately I have a solution for that. There\'s a simple job I\'ve been meaning to take, and they payoff is 800, but it\'s a two-person gig. We\'re going to do it."
+  text: "That\'s not quite enough. I reckon we need about 1000 to even get started, and I have something like 200.\n\nFortunately I have a solution for that. There\'s a simple job I\'ve been meaning to take, and they payoff is 800, but it\'s a two-person gig. We\'re going to do it."
   branches {
     responseText: "Are you out of your mind? Do you think I\'m a shadowrunner?"
     nextNodeIndex: 3
@@ -1789,6 +1790,74 @@ nodes {
           functionName: "Get Map Item (Item)"
           args {
             string_value: "CyberdeckSony"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "PR Medic 1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "PR Killer 1"
           }
         }
       }

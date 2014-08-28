@@ -1,0 +1,993 @@
+idRef {
+  id: "53ff3c156434314eec31c254"
+}
+ui_name: "s005-matrix_enter"
+nodes {
+  idRef {
+    id: "53ff3c1f6434314eec31c25a"
+  }
+  index: 0
+  text: "{{GM}}An old model of a Matrix terminal that has been shut down for ages.{{/GM}}\n\nDrek. The system is huge and unoptimized. My portable battery is not going to power this for very long. Well, the good news is that it\'s not connected to any alarms. The bad news is that if I\'m still in and the power fails, it\'s really going to hurt.\n\n(DEBUG: add Half Shatter as player controlled)"
+  branches {
+    responseText: "Should we get a bigger battery?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "You\'ll just have to run quick then."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Decking{{/CC}} You mean if I\'m still in."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "53fb4c1e6434310c07a40b3a"
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Control"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "53fb4c1e6434310c07a40b3a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PlayerOrAI"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ff3e146434314eec31c25f"
+  }
+  index: 1
+  text: "Nah, it\'ll be enough. \'Sides, I don\'t fancy drawing any more attention to us."
+  branches {
+    responseText: "Good luck."
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff3e2d6434314eec31c261"
+  }
+  index: 2
+  text: "Yep, that\'s how it\'s gonna go.\n\nKeep watch."
+  branches {
+    responseText: "Good luck."
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff40fe6434314eec31c28a"
+  }
+  index: 3
+  text: "No, you\'re staying outside and keeping watch, like we agreed."
+  branches {
+    responseText: "We didn\'t agree to anything. I know how to do this, just like you."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}Jack in before Half Shatter can stop you.{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff41b26434314eec31c28e"
+  }
+  index: 4
+  text: "... Fine. Rock-paper-scissors for it? On three. Oh, and I win if it\'s a tie. One, two --"
+  branches {
+    responseText: "Rock"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Paper"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Scissors"
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: "Middle finger"
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "Loop3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Random (int)"
+          args {
+            int_value: 0
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53ff42436434314eec31c293"
+  }
+  index: 5
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff430b6434314eec31c29e"
+  }
+  index: 6
+  text: "{{GM}}Hannah makes a fist the same time as you. Two rocks.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "A tie is not a --"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff437d6434314eec31c2a2"
+  }
+  index: 7
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff43ac6434314eec31c2ac"
+  }
+  index: 8
+  text: "{{GM}}Hannah\'s hand is flat. Paper beats rock.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You totally waited until-"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff43ac6434314eec31c2b0"
+  }
+  index: 9
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff43ae6434314eec31c2b3"
+  }
+  index: 10
+  text: "{{GM}}Hannah has two fingers sticking out. Rock beats scissors.{{/GM}}\n\nWait wait wait. Best two out of three?"
+  branches {
+    responseText: "Keep watch, sis. {{CC}}Jack in.{{/CC}}"
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2de"
+  }
+  index: 11
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2e1"
+  }
+  index: 12
+  text: "{{GM}}Hannah makes a flat hand, same as you. Two papers.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "A tie is not a --"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2e7"
+  }
+  index: 13
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2eb"
+  }
+  index: 14
+  text: "{{GM}}Hannah has two fingers sticking out. Scissors beat paper.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You totally waited until-"
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2f1"
+  }
+  index: 15
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff452c6434314eec31c2f5"
+  }
+  index: 16
+  text: "{{GM}}Hannah makes a fist. Paper beats rock.{{/GM}}\n\nWait wait wait. Best two out of three?"
+  branches {
+    responseText: "Keep watch, sis. {{CC}}Jack in.{{/CC}}"
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c312"
+  }
+  index: 17
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c315"
+  }
+  index: 18
+  text: "{{GM}}Hannah has two fingers sticking out. Two pairs of scissors.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 19
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "A tie is not a --"
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c31b"
+  }
+  index: 19
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c31f"
+  }
+  index: 20
+  text: "{{GM}}Hannah makes a fist. Rock beats scissors.{{/GM}}\n\nTough luck, $(story.bro)!"
+  branches {
+    responseText: "Best two out--"
+    nextNodeIndex: 21
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You totally waited until-"
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c325"
+  }
+  index: 21
+  text: "{{GM}}She jacks in before you can finish.{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff45d26434314eec31c329"
+  }
+  index: 22
+  text: "{{GM}}Hannah makes a flat hand. Scissors beat paper.{{/GM}}\n\nWait wait wait. Best two out of three?"
+  branches {
+    responseText: "Keep watch, sis. {{CC}}Jack in.{{/CC}}"
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53ff42806434314eec31c297"
+  }
+  index: 23
+  text: "Ha. You forfeit. I win.\n\n{{GM}}She jacks in{{/GM}}"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fb4c1e6434310c07a40b3a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -6303,16 +6303,6 @@ props {
   idRef {
     id: "53f8abbb64343126f4059201"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 0
-      fadeTime: 0
-      inspectText: "There is a camera watching the interrogation room, but it doesn\'t look like it\'s worked in ages."
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
