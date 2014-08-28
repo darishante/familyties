@@ -474,7 +474,7 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "New Region"
+  name: "Brooklynin piha"
   position {
     x: -30
     y: -39
@@ -518,7 +518,7 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "New Region"
+  name: "Brooklynin katto"
   position {
     x: -135
     y: -5
@@ -612,12 +612,56 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "brooklynin rappuk\303\244yt\303\244v\303\244"
+  position {
+    x: -155
+    y: 118
+    width: -10
+    height: 25
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53ff68f63736636c0e000f3f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.39215687
+    g: 0.39215687
+    b: 0.39215687
+    a: 0.39215687
+  }
+  ambient_light_color {
+    r: 0.39215687
+    g: 0.39215687
+    b: 0.39215687
+    a: 0.39215687
+  }
+  ambience_template: "tenement-quiet"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -145
+    x: -160
     y: -0.35
-    z: 0
+    z: 121
   }
   orientation: ORIENTATION_N
   idRef {

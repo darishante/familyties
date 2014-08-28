@@ -1,7 +1,7 @@
 minX: -192
 minZ: -149
 numX: 206
-numZ: 202
+numZ: 292
 props {
   name: "undergroundBase_floor_oldCement04"
   gridPoint {
@@ -1592,7 +1592,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -16.82
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: -39.34
   }
   orientation: ORIENTATION_E
@@ -1752,7 +1752,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: -2.4286129e-17
+    y: -2.4286129e-017
     z: -35.23
   }
   orientation: ORIENTATION_S
@@ -2178,7 +2178,7 @@ props {
   name: "sleekOffice_storage_polyCabinet02"
   gridPoint {
     x: -17.64
-    y: 3.1225023e-17
+    y: 3.1225023e-017
     z: -37.57
   }
   orientation: ORIENTATION_E
@@ -2737,7 +2737,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: 3.469447e-18
+    y: 3.469447e-018
     z: -37.21
   }
   orientation: ORIENTATION_S
@@ -11752,9 +11752,9 @@ props {
 props {
   name: "barrens_building_01edge04"
   gridPoint {
-    x: -114
+    x: -120
     y: 0
-    z: -17
+    z: -18
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -13559,7 +13559,7 @@ props {
   name: "barrens_street_dumpster01"
   gridPoint {
     x: -77.3
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: 9.7
   }
   orientation: ORIENTATION_S
@@ -23248,413 +23248,6 @@ props {
   lod: 0
 }
 props {
-  name: "barrens_ground_twoLaneSingle03"
-  gridPoint {
-    x: -179
-    y: 2.5326963e-16
-    z: -4
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneSingle03"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 2
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1b60373663fc160044cb"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneSingle03"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 8
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1b72373663fc160044cc"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneSingle03"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1b74373663fc160044cd"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneSingle03"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 20
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1b78373663fc160044ce"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneWhite01"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 26
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneWhite01"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 32
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1bc9373663fc160044cf"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneWhite01"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 38
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1bcb373663fc160044d0"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneWhite01"
-  gridPoint {
-    x: -179
-    y: 0
-    z: 44
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1bcf373663fc160044d1"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneDouble01"
-  gridPoint {
-    x: -190
-    y: 0
-    z: 27
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "barrens_ground_twoLaneDouble01"
-  gridPoint {
-    x: -184
-    y: 0
-    z: 27
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1be7373663fc160044d2"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1bfd373663fc160044d3"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: -1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c0e373663fc160044d4"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 2
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c10373663fc160044d5"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 5
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c13373663fc160044d6"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 8
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c16373663fc160044d7"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 11
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c19373663fc160044d8"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c1c373663fc160044d9"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 17
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c1f373663fc160044da"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 20
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c22373663fc160044db"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 23
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c25373663fc160044dc"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c28373663fc160044dd"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -185
-    y: 0
-    z: 24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c2b373663fc160044de"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -188
-    y: 0
-    z: 24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c2f373663fc160044df"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -191
-    y: 0
-    z: 24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c33373663fc160044e0"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -187
-    y: 0
-    z: 33
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c53373663fc160044e1"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -184
-    y: 0
-    z: 33
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c56373663fc160044e2"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 33
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c62373663fc160044e3"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -184
-    y: 0
-    z: 36
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c64373663fc160044e4"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 36
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c69373663fc160044e5"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 39
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c6c373663fc160044e6"
-  }
-  lod: 0
-}
-props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -181
-    y: 0
-    z: 42
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c6e373663fc160044e7"
-  }
-  lod: 0
-}
-props {
   name: "barrens_ground_sidewalkdarkgrey05"
   gridPoint {
     x: -181
@@ -23668,24 +23261,11 @@ props {
   lod: 0
 }
 props {
-  name: "barrens_ground_sidewalkdarkgrey05"
-  gridPoint {
-    x: -182
-    y: 0
-    z: 47
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe1c74373663fc160044e9"
-  }
-  lod: 0
-}
-props {
   name: "memphismotors_car_fordamericarStar"
   gridPoint {
     x: -189
     y: 0
-    z: 34
+    z: 33
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -25638,731 +25218,6 @@ props {
   lod: 0
 }
 props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 13
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe280f3736630819000f3f"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 15
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28153736630819000f40"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28173736630819000f41"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 16
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28193736630819000f42"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 17
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282b3736630819000f43"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 19
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282b3736630819000f44"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 18
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282b3736630819000f45"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 20
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282b3736630819000f46"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 21
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282b3736630819000f47"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 7
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282f3736630819000f48"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282f3736630819000f49"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 8
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282f3736630819000f4a"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 10
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282f3736630819000f4b"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 11
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe282f3736630819000f4c"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 2
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28333736630819000f4d"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28333736630819000f4e"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 3
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28333736630819000f4f"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 5
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28333736630819000f50"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 6
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28333736630819000f51"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: -3
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28373736630819000f52"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: -1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28373736630819000f53"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: -2
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28373736630819000f54"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 0
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28373736630819000f55"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28373736630819000f56"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 22
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe283c3736630819000f57"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 24
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe283c3736630819000f58"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 23
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe283c3736630819000f59"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 25
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe283c3736630819000f5a"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 26
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe283c3736630819000f5b"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 27
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28413736630819000f5c"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 29
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28413736630819000f5d"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 28
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28413736630819000f5e"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 30
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28413736630819000f5f"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 31
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28413736630819000f60"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 32
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28443736630819000f61"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 34
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28443736630819000f62"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 33
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28443736630819000f63"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 35
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28443736630819000f64"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 36
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28443736630819000f65"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 37
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28473736630819000f66"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 39
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28473736630819000f67"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 38
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28473736630819000f68"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 40
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28473736630819000f69"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 41
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28473736630819000f6a"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 42
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284a3736630819000f6b"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 44
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284a3736630819000f6c"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 43
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284a3736630819000f6d"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 45
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284a3736630819000f6e"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 46
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284a3736630819000f6f"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 47
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284d3736630819000f70"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 49
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284d3736630819000f71"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 48
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284d3736630819000f72"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 50
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284d3736630819000f73"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: 51
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe284d3736630819000f74"
-  }
-  lod: 0
-}
-props {
-  name: "system_invisible_solidProp"
-  gridPoint {
-    x: -177
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53fe28543736630819000f75"
-  }
-  lod: 0
-}
-props {
   name: "barrens_building_05tileTrimLong02"
   gridPoint {
     x: -139
@@ -27720,6 +26575,1035 @@ props {
     x: -161
     y: 0
     z: 6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingSimpleDecal"
+  gridPoint {
+    x: -187
+    y: 0
+    z: 31
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: 44.97
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff50eb373663d01600491d"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: 15.970001
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff50f1373663d01600491e"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthEnd"
+  gridPoint {
+    x: -182.09
+    y: 0
+    z: 21
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: 9.9700012
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff511f373663d01600491f"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: 3.9700012
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff5126373663d016004920"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: -2.0299988
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff512a373663d016004921"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthMid"
+  gridPoint {
+    x: -182
+    y: 0.11
+    z: -7.0299988
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff512d373663d016004922"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingStoneSouthEnd"
+  gridPoint {
+    x: -182.14
+    y: 0
+    z: 39
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -182.09
+    y: 0
+    z: 27.03
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -182.1
+    y: 0
+    z: 33.03
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5234373663d016004925"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -187.94
+    y: 0
+    z: 24.18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5242373663d016004926"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -188.1
+    y: 0
+    z: 30.029999
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5250373663d016004927"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -191.1
+    y: 0
+    z: 18.029999
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5253373663d016004928"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -188.1
+    y: 0
+    z: 33.03
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5256373663d016004929"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -190.94
+    y: 0
+    z: 24.18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff52c1373663d01600492a"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_intersectionPlain"
+  gridPoint {
+    x: -185.94
+    y: 0
+    z: 29.18
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff52c5373663d01600492b"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingSimpleDecal"
+  gridPoint {
+    x: -187
+    y: 0
+    z: 28
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff52d0373663d01600492c"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingSimpleDecal"
+  gridPoint {
+    x: -187
+    y: 0
+    z: 34
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff52d3373663d01600492d"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_ground_twoLaneParkingSimpleDecal"
+  gridPoint {
+    x: -187
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff52dc373663d01600492e"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_01baseBevelBack01"
+  gridPoint {
+    x: -182
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff53ef373663200e000f3f"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_01edge04"
+  gridPoint {
+    x: -182
+    y: 3.9
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5406373663200e000f40"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_warning02"
+  gridPoint {
+    x: -182
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_floor_warning02"
+  gridPoint {
+    x: -182
+    y: 0
+    z: 30
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff54a5373663200e000f41"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_warning02"
+  gridPoint {
+    x: -182
+    y: 0
+    z: 34
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff54a9373663200e000f42"
+  }
+  lod: 0
+}
+props {
+  name: "factory_floor_warningEnd02"
+  gridPoint {
+    x: -182
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_floor_warningEnd02"
+  gridPoint {
+    x: -182
+    y: 0
+    z: 28
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_arrowTurnDecal"
+  gridPoint {
+    x: -177
+    y: 0
+    z: 31
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 124
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 124
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 126
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5778373663200e000f56"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 126
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff577a373663200e000f57"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff577c373663200e000f58"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff577e373663200e000f59"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 130
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5781373663200e000f5a"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 130
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5783373663200e000f5b"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 132
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5785373663200e000f5c"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 132
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5787373663200e000f5d"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5789373663200e000f5e"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff578c373663200e000f5f"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff578e373663200e000f60"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5790373663200e000f61"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 138
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5793373663200e000f62"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 138
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5795373663200e000f63"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 140
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5799373663200e000f64"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 140
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff579b373663200e000f65"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff57a6373663200e000f66"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff57a8373663200e000f67"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5b5f373663200e000f71"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5b61373663200e000f72"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base03"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 130
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_05base02"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e07373663200e000f74"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base03"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 122
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e15373663200e000f75"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base02"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 125
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e19373663200e000f76"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base02"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e1d373663200e000f77"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base02"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 133
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e2d373663200e000f78"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05base03"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff5e37373663200e000f7a"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05baseBorderFront01"
+  gridPoint {
+    x: -162
+    y: 0
+    z: 139
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_wallDecoration_cautiontape02"
+  gridPoint {
+    x: -160.65
+    y: 0.45
+    z: 130.92
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_floorDecoration_grate01"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 140
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_floorDecoration_grate01"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff61b6373663200e000f7d"
+  }
+  lod: 0
+}
+props {
+  name: "factory_storage_smallCages"
+  gridPoint {
+    x: -173
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_wall_workLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_wall_workLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 127
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff62fb373663200e000f7e"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_workLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff6301373663200e000f7f"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_workLightLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 121
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "factory_wall_workLightLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 127
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff6334373663200e000f80"
+  }
+  lod: 0
+}
+props {
+  name: "factory_wall_workLightLight01"
+  gridPoint {
+    x: -161
+    y: 2
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff6339373663200e000f81"
+  }
+  lod: 0
+}
+props {
+  name: "mitte_wallDecoration_grunge01"
+  gridPoint {
+    x: -161.13
+    y: 0.17
+    z: 125.4
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "office_decor_bulletholes02"
+  gridPoint {
+    x: -160.95
+    y: 2
+    z: 140.15
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "asylum_ceiling_pipe04"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "asylum_ceiling_pipe04"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff662c373663200e000f89"
+  }
+  lod: 0
+}
+props {
+  name: "asylum_ceiling_pipe04"
+  gridPoint {
+    x: -157
+    y: 0
+    z: 128
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_05base03"
+  gridPoint {
+    x: -160
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff66cd373663200e000f8a"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_05baseBorderFront01"
+  gridPoint {
+    x: -162
+    y: 0.06
+    z: 119
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "53ff66ee373663200e000f8c"
+  }
+  lod: 0
+}
+props {
+  name: "school_floor_stripeTile02"
+  gridPoint {
+    x: -161
+    y: 0
+    z: 119
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff6709373663200e000f8d"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_watersplashes"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 127.14
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "EnvironmentLoopWaterSplashes"
+  }
+  lod: 0
+}
+props {
+  name: "docks_clutter_puddle01"
+  gridPoint {
+    x: -160.16
+    y: 0
+    z: 126.99
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_floorDecoration_grunge01"
+  gridPoint {
+    x: -159
+    y: 0
+    z: 141
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "school_floorDecoration_scuffMarks01"
+  gridPoint {
+    x: -160
+    y: 0
+    z: 134
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash04"
+  gridPoint {
+    x: -161.17
+    y: 0
+    z: 120.42
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash05"
+  gridPoint {
+    x: -158
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash06"
+  gridPoint {
+    x: -161.29
+    y: 0
+    z: 126
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash01"
+  gridPoint {
+    x: -161.19
+    y: 0
+    z: 139
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_piecesOfTrash05"
+  gridPoint {
+    x: -161.24
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "haven_wallDecoration_graffiti17"
+  gridPoint {
+    x: -161
+    y: 1.5
+    z: 135
   }
   orientation: ORIENTATION_S
   lod: 0
