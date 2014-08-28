@@ -180,6 +180,24 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Jack in before Half Shatter can stop you.{{/CC}}"
+    actions {
+      ops {
+        functionName: "Force-Use Interactable Object (with Actor)"
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff40d56434314eec31c27d"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple

@@ -1,7 +1,7 @@
 minX: -15
-minZ: -132
+minZ: -136
 numX: 51
-numZ: 131
+numZ: 135
 props {
   name: "morgue_wall_brickCorner01"
   gridPoint {
@@ -3773,6 +3773,19 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53ff65d36434314eec31c972"
+  }
+  lod: 0
+}
+props {
+  name: "matrix_floor_4x4var2a"
+  gridPoint {
+    x: 16
+    y: 0
+    z: -136
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff7495643431223206dacb"
   }
   lod: 0
 }
