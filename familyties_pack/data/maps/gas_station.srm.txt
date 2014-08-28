@@ -27561,9 +27561,9 @@ props {
 props {
   name: "tenements_clutter_piecesOfTrash05"
   gridPoint {
-    x: -158
+    x: -157.89
     y: 0
-    z: 120
+    z: 120.53
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -27604,6 +27604,26 @@ props {
     x: -161
     y: 1.5
     z: 135
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_clutter_waterJugs01"
+  gridPoint {
+    x: -158
+    y: 0
+    z: 120
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_wallDecoration_wallScratches03"
+  gridPoint {
+    x: -161
+    y: 1.5
+    z: 129
   }
   orientation: ORIENTATION_S
   lod: 0
