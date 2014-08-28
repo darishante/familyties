@@ -1,7 +1,7 @@
 minX: -15
-minZ: -25
-numX: 43
-numZ: 24
+minZ: -153
+numX: 44
+numZ: 152
 props {
   name: "morgue_wall_brickCorner01"
   gridPoint {
@@ -123,8 +123,14 @@ props {
     z: -6
   }
   orientation: ORIENTATION_E
+  displayName: "MatrixTest"
   idRef {
     id: "53db71ef64343176dd31b7f2"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 2
+    interactionIcon: InteractionIcon_Matrix
   }
   lod: 0
 }
@@ -581,6 +587,47 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53f04385643431184931b786"
+  }
+  lod: 0
+}
+props {
+  name: "matrix_floor_entranceexit"
+  gridPoint {
+    x: 3
+    y: 0
+    z: -153
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff408c6434314eec31c27a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    matrixSpawnPoint {
+      dimension: "Municipal Matrix"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53ff40d56434314eec31c27d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    jackPoint {
+      LANIdentifier: "53ff408c6434314eec31c27a"
+      LANEquipment: ""
+    }
   }
   lod: 0
 }

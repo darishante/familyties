@@ -7412,10 +7412,31 @@ patrolRoutes {
   }
   nodes {
     position {
+      x: -52
+      z: -55
+    }
+    index: 7
+  }
+  nodes {
+    position {
+      x: -50
+      z: -55
+    }
+    index: 8
+  }
+  nodes {
+    position {
+      x: -49
+      z: -56
+    }
+    index: 9
+  }
+  nodes {
+    position {
       x: -51
       z: -57
     }
-    index: 7
+    index: 10
   }
   can_move_beyond_node: false
   idRef {

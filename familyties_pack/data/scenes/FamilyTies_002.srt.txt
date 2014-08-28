@@ -1233,6 +1233,68 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "Municipal Matrix"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53db71ef64343176dd31b7f2"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation Between Actors"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53ff3c156434314eec31c254"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "53fb4c1e6434310c07a40b3a"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53ff3b576434314eec31c252"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "Plane, daytime"
   position {
@@ -1315,11 +1377,55 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: ""
+  ambience_template: "warehouse-quiet"
   combat_music: ""
-  default_music: ""
+  default_music: "Silence"
   loop_combat_music: true
   loop_default_music: false
+}
+regions {
+  name: "Municipal Matrix"
+  position {
+    x: -21
+    y: -155
+    width: 72
+    height: 119
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "53ff3bc06434314eec31c253"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: "Seattle-Set3-Combat"
+  default_music: "Seattle-Set8-MatrixLoop"
+  loop_combat_music: true
+  loop_default_music: true
 }
 characters {
   name: "system_spawner_playerSpawner"
@@ -1407,6 +1513,18 @@ characters {
     equipment {
       prefab_name: "CyberdeckKraftwerk1"
     }
+    equipment {
+      prefab_name: "PR Medic 1"
+    }
+    equipment {
+      prefab_name: "ESP Shield"
+    }
+    equipment {
+      prefab_name: "PR Blaster 1"
+    }
+    equipment {
+      prefab_name: "PR Killer 1"
+    }
     team_id: "Shadowrunners"
     char_name: "Half Shatter"
     pc_spawn_number: -1
@@ -1479,6 +1597,11 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+scene_dimensions {
+  dimension_name: "Municipal Matrix"
+  initial_alarm_state: 0
+  turns_per_round: 3
 }
 character_roster {
 }
