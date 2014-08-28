@@ -1,0 +1,513 @@
+idRef {
+  id: "53fed42e6434314eec31b84a"
+}
+ui_name: "s004-dealer_on_the_couch"
+nodes {
+  idRef {
+    id: "53fed4976434314eec31b850"
+  }
+  index: 0
+  text: "{{GM}}A heavyset young man is sitting on the couch doing a crossword.{{/GM}}\n\nWhat\'s a seven-letter word for \"She\'s no longer working\"? Fifth letter is \"i\"."
+  branches {
+    responseText: "\"Unemployed\" ... wait, no."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Got any other letters?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Hang on, I know this one..."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Thought you were someone else, sorry."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Academic{{/CC}} *******"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 19
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 5
+    inputBypass: true
+  }
+  nodeType: ConversationNodeType_Simple
+  inputMaxLength: 7
+  sourceInSceneRef {
+    id: "53fedb0e6434314eec31b86b"
+  }
+}
+nodes {
+  idRef {
+    id: "53fee01d6434314eec31b88b"
+  }
+  index: 1
+  text: "Seven letters. Can you count, hoophead?"
+  branches {
+    responseText: " "
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee1a46434314eec31b89f"
+  }
+  index: 2
+  text: "Nope, that\'s all. I\'m just getting started on this one."
+  branches {
+    responseText: " "
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fedff16434314eec31b883"
+  }
+  index: 3
+  text: ""
+  branches {
+    responseText: "emerita"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_InputKeyboard
+  inputMaxLength: 7
+  sourceInSceneRef {
+    id: "53fedb0e6434314eec31b86b"
+  }
+}
+nodes {
+  idRef {
+    id: "53fee03f6434314eec31b88d"
+  }
+  index: 4
+  text: "You totally looked that up online."
+  branches {
+    responseText: "No, I just know these things."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "So what? That\'s how everyone does crosswords."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "BrooklynsKnewCrossword,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53fed9096434314eec31b85c"
+  }
+  index: 5
+  text: "\"Emerita\"? \n\nWhat the frag does that even mean?"
+  branches {
+    responseText: "A retired female professor."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You like doing crosswords?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "BrooklynsKnewCrossword,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "53fee0b66434314eec31b895"
+  }
+  index: 6
+  text: "I need to brush up on my knowledge if I want to move up in the world, chummer. I ain\'t gonna be stuck on this flea-bitten couch forever. I\'ve got ambition, man.\n\n\'Sides, my piece of drek phone don\'t get a signal here, so I can\'t go online."
+  branches {
+    responseText: "I see"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee21f6434314eec31b8a5"
+  }
+  index: 7
+  text: "Hey, it\'s my friend with the big vocabulary. Siddown!"
+  branches {
+    responseText: " "
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee26f6434314eec31b8a8"
+  }
+  index: 8
+  text: "You need something?"
+  branches {
+    responseText: "Who are you?"
+    nextNodeIndex: 9
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "53fee3bf6434314eec31b8e6"
+    }
+  }
+  branches {
+    responseText: "Got another crossword?"
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Let me see what you\'ve got."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "Not this time."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee2f76434314eec31b8b8"
+  }
+  index: 9
+  text: "The name\'s Kalaheo. Welcome to my office."
+  branches {
+    responseText: "Buying or selling?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee3d46434314eec31b8e8"
+  }
+  index: 10
+  text: "Selling."
+  branches {
+    responseText: "Figures."
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee2d96434314eec31b8b4"
+  }
+  index: 11
+  text: "Nah, man, just this one."
+  branches {
+    responseText: " "
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee3e46434314eec31b8ea"
+  }
+  index: 12
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*KnewCrossword*"
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*KnewCrossword*"
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53fee4db6434314eec31b8ee"
+  }
+  index: 13
+  text: "Sure, here\'s the goods!"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fef1b56434314eec31bb89"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53feea486434314eec31b995"
+  }
+  index: 14
+  text: "Sure! Knocked a few percent off the price for a fellow vocabularist!"
+  branches {
+    responseText: " "
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "53fef1426434314eec31bb87"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "*KnewCrossword*"
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "*KnewCrossword*"
+      }
+    }
+  }
+  nextNodeIndex: 7
+}

@@ -212,6 +212,91 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "Get Down From Roof"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53fedf6d6434314eec31b875"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "53feddce6434314eec31b870"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "53fedd606434314eec31b86f"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Inside Garage Door"
   position {
@@ -435,9 +520,9 @@ regions {
 regions {
   name: "New Region"
   position {
-    x: -138
+    x: -135
     y: -5
-    width: -38
+    width: -68
     height: 57
   }
   enabledAtStart: true
@@ -453,6 +538,57 @@ regions {
   }
   visible_at_start: false
   is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Ladder Down"
+  position {
+    x: -58
+    y: -26
+    width: 1
+    height: -1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "53feddce6434314eec31b870"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: -1
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: true
   directional_light_dir {
     x: -0.5
     y: -1
@@ -572,6 +708,208 @@ characters {
     portrait {
       filename: ""
     }
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -64
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  displayName: "Kalaheo"
+  idRef {
+    id: "53fedb0e6434314eec31b86b"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "53fed42e6434314eec31b84a"
+      turnToFace: true
+    }
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Berlin:Gangers/HumanMaleBerlinGanger_Magnifiker"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 1
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Sword 1 Rebar Pipe"
+    }
+    equipment {
+      prefab_name: "Nitro"
+    }
+    equipment {
+      prefab_name: "Nitro"
+    }
+    equipment {
+      prefab_name: "Jazz"
+    }
+    equipment {
+      prefab_name: "Jazz"
+    }
+    equipment {
+      prefab_name: "Kamikaze"
+    }
+    team_id: "Civilians"
+    char_name: "Kalaheo"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanmale_03b_african"
+    }
+    karma: 8
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -96
+    y: 0
+    z: -29
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53fef1426434314eec31bb87"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Nitro_kalaheo"
+    }
+    equipment {
+      prefab_name: "Nitro_kalaheo"
+    }
+    equipment {
+      prefab_name: "Kamikaze_kalaheo"
+    }
+    equipment {
+      prefab_name: "Jazz_kalaheo"
+    }
+    equipment {
+      prefab_name: "Jazz_kalaheo"
+    }
+    team_id: "Civilians"
+    char_name: "Cheap Drug Stash"
+    pc_spawn_number: -1
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -97
+    y: 0
+    z: -26
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "53fef1b56434314eec31bb89"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Nitro"
+    }
+    equipment {
+      prefab_name: "Nitro"
+    }
+    equipment {
+      prefab_name: "Jazz"
+    }
+    equipment {
+      prefab_name: "Jazz"
+    }
+    equipment {
+      prefab_name: "Kamikaze"
+    }
+    team_id: "Civilians"
+    char_name: "Drug Stash"
+    pc_spawn_number: -1
+    karma: 6
   }
 }
 worldMapLocation {
