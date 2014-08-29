@@ -757,9 +757,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -64
+    x: -63
     y: 0
-    z: -3
+    z: -2
   }
   orientation: ORIENTATION_S
   displayName: "Kalaheo"
@@ -897,9 +897,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -97
+    x: -64
     y: 0
-    z: -26
+    z: 6
   }
   orientation: ORIENTATION_S
   idRef {
