@@ -1,7 +1,7 @@
 minX: -15
-minZ: -136
-numX: 51
-numZ: 135
+minZ: -131
+numX: 53
+numZ: 130
 props {
   name: "morgue_wall_brickCorner01"
   gridPoint {
@@ -1556,9 +1556,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 16
+    x: 15
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1569,9 +1569,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 15
+    x: 14
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1582,9 +1582,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 14
+    x: 13
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1595,9 +1595,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 13
+    x: 12
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1608,9 +1608,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 12
+    x: 11
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1621,9 +1621,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 11
+    x: 10
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1712,9 +1712,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 25
+    x: 24
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1725,9 +1725,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 24
+    x: 23
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1738,9 +1738,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 23
+    x: 22
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1751,9 +1751,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 22
+    x: 21
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1764,9 +1764,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 21
+    x: 20
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1777,9 +1777,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 20
+    x: 19
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1790,9 +1790,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 19
+    x: 18
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1803,9 +1803,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 18
+    x: 17
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1816,9 +1816,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 17
+    x: 16
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1829,9 +1829,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 34
+    x: 33
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1842,9 +1842,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 33
+    x: 32
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1855,9 +1855,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 32
+    x: 31
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1868,9 +1868,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 31
+    x: 30
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1881,9 +1881,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 30
+    x: 29
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1894,9 +1894,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 29
+    x: 28
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1907,9 +1907,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 28
+    x: 27
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1920,9 +1920,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 27
+    x: 26
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1933,9 +1933,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 26
+    x: 25
     y: 0
-    z: -122
+    z: -117
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1946,9 +1946,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 34
+    x: 10
     y: 0
-    z: -121
+    z: -118
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1959,9 +1959,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 34
+    x: 10
     y: 0
-    z: -120
+    z: -121
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1972,9 +1972,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 34
+    x: 10
     y: 0
-    z: -119
+    z: -120
   }
   orientation: ORIENTATION_S
   idRef {
@@ -1985,9 +1985,9 @@ props {
 props {
   name: "system_invisible_solidProp"
   gridPoint {
-    x: 34
+    x: 10
     y: 0
-    z: -118
+    z: -119
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3714,9 +3714,9 @@ props {
 props {
   name: "matrix_wall_door01Near"
   gridPoint {
-    x: 19
+    x: 24
     y: 0
-    z: -125
+    z: -120
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3727,9 +3727,9 @@ props {
 props {
   name: "matrix_wall_door01Far"
   gridPoint {
-    x: 16
+    x: 21
     y: 0
-    z: -125
+    z: -120
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3740,9 +3740,9 @@ props {
 props {
   name: "matrix_floor_door01decor"
   gridPoint {
-    x: 16
+    x: 21
     y: 0
-    z: -126
+    z: -121
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3753,9 +3753,9 @@ props {
 props {
   name: "matrix_floor_4x4var2a"
   gridPoint {
-    x: 16
+    x: 21
     y: 0
-    z: -128
+    z: -123
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3766,9 +3766,9 @@ props {
 props {
   name: "matrix_floor_4x4var2a"
   gridPoint {
-    x: 16
+    x: 21
     y: 0
-    z: -132
+    z: -127
   }
   orientation: ORIENTATION_S
   idRef {
@@ -3779,13 +3779,169 @@ props {
 props {
   name: "matrix_floor_4x4var2a"
   gridPoint {
-    x: 16
+    x: 21
     y: 0
-    z: -136
+    z: -131
   }
   orientation: ORIENTATION_S
   idRef {
     id: "53ff7495643431223206dacb"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 33
+    y: 0
+    z: -74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d0e64343179687c3f34"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 33
+    y: 0
+    z: -73
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1064343179687c3f35"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 33
+    y: 0
+    z: -72
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1264343179687c3f36"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 33
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1464343179687c3f37"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 34
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1964343179687c3f38"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 36
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1d64343179687c3f39"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 35
+    y: 0
+    z: -71
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d1d64343179687c3f3a"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 36
+    y: 0
+    z: -72
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d2564343179687c3f3b"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 36
+    y: 0
+    z: -73
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d2764343179687c3f3c"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 36
+    y: 0
+    z: -74
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d2864343179687c3f3d"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 35
+    y: 0
+    z: -75
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d2a64343179687c3f3e"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 36
+    y: 0
+    z: -75
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54009d2c64343179687c3f3f"
   }
   lod: 0
 }
