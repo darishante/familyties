@@ -1,0 +1,35 @@
+idRef {
+  id: "5400e020643431d9050d04cb"
+}
+ui_name: "s005-gang_encounter"
+nodes {
+  idRef {
+    id: "5400e098643431d9050d04d1"
+  }
+  index: 0
+  text: "{{GM}}A skinny young man with amateurish tattoos spots you. With a couple of his friends, he circles you cautiously, trying to ascertain whether you\'re a threat or an opportunity. Hannah gives him a cold look, but since you\'re the bigger of you two, ganger logic dictates that you are the one in charge.{{/GM}}\n\nHoi! Nice morning, isn\'t it? What are you two up to?\n\n"
+  branches {
+    responseText: "We\'re just looking at the sights. We don\'t want any trouble."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Is the old municipal building this way?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Just keep walking, chummers."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

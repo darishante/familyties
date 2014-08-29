@@ -30,9 +30,10 @@ props {
   gridPoint {
     x: 6
     y: 7
-    z: 5
+    z: 5.5
   }
   orientation: ORIENTATION_S
+  displayName: "Old Timer"
   idRef {
     id: "53e681af64343176a6e50a0d"
   }
