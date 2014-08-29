@@ -961,53 +961,9 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "New Region"
-  position {
-    x: -77
-    y: -13
-    width: 0
-    height: 0
-  }
-  enabledAtStart: true
-  is_camera_region: false
-  idRef {
-    id: "5400cec33736635c08004e7c"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_teleporter_region: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambience_template: ""
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-}
-regions {
   name: "Outside door"
   position {
-    x: -74
+    x: -71
     y: -4
     width: -2
     height: -3
@@ -1289,9 +1245,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -63
+    x: -61
     y: 0
-    z: -2
+    z: -1
   }
   orientation: ORIENTATION_S
   displayName: "Kalaheo"
