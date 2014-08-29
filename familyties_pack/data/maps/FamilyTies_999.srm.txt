@@ -1,7 +1,7 @@
 minX: -2
-minZ: 2
-numX: 12
-numZ: 7
+minZ: 4
+numX: 16
+numZ: 5
 props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
@@ -60,32 +60,6 @@ props {
   lod: 0
 }
 props {
-  name: "sleekOffice_floor_reflected01"
-  gridPoint {
-    x: 7
-    y: 0
-    z: 2
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53e6871c64343176a6e50a17"
-  }
-  lod: 0
-}
-props {
-  name: "sleekOffice_floor_reflected01"
-  gridPoint {
-    x: 7
-    y: 0
-    z: 4
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53e71bf4643431b2b931b787"
-  }
-  lod: 0
-}
-props {
   name: "system_invisible_nonsolidProp"
   gridPoint {
     x: 6
@@ -105,6 +79,61 @@ props {
       inspectText: "Red Hill Park & club area"
       disableAfterInteracting: false
     }
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: 6
+    y: 4
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  displayName: "BrooklynTeleport"
+  idRef {
+    id: "5400ab0764343179687c3f44"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 20
+    transitionPoint {
+      scene_name: "FamilyTies_004"
+      confirmation_text: "Travel to Brooklyn\'s Apartment?"
+    }
+  }
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "diveBar_floor_wood04"
+  gridPoint {
+    x: 10
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "secretLab_wall_fill"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5400b02064343179687c3f4e"
   }
   lod: 0
 }
