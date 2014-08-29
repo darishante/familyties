@@ -4462,62 +4462,6 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Set Variable (string)"
-      args {
-        call_value {
-          functionName: "Get Story Variable (string)"
-          args {
-            string_value: "53da5ef2643431a4970041a8"
-          }
-          args {
-            string_value: "NamesOfDeadPeople"
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Append (string)"
-          args {
-            call_value {
-              functionName: "Get Actor Name"
-              args {
-                call_value {
-                  functionName: "Triggering Target Actor"
-                }
-              }
-            }
-          }
-          args {
-            call_value {
-              functionName: "Get Story Variable (string)"
-              args {
-              }
-              args {
-                string_value: "NamesOfDeadPeople"
-              }
-            }
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Add To Variable (int)"
-      args {
-        call_value {
-          functionName: "Get Story Variable (int)"
-          args {
-            string_value: "53da5ef2643431a4970041a8"
-          }
-          args {
-            string_value: "DeadCitizens"
-          }
-        }
-      }
-      args {
-        int_value: 1
-      }
-    }
-    ops {
       functionName: "Set Variable (int)"
       args {
         call_value {
@@ -4532,6 +4476,23 @@ triggers {
       }
       args {
         int_value: 3
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        string_value: "OmahaInjuredPeople,"
       }
     }
   }
@@ -7608,6 +7569,7 @@ characters {
     portrait_code_override: "s4h6c1"
     karma: 41
     is_prop_character: true
+    persistent_body: true
   }
 }
 characters {
@@ -7657,6 +7619,7 @@ characters {
     }
     portrait_code_override: "s6h5b0"
     karma: 30
+    persistent_body: true
   }
 }
 characters {
@@ -7761,6 +7724,7 @@ characters {
     }
     portrait_code_override: "s5h6b0"
     karma: 30
+    persistent_body: true
   }
 }
 characters {
@@ -7879,6 +7843,7 @@ characters {
       filename: "pc_humanfemale_02b_detective"
     }
     karma: 37
+    persistent_body: true
   }
 }
 characters {
@@ -7998,6 +7963,7 @@ characters {
     }
     portrait_code_override: ""
     karma: 43
+    persistent_body: true
   }
 }
 characters {
@@ -8248,6 +8214,7 @@ characters {
       filename: "backer_humanmale_levieranburks"
     }
     karma: 25
+    persistent_body: true
   }
 }
 characters {

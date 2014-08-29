@@ -238,7 +238,7 @@ nodes {
               string_value: "53da5ef2643431a4970041a8"
             }
             args {
-              string_value: "DeadCitizens"
+              string_value: "WantedLevel"
             }
           }
         }
@@ -254,7 +254,7 @@ nodes {
           }
         }
         args {
-          int_value: 0
+          int_value: 2
         }
       }
     }
@@ -272,7 +272,7 @@ nodes {
               string_value: "53da5ef2643431a4970041a8"
             }
             args {
-              string_value: "DeadCitizens"
+              string_value: "WantedLevel"
             }
           }
         }
@@ -283,12 +283,12 @@ nodes {
               string_value: "Comparison Ops"
             }
             args {
-              int_value: 2
+              int_value: 0
             }
           }
         }
         args {
-          int_value: 0
+          int_value: 3
         }
       }
     }
@@ -301,7 +301,7 @@ nodes {
     id: "53e110656434313b6d058fe2"
   }
   index: 8
-  text: "Somehow you made it out without killing anyone. That\'s a small blessing. The police in will be not as devoted to finding a fugitive who\'s not a confirmed cop killer."
+  text: "Somehow you made it out without killing anyone. That\'s a small blessing. The authorities in will be not as devoted to finding a fugitive who\'s not a confirmed cop killer."
   branches {
     responseText: " "
     nextNodeIndex: 10
@@ -314,7 +314,7 @@ nodes {
     id: "53e110656434313b6d058fe5"
   }
   index: 9
-  text: "Inside people died. That\'s going to complicate matters. Now you\'re not just suspected of killing Brooklyn, you\'re pretty much a known killer.\n\nPolice will be looking for you harder. Let them."
+  text: "Inside the fighting was pretty bad. This is not the bad part of town, however, and every police officer and BHS guard in Omaha has DocWagon coverage. They\'ll probably live.\n\nStill, after putting people in hospital, the authorities will be looking for you harder. That might complicate matters down the road."
   branches {
     responseText: " "
     nextNodeIndex: 10
@@ -326,7 +326,7 @@ nodes {
     id: "53e110656434313b6d058fe8"
   }
   index: 10
-  text: "The only thing that matters is Brooklyn. The Seattle PD will never care for a troll murdered in the slums enough to find anyone. It\'s a wonder they cared enough to send someone to question you.\n\nYou\'re going on the next flight to Seattle."
+  text: "The only thing that matters is Brooklyn. Whoever is taking care of the investigation in Seattle will never care for a troll murdered in the slums enough to find the actual culprit. It\'s a wonder they cared enough to send someone to question you.\n\nYou\'re going on the next flight to Seattle."
   nodeType: ConversationNodeType_Simple
 }
 roots {

@@ -287,7 +287,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   branches {
@@ -341,7 +341,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   branches {
@@ -392,7 +392,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 26
+    nextNodeIndex: 27
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -498,7 +498,7 @@ nodes {
   text: "Wiz! Let\'s get moving!"
   branches {
     responseText: " "
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -515,12 +515,12 @@ nodes {
   }
   branches {
     responseText: "I\'m going to regret this, but all right."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "I suppose you know what you\'re doing. Very well. Let\'s do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -631,7 +631,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 20
+    nextNodeIndex: 21
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -640,7 +640,7 @@ nodes {
     id: "53fe10b164343141cc188b94"
   }
   index: 11
-  text: "Y\'know, funny thing I saw on the news. Apparently someone working for Alcamai Cosmetics killed a cop - or several, I don\'t know - in Omaha yesterday morning. They have a name and description and everything - $(story.pc_firstname) $(story.pc_lastname), $+(l.race) $(l.man). There\'s a reward posted for $(l.him), 1500 nuyen. Maybe you might want to claim that instead?"
+  text: "Y\'know, funny thing I saw on the news. Apparently someone working for Alcamai Cosmetics put some police officers in critical condition in Omaha yesterday morning. They have a name and description and everything - $(story.pc_firstname) $(story.pc_lastname), a mild-mannered $+(l.race) $(l.man). There\'s a reward posted for $(l.him), 1500 nuyen. Maybe you might want to claim that instead?"
   branches {
     responseText: "What-"
     nextNodeIndex: 13
@@ -695,7 +695,7 @@ nodes {
   }
   branches {
     responseText: "Damn right I had my reasons. Okay, let\'s do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -708,7 +708,7 @@ nodes {
   text: "The one thing she and I ever saw eye-to-eye on was that you need to take care of your family.\n\nI may have failed to protect Brooklyn, but I\'m not about to fail to protect you."
   branches {
     responseText: " "
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -721,12 +721,12 @@ nodes {
   text: "Maybe you did, maybe you didn\'t. It doesn\'t really matter to me. I\'m here for you, no matter what."
   branches {
     responseText: "Thanks."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "Sorry if I sounded moralizing earlier. I had no right."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -786,7 +786,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 18
   }
   branches {
     responseText: "You couldn\'t have cleared my name while arranging my escape?"
@@ -820,16 +820,34 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 18
+    nextNodeIndex: 19
   }
   branches {
     responseText: "Well, when you put it that way."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "All right, I get it. Okay, let\'s go do this easy job of yours."
-    nextNodeIndex: 19
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5400830b64343179687c3e19"
+  }
+  index: 18
+  text: "Like hell. That would have left you on the mercy of the police, who don\'t care about anything except getting their suspect. This way you can actually do something about things."
+  branches {
+    responseText: "... I guess."
+    nextNodeIndex: 31
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Fine, whatever, I don\'t have much choice do I?"
+    nextNodeIndex: 31
+    auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -837,16 +855,16 @@ nodes {
   idRef {
     id: "53fe1b2f64343141cc188e84"
   }
-  index: 18
+  index: 19
   text: "You whiny little $(story.insult)! I help you get out of trouble at personal risk, and you moan and gripe that I didn\'t do more?\n\nNo, I couldn\'t have cleared your record just like that. I may, at some point, but frankly right now I think I\'ma charge you for it, just because you are a thankless, insufferable little prat!"
   branches {
     responseText: "Seems like I\'ve got no choice. Okay, let\'s go do your job."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "... sorry. I shouldn\'t ... I mean, thanks for getting me out. And you\'re right. Let\'s do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -874,16 +892,16 @@ nodes {
   idRef {
     id: "53fe1ca064343141cc188f0d"
   }
-  index: 19
+  index: 20
   text: "Was that sarcasm?"
   branches {
     responseText: "Yes"
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "No"
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -892,15 +910,15 @@ nodes {
   idRef {
     id: "53fe1f0564343141cc189089"
   }
-  index: 20
+  index: 21
   text: "Fine! Then tell me your brilliant plan of raising enough money to do an investigation. Maybe you\'d like to fly back to Omaha, work your ass off - if they still want you - and wire me the nuyen while the trail grows cold?\n\nOne thing I\'m sure about though; if you were lying cold in a city morgue, and Brooklyn was investigating your murder with me, she wouldn\'t gripe because she had to do something a little out of her comfort zone. You already flew here, that was a good start - now follow through!"
   branches {
     responseText: "That was a low blow."
-    nextNodeIndex: 21
+    nextNodeIndex: 22
   }
   branches {
     responseText: "I could apply for a loan..."
-    nextNodeIndex: 22
+    nextNodeIndex: 23
   }
   branches {
     responseText: "I\'ve got friends who\'ll lend me money."
@@ -953,11 +971,11 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 23
+    nextNodeIndex: 24
   }
   branches {
     responseText: "All right, I get it. Okay, I\'ll help you do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -966,16 +984,16 @@ nodes {
   idRef {
     id: "53fe206b64343141cc189098"
   }
-  index: 21
+  index: 22
   text: "It\'s true, though. She would do it. Hell, if you\'d died in a suspicious watercooler accident, I\'d go fragging undercover in your company and wear a tie and all that drek in order to get the bastards who did it. It\'s not like I\'m asking you to attack Aztechnology or something."
   branches {
     responseText: "I don\'t want to imagine you in a tie. All right, let\'s do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "Sheesh, enough already. Okay, I\'ll help you."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -984,16 +1002,16 @@ nodes {
   idRef {
     id: "53fe20fd64343141cc18909e"
   }
-  index: 22
+  index: 23
   text: "I bet the banks are just falling over themselves to give money to people who are facing a murder charge. Yeah, gotta get in on that before the bubble bursts."
   branches {
     responseText: "Okay, okay. I\'ll do it."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "Sheesh, I get it no need to get sarcastic."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1002,15 +1020,15 @@ nodes {
   idRef {
     id: "53fe21cd64343141cc1890a5"
   }
-  index: 23
+  index: 24
   text: "Then call them!\n\nI\'ve noticed that rich friends tend to thin out when you\'re in real trouble, but if you can get someone to bankroll us, so much the better."
   branches {
     responseText: "Alex could finance us easily."
-    nextNodeIndex: 24
+    nextNodeIndex: 25
   }
   branches {
     responseText: "I\'m fairly sure that given enough time, I can find someone who\'s willing to lend us some petty cash."
-    nextNodeIndex: 25
+    nextNodeIndex: 26
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1018,11 +1036,11 @@ nodes {
   idRef {
     id: "53fe222f64343141cc1890a8"
   }
-  index: 24
+  index: 25
   text: "He could. He won\'t take my calls, though. He\'s surrounded by a wall of managers, secretaries, lawyers and doormen. You\'re welcome to try."
   branches {
     responseText: "Last time I tried to talk to him it took me 48 hours, but I eventually got through."
-    nextNodeIndex: 25
+    nextNodeIndex: 26
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1031,7 +1049,7 @@ nodes {
   idRef {
     id: "53fe22a564343141cc1890ab"
   }
-  index: 25
+  index: 26
   text: "Did I mention the trail was growing cold? Waiting around for someone to take your calls is not helping us.\n\nLook, call your rich friends, call Alex, call whoever, but call them after we do this job, okay?"
   nodeType: ConversationNodeType_Simple
 }
@@ -1039,11 +1057,11 @@ nodes {
   idRef {
     id: "53fdfead643431269731f848"
   }
-  index: 26
+  index: 27
   text: "There\'s an old isolated Matrix node in the basement of the abandoned municipal building. It was cut of from the net something like ten years ago. There\'s a load of old infrastructural data still on it.\n\nLong story short, there\'s a cash money reward for that data. However one of the local gangs is squatting near the area where the terminal for the node is. They are probably not going to start anything, but no way am I sitting down in their turf unguarded. Someone just might get the idea to slice my throat for the hell of it."
   branches {
     responseText: "800 sounds like a pretty big sum to pay just for some infrastructural data."
-    nextNodeIndex: 27
+    nextNodeIndex: 28
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -1052,7 +1070,7 @@ nodes {
   }
   branches {
     responseText: "Which gang is this and who are they affiliated with?"
-    nextNodeIndex: 28
+    nextNodeIndex: 29
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -1061,7 +1079,7 @@ nodes {
   }
   branches {
     responseText: "Alright, let\'s do this."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1069,11 +1087,11 @@ nodes {
   idRef {
     id: "53fe0161643431269731f84e"
   }
-  index: 27
+  index: 28
   text: "Red Hill has been hit with quite a few catastrophes in the last century, and a lot of stuff has just been lost. The records on, for instance, the sewers or the power cables, are practically nonexistent. A couple of local companies doing repair work and stuff like that have pooled their resources to pay for that data.\n\n... But yeah, they are not paying 800 for that, they\'re only offering 400. I figure there\'s some other stuff in there that\'s worth 400, some old municipal payroll codes and the like, which have no owner at present. If we can grab both sets of data, we can clear out a nice, tidy sum for a day\'s work."
   branches {
     responseText: "I see."
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1082,16 +1100,16 @@ nodes {
   idRef {
     id: "53fe02e1643431269731f85a"
   }
-  index: 28
+  index: 29
   text: "The Placeholders. They are just a bunch of street thugs without any big name connections. Not really bad as those things go, but y\'know, it\'s their territory. Somebody just might be having a really bad day or something."
   branches {
     responseText: "Got it."
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Etiquette: Gang{{/CC}} I think I\'ve met someone who was with them once."
-    nextNodeIndex: 29
+    nextNodeIndex: 30
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1099,16 +1117,16 @@ nodes {
   idRef {
     id: "53fe03a6643431269731f86b"
   }
-  index: 29
+  index: 30
   text: "Okay, is that good news or bad news?"
   branches {
     responseText: "I should be able to reason with them."
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   branches {
     responseText: "It\'s not bad news."
-    nextNodeIndex: 26
+    nextNodeIndex: 27
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1117,7 +1135,7 @@ nodes {
   idRef {
     id: "53fe03fd643431269731f873"
   }
-  index: 30
+  index: 31
   text: "Do you need anything before we go? I should have some spare gear lying around here somewhere."
   branches {
     responseText: "Give me a gun."
@@ -1207,7 +1225,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 31
+    nextNodeIndex: 32
   }
   branches {
     responseText: "Something sharp for self defense, just in case."
@@ -1291,7 +1309,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 32
+    nextNodeIndex: 33
   }
   branches {
     responseText: "Got a spare deck?"
@@ -1378,7 +1396,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 33
+    nextNodeIndex: 34
   }
   branches {
     responseText: "You wouldn\'t have a drone in this garabge heap?"
@@ -1462,7 +1480,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 35
+    nextNodeIndex: 36
   }
   branches {
     responseText: "This is probably not your cup of tea, but have you got anything with a bit of magic in it?"
@@ -1546,7 +1564,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 38
+    nextNodeIndex: 39
   }
   branches {
     responseText: "A grenade or two would be nice."
@@ -1630,7 +1648,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 39
+    nextNodeIndex: 40
   }
   branches {
     responseText: "I think I\'m good."
@@ -1642,7 +1660,7 @@ nodes {
   idRef {
     id: "53fe2dc564343141cc189492"
   }
-  index: 31
+  index: 32
   text: "Here\'s an old sawed-off shotgun, will that do?"
   branches {
     responseText: "Sure"
@@ -1689,7 +1707,7 @@ nodes {
   }
   branches {
     responseText: "On second thought give me something else."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1698,7 +1716,7 @@ nodes {
   idRef {
     id: "53fe2e8564343141cc189537"
   }
-  index: 32
+  index: 33
   text: "This is my favorite steak knife. The steaks around here are really tough."
   branches {
     responseText: "It certainly looks menacing enough."
@@ -1738,12 +1756,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "On second thought give me something else."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1752,20 +1770,20 @@ nodes {
   idRef {
     id: "53fe2d4364343141cc18947e"
   }
-  index: 33
+  index: 34
   text: "Sure... but you are not going to need it. I\'m going to be doing the decking, you\'ll do the watching."
   branches {
     responseText: "Have you ever been to a municipal Matrix node? I have."
-    nextNodeIndex: 34
+    nextNodeIndex: 35
   }
   branches {
     responseText: "No, I think it will be better the other way around."
-    nextNodeIndex: 34
+    nextNodeIndex: 35
     auxiliaryLink: true
   }
   branches {
     responseText: "On second thought, yeah, give me something else."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1774,11 +1792,11 @@ nodes {
   idRef {
     id: "53fe308864343141cc189559"
   }
-  index: 34
+  index: 35
   text: "... I\'m not convinced, but here\'s the deck."
   branches {
     responseText: "Perfect."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1891,7 +1909,7 @@ nodes {
   idRef {
     id: "53fe351b64343141cc189781"
   }
-  index: 35
+  index: 36
   text: ""
   branches {
     responseText: ""
@@ -1925,7 +1943,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 36
+    nextNodeIndex: 37
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -1934,7 +1952,7 @@ nodes {
   }
   branches {
     responseText: ""
-    nextNodeIndex: 37
+    nextNodeIndex: 38
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1942,16 +1960,16 @@ nodes {
   idRef {
     id: "53fe35eb64343141cc189c4b"
   }
-  index: 36
+  index: 37
   text: "I\'m not sure I can give you one. What if you get distracted by its sexiness?"
   branches {
     responseText: "It\'s a chance you\'ll just have to take."
-    nextNodeIndex: 37
+    nextNodeIndex: 38
     auxiliaryLink: true
   }
   branches {
     responseText: "Hannah."
-    nextNodeIndex: 37
+    nextNodeIndex: 38
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1960,7 +1978,7 @@ nodes {
   idRef {
     id: "53fe363764343141cc189c4f"
   }
-  index: 37
+  index: 38
   text: "{{GM}}Hannah points at a really dusty old Doberman under a pile of spare parts.{{/GM}}"
   branches {
     responseText: "Come to me, my pretty!"
@@ -2030,7 +2048,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
@@ -2071,12 +2089,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "On second thought, yeah, give me something else."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2085,7 +2103,7 @@ nodes {
   idRef {
     id: "53fe390f64343141cc189c9d"
   }
-  index: 38
+  index: 39
   text: "I\'m not really sure. I think that piece of crystal there is some kind of magical focus?"
   branches {
     responseText: "Let\'s see."
@@ -2125,12 +2143,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "On second thought, yeah, give me something else."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -2139,7 +2157,7 @@ nodes {
   idRef {
     id: "53fe3a2764343141cc189cea"
   }
-  index: 39
+  index: 40
   text: "I hope that flashbang I\'ve been using as a paperweight still works. Be careful with the pin, I think it\'s loose."
   branches {
     responseText: "... I am just going to assume that you\'re kidding and that the grenade is perfectly safe."
@@ -2179,12 +2197,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   branches {
     responseText: "Yeah, I\'m not touching that."
-    nextNodeIndex: 30
+    nextNodeIndex: 31
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
