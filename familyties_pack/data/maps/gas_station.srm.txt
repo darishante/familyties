@@ -1,6 +1,6 @@
-minX: -265
+minX: -269
 minZ: -149
-numX: 279
+numX: 283
 numZ: 312
 props {
   name: "undergroundBase_floor_oldCement04"
@@ -1592,7 +1592,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -16.82
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: -39.34
   }
   orientation: ORIENTATION_E
@@ -1752,7 +1752,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: -2.4286129e-17
+    y: -2.4286129e-017
     z: -35.23
   }
   orientation: ORIENTATION_S
@@ -2178,7 +2178,7 @@ props {
   name: "sleekOffice_storage_polyCabinet02"
   gridPoint {
     x: -17.64
-    y: 3.1225023e-17
+    y: 3.1225023e-017
     z: -37.57
   }
   orientation: ORIENTATION_E
@@ -2737,7 +2737,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: 3.469447e-18
+    y: 3.469447e-018
     z: -37.21
   }
   orientation: ORIENTATION_S
@@ -13270,7 +13270,7 @@ props {
   name: "barrens_street_dumpster01"
   gridPoint {
     x: -72.3
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: 9.7
   }
   orientation: ORIENTATION_S
@@ -31130,9 +31130,9 @@ props {
 props {
   name: "pikePlace_building_02corner01"
   gridPoint {
-    x: -251
+    x: -266
     y: 0
-    z: 20
+    z: 25
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31140,19 +31140,19 @@ props {
 props {
   name: "pikePlace_building_02roofCorner01"
   gridPoint {
-    x: -260
+    x: -269
     y: 0
-    z: 26
+    z: 20
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
   name: "pikePlace_building_02roofCorner"
   gridPoint {
-    x: -255
+    x: -253
     y: 0
-    z: 15
+    z: 7
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31170,9 +31170,9 @@ props {
 props {
   name: "pikePlace_building_03base03"
   gridPoint {
-    x: -262
+    x: -261
     y: 0
-    z: 20
+    z: 19
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31180,9 +31180,9 @@ props {
 props {
   name: "pikePlace_building_03baseCorner01"
   gridPoint {
-    x: -257
+    x: -259
     y: 0
-    z: 11
+    z: 10
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31200,9 +31200,9 @@ props {
 props {
   name: "pikePlace_building_03base02"
   gridPoint {
-    x: -252
+    x: -255
     y: 0
-    z: 1
+    z: 4
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31210,9 +31210,9 @@ props {
 props {
   name: "pikePlace_building_03edge04"
   gridPoint {
-    x: -265
-    y: 0
-    z: 12
+    x: -247
+    y: 4.01
+    z: 29
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31240,7 +31240,7 @@ props {
 props {
   name: "barrens_street_taxiKiosk"
   gridPoint {
-    x: -240
+    x: -239.55
     y: 0
     z: 16
   }
@@ -31423,9 +31423,9 @@ props {
 props {
   name: "barrens_building_03corner06"
   gridPoint {
-    x: -246
-    y: 0
-    z: 23
+    x: -242
+    y: 4.01
+    z: 27
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31459,9 +31459,9 @@ props {
 props {
   name: "barrens_building_03corner06"
   gridPoint {
-    x: -248
-    y: 0
-    z: 25
+    x: -244
+    y: 4.01
+    z: 29
   }
   orientation: ORIENTATION_E
   idRef {
@@ -31485,19 +31485,19 @@ props {
 props {
   name: "barrens_building_03edge01"
   gridPoint {
-    x: -231
-    y: 0
-    z: 4
+    x: -250
+    y: 4.01
+    z: 29
   }
-  orientation: ORIENTATION_S
+  orientation: ORIENTATION_E
   lod: 0
 }
 props {
   name: "barrens_building_03edge05"
   gridPoint {
-    x: -246
-    y: 0
-    z: 20
+    x: -242
+    y: 4.01
+    z: 22
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31505,9 +31505,9 @@ props {
 props {
   name: "barrens_building_03edge04"
   gridPoint {
-    x: -246
-    y: 0
-    z: 17
+    x: -242
+    y: 4.01
+    z: 19
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31515,9 +31515,9 @@ props {
 props {
   name: "barrens_building_03edge12"
   gridPoint {
-    x: -246
-    y: 0
-    z: 14
+    x: -242
+    y: 4.01
+    z: 16.1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31583,16 +31583,6 @@ props {
   idRef {
     id: "540227603736636c0e003e46"
   }
-  lod: 0
-}
-props {
-  name: "mitte_wallDecoration_smallDecal01"
-  gridPoint {
-    x: -234
-    y: 0.55
-    z: 25
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -31680,9 +31670,9 @@ props {
 props {
   name: "factory_wallDecoration_displayMonitor01"
   gridPoint {
-    x: -242
-    y: 3.68
-    z: 18.46
+    x: -241
+    y: 4.66
+    z: 19.46
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -31690,10 +31680,49 @@ props {
 props {
   name: "factory_wallDecoration_displayMonitor01_lights"
   gridPoint {
-    x: -242
-    y: 3.68
-    z: 18.46
+    x: -241
+    y: 4.66
+    z: 19.46
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_03edge05"
+  gridPoint {
+    x: -242
+    y: 4.01
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5402307e373663dc1400447e"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_03edge12"
+  gridPoint {
+    x: -253
+    y: 4.01
+    z: 29.1
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "540230bb373663dc1400447f"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_building_03base13"
+  gridPoint {
+    x: -253
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "54023108373663dc14004480"
+  }
   lod: 0
 }
