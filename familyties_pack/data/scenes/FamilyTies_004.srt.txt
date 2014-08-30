@@ -1440,6 +1440,94 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "New Region"
+  position {
+    x: -241
+    y: 63
+    width: 0
+    height: 0
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "54021dcb3736636c0e003e27"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Lone star"
+  position {
+    x: -228
+    y: 16
+    width: -27
+    height: 90
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "54021de13736636c0e003e29"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 patrolRoutes {
   name: "New Patrol Route"
   pathType: 0
