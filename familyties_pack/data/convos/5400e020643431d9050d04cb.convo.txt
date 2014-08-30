@@ -9,23 +9,147 @@ nodes {
   index: 0
   text: "{{GM}}A skinny young man with amateurish tattoos spots you. With a couple of his friends, he circles you cautiously, trying to ascertain whether you\'re a threat or an opportunity. Hannah gives him a cold look, but since you\'re the bigger of you two, ganger logic dictates that you are the one in charge.{{/GM}}\n\nHoi! Nice morning, isn\'t it? What are you two up to?\n\n"
   branches {
-    responseText: "We\'re just looking at the sights. We don\'t want any trouble."
-    nextNodeIndex: -1
-  }
-  branches {
     responseText: "Is the old municipal building this way?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "We\'re just looking at the sights. We don\'t want any trouble."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Just keep walking, chummers, and you\'keep having a nice morning."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Haau Rainmakers. What does the wind tell you?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540175fc6434314d1e7268f3"
+  }
+  index: 1
+  text: "You lost? We can help you out. Let me and my brothers take you where you want to go."
+  branches {
+    responseText: "Thank you, that would be nice."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "No need, we\'re fine."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54017dcd6434314d1e726966"
+  }
+  index: 2
+  text: "{{GM}}Hannah looks at you in exasperation, but says nothing, as the Rainmakers would hear. She casually puts her hand on her SMG, but doesn\'t do anything stupid.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540176c96434314d1e7268f8"
+  }
+  index: 3
+  text: "It\'s a troublesome area, chummers. You need to watch your hoop in these parts."
+  branches {
+    responseText: "We can take care of ourselves."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}100 nuyen{{/CC}} Maybe we can hire you to be our local scouts then."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540180056434314d1e7269c7"
+  }
+  index: 4
+  text: "It doesn\'t look that way to me."
+  branches {
+    responseText: "You\'d be smart not to test it."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Looks can be deceiving."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540177726434314d1e7268fc"
+  }
+  index: 5
+  text: "Is that a threat? Are you threatening a Rainmaker on his home ground, stranger?"
+  branches {
+    responseText: "It\'s just a friendly suggestion, don\'t get agitated."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Yes. Now scurry along."
     nextNodeIndex: -1
   }
   branches {
-    responseText: "Just keep walking, chummers."
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} You know what happens when gang trash and professionals have an argument? It does not end well for the gang trash."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5401787b6434314d1e726901"
+  }
+  index: 6
+  text: "Well here\'s my friendly suggestion: you hand over your cash and your valuables, and you get to walk out of here instead of getting left out as a snack for the crows."
+  branches {
+    responseText: "These suggestions are not really very friendly are they?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "No. {{CC}}Attack{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540179446434314d1e726905"
+  }
+  index: 7
+  text: "Oh, to hell with this parlay drek.\n\nYou low-lives: get the hell out of our way right this instant or we\'ll blow you away."
+  branches {
+    responseText: "Hannah-"
     nextNodeIndex: -1
   }
   branches {
-    responseText: ""
+    responseText: "{{CC}}Put your hand on your weapon{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54017cb36434314d1e726924"
+  }
+  index: 8
+  text: "{{GM}}The Rainmakers measure you and Half Shatter, calculating whether they can take you. They wisely decide that they don\'t want to take the chance.{{/GM}}\n\nYou run along now, Runners. Long as you don\'t mess with the Rainmakers, and the Rainmakers don\'t mess with you."
+  branches {
+    responseText: "All right."
     nextNodeIndex: -1
   }
   branches {
-    responseText: ""
+    responseText: "Yeah, on second thought I don\'t want you behind our backs. {{CC}}Attack{{/CC}}"
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
