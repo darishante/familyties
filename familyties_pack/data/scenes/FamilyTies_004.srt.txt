@@ -513,6 +513,222 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "to to SHATTERCAVE"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54017fbd3736634c1500012c"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "54017f5a3736634c15000128"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 7
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54017ff43736634c1500012d"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "from the SHATTERCAVE"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54017fb03736634c1500012a"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "54017f063736634c15000127"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Camera To Actor"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "540180a73736634c1500012e"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Inside Garage Door"
   position {
@@ -727,7 +943,7 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: ""
+  ambience_template: "slums-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -771,7 +987,7 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: "office-quiet"
+  ambience_template: "slums-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -855,16 +1071,16 @@ regions {
     z: -0.75
   }
   directional_light_color {
-    r: 0.39215687
-    g: 0.39215687
-    b: 0.39215687
-    a: 0.39215687
+    r: 0.33333334
+    g: 0.33333334
+    b: 0.33333334
+    a: 0.33333334
   }
   ambient_light_color {
-    r: 0.39215687
-    g: 0.39215687
-    b: 0.39215687
-    a: 0.39215687
+    r: 0.35294119
+    g: 0.33333334
+    b: 0.33333334
+    a: 0.33333334
   }
   ambience_template: "tenement-quiet"
   combat_music: ""
@@ -1075,18 +1291,18 @@ regions {
     z: -0.75
   }
   directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.34117648
+    g: 0.32549021
+    b: 0.32549021
+    a: 0.78431374
   }
   ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.34117648
+    g: 0.32549021
+    b: 0.32549021
+    a: 0.78431374
   }
-  ambience_template: ""
+  ambience_template: "underground-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -1130,6 +1346,94 @@ regions {
     b: 0.50196081
     a: 1
   }
+  ambience_template: "downtown-night"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Entrance to ShatterCave"
+  position {
+    x: -204
+    y: 146
+    width: -3
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "54017f063736634c15000127"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "Outrance to scattecave"
+  position {
+    x: -190
+    y: 154
+    width: 3
+    height: -3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "54017f5a3736634c15000128"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
   ambience_template: ""
   combat_music: ""
   default_music: ""
@@ -1147,9 +1451,9 @@ patrolRoutes {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -55
+    x: -200
     y: -0.35
-    z: -28
+    z: 143
   }
   orientation: ORIENTATION_N
   idRef {
