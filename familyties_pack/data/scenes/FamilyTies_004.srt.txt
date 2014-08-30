@@ -403,7 +403,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "ulos rapusta"
@@ -511,7 +511,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "to to SHATTERCAVE"
@@ -619,7 +619,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "from the SHATTERCAVE"
@@ -727,7 +727,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 regions {
   name: "Inside Garage Door"
@@ -1267,10 +1267,10 @@ regions {
 regions {
   name: "Shattercave"
   position {
-    x: -186
-    y: 150
-    width: -7
-    height: 5
+    x: -187
+    y: 148
+    width: -9
+    height: 7
   }
   enabledAtStart: true
   is_camera_region: true

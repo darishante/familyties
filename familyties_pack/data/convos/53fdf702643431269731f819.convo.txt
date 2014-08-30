@@ -1120,12 +1120,12 @@ nodes {
   index: 30
   text: "Okay, is that good news or bad news?"
   branches {
-    responseText: "I should be able to reason with them."
+    responseText: "They\'re faux Native Americans, who wish they were on the other side of the fence. I should be able to reason with them."
     nextNodeIndex: 27
     auxiliaryLink: true
   }
   branches {
-    responseText: "It\'s not bad news."
+    responseText: "It\'s not bad news. We can deal."
     nextNodeIndex: 27
     auxiliaryLink: true
   }
