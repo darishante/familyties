@@ -3,7 +3,7 @@ project_name: "familyties_pack"
 project_version: "1"
 author_name: "Dare"
 synopsis: "Family Ties content"
-has_story: true
+has_story: false
 preview_image: "preview"
 content_pack_dependencies {
   package_id: "518d7671643431b03f0041a8"
