@@ -12711,6 +12711,9 @@ props {
     z: -15
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "54034e246434313a43980fd7"
+  }
   lod: 0
 }
 props {
@@ -24991,6 +24994,15 @@ props {
     z: 130
   }
   orientation: ORIENTATION_S
+  displayName: "BrooklynsAptDoor"
+  idRef {
+    id: "540336206434313a43980f61"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -25001,8 +25013,111 @@ props {
     z: 128
   }
   orientation: ORIENTATION_S
+  displayName: "WallOverGrate"
   idRef {
     id: "53ff5e07373663200e000f74"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 10
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 8
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 2
+                }
+              }
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Inspect
   }
   lod: 0
 }
@@ -25014,8 +25129,14 @@ props {
     z: 122
   }
   orientation: ORIENTATION_S
+  displayName: "NeighborDoorLeft"
   idRef {
     id: "53ff5e15373663200e000f75"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }
@@ -25066,8 +25187,14 @@ props {
     z: 136
   }
   orientation: ORIENTATION_S
+  displayName: "NeighborDoorRight"
   idRef {
     id: "53ff5e37373663200e000f7a"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }
@@ -25089,6 +25216,14 @@ props {
     z: 130.92
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "5403356f6434313a43980f4a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
   lod: 0
 }
 props {
@@ -25846,8 +25981,35 @@ props {
     z: 120
   }
   orientation: ORIENTATION_S
+  displayName: "AptGrateIn"
   idRef {
     id: "53ff76e53736633c15000f64"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Actor Is A Controlled Spirit Or Drone"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -26242,6 +26404,15 @@ props {
     z: 130.01
   }
   orientation: ORIENTATION_S
+  displayName: "BrooklynInsideDoor"
+  idRef {
+    id: "54033ff26434313a43980f9e"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
+  }
   lod: 0
 }
 props {
@@ -28409,8 +28580,35 @@ props {
     z: 128
   }
   orientation: ORIENTATION_S
+  displayName: "HallwayGrate"
   idRef {
     id: "5400d2563736635c08004e82"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Actor Is A Controlled Spirit Or Drone"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -29275,8 +29473,35 @@ props {
     z: 151.56
   }
   orientation: ORIENTATION_S
+  displayName: "HallGrateOut"
   idRef {
     id: "5400ee14373663140500012f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Actor Is A Controlled Spirit Or Drone"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -29288,8 +29513,35 @@ props {
     z: 149.56
   }
   orientation: ORIENTATION_E
+  displayName: "AptGrateOut"
   idRef {
     id: "5400ee633736631405000130"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Actor Is A Controlled Spirit Or Drone"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }

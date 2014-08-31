@@ -14,19 +14,15 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Decking 3{{/CC}} Hack the lock"
-    nextNodeIndex: 2
-  }
-  branches {
-    responseText: "{{CC}}Shotgun / Grenade / Fireball{{/CC}} Blast the door open, never mind the noise."
     nextNodeIndex: 3
   }
   branches {
-    responseText: "Look for alternate ways in"
+    responseText: "{{CC}}Shotgun / Grenade / Fireball{{/CC}} Blast the door open, never mind the noise."
     nextNodeIndex: 4
   }
   branches {
-    responseText: "Leave"
-    nextNodeIndex: -1
+    responseText: "Look for alternate ways in"
+    nextNodeIndex: 5
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -36,21 +32,73 @@ nodes {
   }
   index: 1
   text: "The lock breaks under your might."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540335f96434313a43980f5f"
+  }
+  index: 2
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "540336206434313a43980f61"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Delete Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5403356f6434313a43980f4a"
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
     id: "54018edb6434318c2b726950"
   }
-  index: 2
+  index: 3
   text: "The Lone Star lock is not a particularily difficult piece of ware, and you get past it in no time."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
     id: "54018ef56434318c2b726952"
   }
-  index: 3
+  index: 4
   text: "This is probably a really bad idea."
   branches {
     responseText: "Do it anyway"
@@ -67,9 +115,81 @@ nodes {
   idRef {
     id: "54018eac6434318c2b72694c"
   }
-  index: 4
+  index: 5
   text: "You look around the corridor for other means of entry."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e15373663200e000f75"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e37373663200e000f7a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e07373663200e000f74"
+          }
+        }
+      }
+    }
+  }
 }
 roots {
   nextNodeIndex: 0

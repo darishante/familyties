@@ -1,0 +1,140 @@
+idRef {
+  id: "540339bf6434313a43980f6f"
+}
+ui_name: "s004-grateway-activate"
+nodes {
+  idRef {
+    id: "54033b3d6434313a43980f7d"
+  }
+  index: 0
+  text: "A small grate just under your feet seems to be loose. However, only a young child, a really tiny Dwarf, a drone or an air or water spirit could fit through."
+  branches {
+    responseText: "{{CC}}Enter Turn mode to send something through{{/CC}}"
+    actions {
+      ops {
+        functionName: "Enable/Disable Manual Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Do nothing."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54033bfe6434313a43980f87"
+  }
+  index: 1
+  text: "A small grate just under your feet seems to be loose. However, only a young child, a really tiny Dwarf, a drone or an air or water spirit could fit through."
+  branches {
+    responseText: "{{CC}}Enter Freemove{{/CC}}"
+    actions {
+      ops {
+        functionName: "Enable/Disable Manual Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop3"
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Do nothing."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Evaluate Turn Mode"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TurnBasedOrFreeMove"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 1
+}
