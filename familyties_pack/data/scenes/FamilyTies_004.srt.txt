@@ -1489,7 +1489,7 @@ regions {
   position {
     x: -228
     y: 16
-    width: -27
+    width: -25
     height: 90
   }
   enabledAtStart: true
@@ -1539,9 +1539,9 @@ patrolRoutes {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -200
+    x: -234
     y: -0.35
-    z: 143
+    z: 94
   }
   orientation: ORIENTATION_N
   idRef {

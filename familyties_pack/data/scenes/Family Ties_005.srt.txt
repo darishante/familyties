@@ -46,7 +46,7 @@ regions {
   name: "maintenance area"
   position {
     x: -47
-    y: 35
+    y: 34
     width: -23
     height: 28
   }
