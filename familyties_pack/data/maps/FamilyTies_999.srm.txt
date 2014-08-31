@@ -138,3 +138,25 @@ props {
   }
   lod: 0
 }
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 6
+    y: 8
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  displayName: "MunicipalBuilding"
+  idRef {
+    id: "5402e3786434310f2137ee65"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 20
+    transitionPoint {
+      scene_name: "Family Ties_005"
+      confirmation_text: "Travel to Old Municipal Building?"
+    }
+  }
+  lod: 0
+}
