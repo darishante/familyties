@@ -46,9 +46,9 @@ regions {
   name: "maintenance area"
   position {
     x: -47
-    y: 34
+    y: 26
     width: -25
-    height: 28
+    height: 35
   }
   enabledAtStart: true
   is_camera_region: true
