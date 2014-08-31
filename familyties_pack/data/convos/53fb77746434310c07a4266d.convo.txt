@@ -4241,7 +4241,7 @@ roots {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "54030b8e643431562664f6fe"
           }
         }
       }
@@ -4293,7 +4293,7 @@ roots {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "54030b8e643431562664f6fe"
           }
         }
       }

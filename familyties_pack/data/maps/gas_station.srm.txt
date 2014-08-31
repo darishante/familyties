@@ -1592,7 +1592,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -16.82
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -39.34
   }
   orientation: ORIENTATION_E
@@ -1752,7 +1752,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: -2.4286129e-017
+    y: -2.4286129e-17
     z: -35.23
   }
   orientation: ORIENTATION_S
@@ -2178,7 +2178,7 @@ props {
   name: "sleekOffice_storage_polyCabinet02"
   gridPoint {
     x: -17.64
-    y: 3.1225023e-017
+    y: 3.1225023e-17
     z: -37.57
   }
   orientation: ORIENTATION_E
@@ -2737,7 +2737,7 @@ props {
   name: "school_wall_stripeEdge01"
   gridPoint {
     x: -18.95
-    y: 3.469447e-018
+    y: 3.469447e-18
     z: -37.21
   }
   orientation: ORIENTATION_S
@@ -13263,7 +13263,7 @@ props {
   name: "barrens_street_dumpster01"
   gridPoint {
     x: -72.3
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 9.7
   }
   orientation: ORIENTATION_S
@@ -19322,8 +19322,14 @@ props {
     z: -38
   }
   orientation: ORIENTATION_S
+  displayName: "RoadToLoneStar"
   idRef {
     id: "53fb856e37366328060015e0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -28557,6 +28563,19 @@ props {
     z: 153.32
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "5403190c643431c333981002"
+  }
+  interactionRoot {
+    isEnabled: false
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "A photograph of your family in Saskatoon, taken in 2063 or something like that."
+      disableAfterInteracting: false
+    }
+  }
   lod: 0
 }
 props {
@@ -28637,6 +28656,19 @@ props {
     z: 151
   }
   orientation: ORIENTATION_E
+  idRef {
+    id: "5403198b643431c333981005"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    inspectInteraction {
+      dispalyTime: 0
+      fadeTime: 0
+      inspectText: "A photograph of your family in Saskatoon, taken in 2063"
+      disableAfterInteracting: false
+    }
+  }
   lod: 0
 }
 props {
@@ -29492,6 +29524,15 @@ props {
     z: -24
   }
   orientation: ORIENTATION_S
+  displayName: "LadderBottom"
+  idRef {
+    id: "54030efd643431562664f73f"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -32011,6 +32052,11 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5402b2ad3736630c1900442a"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }

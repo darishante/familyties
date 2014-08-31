@@ -51,7 +51,16 @@ nodes {
     id: "54018ef56434318c2b726952"
   }
   index: 3
-  text: "With a terrible blast, the door flies open. Fire alarms start blaring, nosy neighbors rush into the hallway, and you can just about imagine a Lone Star patrol in the neighborhood getting interested."
+  text: "This is probably a really bad idea."
+  branches {
+    responseText: "Do it anyway"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Come to your senses."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
