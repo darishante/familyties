@@ -28028,7 +28028,7 @@ props {
     id: "54017fbd3736634c1500012c"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
     interactionIcon: InteractionIcon_Warp
   }
@@ -28569,11 +28569,9 @@ props {
   interactionRoot {
     isEnabled: false
     interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 0
-      fadeTime: 0
-      inspectText: "A photograph of your family in Saskatoon, taken in 2063 or something like that."
-      disableAfterInteracting: false
+    conversationPoint {
+      conversationID: "53fb5b5f6434310c07a415d6"
+      turnToFace: true
     }
   }
   lod: 0

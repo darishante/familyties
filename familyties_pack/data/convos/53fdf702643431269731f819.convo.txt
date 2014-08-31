@@ -1652,7 +1652,7 @@ nodes {
   }
   branches {
     responseText: "I think I\'m good."
-    nextNodeIndex: -1
+    nextNodeIndex: 41
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -2206,6 +2206,60 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5403259e643431c3339821cb"
+  }
+  index: 41
+  text: "All right! Off we go!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 42
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540325a4643431c3339821ce"
+  }
+  index: 42
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "Family Ties_005"
+          }
+        }
+      }
+    }
+  }
 }
 roots {
   nextNodeIndex: 0

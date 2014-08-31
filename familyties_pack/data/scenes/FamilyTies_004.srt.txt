@@ -1259,6 +1259,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54017fbd3736634c1500012c"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1469,6 +1491,28 @@ triggers {
           functionName: "Get Map Item (InteractableObject)"
           args {
             string_value: "54030b8e643431562664f6fe"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5403190c643431c333981002"
           }
         }
       }
@@ -1746,6 +1790,28 @@ triggers {
           }
           args {
             string_value: "calm"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5403190c643431c333981002"
           }
         }
       }
@@ -2030,6 +2096,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5403190c643431c333981002"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -2189,6 +2277,28 @@ triggers {
       }
       args {
         int_value: 2
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5403190c643431c333981002"
+          }
+        }
       }
     }
   }
@@ -3623,6 +3733,11 @@ characters {
     karma: 38
   }
 }
+goals {
+  name: "Get Inside Brooklyn\'s Apartment"
+  type: GoalType_Primary
+  status: GoalStatus_Started
+}
 worldMapLocation {
   filename: ""
   location {
@@ -3632,9 +3747,9 @@ worldMapLocation {
 }
 mapName: "gas_station"
 parentStory: ""
-scene_title: "New Scene"
+scene_title: "RED HILL: AT BROOKLYN\'S APARTMENT"
 scene_subtitle: ""
-scene_synopsis: ""
+scene_synopsis: "After a short flight and a somewhat painful airport experience you\'ve gotten back to Seattle Metroplex. A series of taxis takes you closer to the old suburb of Red Hill, but you cannot find one that would actually take you all the way. The last fifteen minutes is spent on an old automated subway line.\n\nSleep-deprived and tired, much of the journey passes in a haze. From the subway station you walk into the evening, zombie-like, not paying much attention to your surroundings. Finally, your PDA tells you that you have arrived.\n\nThe apartment building is a terrible dump in a neighborhood of terrible dumps. You have a feeling that at night-time, not even the local Lone Star office that\'s conveniently close is going to offer you much security from muggers."
 scene_image: ""
 scene_continue_button_skip: false
 scene_restore_runner_health: false
@@ -3684,8 +3799,6 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
-}
-character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {

@@ -304,7 +304,7 @@ nodes {
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "53fb4c1e6434310c07a40b3a"
+    id: "54030b8e643431562664f6fe"
   }
 }
 nodes {
@@ -315,7 +315,7 @@ nodes {
   text: "{{GM}}Hannah pants and wheezes, spits out some blood, and then waves her hand at you.{{/GM}}\n\nAlright. Hell. You\'ve learned to fight."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "53fb4c1e6434310c07a40b3a"
+    id: "54030b8e643431562664f6fe"
   }
   actions {
     ops {
@@ -327,7 +327,7 @@ nodes {
             call_value {
               functionName: "Get Map Item (Actor)"
               args {
-                string_value: "53fb4c1e6434310c07a40b3a"
+                string_value: "54030b8e643431562664f6fe"
               }
             }
           }
@@ -389,29 +389,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "53fb6c706434310c07a41e20"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Enable/Disable Interactable Object"
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "EnableOrDisable"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "5403190c643431c333981002"
           }
         }
       }
@@ -465,7 +443,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "54030b8e643431562664f6fe"
           }
         }
       }
@@ -491,7 +469,7 @@ nodes {
   text: "Pussy."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "53fb4c1e6434310c07a40b3a"
+    id: "54030b8e643431562664f6fe"
   }
   actions {
     ops {
@@ -503,7 +481,7 @@ nodes {
             call_value {
               functionName: "Get Map Item (Actor)"
               args {
-                string_value: "53fb4c1e6434310c07a40b3a"
+                string_value: "54030b8e643431562664f6fe"
               }
             }
           }
@@ -548,29 +526,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "53fb6c706434310c07a41e20"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Enable/Disable Interactable Object"
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "EnableOrDisable"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "5403190c643431c333981002"
           }
         }
       }
@@ -608,19 +564,34 @@ nodes {
       }
     }
     ops {
-      functionName: "Order Actor to become a Non-Combatant"
+      functionName: "Set Animation State Of Actor To Animation Modifier"
       args {
         call_value {
-          functionName: "Specific Actor"
+          functionName: "Get Preset Value (string)"
           args {
-            call_value {
-              functionName: "Get Map Item (Actor)"
-              args {
-                string_value: "53fb4c1e6434310c07a40b3a"
-              }
-            }
+            string_value: "AnimationState"
           }
           args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "54030b8e643431562664f6fe"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (AnimationModifiers)"
+          args {
+            string_value: "talking"
+          }
+          args {
+            string_value: "talking"
           }
         }
       }
@@ -635,7 +606,7 @@ nodes {
   text: "... yeah, ok."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "53fb4c1e6434310c07a40b3a"
+    id: "54030b8e643431562664f6fe"
   }
   actions {
     ops {
@@ -647,7 +618,7 @@ nodes {
             call_value {
               functionName: "Get Map Item (Actor)"
               args {
-                string_value: "53fb4c1e6434310c07a40b3a"
+                string_value: "54030b8e643431562664f6fe"
               }
             }
           }
@@ -692,29 +663,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (InteractableObject)"
           args {
-            string_value: "53fb6c706434310c07a41e20"
-          }
-        }
-      }
-    }
-    ops {
-      functionName: "Enable/Disable Interactable Object"
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
-          args {
-            string_value: "EnableOrDisable"
-          }
-          args {
-            int_value: 0
-          }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Map Item (InteractableObject)"
-          args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "5403190c643431c333981002"
           }
         }
       }
@@ -768,7 +717,7 @@ nodes {
         call_value {
           functionName: "Get Map Item (Actor)"
           args {
-            string_value: "53fb4c1e6434310c07a40b3a"
+            string_value: "54030b8e643431562664f6fe"
           }
         }
       }
@@ -794,7 +743,7 @@ nodes {
   text: "In your dreams!"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "53fb4c1e6434310c07a40b3a"
+    id: "54030b8e643431562664f6fe"
   }
 }
 roots {
