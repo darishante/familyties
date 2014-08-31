@@ -4234,15 +4234,6 @@ nodes {
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
-      functionName: "Fade Camera Out"
-      args {
-        float_value: 2
-      }
-      args {
-        float_value: 1
-      }
-    }
-    ops {
       functionName: "Assign Conversation to Actor"
       args {
         call_value {
@@ -4284,40 +4275,35 @@ nodes {
       }
     }
     ops {
-      functionName: "Play Sound"
+      functionName: "Set Variable (string)"
       args {
         call_value {
-          functionName: "Get Map Item (Sound)"
+          functionName: "Get Story Variable (string)"
           args {
-            string_value: "props"
+            string_value: "53da5ef2643431a4970041a8"
           }
           args {
-            string_value: "PDA-Ring1"
+            string_value: "StorySoFar"
           }
         }
       }
       args {
-        float_value: 1
-      }
-      args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Append (string)"
           args {
-            string_value: "bool"
+            string_value: "ShattercaveSlept,"
           }
           args {
-            int_value: 0
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
           }
         }
-      }
-    }
-    ops {
-      functionName: "Fade Camera In"
-      args {
-        float_value: 3
-      }
-      args {
-        float_value: 2
       }
     }
   }

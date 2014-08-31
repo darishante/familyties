@@ -826,7 +826,7 @@ triggers {
   is_oneshot: false
 }
 triggers {
-  name: "Spawn Half Shatter"
+  name: "Half Shatter Turns Up"
   events {
     ops {
       functionName: "On Region Enter"
@@ -881,12 +881,89 @@ triggers {
   }
   actions {
     ops {
-      functionName: "Activate Actor Spawner"
+      functionName: "Change Actor Team"
       args {
         call_value {
-          functionName: "Get Map Item (Actor Reference)"
+          functionName: "Specific Actor"
           args {
-            string_value: "54030b8e643431562664f6fe"
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "54030b8e643431562664f6fe"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor near Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "54030b8e643431562664f6fe"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
           }
         }
       }
@@ -2310,6 +2387,99 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "IntoTheMorning"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "*ShattercaveSlept*"
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 2
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "ambient_tenement"
+          }
+          args {
+            string_value: "WaterDrain"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Fade Camera In"
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 4
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54032beb643431c333982af6"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Inside Garage Door"
   position {
@@ -3646,9 +3816,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -72
+    x: -98
     y: 0
-    z: -3
+    z: -54
   }
   orientation: ORIENTATION_W
   GeneralTags: "halfshatter"
@@ -3686,6 +3856,7 @@ characters {
         authority: 0
         protect_tether_range: 0
         move_speed: 0
+        is_fearless: 1
       }
       skills {
         ranged_combat: 1
@@ -3709,9 +3880,6 @@ characters {
       prefab_name: "CyberdeckKraftwerk1"
     }
     equipment {
-      prefab_name: "PR Medic 1"
-    }
-    equipment {
       prefab_name: "ESP Shield"
     }
     equipment {
@@ -3720,10 +3888,10 @@ characters {
     equipment {
       prefab_name: "PR Killer 1"
     }
-    team_id: "Shadowrunners"
+    team_id: "Civilians"
     char_name: "Half Shatter"
     GeneralTags: "halfshatter"
-    enabled_at_start: false
+    enabled_at_start: true
     pc_spawn_number: -1
     cyberware_jack: "Datajack"
     portrait {
@@ -3737,6 +3905,11 @@ goals {
   name: "Get Inside Brooklyn\'s Apartment"
   type: GoalType_Primary
   status: GoalStatus_Started
+}
+goals {
+  name: "New Scene Goal"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
 }
 worldMapLocation {
   filename: ""
@@ -3799,6 +3972,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
