@@ -47,7 +47,7 @@ regions {
   position {
     x: -47
     y: 34
-    width: -23
+    width: -25
     height: 28
   }
   enabledAtStart: true
@@ -69,18 +69,18 @@ regions {
     z: -0.75
   }
   directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.3137255
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.39215687
   }
   ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.3137255
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.39215687
   }
-  ambience_template: ""
+  ambience_template: "underground-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -89,9 +89,9 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -19
+    x: -53
     y: -0.35
-    z: 64
+    z: 52
   }
   orientation: ORIENTATION_N
   idRef {
