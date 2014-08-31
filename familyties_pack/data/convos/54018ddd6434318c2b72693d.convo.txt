@@ -18,11 +18,42 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Shotgun / Grenade / Fireball{{/CC}} Blast the door open, never mind the noise."
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item Holstered"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "No Condition"
+      }
+    }
     nextNodeIndex: 4
   }
   branches {
     responseText: "Look for alternate ways in"
-    nextNodeIndex: 5
+    nextNodeIndex: 6
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -102,7 +133,7 @@ nodes {
   text: "This is probably a really bad idea."
   branches {
     responseText: "Do it anyway"
-    nextNodeIndex: -1
+    nextNodeIndex: 5
   }
   branches {
     responseText: "Come to your senses."
@@ -113,9 +144,45 @@ nodes {
 }
 nodes {
   idRef {
-    id: "54018eac6434318c2b72694c"
+    id: "540353026434313a43980ff0"
   }
   index: 5
+  text: ""
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Attack Actor With Weapon"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "540353546434313a43980ff1"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "No Effect"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54018eac6434318c2b72694c"
+  }
+  index: 6
   text: "You look around the corridor for other means of entry."
   branches {
     responseText: ""
