@@ -12714,6 +12714,14 @@ props {
   idRef {
     id: "54034e246434313a43980fd7"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "Grenade 1 (Frag)"
+      destroyOnPickup: false
+    }
+  }
   lod: 0
 }
 props {
@@ -29779,7 +29787,7 @@ props {
     id: "54030efd643431562664f73f"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
     interactionIcon: InteractionIcon_Warp
   }
@@ -37085,5 +37093,31 @@ props {
     z: -49
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_dirt05"
+  gridPoint {
+    x: -36
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "540370bf6434313a43981347"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_dirt05"
+  gridPoint {
+    x: -39
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "540370c16434313a43981348"
+  }
   lod: 0
 }
