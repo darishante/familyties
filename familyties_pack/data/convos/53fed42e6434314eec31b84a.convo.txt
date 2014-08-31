@@ -21,6 +21,11 @@ nodes {
     nextNodeIndex: 3
   }
   branches {
+    responseText: "Chummer, I heard there was a murder here yesterday. Have you heard anything about it?"
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  branches {
     responseText: "Thought you were someone else, sorry."
     nextNodeIndex: -1
   }
@@ -275,6 +280,10 @@ nodes {
     nextNodeIndex: 12
   }
   branches {
+    responseText: "Do tou know anything about the murder that happened here a while back?"
+    nextNodeIndex: 15
+  }
+  branches {
     responseText: "Not this time."
     nextNodeIndex: -1
   }
@@ -440,6 +449,153 @@ nodes {
         }
       }
     }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5403629c6434313a43981136"
+  }
+  index: 15
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*KnewCrossword*"
+        }
+      }
+    }
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*KnewCrossword*"
+        }
+      }
+    }
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540362f06434313a4398113e"
+  }
+  index: 16
+  text: "I heard something like that gone down, Lone Star came, looked it over and went their merry way. But I try not to get involved, you know? I\'m a professional, I don\'t like the idea of getting caught in other people\'s messes.\n\n... don\'t tell anyone I told you this, but there\'s a hippie dude living on the roof who tends to see a lot of stuff that happens. He\'s probably the man to ask."
+  branches {
+    responseText: " "
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54030efd643431562664f73f"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540363ff6434313a4398116f"
+  }
+  index: 17
+  text: "I heard something like that gone down. But I try not to get involved, you know? I\'m a professional, I don\'t like the idea of getting caught in other people\'s messes."
+  branches {
+    responseText: " She was my sister. Please."
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: "All right, thanks anyway."
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540364646434313a439811a3"
+  }
+  index: 18
+  text: "That\'s rough. You need something to help you get over the grief maybe? I\'ve got all kinds of stuff."
+  branches {
+    responseText: "Show me."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No thanks."
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
