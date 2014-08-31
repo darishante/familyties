@@ -160,3 +160,24 @@ props {
   }
   lod: 0
 }
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: 5
+    y: 7
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "540387f06434313a439814b6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 20
+    transitionPoint {
+      scene_name: "FamilyTies_100"
+      confirmation_text: "Travel to the Bazaar?"
+    }
+  }
+  lod: 0
+}
