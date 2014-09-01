@@ -17401,6 +17401,14 @@ props {
     z: 121.21
   }
   orientation: ORIENTATION_E
+  idRef {
+    id: "5404a53564343139a5a410c3"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
+  }
   lod: 0
 }
 props {
@@ -17638,6 +17646,14 @@ props {
     z: 126
   }
   orientation: ORIENTATION_E
+  idRef {
+    id: "5404a05064343139a5a40ea7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
+  }
   lod: 0
 }
 props {
@@ -17701,6 +17717,14 @@ props {
     z: 130.79
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "5404a1b464343139a5a40ea9"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
+  }
   lod: 0
 }
 props {
@@ -17711,6 +17735,14 @@ props {
     z: 133
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "5404a2ba64343139a5a40eac"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
+  }
   lod: 0
 }
 props {
@@ -17760,6 +17792,17 @@ props {
     z: 123
   }
   orientation: ORIENTATION_S
+  idRef {
+    id: "5404a86564343139a5a410c6"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "BrooklynPicture"
+      destroyOnPickup: false
+    }
+  }
   lod: 0
 }
 props {

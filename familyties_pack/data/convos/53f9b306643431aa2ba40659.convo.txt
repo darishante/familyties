@@ -57,7 +57,7 @@ nodes {
   }
   branches {
     responseText: "DEBUG: fight"
-    nextNodeIndex: 50
+    nextNodeIndex: 58
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -651,7 +651,7 @@ nodes {
   }
   branches {
     responseText: "Got a clue as to how it was done?"
-    nextNodeIndex: 20
+    nextNodeIndex: 23
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -660,7 +660,7 @@ nodes {
   }
   branches {
     responseText: "Why in the name of Lowfyr was my ancient nickname scrawled on the scene?"
-    nextNodeIndex: 26
+    nextNodeIndex: 34
     hideIfUnavailable: true
     onlyOnce: true
     idRef {
@@ -699,7 +699,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 38
+    nextNodeIndex: 46
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -755,6 +755,10 @@ nodes {
     responseText: "What do you make of it?"
     nextNodeIndex: 18
   }
+  branches {
+    responseText: "Her apartment was really nice. Almost suspiciously nice."
+    nextNodeIndex: 20
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -789,13 +793,59 @@ nodes {
 }
 nodes {
   idRef {
-    id: "53f9cf8e643431aa2ba40768"
+    id: "5404ab7d64343139a5a412b0"
   }
   index: 20
+  text: "I gave her some money whenever I could, she\'d take better care of it than I would anyway. I think she was super good at hunting down bargains."
+  branches {
+    responseText: "No, that\'s not it. My place early in my career as a wageslave wasn\'t half as pretty, although the neighborhood was better. She must have had quite a bit of money."
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404ad7f64343139a5a412c0"
+  }
+  index: 21
+  text: "Life is cheap in Red Hill. I mean, living is cheap. Way cheaper than you\'d expect.\n\nWe might want to look into this HBK connection thing. It\'s not like I knew absolutely everything Brooksy was doing anyway. I was pretty sure I knew most of it but even if we saw each other several times a week, that\'s only like 5% of the total waking hours."
+  branches {
+    responseText: "\"Brooksy\". Gawd. Haven\'t heard that nickname in ages. She hated it."
+    nextNodeIndex: 22
+  }
+  branches {
+    responseText: "HBK hired goons to question me, so obviously they want something out of this."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404ad7f64343139a5a412c3"
+  }
+  index: 22
+  text: "Yeah. She still did."
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "53f9cf8e643431aa2ba40768"
+  }
+  index: 23
   text: "Whoever did it also covered up their tracks a bit. Her body\'s gone, but Lone Star has the autopsy report.\n\nSomeone mentioned it was a booby trap, but that\'s just second-hand. I took a look at the scene as well, but the rent-a-cowboys had already messed everything up.\n\nBut yeah. Professional work."
   branches {
     responseText: "What makes you think that?"
-    nextNodeIndex: 21
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "I think you\'re right. The killing shot came from inside the apartment, so the murderer must have been right in there with her."
+    nextNodeIndex: 29
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -803,7 +853,7 @@ nodes {
   idRef {
     id: "53fa175d643431b34ca407df"
   }
-  index: 21
+  index: 24
   text: "Mainly the fact that whoever it was didn\'t touch anything else. Neighbors didn\'t see drek, no one else got hurt, and nobody is bragging about it on the street.\n\nYeah, the low-lives here brag about murdering people. I checked out some Red Hill scumbags first thing, but none of them knew anything. And they are definitely not smart enough to lie about it."
   branches {
     responseText: "We should get that autopsy report."
@@ -836,7 +886,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 22
+    nextNodeIndex: 25
     hideIfUnavailable: true
   }
   branches {
@@ -870,7 +920,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 23
+    nextNodeIndex: 26
     hideIfUnavailable: true
   }
   branches {
@@ -904,7 +954,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 24
+    nextNodeIndex: 27
     hideIfUnavailable: true
   }
   branches {
@@ -938,7 +988,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 25
+    nextNodeIndex: 28
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -947,7 +997,7 @@ nodes {
   idRef {
     id: "53fa1903643431b34ca407e2"
   }
-  index: 22
+  index: 25
   text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second drink.{{/GM}}"
   branches {
     responseText: "Nah, I\'m good."
@@ -984,7 +1034,7 @@ nodes {
   idRef {
     id: "53fa19fb643431b34ca407ec"
   }
-  index: 23
+  index: 26
   text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second beer.{{/GM}}"
   branches {
     responseText: "Nah, I\'m good."
@@ -1021,7 +1071,7 @@ nodes {
   idRef {
     id: "53fa1a37643431b34ca407f1"
   }
-  index: 24
+  index: 27
   text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second cram patch.{{/GM}}"
   branches {
     responseText: "Hit me."
@@ -1058,7 +1108,275 @@ nodes {
   idRef {
     id: "53fa1a3b643431b34ca407f6"
   }
-  index: 25
+  index: 28
+  text: "We should indeed.\n\n{{GM}}She pours herself another drink.{{/GM}}"
+  branches {
+    responseText: "I\'ll make a note of it."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404aea064343139a5a413b4"
+  }
+  index: 29
+  text: "Can\'t tell if she let them in or if it was forced entry. Or a sneak job - plenty of ways to do that. But nobody\'s bragging about it on the streets - I checked that first thing."
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadVodka*"
+        }
+      }
+    }
+    nextNodeIndex: 30
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadBeer*"
+        }
+      }
+    }
+    nextNodeIndex: 31
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadCram*"
+        }
+      }
+    }
+    nextNodeIndex: 32
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "We should get that autopsy report."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*HalfShatterHomeHadNothing*"
+        }
+      }
+    }
+    nextNodeIndex: 33
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404aea064343139a5a413b7"
+  }
+  index: 30
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second drink.{{/GM}}"
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Hit me."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop2"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404aea064343139a5a413c0"
+  }
+  index: 31
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second beer.{{/GM}}"
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Thanks."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop2"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404aea064343139a5a413c9"
+  }
+  index: 32
+  text: "We should indeed.\n\nWant some more?\n\n{{GM}}She offers you a second cram patch.{{/GM}}"
+  branches {
+    responseText: "Hit me."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "Loop2"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nah, I\'m good."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404aea064343139a5a413d2"
+  }
+  index: 33
   text: "We should indeed.\n\n{{GM}}She pours herself another drink.{{/GM}}"
   branches {
     responseText: "I\'ll make a note of it."
@@ -1071,20 +1389,20 @@ nodes {
   idRef {
     id: "53fa1e22643431b34ca40893"
   }
-  index: 26
+  index: 34
   text: "You tell me."
   branches {
     responseText: "What the frag is that supposed to mean?"
-    nextNodeIndex: 27
+    nextNodeIndex: 35
     auxiliaryLink: true
   }
   branches {
     responseText: "Are you implying-"
-    nextNodeIndex: 27
+    nextNodeIndex: 35
   }
   branches {
     responseText: "I\'d tell you if I could. I don\'t have a clue."
-    nextNodeIndex: 37
+    nextNodeIndex: 45
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1092,11 +1410,11 @@ nodes {
   idRef {
     id: "53fa1fb8643431b34ca40898"
   }
-  index: 27
+  index: 35
   text: "I mean I don\'t know! I really don\'t have a clue. I\'m baffled!\n\nBut it sure wasn\'t Brooklyn\'s handwriting. Someone is trying to send a message. Only I don\'t understand what the message is. When was the last time you spoke with Brooklyn?"
   branches {
     responseText: "Um, two years ago I think."
-    nextNodeIndex: 28
+    nextNodeIndex: 36
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1104,21 +1422,21 @@ nodes {
   idRef {
     id: "53fa2677643431b34ca40901"
   }
-  index: 28
+  index: 36
   text: "... Two years? Jaysis, $(l.name), what the frag? Did you guys have a fight?"
   branches {
     responseText: "No, we just ... lost touch."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   branches {
     responseText: "I know. I suck. I feel horrible."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   branches {
     responseText: "Lay off, ok? I was busy. Like, when was the last time you contacted me? 2070?"
-    nextNodeIndex: 29
+    nextNodeIndex: 37
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1126,15 +1444,15 @@ nodes {
   idRef {
     id: "53fa272d643431b34ca409d4"
   }
-  index: 29
+  index: 37
   text: "Hey, in case you don\'t get it, my line of work and your line of work are something like natural enemies! You\'re a corporate drone, just like Grace!"
   branches {
     responseText: "And you\'re a criminal. Nice going there."
-    nextNodeIndex: 30
+    nextNodeIndex: 38
   }
   branches {
     responseText: "Like you know anything about my line of work."
-    nextNodeIndex: 31
+    nextNodeIndex: 39
   }
   branches {
     responseText: "{{CC}}Profession: Creative{{/CC}} Hannah, I do graphic design. The only natural enemy for graphic design is a shortage of caffeine or nicotine. I don\'t think you\'ve been causing those."
@@ -1167,7 +1485,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 32
+    nextNodeIndex: 40
   }
   branches {
     responseText: "{{CC}}Etiquette: Corporate or Shadowrunner{{/CC}} Right, because no one working for a corporation would ever talk to a shadowrunner for any reason. You must do most of your jobs for charities and churches."
@@ -1268,7 +1586,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 33
+    nextNodeIndex: 41
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1276,16 +1594,16 @@ nodes {
   idRef {
     id: "53fa2c25643431ba588e49c2"
   }
-  index: 30
+  index: 38
   text: "Yeah, preach at me, just like fragging Grace.\n\nI don\'t need this drek. Brooklyn\'s dead, I\'m trying to figure out the why, the how and the who, and you don\'t get to fragging moralize to me about it."
   branches {
     responseText: "Right, okay. Sorry."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   branches {
     responseText: "{{CC}}Say nothing{{/CC}}"
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1313,11 +1631,11 @@ nodes {
   idRef {
     id: "53fa2c47643431ba588e49c4"
   }
-  index: 31
+  index: 39
   text: "More than you know about mine.\n\n{{GM}}Hannah glares at you, and takes a sip of vodka.{{/GM}}"
   branches {
     responseText: "So...?"
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1345,11 +1663,11 @@ nodes {
   idRef {
     id: "53fa2df8643431ba588e49c6"
   }
-  index: 32
+  index: 40
   text: "{{GM}}Hannah cracks a smile.{{/GM}}\n\nI totally haven\'t! And I wouldn\'t!"
   branches {
     responseText: "We should have kept in touch. Me and you. Me and Brooklyn."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1358,15 +1676,15 @@ nodes {
   idRef {
     id: "53fa2e8d643431ba588e4a37"
   }
-  index: 33
+  index: 41
   text: "Yeah, but, I mean. I could have kidnapped your boss or something."
   branches {
     responseText: "Like that would have been a bad thing."
-    nextNodeIndex: 34
+    nextNodeIndex: 42
   }
   branches {
     responseText: "If you had kidnapped my boss, I probably would have been the one paying for it anyway."
-    nextNodeIndex: 35
+    nextNodeIndex: 43
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1374,11 +1692,11 @@ nodes {
   idRef {
     id: "53fa358d643431ba588e4a3d"
   }
-  index: 34
+  index: 42
   text: "... I suppose it would have been doing you a favor, huh.\n\nYeah. Anyways."
   branches {
     responseText: "Anyways."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1387,11 +1705,11 @@ nodes {
   idRef {
     id: "53fa3544643431ba588e4a3b"
   }
-  index: 35
+  index: 43
   text: "{{GM}}Hannah has a chuckle.{{/GM}}\n\nYeah, I guess you might have. Sorry $(story.bro), I\'m a bit on edge these days. "
   branches {
     responseText: "It\'s okay. I\'m the same."
-    nextNodeIndex: 36
+    nextNodeIndex: 44
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1399,7 +1717,7 @@ nodes {
   idRef {
     id: "53fa35d2643431ba588e4a40"
   }
-  index: 36
+  index: 44
   text: "I thought if you and Brooklyn had talked recently, or had some dealings, that might have explained your street name scribbled on the scene. Like a warning, y\'know? \"You\'re next!\" But if you hadn\'t, I have no idea what it could have meant, or where to go for more info.\n\nIf you don\'t know anything either, then we\'re flying blind here. I don\'t like it, it\'s the wrong kind of dangerous, but what can you do?"
   branches {
     responseText: " "
@@ -1412,11 +1730,11 @@ nodes {
   idRef {
     id: "53fb6ede6434310c07a421bf"
   }
-  index: 37
+  index: 45
   text: "Me neither. But it sure wasn\'t Brooklyn\'s handwriting. Someone is trying to send a message. Only I don\'t understand what the message is. When was the last time you spoke with Brooklyn?"
   branches {
     responseText: "Um, two years ago I think."
-    nextNodeIndex: 28
+    nextNodeIndex: 36
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1425,16 +1743,16 @@ nodes {
   idRef {
     id: "53fb3c4d6434310c07a40885"
   }
-  index: 38
+  index: 46
   text: "Leads ... Yeah. I\'m trying to look at this as just another job, but it\'s fragging difficult."
   branches {
     responseText: "... yeah."
-    nextNodeIndex: 39
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
     responseText: "So you and Brooklyn hung out a lot huh?"
-    nextNodeIndex: 39
+    nextNodeIndex: 47
     auxiliaryLink: true
   }
   branches {
@@ -1488,7 +1806,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 39
+    nextNodeIndex: 47
     hideIfUnavailable: true
     auxiliaryLink: true
   }
@@ -1543,7 +1861,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 39
+    nextNodeIndex: 47
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1552,15 +1870,15 @@ nodes {
   idRef {
     id: "53fb3f656434310c07a4088f"
   }
-  index: 39
+  index: 47
   text: "Brooklyn and me were tight. Like sisters ought to be. She\'d help me through rough patches, I did the same for her.\n\nPlenty of rough patches to go around in these parts."
   branches {
     responseText: "I wish I\'d kept in touch. Why the frag didn\'t i?"
-    nextNodeIndex: 40
+    nextNodeIndex: 48
   }
   branches {
     responseText: "That\'s life everywhere, I guess."
-    nextNodeIndex: 44
+    nextNodeIndex: 52
   }
   branches {
     responseText: "I saw the service duct in Brooklyn\'s apartment complex. You used that to get to her home, right? Like in the bad old days."
@@ -1594,7 +1912,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 45
+    nextNodeIndex: 53
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1603,7 +1921,7 @@ nodes {
   idRef {
     id: "53fb4a5b6434310c07a40a8c"
   }
-  index: 40
+  index: 48
   text: "Because she was an embarrasment to you and your corporate lifestyle?"
   branches {
     responseText: "... hell. I didn\'t mean that to happen. I loved her."
@@ -1611,7 +1929,7 @@ nodes {
   }
   branches {
     responseText: "The hell she was. Also, drop the \"corporate lifestyle\" bit, it\'s getting really old."
-    nextNodeIndex: 41
+    nextNodeIndex: 49
   }
   branches {
     responseText: "{{CC}}Say nothing{{/CC}}"
@@ -1623,7 +1941,7 @@ nodes {
   idRef {
     id: "53fb52fd6434310c07a41466"
   }
-  index: 41
+  index: 49
   text: "What, don\'t like to be reminded of your wageslave status?"
   branches {
     responseText: "Jeesh, sis. I am not your enemy. Why the cheap shots?"
@@ -1691,12 +2009,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 42
+    nextNodeIndex: 50
     hideIfUnavailable: true
   }
   branches {
     responseText: "You want me to start calling you \"street trash\" then?"
-    nextNodeIndex: 43
+    nextNodeIndex: 51
   }
   branches {
     responseText: "Now I remember why I stopped talking to you. You gonna ask for money next?"
@@ -1764,7 +2082,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 50
+    nextNodeIndex: 58
     hideIfUnavailable: true
     auxiliaryLink: true
   }
@@ -1774,7 +2092,7 @@ nodes {
   idRef {
     id: "53fb52fd6434310c07a41469"
   }
-  index: 42
+  index: 50
   text: "Because I\'m stressed and in shock and angry as frag!"
   nodeType: ConversationNodeType_Simple
 }
@@ -1782,7 +2100,7 @@ nodes {
   idRef {
     id: "53fb52fd6434310c07a4146c"
   }
-  index: 43
+  index: 51
   text: "Go to hell."
   nodeType: ConversationNodeType_Simple
 }
@@ -1790,7 +2108,7 @@ nodes {
   idRef {
     id: "53fb4a9f6434310c07a40a8e"
   }
-  index: 44
+  index: 52
   text: "Oh yeah? Some bits of the world are way rougher than others, $(story.bro).\n\nStick around for a while and you\'ll see what I mean."
   nodeType: ConversationNodeType_Simple
 }
@@ -1798,15 +2116,15 @@ nodes {
   idRef {
     id: "53fb43e86434310c07a40937"
   }
-  index: 45
+  index: 53
   text: "Sometimes my runs were dangerous. I didn\'t want to bring anyone who might be following me with murderous intentions to Brooklyn."
   branches {
     responseText: "Dangerous, like how?"
-    nextNodeIndex: 46
+    nextNodeIndex: 54
   }
   branches {
     responseText: "You think what happened might have something to do with-"
-    nextNodeIndex: 47
+    nextNodeIndex: 55
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -1814,11 +2132,11 @@ nodes {
   idRef {
     id: "53fb44d46434310c07a4093b"
   }
-  index: 46
+  index: 54
   text: "Like hot lead, bad magic and black ICE. The normal stuff. Every now and then people might want to see me dead."
   branches {
     responseText: "You don\'t suppose what happened to Brooklyn-"
-    nextNodeIndex: 47
+    nextNodeIndex: 55
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1827,7 +2145,7 @@ nodes {
   idRef {
     id: "53fb453f6434310c07a4093e"
   }
-  index: 47
+  index: 55
   text: "No!\n\nI was careful! I am careful! I\'m still alive aren\'t I? What the frag kind of a big sister do you think I am?\n\nWhat about you? It was your damn street name found on the fragging scene?"
   branches {
     responseText: "Okay, sorry, I didn\'t mean it like that! Of course I\'m not blaming you for anything!"
@@ -1895,12 +2213,12 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 48
+    nextNodeIndex: 56
     hideIfUnavailable: true
   }
   branches {
     responseText: "I told you I don\'t have a clue what that was about! And it\'s not a \"street name\", it\'s a childhood bloody nickname that nobody has used since high school!"
-    nextNodeIndex: 49
+    nextNodeIndex: 57
   }
   branches {
     responseText: "What kind of big sister ... wait, I think I know this one. How did Gaitlin put it? \"Irrespobsible and reckless\"?"
@@ -1968,7 +2286,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 50
+    nextNodeIndex: 58
     hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
@@ -1977,7 +2295,7 @@ nodes {
   idRef {
     id: "53fb47696434310c07a40946"
   }
-  index: 48
+  index: 56
   text: "Better not."
   nodeType: ConversationNodeType_Simple
 }
@@ -1985,7 +2303,7 @@ nodes {
   idRef {
     id: "53fb4a0d6434310c07a40a8a"
   }
-  index: 49
+  index: 57
   text: "Yeah, sure."
   nodeType: ConversationNodeType_Simple
 }
@@ -1993,7 +2311,7 @@ nodes {
   idRef {
     id: "53fb49386434310c07a40a88"
   }
-  index: 50
+  index: 58
   text: "You --\n\n{{GM}}Hannah jumps at you, fists out.{{/GM}}"
   nodeType: ConversationNodeType_Simple
   actions {

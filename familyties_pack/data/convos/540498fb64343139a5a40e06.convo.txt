@@ -7,7 +7,7 @@ nodes {
     id: "5404990564343139a5a40e0c"
   }
   index: 0
-  text: "{{GM}}An Ork woman with a set of cooking implements is manning a hot dog cart. The odors emanating from the cart can be charitably described as exotic.{{/GM}}\n\nGetcha something to eat?"
+  text: "{{GM}}An Ork woman with a set of cooking implements is operating a hot dog cart. The odors emanating from the cart can be charitably described as exotic.{{/GM}}\n\nGetcha something to eat?"
   branches {
     responseText: "Got anything that doesn\'t smell like dead rat?"
     nextNodeIndex: 1
@@ -31,7 +31,7 @@ nodes {
     id: "5404997a64343139a5a40e14"
   }
   index: 1
-  text: "This hot dog smells like a live rat. Only 2 nuyen."
+  text: "This one\'s got seagull in it. Only 2 nuyen."
   branches {
     responseText: "Gimme."
     actions {
@@ -77,6 +77,11 @@ nodes {
       }
     }
     nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54049f2064343139a5a40e81"
+    }
     auxiliaryLink: true
   }
   branches {
@@ -102,7 +107,7 @@ nodes {
     id: "54049acf64343139a5a40e20"
   }
   index: 3
-  text: "It was the troll, wasn\'t it? Not that much, really."
+  text: "It was the troll, wasn\'t it? Not that much, really. Lone Star has been pretty active at looking into it, which is kinda surprising."
   nodeType: ConversationNodeType_Simple
 }
 roots {

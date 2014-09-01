@@ -1,0 +1,11 @@
+id: "BrooklynPicture"
+type: ItemType_QuestItem
+uirep {
+  name: "Brooklyn\'s Picture"
+  description: "A picture of Brooklyn, taken earlier this year."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "portraits/npc_brooklyn_adult"
+}
