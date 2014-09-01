@@ -4704,7 +4704,7 @@ triggers {
     ops {
       functionName: "Display Text In Popup"
       args {
-        string_value: "A toppled table, probably knocked over by Brooklyn when she ...\n\nSomething that had been lying on the table catches your eye. It\'s a note.\n\n\"$(l.name\""
+        string_value: "A toppled table, probably knocked over by Brooklyn when she ...\n\nSomething that had been lying on the table catches your eye. It\'s a note.\n\n\"$(scene.Handle)\""
       }
       args {
         call_value {
@@ -4812,7 +4812,7 @@ triggers {
     ops {
       functionName: "Display Text In Popup"
       args {
-        string_value: "A toppled table, probably knocked over by Brooklyn when she ...\n\nSomething that had been lying on the table catches your eye. It\'s a note.\n\n\"$(l.name\"\n\nIt doesn\'t say anything else, nor is it attached to anything. It\'s marked by the investigators, meaning that it was here when the body was discovered.\n"
+        string_value: "A toppled table, probably knocked over by Brooklyn when she ...\n\nSomething that had been lying on the table catches your eye. It\'s a note.\n\n\"$(scene.Handle)\"\n\nIt doesn\'t say anything else, nor is it attached to anything. It\'s marked by the investigators, meaning that it was here when the body was discovered.\n"
       }
       args {
         call_value {
@@ -5073,7 +5073,7 @@ triggers {
     ops {
       functionName: "Display Text In Popup"
       args {
-        string_value: "The makeup Brooklyn was using is expensive and kind of hard to get. Brand names, not cheap knockoffs. Some Alcamai stuff, but mainly your competitors\'.\n\nNot all of the stuff is for Troll skin, either. There\'s quite a few $+(l.race) products there. Not your regular make-up kit, but stuff used on trivid and the like."
+        string_value: "The makeup Brooklyn was using is expensive and kind of hard to get. Brand names, not cheap knockoffs. Some Alcamai stuff, but mainly your competitors\'.\n\nNot all of the stuff is for Troll skin, either. There are quite a few products for $(scene.Race) skin and hair as well. Not your regular make-up kit, but stuff used on trivid and the like."
       }
       args {
         call_value {
@@ -5247,6 +5247,336 @@ triggers {
   elseActions {
   }
   is_oneshot: false
+}
+triggers {
+  name: "CheckForHuman"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "Race"
+          }
+        }
+      }
+      args {
+        string_value: "human"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404bad264343139a5a41861"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CheckForElf"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "Race"
+          }
+        }
+      }
+      args {
+        string_value: "elf"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404bb0964343139a5a41862"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CheckForDwarf"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "Race"
+          }
+        }
+      }
+      args {
+        string_value: "dwarf"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404bb0c64343139a5a41863"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CheckForOrk"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "Race"
+          }
+        }
+      }
+      args {
+        string_value: "ork"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404bb0f64343139a5a41864"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CheckForTroll"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "Race"
+          }
+        }
+      }
+      args {
+        string_value: "troll"
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404bb1164343139a5a41865"
+  }
+  elseActions {
+  }
+  is_oneshot: true
 }
 regions {
   name: "Inside Garage Door"
@@ -7821,6 +8151,22 @@ variables {
     scope: TsVariableScope_Scene
     name: "BrooklynCode"
     typeName: "bool"
+  }
+}
+variables {
+  string_value: ""
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "Handle"
+    typeName: "string"
+  }
+}
+variables {
+  string_value: ""
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "Race"
+    typeName: "string"
   }
 }
 mapEvents: "SeeingLonestar"
