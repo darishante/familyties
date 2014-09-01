@@ -1313,5 +1313,76 @@ nodes {
   nodeType: ConversationNodeType_Simple
 }
 roots {
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+          }
+          args {
+            string_value: "pc_jobtitle"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        string_value: "*Manager*"
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Nuyen"
+      args {
+        int_value: 150
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Match (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+          }
+          args {
+            string_value: "pc_jobtitle"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "*Manager*"
+      }
+    }
+  }
+  nextNodeIndex: 0
+  auxiliaryLink: true
 }

@@ -643,6 +643,253 @@ nodes {
     }
     nextNodeIndex: 10
   }
+  branches {
+    responseText: "{{CC}}Fireball{{/CC}} Blast the door open, never mind the noise."
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Evaluate If Actor Has Item"
+            args {
+              call_value {
+                functionName: "Specific Actor"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "HasOrHasNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Item)"
+                args {
+                  string_value: "Spell Fireball 1"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Evaluate If Actor Has Item"
+                args {
+                  call_value {
+                    functionName: "Specific Actor"
+                    args {
+                      call_value {
+                        functionName: "Triggering Actor"
+                      }
+                    }
+                    args {
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "HasOrHasNot"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Map Item (Item)"
+                    args {
+                      string_value: "Spell Flamethrower 1"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "OR"
+                args {
+                  call_value {
+                    functionName: "Evaluate If Actor Has Item"
+                    args {
+                      call_value {
+                        functionName: "Specific Actor"
+                        args {
+                          call_value {
+                            functionName: "Triggering Actor"
+                          }
+                        }
+                        args {
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "HasOrHasNot"
+                        }
+                        args {
+                          int_value: 1
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Map Item (Item)"
+                        args {
+                          string_value: "Spell Fireball 2"
+                        }
+                      }
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Evaluate If Actor Has Item"
+                    args {
+                      call_value {
+                        functionName: "Specific Actor"
+                        args {
+                          call_value {
+                            functionName: "Triggering Actor"
+                          }
+                        }
+                        args {
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "HasOrHasNot"
+                        }
+                        args {
+                          int_value: 1
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Map Item (Item)"
+                        args {
+                          string_value: "Berlin_Spell Flamethrower 2"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "Use the door code"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "BrooklynCode"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -1388,6 +1635,477 @@ nodes {
           functionName: "Get Map Item (InteractableObject)"
           args {
             string_value: "540336206434313a43980f61"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540432bc643431b487e82b4e"
+  }
+  index: 12
+  text: "This is probably a really bad idea."
+  branches {
+    responseText: "Do it anyway"
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "Come to your senses."
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540432bc643431b487e82b51"
+  }
+  index: 13
+  text: "The magical blast echoes through the hall, and the lock melts!"
+  branches {
+    responseText: " "
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Apply Camera Shake"
+      args {
+        float_value: 0.25
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "spellcasting"
+          }
+          args {
+            string_value: "FireboltHit"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Delete Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5403356f6434313a43980f4a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "540336206434313a43980f61"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540432bc643431b487e82b54"
+  }
+  index: 14
+  text: "Apartment doors open all around you. Some of Brooklyn\'s more aggressive neighbors, already spooked by one murder in their building, rush out, armed with small arms."
+  branches {
+    responseText: "{{CC}}Etiquette: Security{{/CC}} GET THE FRAG BACK TO YOUR APARTMENTS AND STAY THERE!"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 14
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Hey, take it easy, I\'m only ..."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "{{CC}}Open fire{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "BrooklynsFoughtNeighbors,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "StorySoFar"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "neighbor"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "54036fed6434313a439812f2"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "neighbor"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540432bc643431b487e82b57"
+  }
+  index: 15
+  text: "{{GM}}Your commanding voice leads the neighbors to believe that there\'s at least a Lone Star assault squad backing you up. Everybody returns inside in a flash.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "neighbor"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "neighbor"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "540370cf6434313a43981349"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540432bc643431b487e82b5a"
+  }
+  index: 16
+  text: "{{GM}}Your words are drowned by gunfire.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "BrooklynsFoughtNeighbors,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
           }
         }
       }

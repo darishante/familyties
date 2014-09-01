@@ -1,0 +1,700 @@
+idRef {
+  id: "540458fa643431cca14f3259"
+}
+ui_name: "s004-lonestar-radio"
+nodes {
+  idRef {
+    id: "54045902643431cca14f325f"
+  }
+  index: 0
+  text: "{{GM}}A Lone Star officer is engaged in a heated debate with a snack vendor. An ... interesting aroma rises from the cart. The officer\'s radio is chattering in his vehicle, unattended.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Grab the mike{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Join the argument{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 5
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54045fab643431cca14f3289"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Join the argument{{/CC}}"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "WantedLevel"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54045faf643431cca14f328a"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Walk away{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54045985643431cca14f3263"
+  }
+  index: 1
+  text: "{{GM}}You pick up the microphone and turn the volume down. The officer has his back to you. The vendor sees you, but isn\'t calling any attention to you.{{/GM}}"
+  branches {
+    responseText: "This is car, um, 171, I need backup here"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Lone Star sucks!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Sergeant Sogliano, this is Officer Meeks. I need to get in to the $(story.pc_lastname) murder scene, but I don\'t have the code. Please advise."
+    conditions {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          string_value: "*SoglianoHasKey*"
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{CC}}Put the mike back, and walk off{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540482db64343139a5a40b53"
+  }
+  index: 2
+  text: "Backup where? At our front door?\n\n... Hey! You! Civilian! Get the hell off this frequency right now!\n\n{{GM}}The officer turns around, sees you holding the mike, and considers shooting you. Best to back off.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54021c943736636c0e003de5"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5404836e64343139a5a40b56"
+  }
+  index: 3
+  text: "Get the hell off this frequency, you ass, or we\'ll enforce the law on you so hard you\'ll think you\'ve been steamrollered!\n\n{{GM}}The officer grabs the microphone off you and gives you a dirty look. Best to back off.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54021c943736636c0e003de5"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5404828264343139a5a40b50"
+  }
+  index: 4
+  text: "For frag\'s sake, can\'t you rookies keep a four-digit security code in your head for an entire shift? It\'s 9457, make a damn note of it already."
+  branches {
+    responseText: "Copy that."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "BrooklynCode"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54021c943736636c0e003de5"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54045f9f643431cca14f3280"
+  }
+  index: 5
+  text: "I don\'t care what agreement you may have with the sergeant of the day shift. This is the night shift, and your so-called food needs to be elsewhere."
+  branches {
+    responseText: "Excuse me, is it okay if I buy a hot dog?"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Your radio is unattended. You might want to keep a closer eye on it."
+    conditions {
+      ops {
+        functionName: "No Condition"
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Officer, can you help me please?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "54045f9f643431cca14f3284"
+  }
+  index: 6
+  text: "{{GM}}The officer turns to look at you. A quick facial recogntion pattern runs on his data visor. His expression changes, and he draws his gun.{{/GM}}\n\nHands in the air right now!"
+  branches {
+    responseText: "{{CC}}Surrender{{/CC}}"
+    actions {
+      ops {
+        functionName: "End Story With Epilogue"
+        args {
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Run or fight{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Team Alliance"
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeamAlliance"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "54045f9f643431cca14f3287"
+  }
+  index: 7
+  text: "No, I\'m busy. Call the emergency number."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "54045ca1643431cca14f3269"
+  }
+  index: 8
+  text: "I don\'t care what agreement you may have with the sergeant of the day shift. This is the night shift, and your so-called food needs to be elsewhere."
+  branches {
+    responseText: "Excuse me, is it okay if I buy a hot dog?"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Your radio is unattended. You might want to keep a closer eye on it."
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Officer, can you help me please?"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Socialte{{/CC}} Officer, I\'d like to speak to a ranking detective about the murder of Brooklyn $(story.pc_lastname)."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 16
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "5404641864343139a5a4078c"
+  }
+  index: 9
+  text: "Yeah. Whaddaya want on it?"
+  branches {
+    responseText: " "
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540457fa643431b487e82de6"
+  }
+}
+nodes {
+  idRef {
+    id: "5404642b64343139a5a4078f"
+  }
+  index: 10
+  text: "$+(l.he)\'s not getting anything! The only reason you\'re still vertical is because the day shift sergeant digs those minced rat hoops in a bun. Nobody in the night shift can stand them however, so frag off or I\'ll book you.\n\n{{GM}}The argument goes on, and your input isn\'t really noticed.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "54045f59643431cca14f3271"
+  }
+  index: 11
+  text: "Drek. Thanks, citizen.\n\n{{GM}}He quickly closes his car window, then resumes his argument with Iris the vendor.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54021c943736636c0e003de5"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54045dff643431cca14f326f"
+  }
+  index: 12
+  text: "No, I\'m busy. Call the emergency number."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "540467d364343139a5a407f6"
+  }
+  index: 13
+  text: "{{GM}}The officer smells money and power, stops arguing with the vendor and turns to you.{{/GM}}\n\nI can take your inquiry, $(l.sir). What do you need?"
+  branches {
+    responseText: "She was my adopted sister, and I\'d like access to her apartment to pick up personal effects."
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540468dd64343139a5a407fa"
+  }
+  index: 14
+  text: "I see. My condolences. The perpetrator will be caught, you can rest assured of that.\n\nUnfortunately her apartment is a murder scene, and as such cannot be visited by anyone. We\'ll let you know when the situation changes. "
+  branches {
+    responseText: "I certainly wouldn\'t want to interfere, but I\'d really need to visit her apartment. Would 150 nuyen be a sufficient guarantee as to my good behavior?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 150
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 150
+        }
+      }
+    }
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Is there no way to maybe just have a look?"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54046abf64343139a5a40800"
+  }
+  index: 15
+  text: "{{GM}}The officer doesn\'t even bother concealing this blatant bit of corruption from the hot dog vendor.{{/GM}}\n\nI suppose the rules could be bent a little for a grieving family member. No one is going to be there tonight, and all the important bits have been recorded anyway. The code is 9457. Let yourself in and out, $(l.sir)."
+  branches {
+    responseText: "Thank you."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "BrooklynCode"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "54021c943736636c0e003de5"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54046a8764343139a5a407fe"
+  }
+  index: 16
+  text: "Sorry, $(l.sir), the company is very strict about these things. I\'ll pass word along to the captain that you were asking about the case."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

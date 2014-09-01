@@ -561,23 +561,6 @@ nodes {
         }
       }
     }
-    ops {
-      functionName: "Set Variable (int)"
-      args {
-        call_value {
-          functionName: "Get Story Variable (int)"
-          args {
-            string_value: "53da5ef2643431a4970041a8"
-          }
-          args {
-            string_value: "WantedLevel"
-          }
-        }
-      }
-      args {
-        int_value: 2
-      }
-    }
   }
 }
 nodes {
@@ -635,6 +618,52 @@ nodes {
   text: "The security network of the police station seems to be malfunctioning due to external interference. Doors are unlocked in fire alarm mode, external connections are down, as is most of the alert system. It is possible the staff hasn\'t yet noticed anything to be amiss."
   branches {
     responseText: "{{CC}}Decking 3{{/CC}} Track down the source of external interference"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
     nextNodeIndex: 10
     onlyOnce: true
     idRef {

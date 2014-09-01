@@ -4475,7 +4475,7 @@ triggers {
         }
       }
       args {
-        int_value: 3
+        int_value: 2
       }
     }
     ops {
@@ -4683,6 +4683,23 @@ triggers {
             string_value: "53f8a6e564343126f4059065"
           }
         }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "WantedLevel"
+          }
+        }
+      }
+      args {
+        int_value: 1
       }
     }
   }
@@ -4991,7 +5008,7 @@ triggers {
         }
       }
       args {
-        int_value: 2
+        int_value: 1
       }
     }
     ops {
@@ -5189,23 +5206,6 @@ triggers {
             int_value: 0
           }
         }
-      }
-    }
-    ops {
-      functionName: "Set Variable (int)"
-      args {
-        call_value {
-          functionName: "Get Story Variable (int)"
-          args {
-            string_value: "53da5ef2643431a4970041a8"
-          }
-          args {
-            string_value: "WantedLevel"
-          }
-        }
-      }
-      args {
-        int_value: 2
       }
     }
     ops {

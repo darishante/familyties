@@ -1,0 +1,376 @@
+idRef {
+  id: "540434a6643431b487e82bfb"
+}
+ui_name: "s004-neighbor-left"
+nodes {
+  idRef {
+    id: "540434b3643431b487e82c01"
+  }
+  index: 0
+  text: "{{GM}}You knock on the door. A tired voice answers from the inside{{/GM}}\n\nWho\'s there?"
+  branches {
+    responseText: "I\'m a relative of Brooklyn $(story.pc_lastname), your neighbor."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "It\'s the police. Open up."
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5404372b643431b487e82c1f"
+    }
+  }
+  branches {
+    responseText: "Sorry, never mind."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54043605643431b487e82c12"
+  }
+  index: 1
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Race"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Race"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404363a643431b487e82c16"
+  }
+  index: 2
+  text: "Poor Brooklyn. I didn\'t know her that well, but we never had any trouble, and around here it\'s a blessing. I\'m sorry about what happened to her. But, y\'know, I don\'t know anything about anything. I wasn\'t even here when it happened. You should talk to Lone Star."
+  branches {
+    responseText: "Yeah, I\'d rather not. Do you know how I could get inside her apartment?"
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "540441f6643431b487e82c2d"
+    }
+  }
+  branches {
+    responseText: "I already did. They are useless."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404375d643431b487e82c2a"
+  }
+  index: 3
+  text: "I\'m sorry about your loss, but I\'m not getting involved into any breaking and entering today, especially since the place is sealed by Lone Star. Go talk to them, they\'re right across the street."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540437ac643431b487e82c2c"
+  }
+  index: 4
+  text: "You could say that again.\n\nLook, for what it\'s worth, you might want to check in with the hippie dude who lives on the roof. I don\'t know if he can help you either, but he knows more about what\'s going on around here than me. Probably more than Lone Star as well."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54030efd643431562664f73f"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5404423f643431b487e82c2f"
+  }
+  index: 5
+  text: "Sure you are. You totally look like one of her relatives. How fragging stupid do you think I am?\n\nGet lost, before I call Lone Star or get the neighborhood watch."
+  branches {
+    responseText: "She\'s adopted. So am I."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Go frag yourself, you racist."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404435a643431b487e82c36"
+  }
+  index: 6
+  text: "Nice try. Frag off. Go bug Lone Star or something, but leave me out of it."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e15373663200e000f75"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54044308643431b487e82c34"
+  }
+  index: 7
+  text: "That word doesn\'t mean what you think it means, $(l.race)."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e15373663200e000f75"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540436c5643431b487e82c1a"
+  }
+  index: 8
+  text: "Yeah, like they\'d knock. Get lost."
+  branches {
+    responseText: "Okay, sorry. I\'m actually a relative of your murdered neighbor, Brooklyn $(story.pc_lastname). I\'m looking for a way to get into her place to look around."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Don\'t make me break down your door, sir."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404370d643431b487e82c1e"
+  }
+  index: 9
+  text: "You try that and you\'ll meet the neighborhood watch."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e15373663200e000f75"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

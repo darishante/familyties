@@ -58,8 +58,8 @@ WantedLevel:
 
  -1 - vangittu
  0 - ei erityistä hakua päällä
- 1 - halutaan esittää kysymyksiä
- 2 - epäilty murhasta
+ 1 - paennut epäilty
+ 2 - aseistettu ja vaarallinen
  3 - aseistettu ja vaarallinen murhaaja
  4 - public enemy #1
 

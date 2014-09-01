@@ -12613,19 +12613,6 @@ props {
   lod: 0
 }
 props {
-  name: "memphismotors_car_fordamericarStar"
-  gridPoint {
-    x: -188
-    y: 0
-    z: 27
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "53fe1cf6373663fc160044ec"
-  }
-  lod: 0
-}
-props {
   name: "system_gizmo_lightbulb"
   gridPoint {
     x: -164
@@ -16418,6 +16405,35 @@ props {
   interactionRoot {
     isEnabled: false
     interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*FoughtNeighbors*"
+        }
+      }
+    }
     interactionIcon: InteractionIcon_Generic
   }
   lod: 0
@@ -16476,6 +16492,35 @@ props {
   interactionRoot {
     isEnabled: false
     interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Match (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+            }
+            args {
+              string_value: "StorySoFar"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          string_value: "*FoughtNeighbors*"
+        }
+      }
+    }
     interactionIcon: InteractionIcon_Generic
   }
   lod: 0
@@ -21711,13 +21756,22 @@ props {
 props {
   name: "memphismotors_car_fordamericarStar"
   gridPoint {
-    x: -248
+    x: -234
     y: 0
-    z: 78
+    z: 51
   }
-  orientation: ORIENTATION_E
+  orientation: ORIENTATION_S
+  displayName: "MeeksCar"
   idRef {
     id: "54021c943736636c0e003de5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "540458fa643431cca14f3259"
+      turnToFace: true
+    }
   }
   lod: 0
 }
@@ -22210,6 +22264,7 @@ props {
     z: 44
   }
   orientation: ORIENTATION_S
+  displayName: "LoneStarCorner"
   idRef {
     id: "54021c943736636c0e003e0b"
   }
@@ -23937,5 +23992,29 @@ props {
     z: 29
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_market_foodCartOnly"
+  gridPoint {
+    x: -232
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "vfx_fx_flies"
+  gridPoint {
+    x: -232
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "SpotlightFliesEnvironment"
+  }
   lod: 0
 }

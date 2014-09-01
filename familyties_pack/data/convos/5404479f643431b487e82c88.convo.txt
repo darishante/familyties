@@ -1,0 +1,822 @@
+idRef {
+  id: "5404479f643431b487e82c88"
+}
+ui_name: "s004-neighbor-right"
+nodes {
+  idRef {
+    id: "540447ac643431b487e82c8e"
+  }
+  index: 0
+  text: "{{GM}}You knock on the door. After a minute a female, slightly drug-addled voice answers:{{/GM}}\n\nAre you a real elf?"
+  branches {
+    responseText: "... yes?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Sorry, I\'ll come back later."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404487c643431b487e82c97"
+  }
+  index: 1
+  text: "I\'ve never seen an Elf around these parts before. I thought you had all gone West."
+  branches {
+    responseText: "That\'s just a story."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Some of us have come back."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Can you help me out? My, uh, troll-sister next door was killed and I need to get into her apartment."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044a11643431b487e82c9f"
+  }
+  index: 2
+  text: "Is that so? I get so confused these days. But I know the Eye is watching ... and calling. It called some of the Orks living here earlier, and they went to fight for it."
+  branches {
+    responseText: "That\'s just the Tolkien BTL chip talking, lady."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I need to get inside the apartment next to yours. It belonged to a relative of mine. Can you help me?"
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044b57643431b487e82cb2"
+  }
+  index: 3
+  text: "No. It really happened."
+  branches {
+    responseText: "Can you help me out? My, uh, troll-sister next door was killed and I need to get into her apartment."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540448e2643431b487e82c9c"
+  }
+  index: 4
+  text: "Brooklyn? I don\'t have a spare key. Oh, and Lone Star put their own lock on the door anyway.\n\nOf course they would have the code key. Some of them tried to get in earlier but they didn\'t have the key. They had to cal sergeant Sogliano on their radio and ask for it, but I didn\'t hear what it was."
+  branches {
+    responseText: "\"Sogliano\" you say? Thanks."
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff5e37373663200e000f7a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "SgtSoglianoHasKey,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "PCThingsKnown"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044b05643431b487e82cab"
+  }
+  index: 5
+  text: "{{GM}}You knock on the door. After a minute a female, slightly drug-addled voice answers:{{/GM}}\n\nGo away! The servants of the Eye are not welcome here!"
+  branches {
+    responseText: "The what now?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Sorry, I\'ll come back later."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044b51643431b487e82cb0"
+  }
+  index: 6
+  text: "You can\'t fool me. Go back into the Shadow, servant of darkness!"
+  branches {
+    responseText: "Yeah, you need to ease on the BTLs and the sims, lady."
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff5e37373663200e000f7a"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m not a servant of any kind of darkness, I\'m just looking for a way to get to--"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Academic / Intelligence 3{{/CC}} You know that\'s really racist and impolite? Orks and trolls get a bad reputation mainly because of the fantasy literature of 20th century was always painting us as evil servants of some sinister force. Yet none of the authors had even met a single goblinoid. I was wishing that prejudice was long gone."
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 19
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Compare Actor Attribute"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorAttributes"
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044d6a643431b487e82cce"
+  }
+  index: 7
+  text: "I can\'t help you. Sorry."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e37373663200e000f7a"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54044ca2643431b487e82cc1"
+  }
+  index: 8
+  text: "... sorry.\n\nSo you aren\'t with the Sons of Sauron?"
+  branches {
+    responseText: "No. Who are they?"
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "I\'m just looking for a way to get to the apartment next door. It belonged to my sister, until she was murdered."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044cee643431b487e82cc6"
+  }
+  index: 9
+  text: "... I don\'t know. Maybe I dreamed it all."
+  branches {
+    responseText: "I\'m just looking for a way to get to the apartment next door. It belonged to my sister, until she was murdered."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044eb7643431b487e82cd1"
+  }
+  index: 10
+  text: "{{GM}}You knock on the door. After a minute a female, slightly drug-addled voice answers:{{/GM}}\n\nYes?"
+  branches {
+    responseText: "Can you help me out? My relative next door was killed and I need to get into her apartment."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044f2a643431b487e82cd4"
+  }
+  index: 11
+  text: "Are you with Lone Star?"
+  branches {
+    responseText: "Yes"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "No"
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54044f6a643431b487e82cd8"
+  }
+  index: 12
+  text: "Let me see your badge."
+  branches {
+    responseText: "I lost it."
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "{{CC}}Charisma 5{{/CC}} I\'m undercover with a special mission. I cannot have a badge with me."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54045005643431b487e82ce0"
+  }
+  index: 13
+  text: "I don\'t believe you. You\'re trying to rob Brooklyn\'s apartment. I\'m not going to talk to you."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e37373663200e000f7a"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54044fc5643431b487e82cdc"
+  }
+  index: 14
+  text: "Oh. Okay. All the other Lone Star officers call sergeant Sogliano when they lose their code keys."
+  branches {
+    responseText: "\"Sogliano\" you say? Thanks."
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff5e37373663200e000f7a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "SgtSoglianoHasKey,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "PCThingsKnown"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54045052643431b487e82ce2"
+  }
+  index: 15
+  text: "Brooklyn was a troll. How can you be her relative?"
+  branches {
+    responseText: "We\'re both orphans, really."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "{{CC}}Charisma 4{{/CC}} We adopted each other when we were children, since we didn\'t have any parents."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540451b6643431b487e82cef"
+  }
+  index: 16
+  text: "I don\'t know. I need to go lie down. Sorry, sorry."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e37373663200e000f7a"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54045129643431b487e82cec"
+  }
+  index: 17
+  text: "That sounds nice. I\'m awfully sorry about Brooklyn. She was always nice to me.\n\nI don\'t have a key or anything. The Lone Star officers kept calling sergeant Sogliano when they had lost their keys."
+  branches {
+    responseText: "\"Sogliano\" you say? Thanks."
+    actions {
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "53ff5e37373663200e000f7a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (string)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "PCThingsKnown"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Append (string)"
+            args {
+              string_value: "SgtSoglianoHasKey,"
+            }
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "PCThingsKnown"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Compare Actor Race"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Race"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "OR"
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 3
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Compare Actor Race"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Race"
+              }
+              args {
+                int_value: 4
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 5
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 10
+}

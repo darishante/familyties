@@ -1,0 +1,243 @@
+idRef {
+  id: "54046c7c64343139a5a4082b"
+}
+ui_name: "s004-lonestar-meeks_at_brooklyn"
+nodes {
+  idRef {
+    id: "54046c8c64343139a5a40831"
+  }
+  index: 0
+  text: "Are you done, $(l.sir)?"
+  branches {
+    responseText: "Yes, I think I\'m done."
+    conditions {
+      ops {
+        functionName: "Evaluate Goal"
+        args {
+          call_value {
+            functionName: "Get Map Item (Goal)"
+            args {
+              string_value: "Observe the Murder Scene"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "GoalStatus"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Not just yet."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Can you tell me anything about the murder?"
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5404719364343139a5a409ea"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Charisma 3{{/CC}} How about another 150 just to give me the front door code so you don\'t need to watch me?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 150
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 150
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540456dc643431b487e82de5"
+  }
+}
+nodes {
+  idRef {
+    id: "540471c764343139a5a409ec"
+  }
+  index: 1
+  text: "All right, let\'s....\n\n{{GM}}He pauses for a second.{{/GM}}\n\nThe weirdest thing. I just got a hit on the search for your name. It says here that ... you\'re a suspect in the murder.\n\nOh drek."
+  branches {
+    responseText: "Yes. But I\'m innocent - I\'ve never even been to this apartment before."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404704364343139a5a409dc"
+  }
+  index: 2
+  text: "Unfortunately I don\'t really know that much, $(l.sir). Our captain, Hammer - I mean, Max Jacobson - is handling the investigation. You should probably speak to him tomorrow."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540470fc64343139a5a409de"
+  }
+  index: 3
+  text: "... I shouldn\'t interfere with your grief, and all the important stuff here is photographed anyway. You can let yourself out when you\'re done. The door code is 9457.\n\n{{GM}}He leaves{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54033ff26434313a43980f9e"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Delete Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5403356f6434313a43980f4a"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "540336206434313a43980f61"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  responseText: "DEBUG: THIS CONVERSATION IS NEVER USED. Decided you can\'t bring Meeks to Brooklyn\'s after all. Sorry."
+  nextNodeIndex: 0
+}

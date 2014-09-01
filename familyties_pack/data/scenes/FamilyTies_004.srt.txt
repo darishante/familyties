@@ -864,7 +864,7 @@ triggers {
         call_value {
           functionName: "Get Map Item (Goal)"
           args {
-            string_value: "Get Inside Brooklyn\'s Apartment"
+            string_value: "Observe the Murder Scene"
           }
         }
       }
@@ -1116,6 +1116,17 @@ triggers {
       args {
         call_value {
           functionName: "Triggering Actor"
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "SeeingLonestar"
+          }
         }
       }
     }
@@ -3412,6 +3423,39 @@ triggers {
         int_value: 1
       }
     }
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Observe the Murder Scene"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -3616,6 +3660,301 @@ triggers {
   elseActions {
   }
   is_oneshot: false
+}
+triggers {
+  name: "LeftNeighborDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e15373663200e000f75"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "540434a6643431b487e82bfb"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "54036fb86434313a439812f1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "540445e1643431b487e82c86"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "RightNeighborDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "53ff5e37373663200e000f7a"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "5404479f643431b487e82c88"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5404528f643431b487e82d27"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404476d643431b487e82c87"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "LoneStarDescription"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "SeeingLonestar"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Display Text In Popup"
+      args {
+        string_value: "Elsewhere in Seattle, Knight Errant handles law enforcement and security. In Red Hill, it seems to be Lone Star.\n\nTheir headquarters is fairly impressive, but to someone trained in corporate deception the gaps are obvious. The building is old and most likely in worse shape than it appears. It\'s operating at 25% capacity, at most."
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PopupType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "The Lone Star HQ in Red Hill "
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54045468643431b487e82de4"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "BrooklynWithLonestar"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "540340026434313a43980f9f"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Teleport Actor near Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "540456dc643431b487e82de5"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "54033ff26434313a43980f9e"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54046b8864343139a5a40802"
+  }
+  elseActions {
+  }
+  is_oneshot: true
 }
 regions {
   name: "Inside Garage Door"
@@ -4410,7 +4749,7 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: ""
+  ambience_template: "slums-busy"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -5670,6 +6009,9 @@ characters {
     GeneralTags: "neighbor"
     enabled_at_start: true
     pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanmale_00_faceless"
+    }
     portrait_code_override: "s1h5b3"
     karma: 33
   }
@@ -5858,13 +6200,212 @@ characters {
     karma: 33
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -36
+    y: 0
+    z: 54
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5404528f643431b487e82d27"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanFemale"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Drugged Woman"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanfemale_00b"
+    }
+    portrait_code_override: "s2h4"
+    karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -231
+    y: 0
+    z: 55
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "540456dc643431b487e82de5"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Lonestar/HumanMaleLonestarGuard"
+    character_sheet_id: "Lonestar_Lv1_Human_Pistol"
+    equipment_sheet_id: "Lonestar_Lv1_Pistol_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeCautious
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "Officer Meeks"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backer_humanmale_adamdoochin_elduce"
+    }
+    karma: 30
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -231
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "540457fa643431b487e82de6"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Standard/OrkFemaleShaman"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Iris"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_orkfemale_03c_brutal"
+    }
+    portrait_code_override: "s2h1b6"
+    karma: 6
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "BrooklynCode"
+    typeName: "bool"
+  }
+}
+mapEvents: "SeeingLonestar"
 goals {
   name: "Get Inside Brooklyn\'s Apartment"
   type: GoalType_Primary
   status: GoalStatus_Started
 }
 goals {
-  name: "New Scene Goal"
+  name: "Half Shatter Must Survive"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "Observe the Murder Scene"
   type: GoalType_Primary
   status: GoalStatus_Hidden
 }
@@ -5903,7 +6444,7 @@ team_affiliations {
   team_name: "Shadowrunners"
   affiliation: 0
   affiliation: 1
-  affiliation: 1
+  affiliation: 0
   affiliation: 0
 }
 team_affiliations {
@@ -5915,7 +6456,7 @@ team_affiliations {
 }
 team_affiliations {
   team_name: "LoneStar"
-  affiliation: 1
+  affiliation: 0
   affiliation: 1
   affiliation: 0
   affiliation: 0
