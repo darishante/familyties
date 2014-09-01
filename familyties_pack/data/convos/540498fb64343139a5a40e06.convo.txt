@@ -1,0 +1,136 @@
+idRef {
+  id: "540498fb64343139a5a40e06"
+}
+ui_name: "s004-hotdog-vendor"
+nodes {
+  idRef {
+    id: "5404990564343139a5a40e0c"
+  }
+  index: 0
+  text: "{{GM}}An Ork woman with a set of cooking implements is manning a hot dog cart. The odors emanating from the cart can be charitably described as exotic.{{/GM}}\n\nGetcha something to eat?"
+  branches {
+    responseText: "Got anything that doesn\'t smell like dead rat?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "There was a murder in the tenements behind us yesterday. Have you heard anything about it?"
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No thanks."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540457fa643431b487e82de6"
+  }
+}
+nodes {
+  idRef {
+    id: "5404997a64343139a5a40e14"
+  }
+  index: 1
+  text: "This hot dog smells like a live rat. Only 2 nuyen."
+  branches {
+    responseText: "Gimme."
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 2
+        }
+      }
+      ops {
+        functionName: "Add Item to Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "strangeHotDog"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Eww."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54049ab464343139a5a40e18"
+  }
+  index: 2
+  text: "Anything else?"
+  branches {
+    responseText: "There was a murder in the tenements behind us yesterday. Have you heard anything about it?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54049acf64343139a5a40e20"
+  }
+  index: 3
+  text: "It was the troll, wasn\'t it? Not that much, really."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        int_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 2
+}

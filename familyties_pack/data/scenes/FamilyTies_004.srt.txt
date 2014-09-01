@@ -1744,6 +1744,40 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "halfshatter"
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -3786,6 +3820,34 @@ triggers {
     }
   }
   conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "WantedLevel"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
   }
   actions {
     ops {
@@ -3814,6 +3876,26 @@ triggers {
     id: "54045468643431b487e82de4"
   }
   elseActions {
+    ops {
+      functionName: "Display Text In Popup"
+      args {
+        string_value: "Elsewhere in Seattle, Knight Errant handles law enforcement and security. In Red Hill, it seems to be Lone Star.\n\nTheir headquarters is fairly impressive, but to someone trained in corporate deception the gaps are obvious. The building is old and most likely in worse shape than it appears. It\'s operating at 25% capacity, at most.\n\nThey will have been notified of your skirmish in Omaha, and you\'ll most likely show up as an armed and dangerous fugitive. Better be really careful."
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PopupType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "The Lone Star HQ in Red Hill "
+      }
+    }
   }
   is_oneshot: true
 }
@@ -3951,6 +4033,397 @@ triggers {
   isActive: true
   idRef {
     id: "54046b8864343139a5a40802"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "gol_YouDied"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "You died!"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404948e64343139a5a40d92"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "NPCDeath"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "DeadSinless"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "NamesOfDeadPeople"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Get Actor Name"
+              args {
+                call_value {
+                  functionName: "Triggering Target Actor"
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "NamesOfDeadPeople"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "NamesOfDeadPeople"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: ","
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "NamesOfDeadPeople"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5404952064343139a5a40d93"
+  }
+  elseActions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "DeadCitizens"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "NamesOfDeadPeople"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            call_value {
+              functionName: "Get Actor Name"
+              args {
+                call_value {
+                  functionName: "Triggering Target Actor"
+                }
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "NamesOfDeadPeople"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "NamesOfDeadPeople"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: ","
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "NamesOfDeadPeople"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "gol_HalfShatterDies"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "54030b8e643431562664f6fe"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Half Shatter Must Survive"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54049cb064343139a5a40e6f"
   }
   elseActions {
   }
@@ -4668,12 +5141,12 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "New Region"
+  name: "Lone Star Door"
   position {
     x: -241
     y: 63
-    width: 0
-    height: 0
+    width: 3
+    height: -4
   }
   enabledAtStart: true
   is_camera_region: false
@@ -4687,7 +5160,14 @@ regions {
     a: 1
   }
   visible_at_start: false
-  is_teleporter_region: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: 0
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: true
   directional_light_dir {
     x: -0.5
     y: -1
@@ -6345,6 +6825,14 @@ characters {
   idRef {
     id: "540457fa643431b487e82de6"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "540498fb64343139a5a40e06"
+      turnToFace: true
+    }
+  }
   lod: 0
   character_instance {
     prefab_name: "Seattle:Standard/OrkFemaleShaman"
@@ -6385,6 +6873,129 @@ characters {
     karma: 6
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -266
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "54048d7164343139a5a40cce"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Lonestar/HumanFemaleLonestarCaptain"
+    character_sheet_id: "Lonestar_Lv1_Captain"
+    equipment_sheet_id: "Lonestar_Lv1_Captain_Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "Lone Star Captain"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    karma: 44
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -265
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "54048dd664343139a5a40ccf"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Lonestar/OrkLonestarGuard"
+    character_sheet_id: "Lonestar_Lv1_Ork_Shotgun"
+    equipment_sheet_id: "Lonestar_Lv1_Shotgun_Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "Lone Star Officer"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    karma: 33
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -267
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "54048e4664343139a5a40cd0"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Lonestar/HumanMaleLonestarGuard"
+    character_sheet_id: "Lonestar_Lv1_Human_Pistol"
+    equipment_sheet_id: "Lonestar_Lv1_Pistol_Gear"
+    character_mod {
+      stats {
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "LoneStar"
+    char_name: "Lone Star Officer"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    karma: 30
+  }
+}
 variables {
   bool_value: false
   variableref_value {
@@ -6406,6 +7017,11 @@ goals {
 }
 goals {
   name: "Observe the Murder Scene"
+  type: GoalType_Primary
+  status: GoalStatus_Hidden
+}
+goals {
+  name: "You died!"
   type: GoalType_Primary
   status: GoalStatus_Hidden
 }

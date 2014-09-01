@@ -1,0 +1,8 @@
+id: "strangeHotDog"
+type: ItemType_QuestItem
+uirep {
+  name: "Suspicious Hot Dog"
+  description: "Maybe you\'ll eat this one of these days, if you get really desperate"
+}
+credentials: 0
+sorting_group: "Quest"
