@@ -3124,6 +3124,10 @@ nodes {
     responseText: "Is that a question about my personal life?"
     nextNodeIndex: 63
   }
+  branches {
+    responseText: "Something like that. How about you? What have you been up to?"
+    nextNodeIndex: 87
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -4307,6 +4311,65 @@ nodes {
       }
     }
   }
+}
+nodes {
+  idRef {
+    id: "5404c35664343139a5a41c0c"
+  }
+  index: 87
+  text: "Well, I became a shadowrunner, how about that!\n\nWhat would you like to know?"
+  branches {
+    responseText: "How did you end up a shadowrunner?"
+    nextNodeIndex: 88
+  }
+  branches {
+    responseText: "Have you got anyone?"
+    nextNodeIndex: 89
+  }
+  branches {
+    responseText: "Does it pay well?"
+    nextNodeIndex: 90
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404c49f64343139a5a41c1b"
+  }
+  index: 88
+  text: "Tried the wage slave route first. Didn\'t take.\n\nDEBUG: to be expanded."
+  branches {
+    responseText: "I see"
+    nextNodeIndex: 83
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404c4b664343139a5a41c1d"
+  }
+  index: 89
+  text: "Like, a boyfriend? Not really. Bedroom buddies come and go, but I\'m not seeing anyone regularily right now.\n\nDEBUG: to be expanded"
+  branches {
+    responseText: "I see"
+    nextNodeIndex: 83
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404c4e964343139a5a41c1f"
+  }
+  index: 90
+  text: "Sometimes it pays unbelievably well. Other times, not so well. Most of the times you need to take any job that comes your way just to cover your living costs, but then once in a while something really lucrative comes along. Of course, it\'s usually really dangerous too.\n\nDEBUG: to be expanded"
+  branches {
+    responseText: "I see"
+    nextNodeIndex: 83
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
 }
 roots {
   conditions {

@@ -2773,6 +2773,39 @@ triggers {
         int_value: 1
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "BrooklynsFoundDuct,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+                string_value: "53da5ef2643431a4970041a8"
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {

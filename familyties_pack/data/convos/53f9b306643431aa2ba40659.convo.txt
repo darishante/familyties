@@ -808,7 +808,7 @@ nodes {
     id: "5404ad7f64343139a5a412c0"
   }
   index: 21
-  text: "Life is cheap in Red Hill. I mean, living is cheap. Way cheaper than you\'d expect.\n\nWe might want to look into this HBK connection thing. It\'s not like I knew absolutely everything Brooksy was doing anyway. I was pretty sure I knew most of it but even if we saw each other several times a week, that\'s only like 5% of the total waking hours."
+  text: "Life is cheap in Red Hill. I mean, living is cheap. Way cheaper than you\'d expect.\n\nBut we might want still to look into this HBK connection. It\'s not like I knew absolutely everything Brooksy was doing anyway. I was pretty sure I knew most of it but even if we saw each other several times a week, that\'s only like 5% of the total waking hours."
   branches {
     responseText: "\"Brooksy\". Gawd. Haven\'t heard that nickname in ages. She hated it."
     nextNodeIndex: 22
@@ -827,7 +827,7 @@ nodes {
   index: 22
   text: "Yeah. She still did."
   branches {
-    responseText: ""
+    responseText: " "
     nextNodeIndex: 14
     auxiliaryLink: true
   }
@@ -1672,6 +1672,45 @@ nodes {
     nextNodeIndex: 50
     hideIfUnavailable: true
   }
+  branches {
+    responseText: "Was it your makeup over at her dresser? Pretty classy."
+    conditions {
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 56
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
@@ -2157,6 +2196,47 @@ nodes {
       }
     }
   }
+}
+nodes {
+  idRef {
+    id: "5404bec064343139a5a41931"
+  }
+  index: 56
+  text: "Huh? What are you talking about?"
+  branches {
+    responseText: "There were several Dwarf-aimed cosmetics products at her home. I assumed they were yours."
+    nextNodeIndex: 58
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "... they weren\'t yours? That\'s strange."
+    nextNodeIndex: 57
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404bfa464343139a5a41935"
+  }
+  index: 57
+  text: "$+(story.bro). Make sense."
+  branches {
+    responseText: "There were several Dwarf-aimed cosmetics products at her home. I assumed they were yours."
+    nextNodeIndex: 58
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404bfcb64343139a5a41939"
+  }
+  index: 58
+  text: "I didn\'t keep my stuff at her place. Are you sure they weren\'t yours? You are the one working at a face paint factory."
+  branches {
+    responseText: "Yeah, pretty sure."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
 }
 roots {
   conditions {
