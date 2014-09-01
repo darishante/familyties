@@ -6017,8 +6017,8 @@ regions {
 regions {
   name: "drone tunnel"
   position {
-    x: -162
-    y: 148
+    x: -178
+    y: 92
     width: -10
     height: 10
   }
@@ -6149,8 +6149,8 @@ regions {
 regions {
   name: "Shattercave"
   position {
-    x: -187
-    y: 148
+    x: -205
+    y: 118
     width: -9
     height: 7
   }
@@ -6281,8 +6281,8 @@ regions {
 regions {
   name: "Outrance to scattecave"
   position {
-    x: -190
-    y: 154
+    x: -208
+    y: 124
     width: 3
     height: -3
   }
@@ -6624,8 +6624,8 @@ regions {
 regions {
   name: "GrateHallwayEnd"
   position {
-    x: -165
-    y: 151
+    x: -181
+    y: 95
     width: 1
     height: 1
   }
@@ -6675,8 +6675,8 @@ regions {
 regions {
   name: "GrateAptEnd"
   position {
-    x: -171
-    y: 149
+    x: -187
+    y: 93
     width: 2
     height: 2
   }

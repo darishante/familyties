@@ -1,7 +1,7 @@
-minX: -273
+minX: -253
 minZ: -65
-numX: 287
-numZ: 228
+numX: 267
+numZ: 224
 props {
   name: "undergroundBase_floor_oldCement04"
   gridPoint {
@@ -19181,41 +19181,11 @@ props {
   lod: 0
 }
 props {
-  name: "mitte_building_02sewer01"
-  gridPoint {
-    x: -191
-    y: 0
-    z: 141
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "mitte_building_02sewer02"
-  gridPoint {
-    x: -191
-    y: 0
-    z: 144
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "sewer_decor_pipe01"
-  gridPoint {
-    x: -190
-    y: 0
-    z: 146
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "morgue_appliance_mediumBodyLocker01"
   gridPoint {
-    x: -171.01
+    x: -187.01
     y: -0.88
-    z: 155.12
+    z: 99.119995
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19223,9 +19193,9 @@ props {
 props {
   name: "factory_floor_plating01"
   gridPoint {
-    x: -171
+    x: -187
     y: 0
-    z: 149
+    z: 93
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19233,9 +19203,9 @@ props {
 props {
   name: "factory_floor_underPipes"
   gridPoint {
-    x: -167
+    x: -183
     y: 0
-    z: 151
+    z: 95
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19243,9 +19213,9 @@ props {
 props {
   name: "factory_floor_underPipes02"
   gridPoint {
-    x: -169
+    x: -185
     y: 0
-    z: 151
+    z: 95
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19253,9 +19223,9 @@ props {
 props {
   name: "factory_floor_underPipesCorner"
   gridPoint {
-    x: -171
+    x: -187
     y: 0
-    z: 151
+    z: 95
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19263,9 +19233,9 @@ props {
 props {
   name: "factory_floor_ReactorVent01"
   gridPoint {
-    x: -165
+    x: -181
     y: 0
-    z: 151
+    z: 95
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19273,29 +19243,9 @@ props {
 props {
   name: "factory_floor_underPipes02"
   gridPoint {
-    x: -171
+    x: -187
     y: 0
-    z: 153
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "tenements_wall_door05Mid"
-  gridPoint {
-    x: -148
-    y: 0
-    z: 134
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "tenements_wall_door04Mid"
-  gridPoint {
-    x: -146
-    y: 0
-    z: 133
+    z: 97
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19303,9 +19253,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -164
+    x: -180
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19316,9 +19266,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -165
+    x: -181
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19329,9 +19279,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -166
+    x: -182
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19342,9 +19292,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -167
+    x: -183
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19355,9 +19305,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -168
+    x: -184
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19368,9 +19318,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -169
+    x: -185
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19381,9 +19331,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -170
+    x: -186
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19394,9 +19344,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -170
+    x: -186
     y: 0
-    z: 149
+    z: 93
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19407,9 +19357,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 149
+    z: 93
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19420,9 +19370,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 150
+    z: 94
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19433,9 +19383,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 151
+    z: 95
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19446,9 +19396,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 152
+    z: 96
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19459,9 +19409,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 153
+    z: 97
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19472,9 +19422,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 154
+    z: 98
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19485,9 +19435,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 155
+    z: 99
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19498,9 +19448,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -172
+    x: -188
     y: 0
-    z: 156
+    z: 100
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19511,9 +19461,9 @@ props {
 props {
   name: "factory_floor_underPipes02"
   gridPoint {
-    x: -171
+    x: -187
     y: 0
-    z: 155
+    z: 99
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19524,9 +19474,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -171
+    x: -187
     y: 0
-    z: 149
+    z: 93
   }
   orientation: ORIENTATION_N
   idRef {
@@ -19537,9 +19487,9 @@ props {
 props {
   name: "secretLab_wall_ventWall01"
   gridPoint {
-    x: -170
+    x: -186
     y: 0
-    z: 149
+    z: 93
   }
   orientation: ORIENTATION_N
   idRef {
@@ -19590,9 +19540,9 @@ props {
 props {
   name: "warehouse_wall_interiorConnector01"
   gridPoint {
-    x: -191
+    x: -209
     y: 0.12
-    z: 151
+    z: 121
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19600,19 +19550,9 @@ props {
 props {
   name: "warehouse_wall_interiorDoor02Front"
   gridPoint {
-    x: -191
+    x: -209
     y: 0
-    z: 151
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "warehouse_wall_interiorEdge03"
-  gridPoint {
-    x: -187
-    y: 0
-    z: 147
+    z: 121
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19620,9 +19560,9 @@ props {
 props {
   name: "warehouse_wall_interiorEnd01"
   gridPoint {
-    x: -189
+    x: -207
     y: 0
-    z: 150
+    z: 120
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19630,9 +19570,9 @@ props {
 props {
   name: "warehouse_wall_spyVent01"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 150.01
+    z: 120.00999
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19640,9 +19580,9 @@ props {
 props {
   name: "warehouse_wall_interiorConnector01"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 150
+    z: 120
   }
   orientation: ORIENTATION_N
   idRef {
@@ -19653,9 +19593,9 @@ props {
 props {
   name: "tenements_wall_stairwell01"
   gridPoint {
-    x: -192.1
+    x: -210.1
     y: 0
-    z: 151.79
+    z: 121.78999
   }
   orientation: ORIENTATION_E
   idRef {
@@ -19679,21 +19619,11 @@ props {
   lod: 0
 }
 props {
-  name: "tenements_furniture_mattressFloor"
-  gridPoint {
-    x: -183.77
-    y: -0.19
-    z: 151
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
   name: "undergroundBase_floor_dragonChamber07"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 151
+    z: 121
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19701,9 +19631,9 @@ props {
 props {
   name: "warehouse_floor_19"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 151
+    z: 121
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19711,9 +19641,9 @@ props {
 props {
   name: "warehouse_floorDecoration_grate01"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 153
+    z: 123
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19721,9 +19651,9 @@ props {
 props {
   name: "diveBar_wallDecor_dartboard01"
   gridPoint {
-    x: -188.19
+    x: -206.19
     y: 1.03
-    z: 150.61
+    z: 120.61
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -19731,9 +19661,9 @@ props {
 props {
   name: "undergroundBase_misc_target02"
   gridPoint {
-    x: -190
+    x: -208
     y: 0
-    z: 153.32
+    z: 123.32001
   }
   orientation: ORIENTATION_S
   idRef {
@@ -19752,19 +19682,9 @@ props {
 props {
   name: "undergroundBase_groundDecoration_keroseneLamp01_lights"
   gridPoint {
-    x: -189.48
+    x: -207.48
     y: -0.23
-    z: 153
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "asylum_lighting_nakedLamp"
-  gridPoint {
-    x: -189
-    y: 0
-    z: 158
+    z: 123
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19772,19 +19692,9 @@ props {
 props {
   name: "undergroundBase_groundDecoration_keroseneLamp02"
   gridPoint {
-    x: -189.48
+    x: -207.48
     y: -0.23
-    z: 153
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "mitte_clutter_crate05"
-  gridPoint {
-    x: -185.28
-    y: 0
-    z: 156.01
+    z: 123
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19792,9 +19702,9 @@ props {
 props {
   name: "factory_wallDecoration_onSwitch"
   gridPoint {
-    x: -190.3
+    x: -208.3
     y: 1.42
-    z: 151.28
+    z: 121.28
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -19802,29 +19712,19 @@ props {
 props {
   name: "factory_wallDecoration_onSwitchLight"
   gridPoint {
-    x: -190.36
+    x: -208.36
     y: 1.42
-    z: 151.19
+    z: 121.19
   }
   orientation: ORIENTATION_S
   lod: 0
 }
 props {
-  name: "asylum_wallDecor_slimDoor01"
-  gridPoint {
-    x: -190.16
-    y: 0
-    z: 158
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
   name: "museum_wallDecoration_techDisplayStand02"
   gridPoint {
-    x: -189
+    x: -207
     y: 0
-    z: 151
+    z: 121
   }
   orientation: ORIENTATION_E
   idRef {
@@ -20421,16 +20321,6 @@ props {
   lod: 0
 }
 props {
-  name: "sleekOffice_prop_glassTable01"
-  gridPoint {
-    x: -207
-    y: 0
-    z: 160
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "factory_tech_bridgeDown"
   gridPoint {
     x: -206.92
@@ -20443,9 +20333,9 @@ props {
 props {
   name: "warehouse_floorDecoration_grate01"
   gridPoint {
-    x: -164.42
+    x: -180.42
     y: 0.56
-    z: 151.56
+    z: 95.56
   }
   orientation: ORIENTATION_S
   displayName: "HallGrateOut"
@@ -20483,9 +20373,9 @@ props {
 props {
   name: "warehouse_floorDecoration_grate01"
   gridPoint {
-    x: -170.42
+    x: -186.42
     y: 2.74
-    z: 149.56
+    z: 93.56
   }
   orientation: ORIENTATION_E
   displayName: "AptGrateOut"
@@ -20807,39 +20697,16 @@ props {
   lod: 0
 }
 props {
-  name: "factory_wallDecoration_industrialFan01"
-  gridPoint {
-    x: -194
-    y: 0
-    z: 160
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "54017eed3736634c15000126"
-  }
-  lod: 0
-}
-props {
   name: "mitte_clutter_crate03"
   gridPoint {
-    x: -188
+    x: -206
     y: 0
-    z: 153
+    z: 123
   }
   orientation: ORIENTATION_S
   idRef {
     id: "540183e3373663cc05000125"
   }
-  lod: 0
-}
-props {
-  name: "docks_clutter_shippingCrate04"
-  gridPoint {
-    x: -181
-    y: 0.01
-    z: 151.34
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -22371,66 +22238,6 @@ props {
   lod: 0
 }
 props {
-  name: "pikePlace_building_02corner01"
-  gridPoint {
-    x: -266
-    y: 0
-    z: 25
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "pikePlace_building_02roofCorner01"
-  gridPoint {
-    x: -269
-    y: 0
-    z: 20
-  }
-  orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "pikePlace_building_02roofCorner"
-  gridPoint {
-    x: -273
-    y: 0
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "pikePlace_building_02roofFrontCorner"
-  gridPoint {
-    x: -267
-    y: 0
-    z: 14
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "pikePlace_building_03base03"
-  gridPoint {
-    x: -265
-    y: 0
-    z: 19
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "pikePlace_building_03baseCorner01"
-  gridPoint {
-    x: -262
-    y: 0
-    z: 12
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "pikePlace_building_03base04"
   gridPoint {
     x: -242
@@ -22441,31 +22248,11 @@ props {
   lod: 0
 }
 props {
-  name: "pikePlace_building_03base02"
-  gridPoint {
-    x: -256
-    y: 0
-    z: -1
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "pikePlace_building_03edge04"
   gridPoint {
     x: -247
     y: 4.01
     z: 29
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "barrens_building_03edge04"
-  gridPoint {
-    x: -259
-    y: 0
-    z: 1
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -22980,31 +22767,11 @@ props {
   lod: 0
 }
 props {
-  name: "barrens_building_roofFront03"
-  gridPoint {
-    x: -259
-    y: 7
-    z: 9
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "barrens_building_roofBack03"
   gridPoint {
     x: -247
     y: 7
     z: 24
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "barrens_building_roofBack01"
-  gridPoint {
-    x: -220
-    y: 0
-    z: 13
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -23262,19 +23029,6 @@ props {
     isEnabled: true
     interactionRadius: 1
     interactionIcon: InteractionIcon_Warp
-  }
-  lod: 0
-}
-props {
-  name: "barrens_building_roofFront03"
-  gridPoint {
-    x: -212
-    y: 7
-    z: 26
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5402b2f03736630c1900442b"
   }
   lod: 0
 }
@@ -23605,9 +23359,9 @@ props {
 props {
   name: "tenements_furniture_singleBed03"
   gridPoint {
-    x: -188
+    x: -206
     y: 0
-    z: 151
+    z: 121
   }
   orientation: ORIENTATION_E
   lod: 0
