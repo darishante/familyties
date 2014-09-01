@@ -24012,3 +24012,55 @@ props {
   orientation: ORIENTATION_S
   lod: 0
 }
+props {
+  name: "pikePlace_ground_cobblestoneCurb02"
+  gridPoint {
+    x: 39
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "5404c6163736638017007ff6"
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_dirt07"
+  gridPoint {
+    x: 58
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5404c66a3736638017007ff7"
+  }
+  lod: 0
+}
+props {
+  name: "cemetery_ground_dirt11"
+  gridPoint {
+    x: 58
+    y: 0
+    z: 60
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5404c6703736638017007ff8"
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_ground_cobblestoneCurb02"
+  gridPoint {
+    x: 15
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "5404c6ef3736638017007ff9"
+  }
+  lod: 0
+}
