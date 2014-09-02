@@ -6017,8 +6017,8 @@ regions {
 regions {
   name: "drone tunnel"
   position {
-    x: -178
-    y: 92
+    x: -163
+    y: 148
     width: -10
     height: 10
   }
@@ -6149,8 +6149,8 @@ regions {
 regions {
   name: "Shattercave"
   position {
-    x: -205
-    y: 118
+    x: -186
+    y: 148
     width: -9
     height: 7
   }
@@ -6281,8 +6281,8 @@ regions {
 regions {
   name: "Outrance to scattecave"
   position {
-    x: -208
-    y: 124
+    x: -190
+    y: 154
     width: 3
     height: -3
   }
@@ -6624,8 +6624,8 @@ regions {
 regions {
   name: "GrateHallwayEnd"
   position {
-    x: -181
-    y: 95
+    x: -165
+    y: 151
     width: 1
     height: 1
   }
@@ -6675,8 +6675,8 @@ regions {
 regions {
   name: "GrateAptEnd"
   position {
-    x: -187
-    y: 93
+    x: -172
+    y: 149
     width: 2
     height: 2
   }
@@ -8285,6 +8285,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
