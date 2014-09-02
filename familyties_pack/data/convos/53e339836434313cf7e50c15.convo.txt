@@ -1,7 +1,7 @@
 idRef {
   id: "53e339836434313cf7e50c15"
 }
-ui_name: "s004_lawyer_calls"
+ui_name: "s005-lawyer_calls"
 nodes {
   idRef {
     id: "53e339906434313cf7e50c1b"
@@ -177,7 +177,7 @@ nodes {
     id: "53e33a586434313cf7e50c21"
   }
   index: 2
-  text: "{{GM}}Your PDA chimes, and a face appears on the screen. You\'re pretty sure you\'ve seen it earlier, at Alcamai, and surely enough, the call certificate confirms that the caller is from the Omaha office.{{/GM}}\n\nHello, $(story.pc_salutation) $(story.pc_lastname)! I\'m Cameron Zhang, a lawyer for the company. I was told you had some detectives question you at the office this morning, and it seems you\'re a suspect in a homicide case. The company is very concerned. Do you require legal assistance?"
+  text: "{{GM}}Your PDA chimes, and a face appears on the screen. You\'re pretty sure you\'ve seen it earlier, at Alcamai, and surely enough, the call certificate confirms that the caller is from the Omaha office.{{/GM}}\n\nHello, $(story.pc_salutation) $(story.pc_lastname)! I\'m Cameron Zhang, a lawyer for the company. I was told you had some detectives question you at the office yesterday morning, and it seems you\'re a suspect in a homicide case. The company is very concerned. Do you require legal assistance?"
   branches {
     responseText: "... I might."
     actions {
@@ -400,74 +400,6 @@ nodes {
   }
   branches {
     responseText: "I can\'t afford your rates. I\'m going to set up my own defense."
-    actions {
-      ops {
-        functionName: "Set Variable (string)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (string)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "pc_alcamai"
-            }
-          }
-        }
-        args {
-          string_value: "fired"
-        }
-      }
-      ops {
-        functionName: "Set Variable (int)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (int)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "ZhangRep"
-            }
-          }
-        }
-        args {
-          int_value: -1
-        }
-      }
-      ops {
-        functionName: "Set Variable (string)"
-        args {
-          call_value {
-            functionName: "Get Story Variable (string)"
-            args {
-              string_value: "53da5ef2643431a4970041a8"
-            }
-            args {
-              string_value: "StorySoFar"
-            }
-          }
-        }
-        args {
-          call_value {
-            functionName: "Append (string)"
-            args {
-              string_value: "AlcamaiGotFired,"
-            }
-            args {
-              call_value {
-                functionName: "Get Story Variable (string)"
-                args {
-                }
-                args {
-                  string_value: "StorySoFar"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     nextNodeIndex: 6
   }
   branches {
@@ -496,6 +428,74 @@ nodes {
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "pc_alcamai"
+          }
+        }
+      }
+      args {
+        string_value: "fired"
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (string)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "StorySoFar"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Append (string)"
+          args {
+            string_value: "AlcamaiGotFired,"
+          }
+          args {
+            call_value {
+              functionName: "Get Story Variable (string)"
+              args {
+              }
+              args {
+                string_value: "StorySoFar"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -586,7 +586,7 @@ nodes {
     id: "53e3414664343179fbe50ac5"
   }
   index: 8
-  text: "You don\'t know what you\'re doing, $(story.pc_lastname). If you choose to go ahead with this, I\'m pretty sure the company will cut you loose."
+  text: "You don\'t know what you\'re doing, $(story.pc_lastname). If you choose to go ahead with this, the company will cut you loose."
   branches {
     responseText: "Yeah, I\'m sure they will. Bye now."
     nextNodeIndex: -1
@@ -816,6 +816,25 @@ nodes {
     nextNodeIndex: 14
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "ZhangMissions"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
 }
 nodes {
   idRef {

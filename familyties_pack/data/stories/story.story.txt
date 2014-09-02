@@ -264,6 +264,18 @@ variables {
   }
 }
 variables {
+  name: "ZhangMissions"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "ZhangMissions"
+      typeName: "int"
+    }
+  }
+}
+variables {
   name: "ZhangRep"
   typeName: "int"
   defaultValue {
