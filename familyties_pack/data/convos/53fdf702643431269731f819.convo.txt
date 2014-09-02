@@ -1703,7 +1703,8 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 31
+    auxiliaryLink: true
   }
   branches {
     responseText: "On second thought give me something else."

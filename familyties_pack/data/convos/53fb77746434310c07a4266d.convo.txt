@@ -4319,16 +4319,16 @@ nodes {
   index: 87
   text: "Well, I became a shadowrunner, how about that!\n\nWhat would you like to know?"
   branches {
-    responseText: "How did you end up a shadowrunner?"
+    responseText: "How did you end up becoming a shadowrunner? All Gaitlin\'s lectures about you being no good finally got to you?"
     nextNodeIndex: 88
   }
   branches {
     responseText: "Have you got anyone?"
-    nextNodeIndex: 89
+    nextNodeIndex: 90
   }
   branches {
     responseText: "Does it pay well?"
-    nextNodeIndex: 90
+    nextNodeIndex: 93
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -4337,9 +4337,21 @@ nodes {
     id: "5404c49f64343139a5a41c1b"
   }
   index: 88
-  text: "Tried the wage slave route first. Didn\'t take.\n\nDEBUG: to be expanded."
+  text: "Don\'t diss my calling, $(story.bro). I\'m good - it\'s just that I\'m good in an offbeat job.\n\nI did try doing something else first when I left the home. Fooled around with legit Matrix jobs, chasing the dangling carrot of wageslavery. Only I always ended up doing a bit more stress testing of my employer\'s network security than was strictly necessary.\n\nThen one time I found a set of really juicy engine specs that were practically sitting in a node unsecured. My bosses were jerks all the way up, so I got even."
   branches {
-    responseText: "I see"
+    responseText: "You stole the data."
+    nextNodeIndex: 89
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404cf0864343139a5a426c8"
+  }
+  index: 89
+  text: "Ayup, and sold it to their competitor. Got more than two months wages out of it.\n\nThis was down south, right on the border. Next thing I know this native shaman dude is headhunting me. I thought he was the law, but no, he was a runner in need of a decker for an op. I named my price, he met it, and the rest was history. Never looked back since.\n\n{{GM}}She yawns{{/GM}}"
+  branches {
+    responseText: "{{CC}}Yawn as well{{/CC}}"
     nextNodeIndex: 83
     auxiliaryLink: true
   }
@@ -4349,10 +4361,39 @@ nodes {
   idRef {
     id: "5404c4b664343139a5a41c1d"
   }
-  index: 89
-  text: "Like, a boyfriend? Not really. Bedroom buddies come and go, but I\'m not seeing anyone regularily right now.\n\nDEBUG: to be expanded"
+  index: 90
+  text: "Like, a boyfriend? Not really. Bedroom buddies come and go, but I\'m not seeing anyone regularily right now.\n\nI did have a sort of serious relationship a year back, but that bombed completely. After that I\'ve just played the field."
   branches {
-    responseText: "I see"
+    responseText: "Ouch. Sorry."
+    nextNodeIndex: 91
+  }
+  branches {
+    responseText: "I can\'t really imagine you in a serious relationship."
+    nextNodeIndex: 92
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404d14564343139a5a426ed"
+  }
+  index: 91
+  text: "Nah, don\'t be, it was the dictionary definition of \"doomed right from the start\".\n\n{{GM}}She yawns{{/GM}}"
+  branches {
+    responseText: "{{CC}}Yawn as well{{/CC}}"
+    nextNodeIndex: 83
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404d11464343139a5a426e7"
+  }
+  index: 92
+  text: "Me neither. That was part of the problem I think.\n\n{{GM}}She yawns{{/GM}}"
+  branches {
+    responseText: "{{CC}}Yawn as well{{/CC}}"
     nextNodeIndex: 83
     auxiliaryLink: true
   }
@@ -4362,10 +4403,22 @@ nodes {
   idRef {
     id: "5404c4e964343139a5a41c1f"
   }
-  index: 90
-  text: "Sometimes it pays unbelievably well. Other times, not so well. Most of the times you need to take any job that comes your way just to cover your living costs, but then once in a while something really lucrative comes along. Of course, it\'s usually really dangerous too.\n\nDEBUG: to be expanded"
+  index: 93
+  text: "There are times shadowrunning pays unbelievably well. But much of the time you need to take any job that comes your way just to cover your living costs. In those times it helps to have good contacts.\n\nThen every once in a while something really lucrative comes along. Of course, it\'s usually really dangerous too. But that has never bothered me. Who wants to live forever and all that?\n\nI\'ve had my share of really well-paying jobs. There\'s a couple I\'ve got my eye on right now."
   branches {
-    responseText: "I see"
+    responseText: "Tell me more."
+    nextNodeIndex: 94
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5404d2ae64343139a5a426f5"
+  }
+  index: 94
+  text: "What, you want a piece of the action?\n\n{{GM}}She yawns{{/GM}}"
+  branches {
+    responseText: "{{CC}}Yawn as well{{/CC}}"
     nextNodeIndex: 83
     auxiliaryLink: true
   }
