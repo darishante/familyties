@@ -25,18 +25,18 @@ regions {
     z: -0.75
   }
   directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.3137255
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.37254903
   }
   ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.3137255
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.37254903
   }
-  ambience_template: ""
+  ambience_template: "underground-busy"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -125,6 +125,8 @@ team_affiliations {
 }
 scene_dimensions {
   dimension_name: "Default"
+}
+character_roster {
 }
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
