@@ -1,3 +1,97 @@
+triggers {
+  name: "ZhangCalls"
+  events {
+    ops {
+      functionName: "On Actor Movement Finished"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "Loop1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 8
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Start Conversation"
+      args {
+        call_value {
+          functionName: "Get Map Item (Conversation)"
+          args {
+            string_value: "53e339836434313cf7e50c15"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5407360c64343161748fb5b4"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5407340a64343161748fb52f"
+  }
+  elseActions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "Loop1"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  is_oneshot: false
+}
 regions {
   name: "New Region"
   position {
@@ -108,6 +202,57 @@ characters {
     pc_spawn_number: 0
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 107
+    y: 0
+    z: 90
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5407360c64343161748fb5b4"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Berlin:HavenCivilians/HumanMaleHavenCivilian_1"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      archetypeName: "Non-Combatant"
+      vulnerabilities {
+      }
+    }
+    team_id: "Civilians"
+    char_name: "Zhang"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backerpc_humanmale_adamdoochin_stephenwatashima"
+    }
+    karma: 6
+  }
+}
 worldMapLocation {
   filename: ""
   location {
@@ -117,9 +262,9 @@ worldMapLocation {
 }
 mapName: "Family Ties_005"
 parentStory: ""
-scene_title: "New Scene"
+scene_title: "RED HILL: THE OLD MUNICIPAL BUILDING"
 scene_subtitle: ""
-scene_synopsis: ""
+scene_synopsis: "From Half Shatter\'s place you walk north. The buildings are run-down, and after a bit they stop being occupied.\n\nGraffiti tells you you are in gangland now. Your sister isn\'t sure about the location of the municipal building, and your PDA navigation system is useless. Some legwork is required."
 scene_image: ""
 scene_continue_button_skip: false
 scene_restore_runner_health: false
@@ -147,14 +292,14 @@ team_affiliations {
   affiliation: 0
 }
 team_affiliations {
-  team_name: "Gangers"
-  affiliation: 1
+  team_name: "Rainmakers"
+  affiliation: 0
   affiliation: 0
   affiliation: 1
   affiliation: 0
 }
 team_affiliations {
-  team_name: "LoneStar"
+  team_name: "Razorbacks"
   affiliation: 1
   affiliation: 1
   affiliation: 0
@@ -180,7 +325,7 @@ scene_hiring_prerequisites {
 }
 hiring_slot_count: 0
 hiring_minimum_karma: 0
-hiring_maximum_karma: 25
+hiring_maximum_karma: 0
 roster_overrides {
 }
 use_hiring_cost_warning: false

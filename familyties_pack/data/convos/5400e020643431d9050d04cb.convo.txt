@@ -22,6 +22,52 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Etiquette: Gang{{/CC}} Haau Rainmakers. What does the wind tell you?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
     nextNodeIndex: 10
   }
   nodeType: ConversationNodeType_Simple
@@ -63,6 +109,33 @@ nodes {
   }
   branches {
     responseText: "{{CC}}100 nuyen{{/CC}} Maybe we can hire you to be our local scouts then. We\'re looking to get to the old municipal building."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+    }
     nextNodeIndex: 5
   }
   nodeType: ConversationNodeType_Simple
@@ -114,6 +187,52 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} You know what happens when gang trash and professionals have an argument? It does not end well for the gang trash."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
     nextNodeIndex: 9
   }
   nodeType: ConversationNodeType_Simple
