@@ -95,15 +95,15 @@ triggers {
 regions {
   name: "New Region"
   position {
-    x: 115
-    y: 11
-    width: -135
-    height: 120
+    x: 113
+    y: 1
+    width: -144
+    height: 140
   }
   enabledAtStart: true
   is_camera_region: true
   idRef {
-    id: "5401a73137366378020001a1"
+    id: "540745b8373663b815004e9e"
   }
   highlight_color {
     r: 0
@@ -130,51 +130,7 @@ regions {
     b: 0.50196081
     a: 1
   }
-  ambience_template: "downtown-night"
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-}
-regions {
-  name: "maintenance area"
-  position {
-    x: -47
-    y: 26
-    width: -25
-    height: 35
-  }
-  enabledAtStart: true
-  is_camera_region: true
-  idRef {
-    id: "5402139b3736636c0e003d83"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_teleporter_region: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.3137255
-    g: 0.29411766
-    b: 0.29411766
-    a: 0.39215687
-  }
-  ambient_light_color {
-    r: 0.3137255
-    g: 0.29411766
-    b: 0.29411766
-    a: 0.39215687
-  }
-  ambience_template: "underground-quiet"
+  ambience_template: "slums-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
