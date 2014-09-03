@@ -31,7 +31,7 @@ triggers {
         }
       }
       args {
-        int_value: 8
+        int_value: 13
       }
     }
   }
@@ -92,6 +92,261 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "RainmakerPatrol"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "5407568964343191848564a2"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Protect (Actor)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "54074ff8643431918485649a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "540750bd643431918485649d"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Protect (Actor)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "540750b4643431918485649c"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "540750bd643431918485649d"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5407541064343191848564a1"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "ReactivatePatrol"
+  events {
+    ops {
+      functionName: "On Conversation Complete"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5407596d6434319184856528"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "DeactivatePatrol"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Actor In Passive Mode"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "540759d8643431918485652b"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "New Region"
   position {
@@ -136,12 +391,216 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+patrolRoutes {
+  name: "Rainmakers Perimeter"
+  pathType: 0
+  nodes {
+    position {
+      x: 94
+      z: 63
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: 105
+      z: 77
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: 110
+      z: 94
+    }
+    index: 2
+  }
+  nodes {
+    position {
+      x: 110
+      z: 116
+    }
+    index: 3
+  }
+  nodes {
+    position {
+      x: 69
+      z: 116
+    }
+    index: 4
+  }
+  nodes {
+    position {
+      x: 60
+      z: 107
+    }
+    index: 5
+  }
+  nodes {
+    position {
+      x: 69
+      z: 91
+    }
+    index: 6
+  }
+  nodes {
+    position {
+      x: 76
+      z: 75
+    }
+    index: 7
+  }
+  nodes {
+    position {
+      x: 64
+      z: 63
+    }
+    index: 8
+  }
+  nodes {
+    position {
+      x: 58
+      z: 43
+    }
+    index: 9
+  }
+  nodes {
+    position {
+      x: 73
+      z: 37
+    }
+    index: 10
+  }
+  nodes {
+    position {
+      x: 68
+      z: 30
+    }
+    index: 11
+  }
+  nodes {
+    position {
+      x: 61
+      z: 38
+    }
+    index: 12
+  }
+  nodes {
+    position {
+      x: 24
+      z: 34
+    }
+    index: 13
+  }
+  nodes {
+    position {
+      x: 0
+      z: 33
+    }
+    index: 14
+  }
+  nodes {
+    position {
+      x: 6
+      z: 46
+    }
+    index: 15
+  }
+  nodes {
+    position {
+      x: 12
+      z: 49
+    }
+    index: 16
+  }
+  nodes {
+    position {
+      x: 18
+      z: 37
+    }
+    index: 17
+  }
+  nodes {
+    position {
+      x: 38
+      z: 31
+    }
+    index: 18
+  }
+  nodes {
+    position {
+      x: 45
+      z: 41
+    }
+    index: 19
+  }
+  nodes {
+    position {
+      x: 45
+      z: 66
+    }
+    index: 20
+  }
+  nodes {
+    position {
+      x: 7
+      z: 66
+    }
+    index: 21
+  }
+  nodes {
+    position {
+      x: 0
+      z: 86
+    }
+    index: 22
+  }
+  nodes {
+    position {
+      x: 1
+      z: 93
+    }
+    index: 23
+  }
+  nodes {
+    position {
+      x: 12
+      z: 104
+    }
+    index: 24
+  }
+  nodes {
+    position {
+      x: 40
+      z: 104
+    }
+    index: 25
+  }
+  nodes {
+    position {
+      x: 40
+      z: 70
+    }
+    index: 26
+  }
+  nodes {
+    position {
+      x: 94
+      z: 63
+    }
+    index: 27
+  }
+  can_move_beyond_node: false
+  idRef {
+    id: "5407568964343191848564a2"
+  }
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: 109
+    x: 108
     y: -0.35
-    z: 116
+    z: 115
   }
   orientation: ORIENTATION_N
   idRef {
@@ -207,6 +666,266 @@ characters {
       filename: "backerpc_humanmale_adamdoochin_stephenwatashima"
     }
     karma: 6
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 92
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "54074ff8643431918485649a"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Gangers/HumanFemaleGanger_Cutter"
+    character_sheet_id: "Generic_Lv1_Human_Melee"
+    equipment_sheet_id: "Generic_Lv1_Melee_Gear"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 1
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 5
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Pi 1 Ceska Black Scorpion"
+    }
+    team_id: "Civilians"
+    char_name: "Rainmaker Pistol"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    karma: 31
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 92
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "540750b4643431918485649c"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Gangers/ElfFemaleGangerMohawk"
+    character_sheet_id: "Generic_Lv1_Human_Melee"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 1
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Berlin_Tb 1 Knife"
+    }
+    equipment {
+      prefab_name: "Sword 1 Machete"
+    }
+    team_id: "Civilians"
+    char_name: "Rainmaker Blades"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    karma: 29
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 93
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  GeneralTags: "patrol"
+  idRef {
+    id: "540750bd643431918485649d"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Gangers/HumanMaleGanger_Cutter"
+    character_sheet_id: "Generic_Lv1_Human_Melee"
+    equipment_sheet_id: "Generic_Lv1_Melee_Gear"
+    character_mod {
+      stats {
+        body: 1
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 15
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 1
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Seek And Destroy"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Sh 1 Ganger Shotgun"
+    }
+    team_id: "Civilians"
+    char_name: "Rainmaker Sergeant"
+    GeneralTags: "patrol"
+    pc_spawn_number: -1
+    portrait {
+      filename: "pc_humanmale_10a_beserker"
+    }
+    karma: 31
   }
 }
 worldMapLocation {
