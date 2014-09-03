@@ -992,7 +992,7 @@ props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
     x: -67.88
-    y: 1.0408341e-017
+    y: 1.0408341e-17
     z: 52.77
   }
   orientation: ORIENTATION_S
@@ -2692,7 +2692,7 @@ props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
     x: -151.88
-    y: 1.0408341e-017
+    y: 1.0408341e-17
     z: 46.77
   }
   orientation: ORIENTATION_S
@@ -4396,7 +4396,7 @@ props {
   name: "school_floorDecoration_grunge01"
   gridPoint {
     x: -65.55
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 53
   }
   orientation: ORIENTATION_E
