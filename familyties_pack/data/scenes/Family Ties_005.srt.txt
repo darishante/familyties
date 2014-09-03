@@ -215,7 +215,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Berlin:HavenCivilians/HumanMaleHavenCivilian_1"
+    prefab_name: "Seattle:Objects/InvisibleActor"
     character_sheet_id: "BaseCivilian"
     character_mod {
       stats {
