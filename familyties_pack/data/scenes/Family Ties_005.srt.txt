@@ -1,10 +1,10 @@
 regions {
   name: "New Region"
   position {
-    x: 83
-    y: 8
-    width: -101
-    height: 111
+    x: 115
+    y: 11
+    width: -135
+    height: 120
   }
   enabledAtStart: true
   is_camera_region: true
@@ -89,9 +89,9 @@ regions {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -16
+    x: 109
     y: -0.35
-    z: 113
+    z: 116
   }
   orientation: ORIENTATION_N
   idRef {
