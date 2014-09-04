@@ -30754,6 +30754,17 @@ props {
     property_id: "fxScript"
     string_value: "CrowdBarrelFireDuo"
   }
+  idRef {
+    id: "5408a5ee6434316217c58206"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "54089c1d643431560e7269f4"
+      turnToFace: false
+    }
+  }
   lod: 0
 }
 props {
@@ -32195,8 +32206,14 @@ props {
     z: 13
   }
   orientation: ORIENTATION_S
+  displayName: "TrapSpring"
   idRef {
     id: "5407423e373663b815004e61"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Inspect
   }
   lod: 0
 }

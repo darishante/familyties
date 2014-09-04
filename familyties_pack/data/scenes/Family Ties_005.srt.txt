@@ -850,6 +850,50 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "Trap"
+  position {
+    x: -4
+    y: 13
+    width: 3
+    height: 5
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5408a131643431560e726a42"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 patrolRoutes {
   name: "Rainmakers Perimeter"
   pathType: 0
@@ -1416,6 +1460,56 @@ characters {
     karma: 31
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 83
+    y: 0
+    z: 107
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5408a5176434316217c58204"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Objects/InvisibleActor"
+    character_sheet_id: "BaseCivilian"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        hp: 0
+        ap: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
+      vulnerabilities {
+      }
+    }
+    team_id: "Shadowrunners"
+    char_name: "Street Denizen"
+    pc_spawn_number: -1
+    portrait {
+      filename: "backer_elffemale_joshualawford_wren"
+    }
+    karma: 6
+  }
+}
 variables {
   int_value: 0
   variableref_value {
@@ -1423,6 +1517,11 @@ variables {
     name: "PatrolShowsTheWay"
     typeName: "int"
   }
+}
+goals {
+  name: "Half Shatter Must Survive"
+  type: GoalType_Primary
+  status: GoalStatus_Started
 }
 worldMapLocation {
   filename: ""

@@ -1,0 +1,374 @@
+idRef {
+  id: "54089c1d643431560e7269f4"
+}
+ui_name: "s005-conversation_by_the_fire"
+nodes {
+  idRef {
+    id: "54089c30643431560e7269fa"
+  }
+  index: 0
+  text: "{{GM}}Two locals are warming their hands in a barrel fire. They look at you cautiously, but not threateningly.{{/GM}}"
+  branches {
+    responseText: "Morning. Which way is the old municipal building?"
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5408a64b643431a018c581d9"
+    }
+  }
+  branches {
+    responseText: "Hoi, what\'s happening?"
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5408a654643431a018c581da"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Keep walking{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089ccf643431560e726a00"
+  }
+  index: 1
+  text: "To the northwest. It\'s the Rainmakers\' home ground though, so you might not want to go there."
+  branches {
+    responseText: "Why\'s that?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Do you know if there\'s a way to slip inside without them knowing?"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089d09643431560e726a04"
+  }
+  index: 2
+  text: "Well, they are in the habit of robbing strangers who come around unprotected."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089d3e643431560e726a08"
+  }
+  index: 3
+  text: "We\'re not unprotected. They try anything, they\'re gonna regret it."
+  branches {
+    responseText: "{{CC}}To Hannah{{/CC}} I thought they weren\'t going to be any trouble?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "{{CC}}To the local{{/CC}} I don\'t think we have anything to worry about."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}To the local{{/CC}} Do you know if there\'s a way to slip inside without them knowing?"
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5408a42c6434316217c581a5"
+  }
+  index: 4
+  text: "They won\'t be anything we can\'t handle."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54089ed4643431560e726a1e"
+  }
+  index: 5
+  text: "It\'s your funeral."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089dd9643431560e726a0c"
+  }
+  index: 6
+  text: "My grandma used to work there way back in the day. I might know a way in. What\'s all that worth to you?"
+  branches {
+    responseText: "20 nuyen?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 20
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 20
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "A hot dog?"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "strangeHotDog"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54089e44643431560e726a12"
+    }
+  }
+  branches {
+    responseText: "{{CC}}Charisma 5{{/CC}} I\'ll owe you a favor."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Street{{/CC}} Are you bullshitting me?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 18
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "5408a03c643431560e726a25"
+  }
+  index: 7
+  text: "Okay. What you need to do is go west past the front gate, and take care not to be spotted by the sentries. Then go bast the collapsed building, and take the alleyway heading north. At the end there\'s a door. It\'s probably locked, but I think you\'ll find a way past that."
+  branches {
+    responseText: "Alright, thanks!"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089e31643431560e726a11"
+  }
+  index: 8
+  text: "Jeesh, that thing smells awful, keep it away from me."
+  branches {
+    responseText: "... Sorry."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "5408a00f643431560e726a23"
+  }
+  index: 9
+  text: "A favor, sure... okay, I won\'t lie to you: I have no idea how to get inside.\n\nAs far as I know the Rainmakers are squatting on the top floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "54089f9a643431560e726a21"
+  }
+  index: 10
+  text: "... Yeah, I totally am. I have no idea how to get inside. \n\nAs far as I know the Rainmakers are squatting on the top floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+nodes {
+  idRef {
+    id: "5408a4a16434316217c581b8"
+  }
+  index: 11
+  text: "Hoi yourselves. Blasted weather. Hope it\'s going to clear up at some point."
+  branches {
+    responseText: "Do you know where the old municipal building is?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Walk on{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5408a5176434316217c58204"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}
