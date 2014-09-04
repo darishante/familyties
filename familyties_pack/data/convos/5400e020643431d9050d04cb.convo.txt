@@ -89,7 +89,7 @@ nodes {
             string_value: "WithOrWithout"
           }
           args {
-            int_value: 1
+            int_value: 0
           }
         }
       }
@@ -100,7 +100,7 @@ nodes {
             string_value: "WaitOrNot"
           }
           args {
-            int_value: 0
+            int_value: 1
           }
         }
       }
@@ -123,9 +123,25 @@ nodes {
     id: "540175fc6434314d1e7268f3"
   }
   index: 1
-  text: "You lost? We can help you out. Let me and my brothers take you where you want to go."
+  text: "You lost? We can help you out. Let me and my sisters take you where you want to go."
   branches {
     responseText: "Thank you, that would be nice."
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "PatrolShowsTheWay"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
     nextNodeIndex: 2
   }
   branches {
@@ -144,7 +160,7 @@ nodes {
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
-      functionName: "Order Actor to Move To (Prop)"
+      functionName: "Set Actor In Passive Mode"
       args {
         call_value {
           functionName: "All Actors With Tag"
@@ -171,20 +187,69 @@ nodes {
       }
       args {
         call_value {
-          functionName: "Get Map Item (Prop)"
+          functionName: "Get Preset Value (int)"
           args {
-            string_value: "5401d024373663b00b0067a5"
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
           }
         }
       }
       args {
         call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "540895c1643431560e7268b6"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
           functionName: "Get Preset Value (int)"
           args {
-            string_value: "FacingDirection"
+            string_value: "EnableOrDisable"
           }
           args {
-            int_value: 0
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5407596d6434319184856528"
           }
         }
       }
@@ -264,6 +329,22 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "PatrolShowsTheWay"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
 }
 nodes {
   idRef {

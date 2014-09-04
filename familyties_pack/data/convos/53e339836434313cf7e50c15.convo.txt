@@ -205,6 +205,22 @@ nodes {
   text: "{{GM}}Your PDA chimes, and a face appears on the screen. It\'s Zhang, the lawyer.\n\nHello, $(story.pc_salutation) $(story.pc_lastname). I was wondering if we should meet and discuss our strategy about the charges against you sometime soon?"
   branches {
     responseText: "Yes, let\'s talk."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     actions {
       ops {
         functionName: "Set Variable (string)"
@@ -244,6 +260,22 @@ nodes {
   }
   branches {
     responseText: "Never mind that. I\'m setting up my own defense."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 7
     auxiliaryLink: true
   }
@@ -265,6 +297,22 @@ nodes {
   text: "{{GM}}Your PDA chimes, and a face appears on the screen. You\'re pretty sure you\'ve seen it earlier, at Alcamai, and surely enough, the call certificate confirms that the caller is from the Omaha office.{{/GM}}\n\nHello, $(story.pc_salutation) $(story.pc_lastname)! I\'m Cameron Zhang, a lawyer for the company. I was told you had some detectives question you at the office yesterday morning, and it seems you\'re a suspect in a homicide case. The company is very concerned. Do you require legal assistance?"
   branches {
     responseText: "... I might."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     actions {
       ops {
         functionName: "Set Variable (string)"
@@ -304,11 +352,43 @@ nodes {
   }
   branches {
     responseText: "No, I\'ve got this."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 7
     auxiliaryLink: true
   }
   branches {
     responseText: "Do you know my sister has been murdered? I\'ve got more important things to worry about here."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 3
     onlyOnce: true
     idRef {
@@ -401,10 +481,42 @@ nodes {
   text: "{{GM}}Your PDA chimes, and a face appears on the screen. It\'s Zhang, the lawyer.\n\nHello, $(story.pc_salutation) $(story.pc_lastname). I was wondering if we should meet and discuss our strategy about the charges against you sometime soon?"
   branches {
     responseText: "How much would this cost me?"
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 5
   }
   branches {
     responseText: "Yeah, never mind that. I\'m setting up my own defense."
+    conditions {
+      ops {
+        functionName: "Evaluate Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TurnBasedOrFreeMove"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 7
   }
   branches {

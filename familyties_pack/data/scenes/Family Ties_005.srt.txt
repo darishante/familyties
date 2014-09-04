@@ -31,7 +31,7 @@ triggers {
         }
       }
       args {
-        int_value: 13
+        int_value: 27
       }
     }
   }
@@ -227,6 +227,25 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Attach Region to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5408980c643431560e72693f"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "540750bd643431918485649d"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -284,6 +303,41 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Order Actor to Patrol"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (PatrolRoute)"
+          args {
+            string_value: "5407568964343191848564a2"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -300,6 +354,27 @@ triggers {
   conditions {
   }
   actions {
+    ops {
+      functionName: "Clear Actor Orders"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "patrol"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Nothing Selected"
+            }
+          }
+        }
+      }
+    }
     ops {
       functionName: "Set Actor In Passive Mode"
       args {
@@ -518,6 +593,131 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "HerdTheRunners"
+  events {
+    ops {
+      functionName: "On Region Exit"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5408980c643431560e72693f"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "PatrolShowsTheWay"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "540750bd643431918485649d"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "C\'mon, keep up, chummers."
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 0
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "540897ea643431560e72693e"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "New Region"
   position {
@@ -557,6 +757,94 @@ regions {
     a: 1
   }
   ambience_template: "slums-quiet"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "MunicipalBldgDoor"
+  position {
+    x: -11
+    y: 32
+    width: 9
+    height: 12
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "54089229643431560e7266f6"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "PatrolCloseArea"
+  position {
+    x: 91
+    y: 62
+    width: 16
+    height: 15
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5408980c643431560e72693f"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
   combat_music: ""
   default_music: ""
   loop_combat_music: true
@@ -764,6 +1052,35 @@ patrolRoutes {
   can_move_beyond_node: false
   idRef {
     id: "5407568964343191848564a2"
+  }
+}
+patrolRoutes {
+  name: "RainmakersEnter"
+  pathType: 2
+  nodes {
+    position {
+      x: 33
+      z: 36
+    }
+    index: 0
+  }
+  nodes {
+    position {
+      x: -2
+      z: 34
+    }
+    index: 1
+  }
+  nodes {
+    position {
+      x: -2
+      z: 34
+    }
+    index: 2
+  }
+  can_move_beyond_node: false
+  idRef {
+    id: "540895c1643431560e7268b6"
   }
 }
 characters {
@@ -1097,6 +1414,14 @@ characters {
       filename: "pc_humanmale_10a_beserker"
     }
     karma: 31
+  }
+}
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "PatrolShowsTheWay"
+    typeName: "int"
   }
 }
 worldMapLocation {
