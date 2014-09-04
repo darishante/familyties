@@ -98,7 +98,7 @@ props {
   name: "barrens_building_01baseFrontCorner01"
   gridPoint {
     x: -5
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: 29
   }
   orientation: ORIENTATION_S
@@ -8487,7 +8487,7 @@ props {
   name: "barrens_ground_twoLaneSingle02"
   gridPoint {
     x: 42
-    y: 3.469447e-18
+    y: 3.469447e-018
     z: 11.52
   }
   orientation: ORIENTATION_E
@@ -27599,7 +27599,7 @@ props {
   name: "haven_wall_concreteBarrierEdge07"
   gridPoint {
     x: 77.33
-    y: -3.469447e-18
+    y: -3.469447e-018
     z: 98.32
   }
   orientation: ORIENTATION_S
