@@ -615,7 +615,7 @@ triggers {
         call_value {
           functionName: "Get Variable (int)"
           args {
-            string_value: "PatrolShowsTheWay"
+            string_value: "RepRainmakers"
           }
         }
       }
@@ -1908,7 +1908,7 @@ variables {
   int_value: 0
   variableref_value {
     scope: TsVariableScope_Scene
-    name: "PatrolShowsTheWay"
+    name: "RepRainmakers"
     typeName: "int"
   }
 }
