@@ -17043,3 +17043,43 @@ props {
   }
   lod: 0
 }
+props {
+  name: "tenements_furniture_brokenTable"
+  gridPoint {
+    x: -26
+    y: 0
+    z: -64
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicDresser"
+  gridPoint {
+    x: -28
+    y: 0
+    z: -62
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_furniture_futuristicLargeCouch02"
+  gridPoint {
+    x: -19
+    y: 0
+    z: -69
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "tenements_tech_cyberTerminal01"
+  gridPoint {
+    x: -29
+    y: 0
+    z: -59
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
