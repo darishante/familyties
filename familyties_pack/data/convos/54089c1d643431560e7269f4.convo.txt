@@ -89,6 +89,9 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
 }
 nodes {
   idRef {
@@ -97,6 +100,9 @@ nodes {
   index: 4
   text: "They won\'t be anything we can\'t handle."
   nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
 }
 nodes {
   idRef {
@@ -141,6 +147,28 @@ nodes {
         functionName: "Remove Nuyen"
         args {
           int_value: 20
+        }
+      }
+      ops {
+        functionName: "Enable/Disable Interactable Object"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (InteractableObject)"
+            args {
+              string_value: "5407423e373663b815004e61"
+            }
+          }
         }
       }
     }

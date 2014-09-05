@@ -32211,7 +32211,7 @@ props {
     id: "5407423e373663b815004e61"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
     interactionIcon: InteractionIcon_Inspect
   }

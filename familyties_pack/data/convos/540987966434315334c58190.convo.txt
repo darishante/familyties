@@ -1,0 +1,385 @@
+idRef {
+  id: "540987966434315334c58190"
+}
+ui_name: "s005-stupid_trap"
+nodes {
+  idRef {
+    id: "540987a96434315334c58196"
+  }
+  index: 0
+  text: "{{GM}}You reach the end of the alley. The wall of the municipal building rises above you, and the alley terminates in a solid concrete wall.\n\nThere is no door.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Look for hidden passages{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Drek."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5409888b6434315334c5819f"
+  }
+  index: 1
+  text: "{{GM}}If there are some, they are beyond your abilities to find.{{/GM}}"
+  branches {
+    responseText: " "
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540987f16434315334c5819a"
+  }
+  index: 2
+  text: "They totally played you for a sucker. I bet that woman\'s grandma never worked a day in her life, let alone here."
+  branches {
+    responseText: "Suckered me? You were with me all the way!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "I\'m an idiot."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Maybe there\'s a way in and we just don\'t see it."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "5409894e6434315334c581b6"
+  }
+  index: 3
+  text: "You were the one who opened $(l.his) credstick! I was just a stunned bystander.\n\nWe\'ve gotta go back to that damn hobette and shoot her full of holes!"
+  branches {
+    responseText: "You what? You\'d murder her for 20 lousy nuyen?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I get first dibs!"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Let\'s just forget the whole thing and look for some other way in."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54098a1f6434315334c581bb"
+  }
+  index: 4
+  text: "It\'s not the amount of money! It\'s the principle of the thing! No one cheats me and gets away with it!"
+  branches {
+    responseText: "So now she did cheat you?"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "That would be just harmless exaggeration if you weren\'t carrying a gun!"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "doorguard"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5408a131643431560e726a42"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54098b136434315334c581bf"
+  }
+  index: 5
+  text: "She\'s just going to fool you again! Better let a pro handle these things!"
+  branches {
+    responseText: "I\'ll let you know if I meet one!"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "No, she\'s mine!"
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "doorguard"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5408a131643431560e726a42"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54098be96434315334c581cc"
+  }
+  index: 6
+  text: "Well, we can get your 20 nuyen back from her cold, dead hands."
+  branches {
+    responseText: "It\'s just 20 nuyen. I\'m not going to murder anyone for pocket change."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I get first dibs!"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54098c516434315334c581d9"
+  }
+  index: 7
+  text: "Yeah, and maybe all those emails from widows of Asante princes really were an opportunity to make millions.\n\nYou done got scammed, $(story.bro)."
+  branches {
+    responseText: "Oh well, just 20 nuyen, no big deal."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m gonna kill her!"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54098b706434315334c581c4"
+  }
+  index: 8
+  text: "Hoi, chummers!\n\n{{GM}}While you and Hannah are arguing with raised voices, several Rainmakers have crept to thee end of the alley.{{/GM}}\n\nWhat are you two shouting about?"
+  branches {
+    responseText: "None of your business."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We\'re just looking for ... drek."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We thought there\'d be a door here."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "PatrolShowsTheWay"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5409909d6434315334c582aa"
+  }
+  actions {
+    ops {
+      functionName: "Add Camera Point of Interest (Point)"
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5408a131643431560e726a42"
+              }
+            }
+          }
+        }
+      }
+      args {
+        float_value: 5
+      }
+    }
+    ops {
+      functionName: "No Effect"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5409938b6434315334c58328"
+  }
+  index: 9
+  text: "Use the front door, why don\'tcha? It\'s easier.\n\nAnd stop yelling, it\'s not even 9 o\'clock yet."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 8
+}

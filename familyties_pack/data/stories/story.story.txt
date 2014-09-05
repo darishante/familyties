@@ -1610,4 +1610,11 @@ character_roster {
     hiring_cost: 6
     content_pack_source: "518d7672643431b03f0041aa"
   }
+  roster_entries {
+    reference_id: "familyties_crew_halfshatter_lv1"
+    hiring_conditions {
+    }
+    hiring_cost: 1
+    content_pack_source: "53da5ef2643431a4970041a8"
+  }
 }
