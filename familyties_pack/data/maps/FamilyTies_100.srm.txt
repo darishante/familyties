@@ -11017,7 +11017,7 @@ props {
   gridPoint {
     x: -21
     y: 0
-    z: -81
+    z: -80
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11107,7 +11107,7 @@ props {
   gridPoint {
     x: -13
     y: 0
-    z: -83
+    z: -84
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11147,7 +11147,7 @@ props {
   gridPoint {
     x: 5
     y: 0
-    z: -74
+    z: -62
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -11467,7 +11467,7 @@ props {
   gridPoint {
     x: -16
     y: 0
-    z: -84
+    z: -83
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -11477,7 +11477,7 @@ props {
   gridPoint {
     x: -3
     y: 0
-    z: -69
+    z: -70
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -11497,7 +11497,7 @@ props {
   gridPoint {
     x: -17
     y: 0
-    z: -84
+    z: -83
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -12804,7 +12804,7 @@ props {
   gridPoint {
     x: -14
     y: 0
-    z: -84
+    z: -83
   }
   orientation: ORIENTATION_E
   idRef {
@@ -12958,7 +12958,7 @@ props {
   gridPoint {
     x: -3
     y: 0
-    z: -75
+    z: -76
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -24732,7 +24732,7 @@ props {
   gridPoint {
     x: -7
     y: 3
-    z: -80
+    z: -79.77
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -25083,5 +25083,78 @@ props {
   idRef {
     id: "540ac416373663081200390d"
   }
+  lod: 0
+}
+props {
+  name: "barrens_appliance_simsenseVendor"
+  gridPoint {
+    x: -8
+    y: 0
+    z: -96.11
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "undergroundBase_tech_experimentwire03"
+  gridPoint {
+    x: -3
+    y: 0
+    z: -81
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "540b47763736637018001aed"
+  }
+  lod: 0
+}
+props {
+  name: "factory_tech_speaker02"
+  gridPoint {
+    x: 8.08
+    y: 2.69
+    z: -91.55
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "mitte_clutter_crate01"
+  gridPoint {
+    x: 31
+    y: 0
+    z: -60
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "docks_tech_storagePod"
+  gridPoint {
+    x: -32
+    y: 0
+    z: -95
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "morgue_furniture_ppeCloset"
+  gridPoint {
+    x: 5
+    y: 0
+    z: -74
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "asylum_appliance_vendingMachine01"
+  gridPoint {
+    x: -20
+    y: 0
+    z: -84
+  }
+  orientation: ORIENTATION_S
   lod: 0
 }
