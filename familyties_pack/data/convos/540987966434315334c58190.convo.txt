@@ -61,7 +61,7 @@ nodes {
   index: 3
   text: "You were the one who opened $(l.his) credstick! I was just a stunned bystander.\n\nWe\'ve gotta go back to that damn hobette and shoot her full of holes!"
   branches {
-    responseText: "You what? You\'d murder her for 20 lousy nuyen?"
+    responseText: "You what? You\'d murder her for 20 lousy nuyen?!"
     nextNodeIndex: 4
   }
   branches {
@@ -81,7 +81,7 @@ nodes {
   index: 4
   text: "It\'s not the amount of money! It\'s the principle of the thing! No one cheats me and gets away with it!"
   branches {
-    responseText: "So now she did cheat you?"
+    responseText: "Oh, so now she did cheat you?"
     nextNodeIndex: 8
     auxiliaryLink: true
   }
@@ -311,7 +311,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: -1
+    nextNodeIndex: 9
   }
   branches {
     responseText: "Hoi chummers. We thought there\'d be a door here."
@@ -342,7 +342,7 @@ nodes {
         }
       }
     }
-    nextNodeIndex: 9
+    nextNodeIndex: 16
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -375,9 +375,187 @@ nodes {
 }
 nodes {
   idRef {
-    id: "5409938b6434315334c58328"
+    id: "540d9b376434311106c58197"
   }
   index: 9
+  text: "Yeah, I bet.\n\nAnyways, local ordinance says that you need to pay a fine for trespassing and making noise. That\'ll bee 200 nuyen. No tax."
+  branches {
+    responseText: "{{CC}}Pay 200 nuyen{{/CC}} Here\'s your money, now stop bugging us."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 200
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 200
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We don\'t have that kind of money."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "That\'s not going to happen."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} Go try your small-time shakedown tactics on someone in your own league."
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Haau, Rainmakers. The Hill Walkers of Omaha send their greetings."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540dbf99643431860cc581a0"
+  }
+  index: 10
+  text: "We\'re flexible. Drugs, cyberdecks, drones and weapons are accepted as well as cash."
+  branches {
+    responseText: "{{CC}}Offer some drugs{{/CC}} Okay, here\'s something to get you high."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Offer a drone{{/CC}} Have an automatic vacuum cleaner."
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "{{CC}}Offer a weapon{{/CC}} I\'ve got this, it\'s practically an antique."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Fight{{/CC}} You take bullets?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540dc06c643431860cc581a8"
+  }
+  index: 11
+  text: "Oh no. I\'m so not having this. You fake teepee-dwellers have like 5 seconds to clear back onto your fake reservation or I\'m going to murder the lot of you. Starting with you, Wears-Stupid-Hats.\n\nFour.\n\nThree."
+  branches {
+    responseText: "Sis-"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Put your hand on your weapon{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "540dc3be643431860cc581b3"
+  }
+  index: 12
+  text: "So get lost, or get geeked."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "540dbecc643431860cc5819d"
+  }
+  index: 13
+  text: "Yeah, \'cos we\'ve already been shaken down by a real pro."
+  branches {
+    responseText: "Shut up."
+    nextNodeIndex: 14
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "What my buddy here is saying, we\'re in a bit of a foul mood and would love an excuse to take it out on someone."
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "540f1478643431b764c581ac"
+  }
+  index: 14
+  text: "{{GM}}The Rainmakers try to stare you down. You stare back. Finally, they back off.{{/GM}}\n\nAs long as you don\'t cause any trouble, you\'re welcome here."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540dc323643431860cc581b0"
+  }
+  index: 15
+  text: "You\'re a long way from Omaha, stranger. But if you\'re with the Hill Walkers, you\'re welcome to visit our land and our longhouse"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5409938b6434315334c58328"
+  }
+  index: 16
   text: "Use the front door, why don\'tcha? It\'s easier.\n\nAnd stop yelling, it\'s not even 9 o\'clock yet."
   nodeType: ConversationNodeType_Simple
 }
