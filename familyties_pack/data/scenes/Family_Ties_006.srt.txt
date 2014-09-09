@@ -42,12 +42,56 @@ regions {
   loop_combat_music: true
   loop_default_music: false
 }
+regions {
+  name: "Office floor"
+  position {
+    x: -25
+    y: -101
+    width: -64
+    height: 59
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "540df36e373663241f0001ee"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -30
+    y: 0.51
+    z: -85
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: "tenement-quiet"
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -53
+    x: -37
     y: -0.35
-    z: 52
+    z: -84
   }
   orientation: ORIENTATION_N
   idRef {
