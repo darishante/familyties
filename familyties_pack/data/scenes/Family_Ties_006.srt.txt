@@ -45,8 +45,8 @@ regions {
 regions {
   name: "Office floor"
   position {
-    x: -25
-    y: -101
+    x: -24
+    y: -108
     width: -64
     height: 59
   }
@@ -69,16 +69,16 @@ regions {
     z: -85
   }
   directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.33333334
+    g: 0.27450982
+    b: 0.27450982
+    a: 0.39215687
   }
   ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.35294119
+    g: 0.33333334
+    b: 0.33333334
+    a: 0.41176471
   }
   ambience_template: "tenement-quiet"
   combat_music: ""
