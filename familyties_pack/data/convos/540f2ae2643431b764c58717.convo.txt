@@ -1,0 +1,419 @@
+idRef {
+  id: "540f2ae2643431b764c58717"
+}
+ui_name: "s005-doorway_trapped"
+nodes {
+  idRef {
+    id: "540f2af5643431b764c5871d"
+  }
+  index: 0
+  text: "{{GM}}Some Rainmakers are loitering at the door of the municipal building. They smile at you, but not in a friendly way.{{/GM}}\n\nHoi! Welcome to our little corner of Red Hill. Admission is 100."
+  branches {
+    responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We\'re just leaving."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "You want to try and take it, chummers?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Are you now charging tribute from Omaha Hill Walker tribesmen?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Academic or Profession: Creative{{/CC}} A hundred? For a yard with that statue? You people are undercharging!"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f2b9a643431b764c58722"
+  }
+  index: 1
+  text: "Sadly, exiting costs the same. Pay up."
+  branches {
+    responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Like hell."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f2c7b643431b764c58729"
+  }
+  index: 2
+  text: "Now $(l.he) finds a spine.\n\nLook fellas, I totally respect your turf and all that, but there\'s a little errand we\'d like to run here. You stay out of the way and nobody gets shot. We cool?"
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} I hope they cool."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}To the Rainmakers{{/CC}} Guys, don\'t provoke my partner. She\'s been having a day and I think she wants to take it out on someone."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "540f2df1643431b764c58732"
+  }
+  index: 3
+  text: "They respect strength. Watch and learn."
+  branches {
+    responseText: " "
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "540f2e0b643431b764c58735"
+  }
+  index: 4
+  text: "You don\'t get to make threats, dwarf. You are about to get you and your friend there a serious asskicking."
+  branches {
+    responseText: "Bring it."
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54075e1e64343191848565dd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "540f1a12643431b764c583c2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} They have a funny way of showing respect."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f2f86643431b764c5873b"
+  }
+  index: 5
+  text: "Shut up and fire!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+  actions {
+    ops {
+      functionName: "Attack Actor With Weapon"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5409909d6434315334c582aa"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "54075e1e64343191848565dd"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "540f1a12643431b764c583c2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540f3059643431b764c5873d"
+  }
+  index: 6
+  text: "I count two of you and six of us. You go down this road, you gonna hurt."
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} He\'s got a point there."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f2c7f643431b764c5872b"
+  }
+  index: 7
+  text: "... No. Never. Didn\'t make you for Hill Walkers. Sorry.\n\nYou\'re welcome to visit us, if you\'re not going to cause trouble."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "540f3166643431b764c58743"
+  }
+  index: 8
+  text: "Huh? What do you mean?"
+  branches {
+    responseText: "That\'s a genuine Vandergraf sculpture from the early 20s, and it\'s not damaged at all. There are only six of those left on the west coast. I bet you could charge hundreds for tourists and art lovers, if you cleaned up this place a little bit."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f31e6643431b764c58746"
+  }
+  index: 9
+  text: "... Really?"
+  branches {
+    responseText: "Absolutely! Look, is it okay if I take a couple of pictures? Then I could just leak the location to one of the uptown art journals. You guys are about to get a drekload of rich tourists gawking at that ... assuming you can hold on to it, of course."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f3270643431b764c58749"
+  }
+  index: 10
+  text: "The statue is on our turf! Rich tourists, you say? Of course we can hold on to it.\n\nTake your pictures. And if you take my picture as well, be sure to get my good side."
+  branches {
+    responseText: "I will."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "540f32d3643431b764c5874c"
+  }
+  index: 11
+  text: "... That was underhanded and sneaky.\n\nI\'m kind of proud of you, $(story.bro)."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}
