@@ -1,0 +1,234 @@
+minX: -34
+minZ: -5
+numX: 70
+numZ: 50
+props {
+  name: "barrens_building_02wallbrokenwindow01"
+  gridPoint {
+    x: 2
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallblueredcloth01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 2
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallcorner01"
+  gridPoint {
+    x: 6
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallcorner02"
+  gridPoint {
+    x: 14
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallcorner03"
+  gridPoint {
+    x: 11
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallfragmented01"
+  gridPoint {
+    x: 24
+    y: 0
+    z: -3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallfragmented02"
+  gridPoint {
+    x: 22
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallfragmented03"
+  gridPoint {
+    x: 16
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallvine01"
+  gridPoint {
+    x: 9
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallwood01"
+  gridPoint {
+    x: 34
+    y: 0
+    z: 3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_02wallyellowcloth01"
+  gridPoint {
+    x: 31
+    y: 0
+    z: 9
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06clothesline01"
+  gridPoint {
+    x: -18
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06corner01"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06corner02"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06fragmentcorner01"
+  gridPoint {
+    x: -7
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06fragmentededge0201"
+  gridPoint {
+    x: -23
+    y: 0
+    z: 17
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06fragmentedge01"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06fragmentedge02"
+  gridPoint {
+    x: -28
+    y: 0
+    z: 0
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06fragmentedwall01"
+  gridPoint {
+    x: -27
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06longwalldoubledoor01"
+  gridPoint {
+    x: -9
+    y: 0
+    z: 33
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06longwallporch01"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06wallcaved01"
+  gridPoint {
+    x: -18
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_building_06wallwindow02"
+  gridPoint {
+    x: -16
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
