@@ -68,6 +68,22 @@ nodes {
         }
       }
     }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
     nextNodeIndex: 10
   }
   nodeType: ConversationNodeType_Simple
@@ -361,6 +377,52 @@ nodes {
   }
   branches {
     responseText: "Yes. Now scurry along."
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54075e1e64343191848565dd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -408,6 +470,22 @@ nodes {
         }
         args {
           int_value: 1
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 3
         }
       }
     }
@@ -593,7 +671,7 @@ nodes {
     id: "54017cb36434314d1e726924"
   }
   index: 9
-  text: "{{GM}}The Rainmakers measure you and Half Shatter, calculating whether they can take you. They wisely decide that they don\'t want to take the chance.{{/GM}}\n\nYou run along now, Runners. Long as you don\'t mess with the Rainmakers, and the Rainmakers don\'t mess with you."
+  text: "{{GM}}The Rainmakers measure you and Half Shatter, calculating whether they can take you. They wisely decide that they don\'t want to take the chance.{{/GM}}\n\nYou run along now, Runners. Long as you don\'t mess with the Rainmakers, the Rainmakers don\'t mess with you."
   branches {
     responseText: "All right."
     nextNodeIndex: -1
@@ -690,6 +768,149 @@ nodes {
   }
   nodeType: ConversationNodeType_Simple
 }
+nodes {
+  idRef {
+    id: "540f2218643431b764c5860d"
+  }
+  index: 13
+  text: "{{GM}}A rainmaker patrol spots you, but does not deviate from its route or appear interested in talking to you.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+}
 roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "54075e1e64343191848565dd"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: -1
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 13
 }

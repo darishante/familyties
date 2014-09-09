@@ -2,7 +2,7 @@ triggers {
   name: "ZhangCalls"
   events {
     ops {
-      functionName: "On Actor Movement Finished"
+      functionName: "On Actor Start Turn"
     }
   }
   conditions {
@@ -31,11 +31,33 @@ triggers {
         }
       }
       args {
-        int_value: 27
+        int_value: 60
       }
     }
   }
   actions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5407340a64343161748fb52f"
+          }
+        }
+      }
+    }
     ops {
       functionName: "Start Conversation"
       args {
@@ -475,6 +497,20 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
   }
   isActive: true
   idRef {
@@ -775,6 +811,82 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "GuardAttacks"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "doorguard"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "540f1a12643431b764c583c2"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "New Region"
   position {
@@ -910,7 +1022,7 @@ regions {
 regions {
   name: "Trap"
   position {
-    x: 15
+    x: 12
     y: 13
     width: 3
     height: 5
@@ -1558,7 +1670,7 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "Shadowrunners"
+    team_id: "Civilians"
     char_name: "Street Denizen"
     pc_spawn_number: -1
     portrait {
@@ -1631,7 +1743,7 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "Shadowrunners"
+    team_id: "Civilians"
     char_name: "Half Shatter"
     pc_spawn_number: -1
     portrait {
@@ -1985,6 +2097,7 @@ character_roster {
     hiring_conditions {
     }
     hiring_cost: -1
+    content_pack_source: "53da5ef2643431a4970041a8"
   }
 }
 show_hiring_screen_on_scene_load: true
