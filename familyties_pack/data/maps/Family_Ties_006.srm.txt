@@ -5141,8 +5141,14 @@ props {
     z: 35
   }
   orientation: ORIENTATION_E
+  displayName: "GroundLadder"
   idRef {
     id: "54037075373663400e0054f7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 3
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -6174,8 +6180,14 @@ props {
     z: 137
   }
   orientation: ORIENTATION_E
+  displayName: "BasementLadder"
   idRef {
     id: "54074eca3736639c0d003d93"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 3
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -11726,8 +11738,14 @@ props {
     z: -73
   }
   orientation: ORIENTATION_E
+  displayName: "TopLadder"
   idRef {
     id: "5409aebb37366338150066c5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 2
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
