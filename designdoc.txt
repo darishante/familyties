@@ -317,6 +317,12 @@ Karmapalkkio: +1 ??
  3 - pelottavia
  4 - kamuja                
 
+MunicipalEntrance:
+
+0 - etuovi
+1 - sivuovi
+2 - viemäri
+
 
 6.5 Flashback 02
 
