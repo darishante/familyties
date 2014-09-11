@@ -7311,7 +7311,7 @@ characters {
     char_name: "Kalaheo"
     pc_spawn_number: -1
     portrait {
-      filename: "pc_humanmale_03b_african"
+      filename: "diileri"
     }
     karma: 8
   }
