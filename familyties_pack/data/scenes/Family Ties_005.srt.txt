@@ -888,7 +888,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "ComeToTheDoor"
+  name: "DoorWithEscort"
   events {
     ops {
       functionName: "On Region Enter"
@@ -946,12 +946,12 @@ triggers {
             string_value: "Comparison Ops"
           }
           args {
-            int_value: 0
+            int_value: 2
           }
         }
       }
       args {
-        int_value: 1
+        int_value: -1
       }
     }
   }
@@ -990,6 +990,202 @@ triggers {
   isActive: true
   idRef {
     id: "540f2a77643431b764c58716"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "EnterThroughFrontDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5401d08c373663b00b0067a7"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "MunicipalEntrance"
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "Family_Ties_006"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5411dc83643431df894a49ea"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "EnterThroughSideDoor"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5401d024373663b00b0067a5"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "MunicipalEntrance"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+    ops {
+      functionName: "Open Scene"
+      args {
+        call_value {
+          functionName: "Get Map Item (Scene)"
+          args {
+            string_value: "Family_Ties_006"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5411dd98643431df894a49ec"
   }
   elseActions {
   }
@@ -2046,6 +2242,14 @@ characters {
   GeneralTags: "doorguard"
   idRef {
     id: "5409909d6434315334c582aa"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "540f2ae2643431b764c58717"
+      turnToFace: true
+    }
   }
   lod: 0
   character_instance {

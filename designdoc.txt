@@ -311,11 +311,20 @@ Karmapalkkio: +1 ??
  - RepRainmakers:
  
  0 - nevöhööd
+-4 - tuhosivat kaikki kaikkialta
+-3 - tuhosivat kaikki sisältä
+-2 - tuhosivat kaikki ulkoa
 -1 - vihollisia
  1 - ansaan houkuteltavia
  2 - jymäytettäviä
  3 - pelottavia
  4 - kamuja                
+
+MunicipalEntrance:
+
+0 - etuovi
+1 - sivuovi
+2 - viemäri
 
 
 6.5 Flashback 02

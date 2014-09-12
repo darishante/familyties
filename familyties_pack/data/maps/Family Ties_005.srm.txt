@@ -1708,6 +1708,7 @@ props {
     z: 56
   }
   orientation: ORIENTATION_S
+  displayName: "SideDoor"
   idRef {
     id: "5401d024373663b00b0067a5"
   }

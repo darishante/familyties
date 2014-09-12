@@ -252,6 +252,18 @@ variables {
   }
 }
 variables {
+  name: "RainmakersRep"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "RainmakersRep"
+      typeName: "int"
+    }
+  }
+}
+variables {
   name: "StorySoFar"
   typeName: "string"
   defaultValue {
