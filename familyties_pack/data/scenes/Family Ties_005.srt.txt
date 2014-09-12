@@ -888,7 +888,7 @@ triggers {
   is_oneshot: true
 }
 triggers {
-  name: "ComeToTheDoor"
+  name: "DoorWithEscort"
   events {
     ops {
       functionName: "On Region Enter"
@@ -946,12 +946,12 @@ triggers {
             string_value: "Comparison Ops"
           }
           args {
-            int_value: 0
+            int_value: 2
           }
         }
       }
       args {
-        int_value: 1
+        int_value: -1
       }
     }
   }
@@ -2242,6 +2242,14 @@ characters {
   GeneralTags: "doorguard"
   idRef {
     id: "5409909d6434315334c582aa"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "540f2ae2643431b764c58717"
+      turnToFace: true
+    }
   }
   lod: 0
   character_instance {

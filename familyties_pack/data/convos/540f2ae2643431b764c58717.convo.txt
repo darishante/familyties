@@ -10,6 +10,47 @@ nodes {
   text: "{{GM}}Some Rainmakers are loitering at the door of the municipal building. They smile at you, but not in a friendly way.{{/GM}}\n\nHoi! Welcome to our little corner of Red Hill. Admission is 100."
   branches {
     responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -22,10 +63,139 @@ nodes {
   }
   branches {
     responseText: "{{CC}}Etiquette: Gang{{/CC}} Are you now charging tribute from Omaha Hill Walker tribesmen?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
     nextNodeIndex: 7
   }
   branches {
     responseText: "{{CC}}Etiquette: Academic or Profession: Creative{{/CC}} A hundred? For a yard with that statue? You people are undercharging!"
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 19
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (string)"
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "pc_careerpath"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              string_value: "Creative"
+            }
+          }
+        }
+      }
+    }
     actions {
       ops {
         functionName: "Set Variable (int)"
@@ -54,6 +224,47 @@ nodes {
   text: "Sadly, exiting costs the same. Pay up."
   branches {
     responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -414,6 +625,1001 @@ nodes {
     id: "540980e2643431672f039469"
   }
 }
+nodes {
+  idRef {
+    id: "541308e4643431d1c8da5091"
+  }
+  index: 12
+  text: "{{GM}}Some Rainmakers are loitering at the door of the municipal building. They glance at you, but not in a hostile way.{{/GM}}\n\nYou guys know how to behave, so you\'re welcome to hang around the Rainmakers. Go inside if you need shelter or goods."
+  branches {
+    responseText: "Okay, thanks."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "What\'s the story of this building here?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Who are you guys?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130ad26434314acada504f"
+  }
+  index: 13
+  text: "{{GM}}Some Rainmakers are loitering at the door of the municipal building. They peer at you cautiously and warily.{{/GM}}\n\nRunners. Let\'s not cause each other any trouble, ok?"
+  branches {
+    responseText: "Fine with me."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "What\'s the story of this building?"
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Who are you guys?"
+    nextNodeIndex: 15
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130b476434314acada5056"
+  }
+  index: 14
+  text: "It\'s our home. Respect that."
+  branches {
+    responseText: "Right."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130b316434314acada5054"
+  }
+  index: 15
+  text: "We\'re the Rainmakers. This is our turf. You are just visiting."
+  branches {
+    responseText: "Of course."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130bf66434314acada5098"
+  }
+  index: 16
+  text: "{{GM}}Some Rainmakers are loitering at the door of the municipal building. They nod at you respectfully.{{/GM}}\n\nHaau, brothers. You are welcome to visit us. If you need to barter, we have some stuff for sale inside."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50c9"
+  }
+  index: 17
+  text: "{{GM}}Some gang members are loitering at the door of the municipal building. They smile at you, but not in a friendly way.{{/GM}}\n\nHoi! Welcome to our little corner of Red Hill. Admission is 100."
+  branches {
+    responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We\'re just leaving."
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: "You want to try and take it, chummers?"
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Are you now demanding tribute from Omaha Hill Walker tribesmen?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Academic or Profession: Creative{{/CC}} A hundred? For a yard with that statue? You people are undercharging!"
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 19
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (string)"
+            args {
+              call_value {
+                functionName: "Get Story Variable (string)"
+                args {
+                }
+                args {
+                  string_value: "pc_careerpath"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              string_value: "Creative"
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 25
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} We did not come here to fight you, but if you insist on trying your amateurish shakedown schemes on us, we can just as well make this nasty."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Get Map Item (Player)"
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 29
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50cd"
+  }
+  index: 18
+  text: "Sadly, exiting costs the same. Pay up."
+  branches {
+    responseText: "{{CC}}Pay 100{{/CC}} Here\'s the money."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 100
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Like hell."
+    nextNodeIndex: 19
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50d4"
+  }
+  index: 19
+  text: "Now $(l.he) finds a spine.\n\nLook fellas, I totally respect your turf and all that, but there\'s a little errand we\'d like to run here. You stay out of the way and nobody gets shot. We cool?"
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} I hope they cool."
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: "{{CC}}To the Rainmakers{{/CC}} Guys, don\'t provoke my partner. She\'s been having a day and I think she wants to take it out on someone."
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50d7"
+  }
+  index: 20
+  text: "They respect strength. Watch and learn."
+  branches {
+    responseText: " "
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50da"
+  }
+  index: 21
+  text: "You don\'t get to make threats, dwarf. You are about to get you and your friend there a serious asskicking."
+  branches {
+    responseText: "Bring it."
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54075e1e64343191848565dd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "540f1a12643431b764c583c2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} They have a funny way of showing respect."
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50de"
+  }
+  index: 22
+  text: "Shut up and fire!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+  actions {
+    ops {
+      functionName: "Attack Actor With Weapon"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5409909d6434315334c582aa"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "54075e1e64343191848565dd"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "540f1a12643431b764c583c2"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50e1"
+  }
+  index: 23
+  text: "I count two of you and three of us, with more inside. You go down this road, you gonna hurt."
+  branches {
+    responseText: "{{CC}}To Half Shatter{{/CC}} He\'s got a point there."
+    nextNodeIndex: 22
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50e7"
+  }
+  index: 24
+  text: "... No. Never. Didn\'t make you for Hill Walkers. Sorry.\n\nYou\'re welcome to visit us, if you\'re not going to cause trouble."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50ea"
+  }
+  index: 25
+  text: "Huh? What do you mean?"
+  branches {
+    responseText: "That\'s a genuine Vandergraf sculpture from the early 20s, and it\'s not damaged at all. There are only six of those left on the west coast. I bet you could charge hundreds for tourists and art lovers, if you cleaned up this place a little bit."
+    nextNodeIndex: 26
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50ed"
+  }
+  index: 26
+  text: "... Really?"
+  branches {
+    responseText: "Absolutely! Look, is it okay if I take a couple of pictures? Then I could just leak the location to one of the uptown art journals. You guys are about to get a drekload of rich tourists gawking at that ... assuming you can hold on to it, of course."
+    nextNodeIndex: 27
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50f0"
+  }
+  index: 27
+  text: "The statue is on our turf! Rich tourists, you say? Of course we can hold on to it.\n\nTake your pictures. And if you take my picture as well, be sure to get my good side."
+  branches {
+    responseText: "I will."
+    nextNodeIndex: 28
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54130c986434314acada50f3"
+  }
+  index: 28
+  text: "... That was underhanded and sneaky.\n\nI\'m kind of proud of you, $(story.bro)."
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "540980e2643431672f039469"
+  }
+}
+nodes {
+  idRef {
+    id: "54130e516434314acada50f6"
+  }
+  index: 29
+  text: "{{GM}}The gangers look you up and down, and decide that they don\'t want to risk a firefight. They don\'t seem too happy about you though.{{/GM}}\n\n... okay runners, we\'ll keep an eye on you. Don\'t do anything foolish?"
+  branches {
+    responseText: "Didn\'t cross our mind."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Foolish, like this? {{CC}}Attack{{/CC}}"
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "RepRainmakers"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "540f1a12643431b764c583c2"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
 roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  nextNodeIndex: 12
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+  nextNodeIndex: 13
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  nextNodeIndex: 16
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 17
 }

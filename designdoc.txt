@@ -311,6 +311,9 @@ Karmapalkkio: +1 ??
  - RepRainmakers:
  
  0 - nevöhööd
+-4 - tuhosivat kaikki kaikkialta
+-3 - tuhosivat kaikki sisältä
+-2 - tuhosivat kaikki ulkoa
 -1 - vihollisia
  1 - ansaan houkuteltavia
  2 - jymäytettäviä
