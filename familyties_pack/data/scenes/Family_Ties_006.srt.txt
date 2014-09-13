@@ -724,170 +724,17 @@ regions {
   loop_default_music: false
 }
 regions {
-  name: "TopFloorLadder"
+  name: "2nd floor offices"
   position {
-    x: -67
-    y: -72
-    width: 5
-    height: 3
-  }
-  enabledAtStart: true
-  is_camera_region: false
-  idRef {
-    id: "5411e19a643431df894a49f3"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_teleporter_region: true
-  linked_teleporter_region: ""
-  teleport_facing: -1
-  teleport_sound_fx: ""
-  teleport_sound_volume: 0
-  teleport_source_fx: ""
-  teleport_destination_fx: ""
-  teleport_pc_only: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambience_template: ""
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-}
-regions {
-  name: "GroundFloorLadder"
-  position {
-    x: -54
-    y: 36
-    width: 3
-    height: 2
-  }
-  enabledAtStart: true
-  is_camera_region: false
-  idRef {
-    id: "5411e1e3643431df894a49f4"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_teleporter_region: true
-  linked_teleporter_region: ""
-  teleport_facing: -1
-  teleport_sound_fx: ""
-  teleport_sound_volume: 0
-  teleport_source_fx: ""
-  teleport_destination_fx: ""
-  teleport_pc_only: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambience_template: ""
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-}
-regions {
-  name: "BasementLadderBottom"
-  position {
-    x: -44
-    y: 138
-    width: 3
-    height: 4
-  }
-  enabledAtStart: true
-  is_camera_region: false
-  idRef {
-    id: "5411e3c1643431df894a4a0d"
-  }
-  highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  }
-  visible_at_start: false
-  is_teleporter_region: true
-  linked_teleporter_region: ""
-  teleport_facing: -1
-  teleport_sound_fx: ""
-  teleport_sound_volume: 0
-  teleport_source_fx: ""
-  teleport_destination_fx: ""
-  teleport_pc_only: false
-  directional_light_dir {
-    x: -0.5
-    y: -1
-    z: -0.75
-  }
-  directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
-  }
-  ambience_template: ""
-  combat_music: ""
-  default_music: ""
-  loop_combat_music: true
-  loop_default_music: false
-}
-regions {
-  name: "Basement"
-  position {
-    x: -103
-    y: 102
-    width: 72
-    height: 74
+    x: -42
+    y: -219
+    width: -57
+    height: 53
   }
   enabledAtStart: true
   is_camera_region: true
   idRef {
-    id: "5411e53c643431df894a4a33"
+    id: "54146ea2373663641300074e"
   }
   highlight_color {
     r: 0
@@ -899,22 +746,22 @@ regions {
   is_teleporter_region: false
   directional_light_dir {
     x: -0.5
-    y: -1
-    z: -0.75
+    y: 0
+    z: -195
   }
   directional_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.37254903
+    g: 0.33333334
+    b: 0.32941177
+    a: 0.39215687
   }
   ambient_light_color {
-    r: 0.50196081
-    g: 0.50196081
-    b: 0.50196081
-    a: 1
+    r: 0.37254903
+    g: 0.33333334
+    b: 0.33333334
+    a: 0.39215687
   }
-  ambience_template: ""
+  ambience_template: "estate-quiet"
   combat_music: ""
   default_music: ""
   loop_combat_music: true
