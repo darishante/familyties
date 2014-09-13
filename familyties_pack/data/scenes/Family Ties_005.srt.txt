@@ -1416,8 +1416,44 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "ItsRaining"
+  events {
+    ops {
+      functionName: "On Map Start"
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Environmental Effect Amount"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "EnvironmentalEffects"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 40
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "54143fb6643431aa02da5234"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
-  name: "New Region"
+  name: "Civic Center Area"
   position {
     x: 113
     y: 1
