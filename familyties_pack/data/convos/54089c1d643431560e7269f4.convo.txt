@@ -171,6 +171,28 @@ nodes {
           }
         }
       }
+      ops {
+        functionName: "Set Waypoint on Prop"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PrimaryOrSecondary"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "5407423e373663b815004e61"
+            }
+          }
+        }
+      }
     }
     nextNodeIndex: 7
   }
