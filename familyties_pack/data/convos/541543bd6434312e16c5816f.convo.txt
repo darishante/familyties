@@ -1,0 +1,498 @@
+idRef {
+  id: "541543bd6434312e16c5816f"
+}
+ui_name: "s005-enoch"
+nodes {
+  idRef {
+    id: "541543c66434312e16c58175"
+  }
+  index: 0
+  text: "{{GM}}A battle-worn Ork wearing rags sits panhandling.{{/GM}}\n\nMorning, chummers. Enoch\'s the name. Got a few nuyen for a veteran?"
+  branches {
+    responseText: "{{CC}}5 nuyen{{/CC}} Sure"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Sorry, no."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "A veteran of what?"
+    nextNodeIndex: 7
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5415484f643431991a8564c8"
+    }
+  }
+  branches {
+    responseText: "Get a job, you lazy fraghead."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154d3f643431991a8565a0"
+  }
+  index: 1
+  text: "Thanks. What you looking for out here?"
+  branches {
+    responseText: "You happen to know a way to get into the municipal building?"
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54154da4643431991a8565a3"
+    }
+  }
+  branches {
+    responseText: "Nothing really."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154dd0643431991a8565a5"
+  }
+  index: 2
+  text: "I might. What do you want with that place?"
+  branches {
+    responseText: "Not going to tell you."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "We\'re going to hit the Rainmakers."
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "We\'re looking for something valuable inside."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154e37643431991a8565b5"
+  }
+  index: 3
+  text: "Another couple of nuyen will satisfy my curiousity."
+  branches {
+    responseText: "{{CC}}2 nuyen{{/CC}} Here."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Forget it."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "How about we beat it out of you?"
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54154f38643431991a8565c5"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154e96643431991a8565ba"
+  }
+  index: 4
+  text: "Scarier people than you have tried and failed."
+  branches {
+    responseText: " "
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154ffa643431991a8565dc"
+  }
+  index: 5
+  text: "Valuable, eh? 10 nuyen will get you something you can use."
+  branches {
+    responseText: "{{CC}}10 nuyen{{/CC}} Here."
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 10
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 10
+        }
+      }
+    }
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Forget it."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "How about we beat it out of you?"
+    nextNodeIndex: 6
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54154f38643431991a8565c5"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154ffa643431991a8565e3"
+  }
+  index: 6
+  text: "Scarier people than you have tried and failed."
+  branches {
+    responseText: " "
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541546b9643431991a8564bb"
+  }
+  index: 7
+  text: "Way too many battles to remember. None that they write about in history books, though.\n\nWhat are you looking for in here? You don\'t strike me as a local."
+  branches {
+    responseText: "We\'re shadowrunners on a job"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "No, I\'m from Omaha. I\'m ... checking out the sights."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m looking for a way into the old municipal building. You know anything abou that?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5415475b643431991a8564c0"
+  }
+  index: 8
+  text: "Shadowrunners? Maybe I can help you out. Who\'s your target?"
+  branches {
+    responseText: "None of your business."
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "We just want to get into the municipal buiding."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "The gang holding the municipal building."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "{{CC}}Lie{{/CC}} HBK"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "{{CC}}Lie{{/CC}} Lone Star"
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154843643431991a8564c7"
+  }
+  index: 9
+  text: "Have it your way."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5415498d643431991a8564d3"
+  }
+  index: 10
+  text: "Slip me 5 nuyen and I\'ll let you in on a secret."
+  branches {
+    responseText: "{{CC}}5 nuyen{{/CC}} Deal."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nice try."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Hot dog{{/CC}} How about a hot dog instead?"
+    conditions {
+      ops {
+        functionName: "Evaluate If Actor Has Item"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "HasOrHasNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "strangeHotDog"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "54154a10643431991a8564d7"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154a29643431991a8564d9"
+  }
+  index: 11
+  text: "If I wanted to eat roadkill, I could sweep some up myself. This info is cash only."
+  branches {
+    responseText: "Fine."
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541548c2643431991a8564cf"
+  }
+  index: 12
+  text: "You got beef with the Rainmakers? Ha! Those sorry little wannabes. If you are not in a hurry, just wait a couple of weeks, they\'ll run out of here on their own.\n\nJust the two of you are going to have a tough time taking out all of them though, unless you\'ve got the element of surprise on your side."
+  branches {
+    responseText: "How do we get that?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154ab4643431991a856506"
+  }
+  index: 13
+  text: "There\'s an old \"F\" tag on the east side of the municipal courtuard wall - a bit to the north from here. It\'s covering a hatch in the wall. Freistaaters, an Europhone gang who used to squat there, decided they wanted some additional access so they made one.\n\nYou can get into the courtyard through the hatch. Beyond the hatch there\'s a service entrance leading into a maintenance floor of the building. You could use that for an unseen approach."
+  branches {
+    responseText: "Ok, we\'ll check it out."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "How do you know this?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5401db943736631c14004ae7"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Waypoint on Prop"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5401db943736631c14004ae7"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54154be2643431991a85650b"
+  }
+  index: 14
+  text: "I used to run with the Freistaaters. That was years ago though. The municipal building has changed hands numerous times since then."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154859643431991a8564ca"
+  }
+  index: 15
+  text: "Yeah, well, you\'re in the wrong part of town for that."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154895643431991a8564cd"
+  }
+  index: 16
+  text: "{{GM}}Enoch spits{{/GM}}\n\nGood luck with that. Shoot a couple of them for me as well."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54154632643431991a8564a4"
+  }
+  index: 17
+  text: "{{GM}}Enoch makes a finger-gun gesture at you, then ignores you.{{/GM}}"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Enable/Disable Interactable Object"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "541542976434312e16c5816e"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

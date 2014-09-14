@@ -4488,14 +4488,9 @@ props {
     id: "5401db943736631c14004ae7"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Salak\303\244yt\303\244v\303\244 jonkin graffitin kohdalla? Etuk\303\244teistieto vaadittaisiin tieto?"
-      disableAfterInteracting: false
-    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }

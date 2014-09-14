@@ -180,7 +180,7 @@ nodes {
               string_value: "PrimaryOrSecondary"
             }
             args {
-              int_value: 0
+              int_value: 1
             }
           }
         }
@@ -382,7 +382,7 @@ nodes {
     id: "5408a00f643431560e726a23"
   }
   index: 9
-  text: "A favor, sure... okay, I won\'t lie to you: I have no idea how to get inside.\n\nAs far as I know the Rainmakers are squatting on the top floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
+  text: "A favor, sure... okay, I won\'t lie to you: I have no idea how to get inside. There\'s an Ork panhandling by the tents over there. I think he used to squat in the municipal building. You could ask him.\n\nAs far as I know the Rainmakers are squatting on the office floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "5408a5176434316217c58204"
@@ -393,7 +393,7 @@ nodes {
     id: "54089f9a643431560e726a21"
   }
   index: 10
-  text: "... Yeah, I totally am. I have no idea how to get inside. \n\nAs far as I know the Rainmakers are squatting on the top floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
+  text: "... Yeah, I totally am. I have no idea how to get inside. There\'s an Ork panhandling by the tents over there. I think he used to squat in the municipal building. You could ask him.\n\nAs far as I know the Rainmakers are squatting on the top floor. They keep talking about fixing the place up and start doing some business in it, but they are too lazy to actually ever get around to doing anything."
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "5408a5176434316217c58204"
