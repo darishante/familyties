@@ -33027,6 +33027,15 @@ props {
     z: 214
   }
   orientation: ORIENTATION_E
+  displayName: "SewerEntrance"
+  idRef {
+    id: "5415c663643431df3d8fb498"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -33111,16 +33120,6 @@ props {
     x: 85
     y: 0
     z: 195
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
-  name: "sewer_wall_brickEdge07"
-  gridPoint {
-    x: 84
-    y: 0
-    z: 198
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -33387,16 +33386,6 @@ props {
   idRef {
     id: "541561db37366358180073f2"
   }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brickEdge06"
-  gridPoint {
-    x: 84
-    y: 0
-    z: 196
-  }
-  orientation: ORIENTATION_S
   lod: 0
 }
 props {
@@ -35961,7 +35950,7 @@ props {
 props {
   name: "sewer_floor_water06"
   gridPoint {
-    x: 35
+    x: 34
     y: 0
     z: 227
   }
@@ -38253,5 +38242,31 @@ props {
     z: 52
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sewer_floor_water06"
+  gridPoint {
+    x: 33
+    y: 0
+    z: 229
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5415c5ca643431df3d8fb494"
+  }
+  lod: 0
+}
+props {
+  name: "sewer_floor_water06"
+  gridPoint {
+    x: 35
+    y: 0
+    z: 227
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5415c5d3643431df3d8fb495"
+  }
   lod: 0
 }
