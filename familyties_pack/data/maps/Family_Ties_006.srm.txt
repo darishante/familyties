@@ -15256,6 +15256,15 @@ props {
     z: -89
   }
   orientation: ORIENTATION_N
+  displayName: "OfficeStairsLeft"
+  idRef {
+    id: "5415ca58643431df3d8fb4a1"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -15266,8 +15275,14 @@ props {
     z: -81
   }
   orientation: ORIENTATION_N
+  displayName: "OfficeStairsRight"
   idRef {
     id: "540f04553736637c22002ea8"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -20805,9 +20820,9 @@ props {
 props {
   name: "haven_floorDecoration_grunge03"
   gridPoint {
-    x: -66
+    x: -65
     y: 0
-    z: -192
+    z: -189
   }
   orientation: ORIENTATION_S
   idRef {
@@ -24931,8 +24946,14 @@ props {
     z: -203
   }
   orientation: ORIENTATION_N
+  displayName: "TopStairsLeft"
   idRef {
     id: "541433003736632014001520"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -24944,8 +24965,14 @@ props {
     z: -194
   }
   orientation: ORIENTATION_N
+  displayName: "TopStairsRight"
   idRef {
     id: "5414330f3736632014001521"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }

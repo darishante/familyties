@@ -67,7 +67,7 @@ nodes {
     id: "541569686434316c29c581b8"
   }
   index: 4
-  text: "The entity is way too big to kill."
+  text: "The entity is way too big to kill. It seems to be focused on this building alone, so it\'s not a threat to anyone else."
   nodeType: ConversationNodeType_Simple
 }
 roots {
