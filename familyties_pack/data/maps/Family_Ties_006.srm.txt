@@ -256,7 +256,7 @@ props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
     x: -67.88
-    y: 1.0408341e-017
+    y: 1.0408341e-17
     z: 52.77
   }
   orientation: ORIENTATION_S
@@ -1638,7 +1638,7 @@ props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
     x: -151.88
-    y: 1.0408341e-017
+    y: 1.0408341e-17
     z: 46.77
   }
   orientation: ORIENTATION_S
@@ -3329,7 +3329,7 @@ props {
   name: "school_floorDecoration_grunge01"
   gridPoint {
     x: -65.55
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 53
   }
   orientation: ORIENTATION_E
@@ -9498,7 +9498,7 @@ props {
     z: -73
   }
   orientation: ORIENTATION_E
-  displayName: "TopLadder"
+  displayName: "OfficeLadder"
   idRef {
     id: "5409aebb37366338150066c5"
   }
@@ -14646,7 +14646,7 @@ props {
   name: "barrens_appliance_popMachine"
   gridPoint {
     x: -56.2
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -92.56
   }
   orientation: ORIENTATION_E
@@ -14904,9 +14904,9 @@ props {
 props {
   name: "haven_floorDecoration_grunge03"
   gridPoint {
-    x: -32
+    x: -29
     y: 0
-    z: -84
+    z: -83
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -20038,7 +20038,7 @@ props {
   name: "barrens_appliance_popMachine"
   gridPoint {
     x: -73.2
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -205.56
   }
   orientation: ORIENTATION_E
@@ -27069,7 +27069,7 @@ props {
   name: "office_wall_end01"
   gridPoint {
     x: -61.03
-    y: 8.6736174e-017
+    y: 8.6736174e-17
     z: -214.08
   }
   orientation: ORIENTATION_E
