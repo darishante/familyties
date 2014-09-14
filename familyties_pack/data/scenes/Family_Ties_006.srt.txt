@@ -737,10 +737,10 @@ regions {
     id: "54146ea2373663641300074e"
   }
   highlight_color {
-    r: 0
-    g: 0
-    b: 0
-    a: 1
+    r: 0.039215688
+    g: 0.039215688
+    b: 0.039215688
+    a: 0.39215687
   }
   visible_at_start: false
   is_teleporter_region: false
@@ -750,16 +750,16 @@ regions {
     z: -195
   }
   directional_light_color {
-    r: 0.37254903
-    g: 0.33333334
-    b: 0.32941177
-    a: 0.39215687
+    r: 0.33333334
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.35294119
   }
   ambient_light_color {
-    r: 0.37254903
-    g: 0.33333334
-    b: 0.33333334
-    a: 0.39215687
+    r: 0.33333334
+    g: 0.29411766
+    b: 0.29411766
+    a: 0.35294119
   }
   ambience_template: "estate-quiet"
   combat_music: ""

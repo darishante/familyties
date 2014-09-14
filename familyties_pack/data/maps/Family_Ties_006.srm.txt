@@ -19996,19 +19996,6 @@ props {
   lod: 0
 }
 props {
-  name: "office_furniture_overturnedDesk02"
-  gridPoint {
-    x: -76
-    y: 0
-    z: -207
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5414306137366320140012e0"
-  }
-  lod: 0
-}
-props {
   name: "office_wall_thinEdge01"
   gridPoint {
     x: -84.54
@@ -20362,7 +20349,7 @@ props {
 props {
   name: "office_wall_thinEdge01"
   gridPoint {
-    x: -86.54
+    x: -87.54
     y: 0
     z: -200
   }
@@ -20440,7 +20427,7 @@ props {
 props {
   name: "office_wall_thinEdge01"
   gridPoint {
-    x: -88.54
+    x: -89.54
     y: 0
     z: -200
   }
@@ -28908,5 +28895,362 @@ props {
   idRef {
     id: "54146c65373663e411000254"
   }
+  lod: 0
+}
+props {
+  name: "sleekOffice_clutter_damagedSmallCrate"
+  gridPoint {
+    x: -78
+    y: 0
+    z: -208
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_clutter_damagedSmallCrate"
+  gridPoint {
+    x: -78
+    y: 0
+    z: -207.29
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_damagedTable01"
+  gridPoint {
+    x: -67
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_desk01"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_damagedTable01"
+  gridPoint {
+    x: -75
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54151ec93736635c1b007a77"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_overturnedChair03"
+  gridPoint {
+    x: -58
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_overturnedTable01"
+  gridPoint {
+    x: -83
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_polyChair01"
+  gridPoint {
+    x: -80
+    y: 0
+    z: -196
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_polyChair01"
+  gridPoint {
+    x: -77
+    y: 0
+    z: -196
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "54151f113736635c1b007a78"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_polyCoffeeTable01"
+  gridPoint {
+    x: -75
+    y: 0
+    z: -205
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_furniture_polySideTable01"
+  gridPoint {
+    x: -69
+    y: 0
+    z: -202
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_deskLamp01"
+  gridPoint {
+    x: -92
+    y: 0.6
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallLight01"
+  gridPoint {
+    x: -90
+    y: 1
+    z: -213
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallLight01"
+  gridPoint {
+    x: -82
+    y: 1
+    z: -213
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "54151f893736635c1b007a79"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallLight01"
+  gridPoint {
+    x: -74
+    y: 1
+    z: -213
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "54151f953736635c1b007a7a"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallLight01"
+  gridPoint {
+    x: -66
+    y: 1
+    z: -213
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "54151f9c3736635c1b007a7b"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_lighting_wallLight01"
+  gridPoint {
+    x: -58
+    y: 1
+    z: -213
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "54151fb33736635c1b007a7d"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_storage_filingCabinetMid01"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -204
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_storage_filingCabinetEnd01"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -203
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sleekOffice_storage_filingCabinetMid01"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -205
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54151fdf3736635c1b007a7e"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_storage_filingCabinetEnd01"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -206
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "54151ff53736635c1b007a7f"
+  }
+  lod: 0
+}
+props {
+  name: "sleekOffice_tech_terminal01"
+  gridPoint {
+    x: -92
+    y: 0.5
+    z: -216
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_clutter_bookStacks02"
+  gridPoint {
+    x: -66.3
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_clutter_brokenWall02"
+  gridPoint {
+    x: -67
+    y: 0
+    z: -212
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_clutter_brokenWall01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: -212
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_clutter_trashCan02"
+  gridPoint {
+    x: -74
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_decor_pottedFicus"
+  gridPoint {
+    x: -92
+    y: 0
+    z: -202
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_floorDecoration_grunge03"
+  gridPoint {
+    x: -80
+    y: 0
+    z: -209
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5415213b3736635c1b007a83"
+  }
+  lod: 0
+}
+props {
+  name: "office_furniture_coffeeTable02"
+  gridPoint {
+    x: -76
+    y: 0
+    z: -207
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_ground_groundCrack02"
+  gridPoint {
+    x: -87
+    y: 0
+    z: -209
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_trash_smallBin01"
+  gridPoint {
+    x: -70
+    y: 0
+    z: -218
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "office_trash_smallBin01"
+  gridPoint {
+    x: -82
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "secretLab_furniture_officeChair"
+  gridPoint {
+    x: -90
+    y: 0
+    z: -217
+  }
+  orientation: ORIENTATION_N
   lod: 0
 }
