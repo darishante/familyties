@@ -1,7 +1,7 @@
-minX: -34
+minX: -88
 minZ: -5
-numX: 70
-numZ: 50
+numX: 157
+numZ: 85
 props {
   name: "barrens_building_02wallbrokenwindow01"
   gridPoint {
@@ -694,5 +694,625 @@ props {
   idRef {
     id: "54151de43736635c1b007a76"
   }
+  lod: 0
+}
+props {
+  name: "undergroundBase_groundDecoration_craterCorner01"
+  gridPoint {
+    x: 58
+    y: 0
+    z: 13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_groundDecoration_craterEdge01"
+  gridPoint {
+    x: 61
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_groundDecoration_craterEdge02"
+  gridPoint {
+    x: 54
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floorDecoration_hole01"
+  gridPoint {
+    x: 44
+    y: 0
+    z: -5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete02"
+  gridPoint {
+    x: -57
+    y: 0
+    z: 33
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete01"
+  gridPoint {
+    x: -53
+    y: 0
+    z: 26
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete03"
+  gridPoint {
+    x: -50
+    y: 0
+    z: 34
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick01"
+  gridPoint {
+    x: -15
+    y: 0
+    z: 57
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick02"
+  gridPoint {
+    x: -21
+    y: 0
+    z: 56
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick03"
+  gridPoint {
+    x: -27
+    y: 0
+    z: 58
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick04"
+  gridPoint {
+    x: -10
+    y: 0
+    z: 69
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick05"
+  gridPoint {
+    x: -17
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick06"
+  gridPoint {
+    x: -19
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick07"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 64
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_brick08"
+  gridPoint {
+    x: -5
+    y: 0
+    z: 69
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestone01"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 49
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestone02"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 54
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestone03"
+  gridPoint {
+    x: -48
+    y: 0
+    z: 57
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestone04"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestone05"
+  gridPoint {
+    x: -52
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestoneCircle01"
+  gridPoint {
+    x: -46
+    y: 0
+    z: 68
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestoneCircle02"
+  gridPoint {
+    x: -36
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestoneCircle03"
+  gridPoint {
+    x: -39
+    y: 0
+    z: 65
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestoneCircle04"
+  gridPoint {
+    x: -43
+    y: 0
+    z: 76
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark01"
+  gridPoint {
+    x: -86
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark02"
+  gridPoint {
+    x: -84
+    y: 0
+    z: 32
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark03"
+  gridPoint {
+    x: -76
+    y: 0
+    z: 42
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark04"
+  gridPoint {
+    x: -78
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark05"
+  gridPoint {
+    x: -76
+    y: 0
+    z: 46
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedark06"
+  gridPoint {
+    x: -76
+    y: 0
+    z: 54
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_cobblestonedarkCircle01"
+  gridPoint {
+    x: -88
+    y: 0
+    z: 50
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_ground_roundaboutCenterpiece"
+  gridPoint {
+    x: -68
+    y: 0
+    z: 4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock01"
+  gridPoint {
+    x: -55
+    y: 0
+    z: 7
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock02"
+  gridPoint {
+    x: -53
+    y: 0
+    z: 5
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "sewer_groundDecoration_dirt03"
+  gridPoint {
+    x: 38
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock03"
+  gridPoint {
+    x: -54
+    y: 0
+    z: 13
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock03"
+  gridPoint {
+    x: -51
+    y: 0
+    z: 12
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock04"
+  gridPoint {
+    x: -48
+    y: 0
+    z: 8
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock05"
+  gridPoint {
+    x: -48
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock06"
+  gridPoint {
+    x: -47
+    y: 0
+    z: 16
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock07"
+  gridPoint {
+    x: -51
+    y: 0
+    z: 15
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock08"
+  gridPoint {
+    x: -58
+    y: 0
+    z: 11
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_clutter_rock09"
+  gridPoint {
+    x: -60
+    y: 0
+    z: 6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floorDecoration_crack01"
+  gridPoint {
+    x: -14
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_ground_undergroundWallCorner01"
+  gridPoint {
+    x: 65
+    y: 0
+    z: 14
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "undergroundBase_ground_undergroundWallEdge01"
+  gridPoint {
+    x: 61
+    y: 0
+    z: 16
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_ground_undergroundWallEdge02"
+  gridPoint {
+    x: 60
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_rockEdge05"
+  gridPoint {
+    x: 51
+    y: 0
+    z: 27
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_rockEdge06"
+  gridPoint {
+    x: 51
+    y: 0
+    z: 29
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_rockEdge07"
+  gridPoint {
+    x: 51
+    y: 0
+    z: 25
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_rockEdge08"
+  gridPoint {
+    x: 52
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_rockEdge09"
+  gridPoint {
+    x: 51
+    y: 0
+    z: 23
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_subBaseEdge01Bot"
+  gridPoint {
+    x: 58
+    y: 0
+    z: 31
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_subBaseEdge01Top"
+  gridPoint {
+    x: 64
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_subBaseEdge02Top"
+  gridPoint {
+    x: 66
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_wall_subBaseEdge03Bot"
+  gridPoint {
+    x: 61
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestone03"
+  gridPoint {
+    x: -39
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestone"
+  gridPoint {
+    x: -39
+    y: 0
+    z: 33
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestone03"
+  gridPoint {
+    x: -34
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestoneEnd01"
+  gridPoint {
+    x: -30
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestoneEnd02"
+  gridPoint {
+    x: -26
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_ground_cobblestoneEnd03"
+  gridPoint {
+    x: -22
+    y: 0
+    z: 39
+  }
+  orientation: ORIENTATION_S
   lod: 0
 }
