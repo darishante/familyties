@@ -297,7 +297,35 @@ nodes {
   text: "Slip me 5 nuyen and I\'ll let you in on a secret."
   branches {
     responseText: "{{CC}}5 nuyen{{/CC}} Deal."
-    nextNodeIndex: -1
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 13
+    auxiliaryLink: true
   }
   branches {
     responseText: "Nice try."
