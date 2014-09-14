@@ -43,16 +43,6 @@ props {
   idRef {
     id: "5401cff0373663b00b0067a1"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Is this empty"
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
@@ -1715,12 +1705,7 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Maintenace door.. Classic for sneaking in"
-      disableAfterInteracting: false
-    }
+    interactionIcon: InteractionIcon_SceneTransition
   }
   lod: 0
 }
@@ -2024,8 +2009,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "Sonyboy got short straw when loot was shared"
-      disableAfterInteracting: false
+      inspectText: "Somebody drew the short straw when loot was shared"
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -2090,8 +2075,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "Not a single scratch. I dont know who he is, but must be divinely protected."
-      disableAfterInteracting: false
+      inspectText: "Not a single scratch. No idea who he is, but he must be divinely protected."
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -3943,16 +3928,6 @@ props {
   idRef {
     id: "5401cf71373663b00b00679d"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Maybe something agile could go over. What\'s in other side? "
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
@@ -4427,8 +4402,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "Silent testimony for shooting accuracy of local gangs"
-      disableAfterInteracting: false
+      inspectText: "Silent testimony for the shooting accuracy of local gangs"
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -4488,14 +4463,9 @@ props {
     id: "5401db943736631c14004ae7"
   }
   interactionRoot {
-    isEnabled: true
+    isEnabled: false
     interactionRadius: 1
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Salak\303\244yt\303\244v\303\244 jonkin graffitin kohdalla? Etuk\303\244teistieto vaadittaisiin tieto?"
-      disableAfterInteracting: false
-    }
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -33036,6 +33006,7 @@ props {
   lod: 0
 }
 props {
+<<<<<<< HEAD
   name: "sleekOffice_wall_stairwell01"
   gridPoint {
     x: 90.41
@@ -38384,11 +38355,29 @@ props {
     x: 97
     y: 0.31
     z: 188
+=======
+  name: "sleekOffice_furniture_overturnedTable02"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 55
   }
   orientation: ORIENTATION_S
   lod: 0
 }
 props {
+  name: "warehouse_storage_bin01"
+  gridPoint {
+    x: 0
+    y: 0
+    z: 54
+>>>>>>> bb409b0f497219582b37ad9627d5884181304e3a
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+<<<<<<< HEAD
   name: "tenements_appliance_toilet02"
   gridPoint {
     x: 96
@@ -38422,5 +38411,24 @@ props {
   idRef {
     id: "54156ffb3736635818007554"
   }
+=======
+  name: "haven_clutter_trashPile02"
+  gridPoint {
+    x: 1
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "mitte_decor_rubble02"
+  gridPoint {
+    x: -2
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_S
+>>>>>>> bb409b0f497219582b37ad9627d5884181304e3a
   lod: 0
 }

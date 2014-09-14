@@ -1,10 +1,10 @@
 idRef {
-  id: "5411e229643431df894a49f5"
+  id: "541560f0643431991a8566fa"
 }
-ui_name: "s006-groundfloor_ladder"
+ui_name: "s006-officefloor_ladder"
 nodes {
   idRef {
-    id: "5411e234643431df894a49fb"
+    id: "54156101643431991a856700"
   }
   index: 0
   text: "Climb up or down?"
@@ -55,7 +55,7 @@ nodes {
               call_value {
                 functionName: "Get Map Item (Region)"
                 args {
-                  string_value: "5415626c6434316c29c5817e"
+                  string_value: "5415623a6434316c29c5817c"
                 }
               }
             }
@@ -145,7 +145,7 @@ nodes {
               call_value {
                 functionName: "Get Map Item (Region)"
                 args {
-                  string_value: "541562aa6434316c29c58180"
+                  string_value: "5415628a6434316c29c5817f"
                 }
               }
             }
