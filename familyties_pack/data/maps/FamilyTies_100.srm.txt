@@ -24730,9 +24730,9 @@ props {
 props {
   name: "factory_groundDecoration_danceFloor_lights"
   gridPoint {
-    x: -7
+    x: -10
     y: 3
-    z: -79.77
+    z: -65.77
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -25413,5 +25413,15 @@ props {
   idRef {
     id: "54151ac73736635c1b007a6e"
   }
+  lod: 0
+}
+props {
+  name: "mitte_groundDecoration_tech01"
+  gridPoint {
+    x: -8.61
+    y: 0.2
+    z: -81.43
+  }
+  orientation: ORIENTATION_S
   lod: 0
 }
