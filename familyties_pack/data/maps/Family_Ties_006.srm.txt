@@ -29254,3 +29254,29 @@ props {
   orientation: ORIENTATION_N
   lod: 0
 }
+props {
+  name: "diveBar_wallDecoration_dreamCatcher"
+  gridPoint {
+    x: -65
+    y: 0.23
+    z: -86
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54154ac137366318160022ef"
+  }
+  lod: 0
+}
+props {
+  name: "diveBar_wallDecoration_dreamCatcher"
+  gridPoint {
+    x: -73
+    y: 0.23
+    z: -198
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "54154ad937366318160022f0"
+  }
+  lod: 0
+}
