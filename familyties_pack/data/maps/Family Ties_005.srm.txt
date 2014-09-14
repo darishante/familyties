@@ -1,7 +1,7 @@
 minX: -23
 minZ: 1
 numX: 143
-numZ: 241
+numZ: 236
 props {
   name: "barrens_building_01baseFrontCorner01"
   gridPoint {
@@ -88,7 +88,7 @@ props {
   name: "barrens_building_01baseFrontCorner01"
   gridPoint {
     x: -5
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 29
   }
   orientation: ORIENTATION_S
@@ -8458,7 +8458,7 @@ props {
   name: "barrens_ground_twoLaneSingle02"
   gridPoint {
     x: 42
-    y: 3.469447e-018
+    y: 3.469447e-18
     z: 11.52
   }
   orientation: ORIENTATION_E
@@ -13873,13 +13873,8 @@ props {
   }
   interactionRoot {
     isEnabled: true
-    interactionRadius: 2
-    inspectInteraction {
-      dispalyTime: 1
-      fadeTime: 1
-      inspectText: "Ovi kellareihin"
-      disableAfterInteracting: false
-    }
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -27583,7 +27578,7 @@ props {
   name: "haven_wall_concreteBarrierEdge07"
   gridPoint {
     x: 77.33
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 98.32
   }
   orientation: ORIENTATION_S
@@ -33013,6 +33008,15 @@ props {
     z: 187.51
   }
   orientation: ORIENTATION_E
+  displayName: "StreetStairs"
+  idRef {
+    id: "54157a92643431f22e64f848"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -34140,29 +34144,6 @@ props {
   lod: 0
 }
 props {
-  name: "undergroundBase_wall_rockEdge04"
-  gridPoint {
-    x: 60
-    y: 0
-    z: 236
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5415662f373663581800741b"
-  }
-  lod: 0
-}
-props {
-  name: "undergroundBase_wall_rockEdge08"
-  gridPoint {
-    x: 57
-    y: 0
-    z: 239
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "undergroundBase_wall_rockEdge06"
   gridPoint {
     x: 57
@@ -34170,45 +34151,6 @@ props {
     z: 195
   }
   orientation: ORIENTATION_E
-  lod: 0
-}
-props {
-  name: "undergroundBase_wall_rockEdge04"
-  gridPoint {
-    x: 57
-    y: 0
-    z: 236
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5415667a373663581800741d"
-  }
-  lod: 0
-}
-props {
-  name: "undergroundBase_wall_rockEdge06"
-  gridPoint {
-    x: 63
-    y: 0
-    z: 237
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5415667a373663581800741e"
-  }
-  lod: 0
-}
-props {
-  name: "undergroundBase_wall_rockEdge05"
-  gridPoint {
-    x: 63
-    y: 0
-    z: 234
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "5415667a373663581800741f"
-  }
   lod: 0
 }
 props {
@@ -37250,71 +37192,6 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "54156cea3736635818007501"
-  }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brick02"
-  gridPoint {
-    x: 2
-    y: 0
-    z: 217
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "54156cf13736635818007502"
-  }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brick02"
-  gridPoint {
-    x: 10
-    y: 0
-    z: 220
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "54156cf43736635818007503"
-  }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brick02"
-  gridPoint {
-    x: 3
-    y: 0
-    z: 211
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "54156cf63736635818007504"
-  }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brick02"
-  gridPoint {
-    x: 9.29
-    y: 0
-    z: 223
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "54156cf93736635818007505"
-  }
-  lod: 0
-}
-props {
-  name: "sewer_wall_brick02"
-  gridPoint {
-    x: 0
-    y: 0
-    z: 211
-  }
-  orientation: ORIENTATION_E
-  idRef {
-    id: "54156cfd3736635818007506"
   }
   lod: 0
 }
