@@ -2194,6 +2194,14 @@ scene_dimensions {
   initial_alarm_state: 0
   turns_per_round: 3
 }
+character_roster {
+  roster_entries {
+    reference_id: "familyties_crew_halfshatter_lv1"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+  }
+}
 show_hiring_screen_on_scene_load: false
 scene_hiring_prerequisites {
   prereq_description: ""
@@ -2204,6 +2212,13 @@ hiring_slot_count: 0
 hiring_minimum_karma: 0
 hiring_maximum_karma: 0
 roster_overrides {
+  roster_entries {
+    reference_id: "familyties_crew_halfshatter_lv1"
+    hiring_conditions {
+    }
+    hiring_cost: -1
+    content_pack_source: "53da5ef2643431a4970041a8"
+  }
 }
 use_hiring_cost_warning: false
 hiring_average_cost: 0

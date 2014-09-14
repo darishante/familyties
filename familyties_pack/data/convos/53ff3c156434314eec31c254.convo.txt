@@ -7,7 +7,7 @@ nodes {
     id: "53ff3c1f6434314eec31c25a"
   }
   index: 0
-  text: "{{GM}}An old model of a Matrix terminal that has been shut down for ages.{{/GM}}\n\nDrek. The system is huge and unoptimized. My portable battery is not going to power this for very long. Well, the good news is that it\'s not connected to any alarms. The bad news is that if I\'m still in and the power fails, it\'s really going to hurt.\n\n(DEBUG: add Half Shatter as player controlled)"
+  text: "{{GM}}An old model of a Matrix terminal that has been shut down for ages.{{/GM}}\n\nDrek. The system is huge and unoptimized. My portable battery is not going to power this for very long. Well, the good news is that it\'s not connected to any alarms. The bad news is that if I\'m still in and the power fails, it\'s really going to hurt."
   branches {
     responseText: "Should we get a bigger battery?"
     nextNodeIndex: 1
@@ -117,15 +117,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -150,15 +150,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -187,7 +187,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
@@ -395,15 +395,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -445,15 +445,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -478,7 +478,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
@@ -635,15 +635,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -685,15 +685,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -718,7 +718,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
@@ -875,15 +875,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -925,15 +925,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }
@@ -958,7 +958,7 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
@@ -988,15 +988,15 @@ nodes {
           call_value {
             functionName: "Get Map Item (InteractableObject)"
             args {
-              string_value: "53ff40d56434314eec31c27d"
+              string_value: "54157196643431f22e64f7a5"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Actor)"
+            functionName: "Get Map Item (Player)"
             args {
-              string_value: "53fb4c1e6434310c07a40b3a"
+              int_value: 1
             }
           }
         }

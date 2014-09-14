@@ -4092,8 +4092,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "WARNING! Elevator Malfunktion!"
-      disableAfterInteracting: false
+      inspectText: "WARNING! Elevator Malfunction!"
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -4121,16 +4121,6 @@ props {
   orientation: ORIENTATION_W
   idRef {
     id: "5403739537366318110041be"
-  }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 2
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 2
-      inspectText: "Elevator maintenace ladders. UP and down"
-      disableAfterInteracting: false
-    }
   }
   lod: 0
 }
@@ -4549,16 +4539,6 @@ props {
   idRef {
     id: "54074eca3736639c0d003d92"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 2
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 2
-      inspectText: "Elevator maintenace ladders. UP and down"
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
@@ -4688,8 +4668,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "WARNING! Elevator Malfunktion!"
-      disableAfterInteracting: false
+      inspectText: "WARNING! Elevator Malfunction!"
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -8054,6 +8034,18 @@ props {
     z: 150
   }
   orientation: ORIENTATION_E
+  displayName: "RealJackIn"
+  idRef {
+    id: "54157196643431f22e64f7a5"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    jackPoint {
+      LANIdentifier: "54156b77643431f22e64f6e5"
+      LANEquipment: ""
+    }
+  }
   lod: 0
 }
 props {
@@ -8606,10 +8598,7 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    jackPoint {
-      LANIdentifier: "54156b77643431f22e64f6e5"
-      LANEquipment: ""
-    }
+    interactionIcon: InteractionIcon_Matrix
   }
   lod: 0
 }
@@ -8701,6 +8690,16 @@ props {
   orientation: ORIENTATION_E
   idRef {
     id: "540863bb373663740c001657"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    doorPoint {
+      doorState: false
+      aiOnlyDoor: false
+      doorSound: "Door"
+      doorSoundBundle: "ambient_office"
+    }
   }
   lod: 0
 }
@@ -9425,16 +9424,6 @@ props {
   idRef {
     id: "5409aebb37366338150066bf"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 2
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 2
-      inspectText: "Elevator maintenace ladders. UP and down"
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
@@ -9642,8 +9631,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "WARNING! Elevator Malfunktion!"
-      disableAfterInteracting: false
+      inspectText: "WARNING! Elevator Malfunction!"
+      disableAfterInteracting: true
     }
   }
   lod: 0
@@ -19355,16 +19344,6 @@ props {
   idRef {
     id: "54143061373663201400128c"
   }
-  interactionRoot {
-    isEnabled: true
-    interactionRadius: 2
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 2
-      inspectText: "Elevator maintenace ladders. UP and down"
-      disableAfterInteracting: false
-    }
-  }
   lod: 0
 }
 props {
@@ -19715,8 +19694,8 @@ props {
     inspectInteraction {
       dispalyTime: 2
       fadeTime: 1
-      inspectText: "WARNING! Elevator Malfunktion!"
-      disableAfterInteracting: false
+      inspectText: "WARNING! Elevator Malfunction!"
+      disableAfterInteracting: true
     }
   }
   lod: 0
