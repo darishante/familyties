@@ -1,0 +1,75 @@
+idRef {
+  id: "541566896434316c29c581a4"
+}
+ui_name: "s006-rainmakers_shaman"
+nodes {
+  idRef {
+    id: "541566916434316c29c581aa"
+  }
+  index: 0
+  text: "{{GM}}A young woman dressed in traditional shamanic wear raises her head when you approach.{{/GM}}\n\nYes?"
+  branches {
+    responseText: "Hello. I\'m $(s.name) and this is my ... colleague, Half Shatter."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Never mind."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Awakened{{/CC}} There\'s something magically strange with this place, isn\'t there?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541567b96434316c29c581b0"
+  }
+  index: 1
+  text: "I\'m Viridian. You\'re shadowrunners, I can tell. What do you want?"
+  branches {
+    responseText: "Nothing with you or your gang, just something that\'s lying in the basement."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Got anything magical for sale?"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541568586434316c29c581b4"
+  }
+  index: 2
+  text: "... yes. Something was summoned here a long time ago, and it has crawled deep underneath the building. It doesn\'t like that we\'re here. I try not to disturb it, and have set up dreamcatchers to soothe our relations, but I\'m afraid that may not be enough to keep things calm."
+  branches {
+    responseText: "Probably not the smartest idea to squat here then."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Have you tried to kill it?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541569966434316c29c581ba"
+  }
+  index: 3
+  text: "I\'ve been of that opinion, but our chief says we don\'t really have a choice. This is the only building in the neighborhood capable of keeping the elements out when winter comes. No other gangs bother us here."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541569686434316c29c581b8"
+  }
+  index: 4
+  text: "The entity is way too big to kill."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
