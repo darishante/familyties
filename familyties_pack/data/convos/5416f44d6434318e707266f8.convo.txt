@@ -1,0 +1,495 @@
+idRef {
+  id: "5416f44d6434318e707266f8"
+}
+ui_name: "s006-diplomacy_for_foes"
+nodes {
+  idRef {
+    id: "5416f45a6434318e707266fe"
+  }
+  index: 0
+  text: "{{GM}}A young woman with dirty clothes and old eyes is practically waiting for you. She has her hands out to show you she has no weapon.{{/GM}}\n\nYou guys are shadowrunners, right? What do you want with us?"
+  branches {
+    responseText: "Sorry, not going to tell you that."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Your people out there are way too trigger-happy! I\'m considering returning the favor."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "How\'d you find us?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416f7f36434318e70726716"
+  }
+  index: 1
+  text: "Considering you just turned up at our home you might want to consider an attitude change.\n\nI\'m Sandra. The chief of the Rainmakers, Mountain, is my boyfriend."
+  branches {
+    responseText: "I\'m ... $(s.name), and this is Half Shatter."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nice place you\'ve got here."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416f6676434318e70726705"
+  }
+  index: 2
+  text: "You haven\'t even seen \"trigger happy\". There are some neighborhoods in Red Hill where everybody shoots first and ask questions never. Compared to people living around there, the Rainmakers are practically pacifists.\n\nAnyway, I\'m Sandra. The chief of the Rainmakers, Mountain, is my boyfriend."
+  branches {
+    responseText: "I\'m ... $(s.name), and this is Half Shatter."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nice place you\'ve got here."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416f6656434318e70726703"
+  }
+  index: 3
+  text: "One of our lookouts spotted you. I figured you\'d turn up in here.\n\nAnyway, I\'m Sandra. The chief of the Rainmakers, Mountain, is my boyfriend."
+  branches {
+    responseText: "I\'m ... $(s.name), and this is Half Shatter."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nice place you\'ve got here."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416f89f6434318e70726728"
+  }
+  index: 4
+  text: "It\'s warm enough, which should mean that none of us freeze to death this winter. But this brings me to my main point."
+  branches {
+    responseText: "Which is?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416f98a6434318e70726736"
+  }
+  index: 5
+  text: "I don\'t want any trouble for us. However, some idiots here take their turf very seriously, and they have no love for shadowrunners. We could probably take you if it came to that..."
+  branches {
+    responseText: " "
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5416fa246434318e70726739"
+  }
+  index: 6
+  text: "In your dreams. We\'ve handled gang trash before."
+  branches {
+    responseText: "Hannah-"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{CC}}Say nothing{{/CC}}"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
+}
+nodes {
+  idRef {
+    id: "5416fa556434318e7072673d"
+  }
+  index: 7
+  text: "Nice attitude, digger lady. Look, I don\'t want any of us getting hurt. Nobody\'s dead yet, and I\'d like to keep it that way.\n\nSo, tell me what you want, and we can negotiate for it. Or I can scream for help, and you\'ll get everybody here after you."
+  branches {
+    responseText: "{{CC}}Let Half Shatter decide{{/CC}}"
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "We\'re looking for some data that\'s been lying in your basement forever. You aren\'t using it and won\'t miss it."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "We\'re not here for any of you or any of your stuff. Fair enough?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Scream all you like. If the Rainmakers come at us, they\'ll regret it."
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} We respect your turf, and what we\'re looking for you\'ll never miss. Let us poke around a bit and say we\'ll owe you a favor?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541705f46434318e707267af"
+  }
+  index: 8
+  text: "No, that\'s not good enough. You want to come here, you need to get our approval."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541706c26434318e707267b3"
+  }
+  index: 9
+  text: "... I suppose that as long as you won\'t pick any fights or steal anything that\'s obviously ours, we\'ve got a deal."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5416fc2c6434318e70726774"
+  }
+  index: 10
+  text: "You\'re the boss\'s girlfriend, right? You\'ll make a nice hostage. Play nice, and no one needs to get hurt.\n\n{{GM}}She brings out her SMG.{{/GM}}"
+  branches {
+    responseText: "... No. We\'re not doing that."
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "{{CC}}Help tie Sandra up{{/CC}}"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
+}
+nodes {
+  idRef {
+    id: "5416fca66434318e70726778"
+  }
+  index: 11
+  text: "{{GM}}Half Shatter turns to you, angrily.{{/GM}}\n\nHey, I know what I\'m doing here. The minute we hit a cocktail party we can do what you want, but right now...\n\n{{GM}}Sandra takes off in a run{{/GM}}\n\nOh, drek!"
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "HalfShatterRep"
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5416fd246434318e7072677a"
+  }
+  index: 12
+  text: "{{GM}}Sandra considers screaming, but she sees that Half Shatter would kill her without a second thought. You put some binders around her hands and stuff a glove into her mouth. Half Shatter takes a small pistol off her and chucks it into a trashcan.{{/GM}}\n\n"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Item from Actor by Item Type"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ItemType"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5416f3056434318e707266f7"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Apply Attribute Status Effect to Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5416f3056434318e707266f7"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: -2
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorAttributes"
+          }
+          args {
+            int_value: 12
+          }
+        }
+      }
+      args {
+        string_value: "cuffs"
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BuffDebuffType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+    ops {
+      functionName: "Apply Condition Status Effect to Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5416f3056434318e707266f7"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "StatusCondition"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        string_value: "gagged"
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BuffDebuffType"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: -1
+      }
+    }
+    ops {
+      functionName: "Change Actor Team"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5416f3056434318e707266f7"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 10
+}

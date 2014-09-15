@@ -331,9 +331,12 @@ Kenttä 006:
 
  - 12 Rainmakeria (shamaani, pomo, melee, diplomaatti (pomon nainen), aseistettu porukka)
  
- * jos maine on -1, voidaan asiat vielä sopia suht helposti (spawnataan oitis diplomaatti juttelemaan pelaajahahmojen kanssa --> palauttaa maineen 0:aan)
- * jos maine on -2, on vielä mahdollista sopia mikäli paikantaa shamaanin, diplomaatin tai pomon
+ * 0: jos sisään tulee sivuovesta, diplomaatti on vastassa
+  * jos maine on -1 tai -2, diplomaatti on vastassa sivuovella ja viemärissä (ei jos -3)
+ * jos maine on -1 tai -2, on vielä mahdollista sopia mikäli paikantaa shamaanin, diplomaatin tai pomon
 
+
+diplomaatin voi ostaa, ylipuhua tai ottaa panttivangiksi
 
 
 6.5 Flashback 02
