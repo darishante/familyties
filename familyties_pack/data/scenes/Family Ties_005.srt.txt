@@ -1766,6 +1766,20 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "RepRainmakers"
+          }
+        }
+      }
+      args {
+        int_value: -2
+      }
+    }
   }
   isActive: true
   idRef {
@@ -1779,7 +1793,7 @@ triggers {
   name: "DeadRainmakerTotal"
   events {
     ops {
-      functionName: "On Actor Death"
+      functionName: "On Combat Exited"
     }
   }
   conditions {
@@ -1821,7 +1835,7 @@ triggers {
         }
       }
       args {
-        int_value: -2
+        int_value: -3
       }
     }
   }

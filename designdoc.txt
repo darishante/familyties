@@ -311,9 +311,10 @@ Karmapalkkio: +1 ??
  - RepRainmakers:
  
  0 - nevöhööd
--4 - tuhosivat kaikki kaikkialta
--3 - tuhosivat kaikki sisältä
--2 - tuhosivat kaikki ulkoa
+-5 - tuhosivat kaikki kaikkialta
+-4 - tuhosivat kaikki sisältä
+-3 - tuhosivat kaikki ulkoa
+-2 - tapettu rainmaker
 -1 - vihollisia
  1 - ansaan houkuteltavia
  2 - jymäytettäviä
@@ -325,6 +326,14 @@ MunicipalEntrance:
 0 - etuovi
 1 - sivuovi
 2 - viemäri
+
+Kenttä 006: 
+
+ - 12 Rainmakeria (shamaani, pomo, melee, diplomaatti (pomon nainen), aseistettu porukka)
+ 
+ * jos maine on -1, voidaan asiat vielä sopia suht helposti (spawnataan oitis diplomaatti juttelemaan pelaajahahmojen kanssa --> palauttaa maineen 0:aan)
+ * jos maine on -2, on vielä mahdollista sopia mikäli paikantaa shamaanin, diplomaatin tai pomon
+
 
 
 6.5 Flashback 02
