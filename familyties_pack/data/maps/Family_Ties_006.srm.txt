@@ -30850,3 +30850,13 @@ props {
   }
   lod: 0
 }
+props {
+  name: "system_invisible_solidProp"
+  gridPoint {
+    x: -51
+    y: 0
+    z: 136
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
