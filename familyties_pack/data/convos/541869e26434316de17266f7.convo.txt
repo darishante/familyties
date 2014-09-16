@@ -1,0 +1,794 @@
+idRef {
+  id: "541869e26434316de17266f7"
+}
+ui_name: "s006-hostage_talk"
+nodes {
+  idRef {
+    id: "541869f36434316de17266fd"
+  }
+  index: 0
+  text: "{{GM}}A Rainmaker spots you, and draws a weapon. In return, Half Shatter points her SMG at Sandra.{{/GM}}\n\nWhat the frag? Who are you? What are you doing?"
+  branches {
+    responseText: "Back off, or she gets ventilated!"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Nobody do anything stupid now."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "In order: A) Rhetorical question, B) Doesn\'t matter C) Holding your boss\'s SO hostage."
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "541874eb6434316de17267a1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5417077b6434318e707267e1"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54186af46434316de1726702"
+  }
+  index: 1
+  text: "{{GM}}The weapon goes back into the holster.{{/GM}}\n\nOkay - we cool, man. What do you want?"
+  branches {
+    responseText: "We need something you won\'t miss. We\'re going to look for it here."
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Just something from your basement. Stay out of our way and you\'ll get her back unharmed."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54186bba6434316de1726706"
+  }
+  index: 2
+  text: "That ain\'t happening. You let her go, or we\'ll blow you away."
+  branches {
+    responseText: "BACK THE FRAG DOWN NOW!"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "We can just as easily kill everyone in this building, you stupid punk."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Mountain\'s gonna love you after you caused her girlfriend\'s death, but have it your way."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54186f556434316de1726728"
+  }
+  index: 3
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 14
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Compare Actor Race"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "IsOrIsNot"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Race"
+                    }
+                    args {
+                      int_value: 4
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "OR"
+                args {
+                  call_value {
+                    functionName: "Compare Actor Attribute"
+                    args {
+                      call_value {
+                        functionName: "Triggering Actor"
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "BaseOrCurrent"
+                        }
+                        args {
+                          int_value: 0
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "ActorAttributes"
+                        }
+                        args {
+                          int_value: 2
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "Comparison Ops"
+                        }
+                        args {
+                          int_value: 3
+                        }
+                      }
+                    }
+                    args {
+                      int_value: 4
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "OR"
+                    args {
+                      call_value {
+                        functionName: "Compare Actor Attribute"
+                        args {
+                          call_value {
+                            functionName: "Triggering Actor"
+                          }
+                        }
+                        args {
+                          call_value {
+                            functionName: "Get Preset Value (int)"
+                            args {
+                              string_value: "BaseOrCurrent"
+                            }
+                            args {
+                              int_value: 0
+                            }
+                          }
+                        }
+                        args {
+                          call_value {
+                            functionName: "Get Preset Value (int)"
+                            args {
+                              string_value: "ActorAttributes"
+                            }
+                            args {
+                              int_value: 5
+                            }
+                          }
+                        }
+                        args {
+                          call_value {
+                            functionName: "Get Preset Value (int)"
+                            args {
+                              string_value: "Comparison Ops"
+                            }
+                            args {
+                              int_value: 3
+                            }
+                          }
+                        }
+                        args {
+                          int_value: 5
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Compare Actor Race"
+                        args {
+                          call_value {
+                            functionName: "Triggering Actor"
+                          }
+                        }
+                        args {
+                          call_value {
+                            functionName: "Get Preset Value (int)"
+                            args {
+                              string_value: "IsOrIsNot"
+                            }
+                            args {
+                              int_value: 1
+                            }
+                          }
+                        }
+                        args {
+                          call_value {
+                            functionName: "Get Preset Value (int)"
+                            args {
+                              string_value: "Race"
+                            }
+                            args {
+                              int_value: 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541874876434316de17267a0"
+  }
+  index: 4
+  text: "Okay, okay! Chill! Do whatever, man! Just don\'t start nothing!"
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "541871a66434316de1726794"
+  }
+  index: 5
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 17
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Compare Actor Skill"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 1
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorSkills"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "OR"
+                args {
+                  call_value {
+                    functionName: "Compare Actor Attribute"
+                    args {
+                      call_value {
+                        functionName: "Triggering Actor"
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "BaseOrCurrent"
+                        }
+                        args {
+                          int_value: 0
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "ActorAttributes"
+                        }
+                        args {
+                          int_value: 5
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "Comparison Ops"
+                        }
+                        args {
+                          int_value: 3
+                        }
+                      }
+                    }
+                    args {
+                      int_value: 4
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Compare Actor Attribute"
+                    args {
+                      call_value {
+                        functionName: "Triggering Actor"
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "BaseOrCurrent"
+                        }
+                        args {
+                          int_value: 0
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "ActorAttributes"
+                        }
+                        args {
+                          int_value: 3
+                        }
+                      }
+                    }
+                    args {
+                      call_value {
+                        functionName: "Get Preset Value (int)"
+                        args {
+                          string_value: "Comparison Ops"
+                        }
+                        args {
+                          int_value: 3
+                        }
+                      }
+                    }
+                    args {
+                      int_value: 5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541873176434316de1726798"
+  }
+  index: 6
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Compare Actor Skill"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "BaseOrCurrent"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "ActorSkills"
+                }
+                args {
+                  int_value: 13
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "OR"
+            args {
+              call_value {
+                functionName: "Compare Actor Attribute"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorAttributes"
+                    }
+                    args {
+                      int_value: 4
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Compare Actor Attribute"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "BaseOrCurrent"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "ActorAttributes"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "Comparison Ops"
+                    }
+                    args {
+                      int_value: 3
+                    }
+                  }
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541873d56434316de172679b"
+  }
+  index: 7
+  text: "{{GM}}The Rainmaker considers your words, and decides he doesn\'t want to take the chance.{{/GM}}\n\nFine. Do whatever. And pray we never meet in a dark alley."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+}
+roots {
+  nextNodeIndex: 0
+}
