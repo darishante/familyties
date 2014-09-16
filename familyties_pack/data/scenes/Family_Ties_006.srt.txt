@@ -4327,10 +4327,10 @@ characters {
       stats {
         body: 0
         quickness: 0
-        strength: 0
+        strength: -1
         charisma: 0
         intelligence: 0
-        willpower: 0
+        willpower: 1
         essence: 0
         magic: 0
         hp: 0
@@ -4377,7 +4377,7 @@ characters {
         drone_combat: 0
       }
       archetypeName: "Guard - Seek And Destroy"
-      attitude: AttitudeAggressive
+      attitude: AttitudeCautious
       vulnerabilities {
       }
     }

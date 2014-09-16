@@ -300,15 +300,7 @@ nodes {
         }
       }
       ops {
-        functionName: "Select Item on Actor"
-        args {
-          call_value {
-            functionName: "Get Map Item (Item)"
-            args {
-              string_value: "Grenade 1 (Flash)"
-            }
-          }
-        }
+        functionName: "Order Actor to Move To (Actor)"
         args {
           call_value {
             functionName: "Specific Actor"
@@ -321,34 +313,73 @@ nodes {
               }
             }
             args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "54170abb643431fb787266f7"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 0
             }
           }
         }
       }
       ops {
-        functionName: "Attack Actor With Weapon"
+        functionName: "Display Text over Actor"
         args {
           call_value {
-            functionName: "Specific Actor"
+            functionName: "Get Map Item (Actor)"
             args {
-              call_value {
-                functionName: "Get Map Item (Actor)"
-                args {
-                  string_value: "5416f3056434318e707266f7"
-                }
-              }
-            }
-            args {
+              string_value: "5416f3056434318e707266f7"
             }
           }
         }
         args {
           call_value {
-            functionName: "Get Map Item (Player)"
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TextPopupStyle"
+            }
             args {
               int_value: 0
             }
           }
+        }
+        args {
+          string_value: "INTRUDERS! I NEED A HAND HERE!"
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 3
+        }
+        args {
+          float_value: 0
         }
       }
     }
@@ -716,7 +747,7 @@ nodes {
       }
     }
     ops {
-      functionName: "Order Actor to Flee"
+      functionName: "Order Actor to Move To (Actor)"
       args {
         call_value {
           functionName: "Specific Actor"
@@ -729,6 +760,25 @@ nodes {
             }
           }
           args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "54170abb643431fb787266f7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
           }
         }
       }
