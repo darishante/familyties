@@ -314,7 +314,7 @@ Karmapalkkio: +1 ??
 -5 - tuhosivat kaikki kaikkialta
 -4 - tuhosivat kaikki sisältä
 -3 - tuhosivat kaikki ulkoa
--2 - tapettu rainmaker
+-2 - maksamaton verivelka
 -1 - vihollisia
  1 - ansaan houkuteltavia
  2 - jymäytettäviä

@@ -35,12 +35,12 @@ nodes {
               string_value: "Comparison Ops"
             }
             args {
-              int_value: 0
+              int_value: 4
             }
           }
         }
         args {
-          int_value: -1
+          int_value: 0
         }
       }
     }
@@ -123,7 +123,7 @@ nodes {
     id: "5416f98a6434318e70726736"
   }
   index: 5
-  text: "I don\'t want any trouble for us. However, some idiots here take their turf very seriously, and they have no love for shadowrunners. We could probably take you if it came to that..."
+  text: "I don\'t want any trouble for us. However, some people here take their turf very seriously, and they have no love for shadowrunners. We could probably take you if it came to that..."
   branches {
     responseText: " "
     nextNodeIndex: 6
@@ -155,19 +155,65 @@ nodes {
     id: "5416fa556434318e7072673d"
   }
   index: 7
-  text: "Nice attitude, digger lady. Look, I don\'t want any of us getting hurt. Nobody\'s dead yet, and I\'d like to keep it that way.\n\nSo, tell me what you want, and we can negotiate for it. Or I can scream for help, and you\'ll get everybody here after you."
+  text: "Nice attitude, pintsize. Look, I don\'t want any of us getting hurt. Nobody\'s dead yet, and I\'d like to keep it that way.\n\nSo, tell me what you want, and we can negotiate for it. Or I can call an intruder alert, and you\'ll be bleeding out before noon."
+  branches {
+    responseText: "Actually I\'m pretty sure there was a death already, outside."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: -2
+        }
+      }
+    }
+    nextNodeIndex: 8
+    hideIfUnavailable: true
+  }
   branches {
     responseText: "{{CC}}Let Half Shatter decide{{/CC}}"
-    nextNodeIndex: 10
+    nextNodeIndex: 15
     auxiliaryLink: true
   }
   branches {
     responseText: "We\'re looking for some data that\'s been lying in your basement forever. You aren\'t using it and won\'t miss it."
-    nextNodeIndex: -1
+    nextNodeIndex: 18
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5418024664343196b6726892"
+    }
+    auxiliaryLink: true
   }
   branches {
     responseText: "We\'re not here for any of you or any of your stuff. Fair enough?"
-    nextNodeIndex: 8
+    nextNodeIndex: 13
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5418023a64343196b6726891"
+    }
   }
   branches {
     responseText: "Scream all you like. If the Rainmakers come at us, they\'ll regret it."
@@ -189,12 +235,214 @@ nodes {
           int_value: -1
         }
       }
+      ops {
+        functionName: "Order Actor to Call for help"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+      }
     }
     nextNodeIndex: -1
   }
   branches {
-    responseText: "{{CC}}Etiquette: Gang{{/CC}} We respect your turf, and what we\'re looking for you\'ll never miss. Let us poke around a bit and say we\'ll owe you a favor?"
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} We could have seriously hurt someone out there, but didn\'t. We respect your turf, and what we\'re looking for is not even in the part of the building you\'re using. Let us poke around a bit and say we\'ll owe you a favor? We\'ll keep our weapons out of sight."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: -2
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5417d16664343134a6856555"
+  }
+  index: 8
+  text: "Drek.\n\nWho was it?"
+  branches {
+    responseText: "I don\'t really know."
     nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5417d18a64343134a6856558"
+  }
+  index: 9
+  text: "Kid was asking for it. If you want to live a long life, don\'t play with weapons."
+  branches {
+    responseText: "Hannah, shut up. ... I\'m sorry. It all happened really fast."
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "It\'s regrettable, but it was self defense."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "Yeah, and there will be lots more unless you people keep out of our way."
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
+}
+nodes {
+  idRef {
+    id: "5417dd0b64343134a6856654"
+  }
+  index: 10
+  text: "Sorry. Yeah, everyone\'s sorry, and still we keep shooting at each other. If we are unarmed, Razorbacks or Halloweeners or someone is going to kick us out, maybe massacre us a bit while they\'re at it."
+  branches {
+    responseText: "{{CC}}150 nuyen{{/CC}} You use blood money? We\'ll pay it."
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "True. But when everybody\'s armed, mistakes will happen."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541802e664343196b6726894"
+  }
+  index: 11
+  text: "I suppose that\'s the best we can expect. It\'s not going to bring anyone back, but it\'ll probably be enough to stop anyone seeking vengeance.\n\nSo, what do you really want here?\n\n"
+  branches {
+    responseText: "I\'d rather not say, except that it\'s got nothing to do with the Rainmakers or their stuff."
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "We\'re looking for some data that\'s been lying in your basement forever. You aren\'t using it and won\'t miss it."
+    nextNodeIndex: 18
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 150
+      }
+    }
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 3
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5417da7464343134a68565d3"
+  }
+  index: 12
+  text: "\"Regrettable\". You work for Lone Star? You certainly sound like them.\n\nGet out of here right now. In six seconds or less."
+  branches {
+    responseText: "Not going to happen."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Let Half Shatter handle this{{/CC}}"
+    nextNodeIndex: 15
+    auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -202,16 +450,58 @@ nodes {
   idRef {
     id: "541705f46434318e707267af"
   }
-  index: 8
+  index: 13
   text: "No, that\'s not good enough. You want to come here, you need to get our approval."
+  branches {
+    responseText: "{{CC}}Pay 50 nuyen{{/CC}} This enough to buy a permit to poke around?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 50
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 50
+        }
+      }
+    }
+    nextNodeIndex: 20
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "All right, we\'re looking for some data that\'s been lying in your basement forever. You aren\'t using it and won\'t miss it."
+    nextNodeIndex: 18
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "We\'re going to have a disagreement, then.\n"
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 nodes {
   idRef {
     id: "541706c26434318e707267b3"
   }
-  index: 9
-  text: "... I suppose that as long as you won\'t pick any fights or steal anything that\'s obviously ours, we\'ve got a deal."
+  index: 14
+  text: "... I suppose that as long as you won\'t pick any fights or steal anything that\'s obviously ours, we\'ve got a deal.\n\nI\'ll let Mountain and the boys and girls know that you\'re cool. Don\'t make me a liar."
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
@@ -237,15 +527,15 @@ nodes {
   idRef {
     id: "5416fc2c6434318e70726774"
   }
-  index: 10
+  index: 15
   text: "You\'re the boss\'s girlfriend, right? You\'ll make a nice hostage. Play nice, and no one needs to get hurt.\n\n{{GM}}She brings out her SMG.{{/GM}}"
   branches {
     responseText: "... No. We\'re not doing that."
-    nextNodeIndex: 11
+    nextNodeIndex: 16
   }
   branches {
     responseText: "{{CC}}Help tie Sandra up{{/CC}}"
-    nextNodeIndex: 12
+    nextNodeIndex: 17
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
@@ -256,8 +546,8 @@ nodes {
   idRef {
     id: "5416fca66434318e70726778"
   }
-  index: 11
-  text: "{{GM}}Half Shatter turns to you, angrily.{{/GM}}\n\nHey, I know what I\'m doing here. The minute we hit a cocktail party we can do what you want, but right now...\n\n{{GM}}Sandra takes off in a run{{/GM}}\n\nOh, drek!"
+  index: 16
+  text: "{{GM}}Half Shatter turns to you, angrily.{{/GM}}\n\nHey, I know what I\'m doing here. The minute we hit a cocktail party we can do things the way you like, but right now...\n\n{{GM}}Sandra takes off in a run{{/GM}}\n\nOh, drek!"
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
     id: "54156c36643431f22e64f6f9"
@@ -286,8 +576,8 @@ nodes {
   idRef {
     id: "5416fd246434318e7072677a"
   }
-  index: 12
-  text: "{{GM}}Sandra considers screaming, but she sees that Half Shatter would kill her without a second thought. You put some binders around her hands and stuff a glove into her mouth. Half Shatter takes a small pistol off her and chucks it into a trashcan.{{/GM}}\n\n"
+  index: 17
+  text: "{{GM}}Sandra considers screaming, but she sees that Half Shatter would shoot her without a second thought. You put some binders around her hands and stuff a glove into her mouth. Half Shatter takes a small pistol off her and chucks it into a trashcan.{{/GM}}\n\n"
   nodeType: ConversationNodeType_Simple
   actions {
     ops {
@@ -464,6 +754,76 @@ nodes {
     }
   }
 }
+nodes {
+  idRef {
+    id: "5418089464343196b6726980"
+  }
+  index: 18
+  text: "Huh. The basement is an interesting place all right. We don\'t really go there."
+  branches {
+    responseText: "Why\'s that?"
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "Then you should have no problem with us taking a look."
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5418093e64343196b67269d7"
+  }
+  index: 19
+  text: "You might want to ask Viridian about that. She\'s our shaman. I think she\'s somewhere on the top floor.\n\nAnyway, I guess you\'re okay to poke around in the basement, as long as you don\'t pick any fights or try to steal stuff that\'s obviously ours. I\'ll let the folks know you\'re cool. Don\'t make me a liar."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "541809ad64343196b67269d9"
+  }
+  index: 20
+  text: "... I suppose that as long as you won\'t pick any fights or steal anything that\'s obviously ours, you\'re good.\n\nI\'ll let Mountain and the boys and girls know that you\'re cool. Don\'t make me a liar."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "53da5ef2643431a4970041a8"
+          }
+          args {
+            string_value: "RainmakersRep"
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+}
 roots {
   nextNodeIndex: 0
 }
@@ -491,5 +851,31 @@ roots {
       }
     }
   }
-  nextNodeIndex: 10
+  nextNodeIndex: 15
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        int_value: 0
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 18
 }
