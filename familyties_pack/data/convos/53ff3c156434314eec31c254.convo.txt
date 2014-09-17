@@ -1082,7 +1082,7 @@ nodes {
   }
   nodeType: ConversationNodeType_Simple
   sourceInSceneRef {
-    id: "54156b77643431f22e64f699"
+    id: "5407485c373663f00d00797f"
   }
 }
 roots {
