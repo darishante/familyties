@@ -1,0 +1,186 @@
+idRef {
+  id: "5419ac0964343119367266f8"
+}
+ui_name: "s006-drone_hatch"
+nodes {
+  idRef {
+    id: "5419ac1264343119367266fe"
+  }
+  index: 0
+  text: "{{GM}}A drone hatch is set in the wall. Hannah views it suspiciously.{{/GM}}\n\nI might be able to get through, but you wouldn\'t."
+  branches {
+    responseText: "{{CC}}Rigger{{/CC}} I could send my drone with you."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 10
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Want to take a look?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5419b00064343119367267e7"
+  }
+  index: 1
+  text: "I suppose we could do that. Will you be ok up here?"
+  branches {
+    responseText: "I can handle it."
+    actions {
+      ops {
+        functionName: "Enable/Disable Manual Turn Mode"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5419ac7f6434311936726702"
+  }
+  index: 2
+  text: "I\'m sure this leads to the basement, but I don\'t like the idea of going there by myself. Let\'s find some other way down."
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5419b0af64343119367267ff"
+  }
+  index: 3
+  text: "{{GM}}A drone hatch is set in the wall. Hannah views it suspiciously.{{/GM}}\n\nI might be able to get through, but you wouldn\'t. And I don\'t think it\'s a good idea to split up - the Rainmakers will attack us if they think they have a chance."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "SandraIsHostage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "SandraIsHostage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 3
+}
