@@ -1,0 +1,278 @@
+idRef {
+  id: "54198baa643431502a7266f8"
+}
+ui_name: "s006-cross_hole"
+nodes {
+  idRef {
+    id: "54198bb0643431502a7266fe"
+  }
+  index: 0
+  text: "{{GM}}A chasm is ripped open here. It doens\'t look like the floor collapsed, but was blown open from underneath. The rift rips through all the floors and into an eerie light below.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Quickness 5{{/CC}} Cross the rift in a running leap"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54198c0c643431502a726701"
+  }
+  index: 1
+  text: "Um, what are you doing? Do I look like a video game character? I\'m not going to jump over bottomless pits. There has to be another way."
+  branches {
+    responseText: "You wait here, I\'ll go have a look"
+    conditions {
+      ops {
+        functionName: "No Condition"
+      }
+    }
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors Except Some"
+            args {
+              call_value {
+                functionName: "All Actors on Team"
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (string)"
+                    args {
+                      string_value: "FactionList"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (int)"
+                    args {
+                      string_value: "AllOrAny"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Map Item (SceneDimension)"
+                    args {
+                      string_value: "Default"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Specific Actor"
+                args {
+                  call_value {
+                    functionName: "Get Map Item (Player)"
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Change Actor Control"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PlayerOrAI"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Teleport Actor"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Current Location of Prop"
+            args {
+              call_value {
+                functionName: "Get Map Item (Prop)"
+                args {
+                  string_value: "54143061373663201400131b"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "FacingDirection"
+            }
+            args {
+              int_value: 7
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "TeleportMethod"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "HalfShatterLeftBehind"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "How can anyone so clumsy call themselves a shadowrunner?"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
+}
+nodes {
+  idRef {
+    id: "54198c93643431502a726705"
+  }
+  index: 2
+  text: "Har har. Watch out or I\'ll push you down."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "54199052643431502a726724"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}

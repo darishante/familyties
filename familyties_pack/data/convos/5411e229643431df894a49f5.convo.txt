@@ -9,7 +9,7 @@ nodes {
   index: 0
   text: "Climb up or down?"
   branches {
-    responseText: "Up"
+    responseText: "Up to first floor"
     actions {
       ops {
         functionName: "Teleport Actor"
@@ -99,7 +99,7 @@ nodes {
     nextNodeIndex: -1
   }
   branches {
-    responseText: "Down"
+    responseText: "Down to basement"
     actions {
       ops {
         functionName: "Teleport Actor"

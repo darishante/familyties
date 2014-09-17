@@ -256,7 +256,7 @@ props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
     x: -67.88
-    y: 1.0408341e-017
+    y: 1.0408341e-17
     z: 52.77
   }
   orientation: ORIENTATION_S
@@ -1499,7 +1499,7 @@ props {
   name: "school_floorDecoration_grunge01"
   gridPoint {
     x: -65.55
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: 53
   }
   orientation: ORIENTATION_E
@@ -2060,6 +2060,15 @@ props {
     z: 28
   }
   orientation: ORIENTATION_S
+  displayName: "MaintenanceStairwellUp"
+  idRef {
+    id: "54198ef2643431502a72671d"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
+  }
   lod: 0
 }
 props {
@@ -2070,18 +2079,14 @@ props {
     z: 27
   }
   orientation: ORIENTATION_S
+  displayName: "MaintenanceStairwellDown"
   idRef {
     id: "54036a5a373663400e0054ef"
   }
   interactionRoot {
     isEnabled: true
-    interactionRadius: 12
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Stairwell to lower maintenance level."
-      disableAfterInteracting: false
-    }
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -3346,8 +3351,14 @@ props {
     z: 130
   }
   orientation: ORIENTATION_S
+  displayName: "BasementStairwell"
   idRef {
     id: "540751923736639c0d003ddf"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -8205,18 +8216,14 @@ props {
     z: -81
   }
   orientation: ORIENTATION_S
+  displayName: "OfficeStairwellDown"
   idRef {
     id: "5409aebb37366338150066fe"
   }
   interactionRoot {
     isEnabled: true
-    interactionRadius: 12
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Stairwell to lower maintenance level."
-      disableAfterInteracting: false
-    }
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -8254,8 +8261,14 @@ props {
     z: -80
   }
   orientation: ORIENTATION_S
+  displayName: "OfficeStairwellUp"
   idRef {
     id: "5409aebb3736633815006701"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -12817,7 +12830,7 @@ props {
   name: "barrens_appliance_popMachine"
   gridPoint {
     x: -56.2
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -92.56
   }
   orientation: ORIENTATION_E
@@ -18214,7 +18227,7 @@ props {
   name: "barrens_appliance_popMachine"
   gridPoint {
     x: -73.2
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -205.56
   }
   orientation: ORIENTATION_E
@@ -18621,18 +18634,14 @@ props {
     z: -194
   }
   orientation: ORIENTATION_S
+  displayName: "TopFloorStairwell"
   idRef {
     id: "54143061373663201400131b"
   }
   interactionRoot {
     isEnabled: true
-    interactionRadius: 12
-    inspectInteraction {
-      dispalyTime: 2
-      fadeTime: 1
-      inspectText: "Stairwell to lower maintenance level."
-      disableAfterInteracting: false
-    }
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Warp
   }
   lod: 0
 }
@@ -19073,8 +19082,14 @@ props {
     z: -190
   }
   orientation: ORIENTATION_S
+  displayName: "TopFloorHole"
   idRef {
     id: "541430613736632014001375"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    interactionIcon: InteractionIcon_Generic
   }
   lod: 0
 }
@@ -25257,7 +25272,7 @@ props {
   name: "office_wall_end01"
   gridPoint {
     x: -61.03
-    y: 8.6736174e-017
+    y: 8.6736174e-17
     z: -214.08
   }
   orientation: ORIENTATION_E
