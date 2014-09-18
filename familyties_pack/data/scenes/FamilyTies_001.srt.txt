@@ -7008,10 +7008,10 @@ regions {
 regions {
   name: "Outside"
   position {
-    x: 29
-    y: -5
-    width: 4
-    height: 4
+    x: 28
+    y: -8
+    width: 7
+    height: 11
   }
   enabledAtStart: true
   is_camera_region: true

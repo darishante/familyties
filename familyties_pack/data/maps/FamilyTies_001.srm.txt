@@ -4342,16 +4342,6 @@ props {
   lod: 0
 }
 props {
-  name: "haven_building_03base02"
-  gridPoint {
-    x: 27
-    y: 0
-    z: -7
-  }
-  orientation: ORIENTATION_S
-  lod: 0
-}
-props {
   name: "haven_ground_concrete04"
   gridPoint {
     x: 31
@@ -4374,32 +4364,6 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "53dfc2a46434313c150592c9"
-  }
-  lod: 0
-}
-props {
-  name: "haven_building_03base02"
-  gridPoint {
-    x: 27
-    y: 0
-    z: -1
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dfc2a76434313c150592ca"
-  }
-  lod: 0
-}
-props {
-  name: "haven_building_03base02"
-  gridPoint {
-    x: 27
-    y: 0
-    z: -4
-  }
-  orientation: ORIENTATION_S
-  idRef {
-    id: "53dfc2c36434313c150592cb"
   }
   lod: 0
 }
@@ -7070,6 +7034,88 @@ props {
     isEnabled: true
     interactionRadius: 1
     interactionIcon: InteractionIcon_ItemPickup
+  }
+  lod: 0
+}
+props {
+  name: "haven_misc_planter01"
+  gridPoint {
+    x: 31
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_misc_planter01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541b161a643431d005980f4a"
+  }
+  lod: 0
+}
+props {
+  name: "pikePlace_door_RoyaleEntrance"
+  gridPoint {
+    x: 27
+    y: 0
+    z: -6
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "pikePlace_building_02base01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -1
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "pikePlace_building_02base01"
+  gridPoint {
+    x: 26
+    y: 0
+    z: -8
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541b16ab643431d005980f4c"
+  }
+  lod: 0
+}
+props {
+  name: "haven_misc_planter01"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 1
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541b16e9643431d005980f4d"
+  }
+  lod: 0
+}
+props {
+  name: "haven_misc_planter01"
+  gridPoint {
+    x: 31
+    y: 0
+    z: -7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541b16ed643431d005980f4e"
   }
   lod: 0
 }
