@@ -3901,8 +3901,8 @@ triggers {
 regions {
   name: "Municipal"
   position {
-    x: -45
-    y: 63
+    x: -139
+    y: -150
     width: -35
     height: -37
   }
@@ -4040,8 +4040,8 @@ regions {
 regions {
   name: "SideDoor"
   position {
-    x: -53
-    y: 54
+    x: -147
+    y: -159
     width: 3
     height: 4
   }
@@ -4091,8 +4091,8 @@ regions {
 regions {
   name: "2nd floor offices"
   position {
-    x: -42
-    y: -219
+    x: -39
+    y: -177
     width: -57
     height: 53
   }
@@ -4135,8 +4135,8 @@ regions {
 regions {
   name: "Subbasement"
   position {
-    x: -104
-    y: 101
+    x: -78
+    y: -40
     width: 67
     height: 71
   }
@@ -4179,8 +4179,8 @@ regions {
 regions {
   name: "TopfloorLadder"
   position {
-    x: -82
-    y: -185
+    x: -79
+    y: -143
     width: 3
     height: 3
   }
@@ -4281,8 +4281,8 @@ regions {
 regions {
   name: "GroundfloorLadder"
   position {
-    x: -54
-    y: 36
+    x: -148
+    y: -177
     width: 3
     height: 3
   }
@@ -4332,8 +4332,8 @@ regions {
 regions {
   name: "SubbasementLadder"
   position {
-    x: -44
-    y: 138
+    x: -18
+    y: -3
     width: 3
     height: 3
   }
@@ -4383,8 +4383,8 @@ regions {
 regions {
   name: "Municipal Matrix"
   position {
-    x: -270
-    y: -161
+    x: -170
+    y: -111
     width: 72
     height: 119
   }
@@ -4427,8 +4427,8 @@ regions {
 regions {
   name: "Entrance to Data"
   position {
-    x: -225
-    y: -118
+    x: -125
+    y: -68
     width: -2
     height: 1
   }
@@ -4478,8 +4478,8 @@ regions {
 regions {
   name: "Data to Entrance"
   position {
-    x: -225
-    y: -125
+    x: -125
+    y: -75
     width: -2
     height: -1
   }
@@ -4529,8 +4529,8 @@ regions {
 regions {
   name: "SewerWay"
   position {
-    x: -71
-    y: 152
+    x: -45
+    y: 11
     width: 3
     height: 3
   }
@@ -4580,8 +4580,8 @@ regions {
 regions {
   name: "TopLeftStaircase"
   position {
-    x: -67
-    y: -202
+    x: -64
+    y: -160
     width: 2
     height: 3
   }
@@ -4631,8 +4631,8 @@ regions {
 regions {
   name: "TopRightStaircase"
   position {
-    x: -67
-    y: -194
+    x: -64
+    y: -152
     width: 2
     height: 4
   }
@@ -4784,8 +4784,8 @@ regions {
 regions {
   name: "EastOfChasm"
   position {
-    x: -96
-    y: -185
+    x: -93
+    y: -143
     width: 8
     height: 3
   }
@@ -4835,8 +4835,8 @@ regions {
 regions {
   name: "WestOfChasm"
   position {
-    x: -97
-    y: -188
+    x: -94
+    y: -146
     width: 7
     height: -4
   }
@@ -5178,9 +5178,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -215
+    x: -115
     y: 0
-    z: -79
+    z: -29
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5221,9 +5221,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -226
+    x: -126
     y: 0
-    z: -135
+    z: -85
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5485,9 +5485,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -65
+    x: -159
     y: 0
-    z: 40
+    z: -173
   }
   orientation: ORIENTATION_N
   GeneralTags: "rainmaker"
@@ -5570,9 +5570,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -86
+    x: -83
     y: 0
-    z: -205
+    z: -163
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5748,9 +5748,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -65
+    x: -159
     y: 0
-    z: 38
+    z: -175
   }
   orientation: ORIENTATION_E
   GeneralTags: "rainmaker"
