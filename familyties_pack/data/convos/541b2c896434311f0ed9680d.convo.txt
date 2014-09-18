@@ -1,0 +1,59 @@
+idRef {
+  id: "541b2c896434311f0ed9680d"
+}
+ui_name: "s006-maintenanceway"
+nodes {
+  idRef {
+    id: "541b2c976434311f0ed96813"
+  }
+  index: 0
+  text: "{{GM}}A metal hatch is set in the wall. It\'s locked with an ancient mechanical lock.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Unlock it with the key{{/CC}}"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{CC}}Use brute force{{/CC}}"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Walk away{{/CC}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541b2d276434311f0ed96818"
+  }
+  index: 1
+  text: ""
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "541b2d346434311f0ed9681c"
+  }
+  index: 2
+  text: "Wait wait wait. They\'ll hear us if we force our way through. We\'ve gotten this far unnoticed, this might not be the best way to announce our presence."
+  branches {
+    responseText: "I don\'t see a key anywhere. Let\'s just smash this grate and head through quickly."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You\'re right, let\'s try to find another way."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
