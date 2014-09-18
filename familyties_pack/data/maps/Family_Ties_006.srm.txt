@@ -255,15 +255,9 @@ props {
 props {
   name: "tenements_wall_closet02Storeroom"
   gridPoint {
-<<<<<<< HEAD
-    x: -67.88
-    y: 1.0408341e-017
-    z: 52.77
-=======
     x: -161.88
     y: 1.0408341e-17
     z: -160.23
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
   }
   orientation: ORIENTATION_S
   lod: 0
@@ -1504,15 +1498,9 @@ props {
 props {
   name: "school_floorDecoration_grunge01"
   gridPoint {
-<<<<<<< HEAD
-    x: -65.55
-    y: -3.469447e-018
-    z: 53
-=======
     x: -159.55
     y: -3.469447e-18
     z: -160
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
   }
   orientation: ORIENTATION_E
   lod: 0
@@ -12832,7 +12820,7 @@ props {
   name: "barrens_appliance_popMachine"
   gridPoint {
     x: -56.2
-    y: -3.469447e-018
+    y: -3.469447e-18
     z: -92.56
   }
   orientation: ORIENTATION_E
@@ -18372,15 +18360,9 @@ props {
 props {
   name: "barrens_appliance_popMachine"
   gridPoint {
-<<<<<<< HEAD
-    x: -73.2
-    y: -3.469447e-018
-    z: -205.56
-=======
     x: -70.2
     y: -3.469447e-18
     z: -163.56
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
   }
   orientation: ORIENTATION_E
   idRef {
@@ -21315,9 +21297,6 @@ props {
 props {
   name: "office_floor_2x2panel01"
   gridPoint {
-<<<<<<< HEAD
-    x: -73
-=======
     x: -74
     y: 0
     z: -158
@@ -21332,7 +21311,6 @@ props {
   name: "office_floor_2x2panel01"
   gridPoint {
     x: -70
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
     y: 0
     z: -162
   }
@@ -21371,9 +21349,6 @@ props {
 props {
   name: "office_floor_2x2panel01"
   gridPoint {
-<<<<<<< HEAD
-    x: -79
-=======
     x: -74
     y: 0
     z: -158
@@ -21388,7 +21363,6 @@ props {
   name: "office_floor_2x2panel01"
   gridPoint {
     x: -76
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
     y: 0
     z: -156
   }
@@ -25431,15 +25405,9 @@ props {
 props {
   name: "office_wall_end01"
   gridPoint {
-<<<<<<< HEAD
-    x: -61.03
-    y: 8.6736174e-017
-    z: -214.08
-=======
     x: -58.03
     y: 8.6736174e-17
     z: -172.08
->>>>>>> 1a3471380716d4ca7b9b1b0615931850d488abc6
   }
   orientation: ORIENTATION_E
   idRef {
