@@ -30,6 +30,36 @@ nodes {
   text: ""
   branches {
     responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
     nextNodeIndex: 2
   }
   branches {
@@ -46,6 +76,132 @@ nodes {
   text: "Wait wait wait. They\'ll hear us if we force our way through. We\'ve gotten this far unnoticed, this might not be the best way to announce our presence."
   branches {
     responseText: "I don\'t see a key anywhere. Let\'s just smash this grate and head through quickly."
+    actions {
+      ops {
+        functionName: "Attack Actor With Weapon"
+        args {
+          call_value {
+            functionName: "All Actors on Team"
+            args {
+              call_value {
+                functionName: "Get Preset Value (string)"
+                args {
+                  string_value: "FactionList"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (SceneDimension)"
+                args {
+                  string_value: "Default"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "541b312d6434311f0ed96882"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Play Sound"
+        args {
+          call_value {
+            functionName: "Get Map Item (Sound)"
+            args {
+              string_value: "weapons"
+            }
+            args {
+              string_value: "ShotgunHit"
+            }
+          }
+        }
+        args {
+          float_value: 0
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Delete Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "5409b3473736633815006775"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Move Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "541b3911643431791b980f4a"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specified Point (2D)"
+            args {
+              float_value: -73
+            }
+            args {
+              float_value: -81
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "53da5ef2643431a4970041a8"
+            }
+            args {
+              string_value: "RainmakersRep"
+            }
+          }
+        }
+        args {
+          int_value: -1
+        }
+      }
+    }
     nextNodeIndex: -1
   }
   branches {
@@ -53,6 +209,9 @@ nodes {
     nextNodeIndex: -1
   }
   nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54156c36643431f22e64f6f9"
+  }
 }
 roots {
   nextNodeIndex: 0
