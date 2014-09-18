@@ -3674,6 +3674,40 @@ triggers {
     }
   }
   conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5419b9ff6434311936726923"
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -3726,6 +3760,50 @@ triggers {
     id: "5419b9c06434311936726922"
   }
   elseActions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5419b9ff6434311936726923"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Nothing Selected"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
   is_oneshot: false
 }
@@ -3843,6 +3921,40 @@ triggers {
     }
   }
   conditions {
+    ops {
+      functionName: "Evaluate If Actor is Inside Region"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "AreOrAreNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "541ae6b664343158ee7266f7"
+          }
+        }
+      }
+    }
   }
   actions {
     ops {
@@ -3895,14 +4007,58 @@ triggers {
     id: "5419bb0e643431193672692b"
   }
   elseActions {
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Center of Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "541ae6b664343158ee7266f7"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Nothing Selected"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
   is_oneshot: false
 }
 regions {
   name: "Municipal"
   position {
-    x: -45
-    y: 63
+    x: -139
+    y: -150
     width: -35
     height: -37
   }
@@ -4040,8 +4196,8 @@ regions {
 regions {
   name: "SideDoor"
   position {
-    x: -53
-    y: 54
+    x: -147
+    y: -159
     width: 3
     height: 4
   }
@@ -4091,8 +4247,8 @@ regions {
 regions {
   name: "2nd floor offices"
   position {
-    x: -42
-    y: -219
+    x: -39
+    y: -177
     width: -57
     height: 53
   }
@@ -4135,8 +4291,8 @@ regions {
 regions {
   name: "Subbasement"
   position {
-    x: -104
-    y: 101
+    x: -78
+    y: -40
     width: 67
     height: 71
   }
@@ -4179,8 +4335,8 @@ regions {
 regions {
   name: "TopfloorLadder"
   position {
-    x: -82
-    y: -185
+    x: -79
+    y: -143
     width: 3
     height: 3
   }
@@ -4281,8 +4437,8 @@ regions {
 regions {
   name: "GroundfloorLadder"
   position {
-    x: -54
-    y: 36
+    x: -148
+    y: -177
     width: 3
     height: 3
   }
@@ -4332,8 +4488,8 @@ regions {
 regions {
   name: "SubbasementLadder"
   position {
-    x: -44
-    y: 138
+    x: -18
+    y: -3
     width: 3
     height: 3
   }
@@ -4383,8 +4539,8 @@ regions {
 regions {
   name: "Municipal Matrix"
   position {
-    x: -270
-    y: -161
+    x: -170
+    y: -111
     width: 72
     height: 119
   }
@@ -4427,8 +4583,8 @@ regions {
 regions {
   name: "Entrance to Data"
   position {
-    x: -225
-    y: -118
+    x: -125
+    y: -68
     width: -2
     height: 1
   }
@@ -4478,8 +4634,8 @@ regions {
 regions {
   name: "Data to Entrance"
   position {
-    x: -225
-    y: -125
+    x: -125
+    y: -75
     width: -2
     height: -1
   }
@@ -4529,8 +4685,8 @@ regions {
 regions {
   name: "SewerWay"
   position {
-    x: -71
-    y: 152
+    x: -45
+    y: 11
     width: 3
     height: 3
   }
@@ -4580,8 +4736,8 @@ regions {
 regions {
   name: "TopLeftStaircase"
   position {
-    x: -67
-    y: -202
+    x: -64
+    y: -160
     width: 2
     height: 3
   }
@@ -4631,8 +4787,8 @@ regions {
 regions {
   name: "TopRightStaircase"
   position {
-    x: -67
-    y: -194
+    x: -64
+    y: -152
     width: 2
     height: 4
   }
@@ -4784,8 +4940,8 @@ regions {
 regions {
   name: "EastOfChasm"
   position {
-    x: -96
-    y: -185
+    x: -93
+    y: -143
     width: 8
     height: 3
   }
@@ -4835,8 +4991,8 @@ regions {
 regions {
   name: "WestOfChasm"
   position {
-    x: -97
-    y: -188
+    x: -94
+    y: -146
     width: 7
     height: -4
   }
@@ -4938,9 +5094,9 @@ regions {
   name: "OfficeHatchOffice"
   position {
     x: -72
-    y: -100
+    y: -101
     width: 2
-    height: 2
+    height: 4
   }
   enabledAtStart: true
   is_camera_region: false
@@ -4997,6 +5153,57 @@ regions {
   is_camera_region: false
   idRef {
     id: "5419bae5643431193672692a"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_teleporter_region: true
+  linked_teleporter_region: ""
+  teleport_facing: -1
+  teleport_sound_fx: ""
+  teleport_sound_volume: 0
+  teleport_source_fx: ""
+  teleport_destination_fx: ""
+  teleport_pc_only: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+}
+regions {
+  name: "StairwellHatchInside"
+  position {
+    x: -76
+    y: -84
+    width: 3
+    height: 3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "541ae6b664343158ee7266f7"
   }
   highlight_color {
     r: 0
@@ -5178,9 +5385,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -215
+    x: -115
     y: 0
-    z: -79
+    z: -29
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5221,9 +5428,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -226
+    x: -126
     y: 0
-    z: -135
+    z: -85
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5485,9 +5692,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -65
+    x: -159
     y: 0
-    z: 40
+    z: -173
   }
   orientation: ORIENTATION_N
   GeneralTags: "rainmaker"
@@ -5570,9 +5777,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -86
+    x: -83
     y: 0
-    z: -205
+    z: -163
   }
   orientation: ORIENTATION_S
   idRef {
@@ -5748,9 +5955,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: -65
+    x: -159
     y: 0
-    z: 38
+    z: -175
   }
   orientation: ORIENTATION_E
   GeneralTags: "rainmaker"
