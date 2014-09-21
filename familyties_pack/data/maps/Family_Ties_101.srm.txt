@@ -1,7 +1,7 @@
 minX: -88
 minZ: -5
-numX: 157
-numZ: 85
+numX: 258
+numZ: 108
 props {
   name: "barrens_building_02wallbrokenwindow01"
   gridPoint {
@@ -1314,5 +1314,838 @@ props {
     z: 39
   }
   orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge02"
+  gridPoint {
+    x: 26
+    y: 0
+    z: 61
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge03"
+  gridPoint {
+    x: 37
+    y: 0
+    z: 61
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge04"
+  gridPoint {
+    x: 33
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge05"
+  gridPoint {
+    x: 43
+    y: 0
+    z: 59
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge06"
+  gridPoint {
+    x: 163
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge07"
+  gridPoint {
+    x: 126
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge08"
+  gridPoint {
+    x: 32
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge10"
+  gridPoint {
+    x: 31
+    y: 0
+    z: 77
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge11"
+  gridPoint {
+    x: 27
+    y: 0
+    z: 96
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEnd01"
+  gridPoint {
+    x: 55
+    y: 0
+    z: 55
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEnd02"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorPillar"
+  gridPoint {
+    x: 113.89
+    y: 0
+    z: 51.79
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorPillar02"
+  gridPoint {
+    x: 144
+    y: 0
+    z: 61.32
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor03"
+  gridPoint {
+    x: 136
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor02"
+  gridPoint {
+    x: 13
+    y: 0
+    z: 54
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor01"
+  gridPoint {
+    x: 9
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorConnector02"
+  gridPoint {
+    x: 18
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorConnector01"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 70
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete01"
+  gridPoint {
+    x: 91
+    y: 0
+    z: 75
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete02"
+  gridPoint {
+    x: 111
+    y: 0
+    z: 86
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete03"
+  gridPoint {
+    x: 72
+    y: 0
+    z: 69
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEnd01"
+  gridPoint {
+    x: 78
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e8dc4373663c819004dbc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge03"
+  gridPoint {
+    x: 81
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "541e8dd0373663c819004dbd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge02"
+  gridPoint {
+    x: 87
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "541e8de2373663c819004dbe"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge04"
+  gridPoint {
+    x: 93
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "541e8def373663c819004dbf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor02"
+  gridPoint {
+    x: 99
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "541e8dfe373663c819004dc0"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorConnector01"
+  gridPoint {
+    x: 111
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e8e12373663c819004dc1"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete02"
+  gridPoint {
+    x: 96
+    y: 0
+    z: 73
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8e39373663c819004dc2"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_mossyConcrete02"
+  gridPoint {
+    x: 104
+    y: 0
+    z: 78
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8e3b373663c819004dc3"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete05"
+  gridPoint {
+    x: 97
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 94
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 91
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete03"
+  gridPoint {
+    x: 88
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete03"
+  gridPoint {
+    x: 85
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete03"
+  gridPoint {
+    x: 82
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 79
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8e66373663c819004dc4"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 78
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8e6a373663c819004dc5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorBeam"
+  gridPoint {
+    x: 127
+    y: 0
+    z: 53
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge04"
+  gridPoint {
+    x: 105
+    y: 0
+    z: 62
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "541e8ed3373663c819004dc6"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 104
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8f6b373663c819004dc8"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 107
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8f72373663c819004dc9"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 110
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8f75373663c819004dca"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 63
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8f78373663c819004dcb"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorConnector01"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 52
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "541e8f80373663c819004dcc"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorConnector01"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 60.14
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e8f9f373663c819004dcd"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge04"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 55
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "541e8fc5373663c819004dce"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge07"
+  gridPoint {
+    x: 131
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e8ff7373663c819004dcf"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge08"
+  gridPoint {
+    x: 142
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e8ffe373663c819004dd0"
+  }
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement09"
+  gridPoint {
+    x: 128
+    y: 0
+    z: 67
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement08"
+  gridPoint {
+    x: 129
+    y: 0
+    z: 74
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement07"
+  gridPoint {
+    x: 132
+    y: 0
+    z: 75
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement06"
+  gridPoint {
+    x: 135
+    y: 0
+    z: 71
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement05"
+  gridPoint {
+    x: 138
+    y: 0
+    z: 66
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement03"
+  gridPoint {
+    x: 140
+    y: 0
+    z: 72
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement02"
+  gridPoint {
+    x: 146
+    y: 0
+    z: 70
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement01"
+  gridPoint {
+    x: 142
+    y: 0
+    z: 73
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_cement10"
+  gridPoint {
+    x: 146
+    y: 0
+    z: 66
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete03"
+  gridPoint {
+    x: 121
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete04"
+  gridPoint {
+    x: 123
+    y: 0
+    z: 81
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete05"
+  gridPoint {
+    x: 126
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete06"
+  gridPoint {
+    x: 128
+    y: 0
+    z: 80
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete07"
+  gridPoint {
+    x: 128
+    y: 0
+    z: 85
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "undergroundBase_floor_concrete08"
+  gridPoint {
+    x: 133
+    y: 0
+    z: 83
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEnd02"
+  gridPoint {
+    x: 42
+    y: 0
+    z: 92
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e90dc373663c819004dd1"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEnd02"
+  gridPoint {
+    x: 160
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e90dc373663c819004dd2"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorDoor01"
+  gridPoint {
+    x: 154
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e90ec373663c819004dd3"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorEdge07"
+  gridPoint {
+    x: 148
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "541e9102373663c819004dd4"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorPillar02"
+  gridPoint {
+    x: 150
+    y: 0
+    z: 60.32
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9162373663c819004dd5"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorPillar"
+  gridPoint {
+    x: 113
+    y: 0
+    z: 61.79
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9189373663c819004dd6"
+  }
+  lod: 0
+}
+props {
+  name: "warehouse_wall_exteriorPillar"
+  gridPoint {
+    x: 77
+    y: 0
+    z: 62.79
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9190373663c819004dd7"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 114
+    y: 0
+    z: 60
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9211373663c819004dda"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete02"
+  gridPoint {
+    x: 114
+    y: 0
+    z: 57
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9214373663c819004ddb"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete03"
+  gridPoint {
+    x: 114
+    y: 0
+    z: 54
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e9219373663c819004ddc"
+  }
+  lod: 0
+}
+props {
+  name: "haven_ground_concrete03"
+  gridPoint {
+    x: 114
+    y: 0
+    z: 51
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e921b373663c819004ddd"
+  }
   lod: 0
 }

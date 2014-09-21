@@ -38719,3 +38719,16 @@ props {
   }
   lod: 0
 }
+props {
+  name: "pikePlace_ground_cobblestone02"
+  gridPoint {
+    x: 63
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "541e87d5373663c819004db8"
+  }
+  lod: 0
+}
